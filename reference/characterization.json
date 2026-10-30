@@ -1,0 +1,844 @@
+{
+  "python": "3.14.3",
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99
+  ],
+  "archive_sha256": "72a7e7b9a7bfe9d961656d30c74e85bf7c12a8713720bb00540a6b17cf99b302",
+  "seeds_with_discarded_clues": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    11,
+    12,
+    13,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    24,
+    25,
+    28,
+    30,
+    31,
+    32,
+    34,
+    35,
+    36,
+    37,
+    38,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    73,
+    74,
+    75,
+    76,
+    78,
+    80,
+    82,
+    83,
+    84,
+    85,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    99
+  ],
+  "examples": {
+    "0": {
+      "solution": {
+        "culprit": "Diana",
+        "weapon": "bat",
+        "motive": "jealousy"
+      },
+      "context": {
+        "murder_room": "hallway",
+        "murder_time": "last night",
+        "culprit": "Diana",
+        "suspects": [
+          "Ana",
+          "Bruno",
+          "Carlos",
+          "Diana"
+        ]
+      },
+      "clues": [
+        {
+          "name": "Rope",
+          "description": "You found a rope. The fibers look recently strained.",
+          "category": "weapon",
+          "target": "rope",
+          "is_true": false,
+          "type": "object"
+        },
+        {
+          "name": "Report",
+          "description": "A written record indicates that a staff member was treated for a minor cut while preparing a meal.",
+          "category": "weapon",
+          "target": "knife",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Statement Record",
+          "description": "Record shows Ana was in the guest room during last night.",
+          "category": "suspect",
+          "target": "Ana",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Report",
+          "description": "A written record indicates that several equipment were used to move heavy equipment.",
+          "category": "weapon",
+          "target": "rope",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Statement Record",
+          "description": "Record shows Carlos was in the pool area during last night.",
+          "category": "suspect",
+          "target": "Carlos",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Gossip",
+          "description": "A guest was worried about the hotel's safety. They mentioned that Carlos was acting suspicious early evening.",
+          "category": "suspect",
+          "target": "Carlos",
+          "is_true": false,
+          "type": "gossip"
+        },
+        {
+          "name": "Bat",
+          "description": "You found a bat. There are impact marks and dark stains.",
+          "category": "weapon",
+          "target": "bat",
+          "is_true": true,
+          "type": "object"
+        },
+        {
+          "name": "Gossip",
+          "description": "An employee approached you. They claimed that Diana was near the hallway last night.",
+          "category": "suspect",
+          "target": "Diana",
+          "is_true": true,
+          "type": "gossip"
+        },
+        {
+          "name": "Report",
+          "description": "A written record indicates that the item was used earlier.",
+          "category": "weapon",
+          "target": "poison",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Gossip",
+          "description": "A guest was worried about the hotel's safety. They mentioned that Ana was acting suspicious late evening.",
+          "category": "suspect",
+          "target": "Ana",
+          "is_true": false,
+          "type": "gossip"
+        },
+        {
+          "name": "Record",
+          "description": "Records show Ana's issue with the victim had already been resolved.",
+          "category": "motive",
+          "target": "money",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Gossip",
+          "description": "A guest was worried about the hotel's safety. They mentioned that Diana had a financial dispute with the victim.",
+          "category": "motive",
+          "target": "money",
+          "is_true": false,
+          "type": "gossip"
+        },
+        {
+          "name": "Gossip",
+          "description": "You heard gossip that Diana was involved in a jealousy-related argument with the victim.",
+          "category": "motive",
+          "target": "jealousy",
+          "is_true": true,
+          "type": "gossip"
+        },
+        {
+          "name": "Knife",
+          "description": "You found a knife. The blade has fresh smudges.",
+          "category": "weapon",
+          "target": "knife",
+          "is_true": false,
+          "type": "object"
+        },
+        {
+          "name": "Gossip",
+          "description": "A guest was worried about the hotel's safety. They mentioned that Bruno was acting suspicious shortly after midnight.",
+          "category": "suspect",
+          "target": "Bruno",
+          "is_true": false,
+          "type": "gossip"
+        },
+        {
+          "name": "Record",
+          "description": "Records show Bruno's issue with the victim had already been resolved.",
+          "category": "motive",
+          "target": "revenge",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Gossip",
+          "description": "An employee approached you. They claimed that Carlos held a personal grudge against the victim.",
+          "category": "motive",
+          "target": "revenge",
+          "is_true": false,
+          "type": "gossip"
+        },
+        {
+          "name": "Statement Record",
+          "description": "Record shows Bruno was in the security office during last night.",
+          "category": "suspect",
+          "target": "Bruno",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Poison",
+          "description": "You found a poison. there are unusual traces.",
+          "category": "weapon",
+          "target": "poison",
+          "is_true": false,
+          "type": "object"
+        }
+      ],
+      "rooms": {
+        "guest room": [
+          {
+            "name": "Report",
+            "description": "A written record indicates that the item was used earlier.",
+            "category": "weapon",
+            "target": "poison",
+            "is_true": true,
+            "type": "document"
+          },
+          {
+            "name": "Gossip",
+            "description": "A guest was worried about the hotel's safety. They mentioned that Carlos was acting suspicious early evening.",
+            "category": "suspect",
+            "target": "Carlos",
+            "is_true": false,
+            "type": "gossip"
+          },
+          {
+            "name": "Gossip",
+            "description": "You heard gossip that Diana was involved in a jealousy-related argument with the victim.",
+            "category": "motive",
+            "target": "jealousy",
+            "is_true": true,
+            "type": "gossip"
+          }
+        ],
+        "pool area": [
+          {
+            "name": "Report",
+            "description": "A written record indicates that several equipment were used to move heavy equipment.",
+            "category": "weapon",
+            "target": "rope",
+            "is_true": true,
+            "type": "document"
+          },
+          {
+            "name": "Gossip",
+            "description": "An employee approached you. They claimed that Diana was near the hallway last night.",
+            "category": "suspect",
+            "target": "Diana",
+            "is_true": true,
+            "type": "gossip"
+          }
+        ],
+        "gym": [
+          {
+            "name": "Report",
+            "description": "A written record indicates that a staff member was treated for a minor cut while preparing a meal.",
+            "category": "weapon",
+            "target": "knife",
+            "is_true": true,
+            "type": "document"
+          },
+          {
+            "name": "Bat",
+            "description": "You found a bat. There are impact marks and dark stains.",
+            "category": "weapon",
+            "target": "bat",
+            "is_true": true,
+            "type": "object"
+          },
+          {
+            "name": "Gossip",
+            "description": "An employee approached you. They claimed that Carlos held a personal grudge against the victim.",
+            "category": "motive",
+            "target": "revenge",
+            "is_true": false,
+            "type": "gossip"
+          }
+        ],
+        "hallway": [
+          {
+            "name": "Statement Record",
+            "description": "Record shows Ana was in the guest room during last night.",
+            "category": "suspect",
+            "target": "Ana",
+            "is_true": true,
+            "type": "document"
+          },
+          {
+            "name": "Gossip",
+            "description": "A guest was worried about the hotel's safety. They mentioned that Bruno was acting suspicious shortly after midnight.",
+            "category": "suspect",
+            "target": "Bruno",
+            "is_true": false,
+            "type": "gossip"
+          },
+          {
+            "name": "Gossip",
+            "description": "A guest was worried about the hotel's safety. They mentioned that Diana had a financial dispute with the victim.",
+            "category": "motive",
+            "target": "money",
+            "is_true": false,
+            "type": "gossip"
+          }
+        ],
+        "kitchen": [
+          {
+            "name": "Rope",
+            "description": "You found a rope. The fibers look recently strained.",
+            "category": "weapon",
+            "target": "rope",
+            "is_true": false,
+            "type": "object"
+          },
+          {
+            "name": "Gossip",
+            "description": "A guest was worried about the hotel's safety. They mentioned that Ana was acting suspicious late evening.",
+            "category": "suspect",
+            "target": "Ana",
+            "is_true": false,
+            "type": "gossip"
+          },
+          {
+            "name": "Record",
+            "description": "Records show Ana's issue with the victim had already been resolved.",
+            "category": "motive",
+            "target": "money",
+            "is_true": true,
+            "type": "document"
+          }
+        ],
+        "storage room": [
+          {
+            "name": "Knife",
+            "description": "You found a knife. The blade has fresh smudges.",
+            "category": "weapon",
+            "target": "knife",
+            "is_true": false,
+            "type": "object"
+          },
+          {
+            "name": "Statement Record",
+            "description": "Record shows Bruno was in the security office during last night.",
+            "category": "suspect",
+            "target": "Bruno",
+            "is_true": true,
+            "type": "document"
+          }
+        ],
+        "bathroom": [
+          {
+            "name": "Poison",
+            "description": "You found a poison. there are unusual traces.",
+            "category": "weapon",
+            "target": "poison",
+            "is_true": false,
+            "type": "object"
+          }
+        ],
+        "security office": [
+          {
+            "name": "Statement Record",
+            "description": "Record shows Carlos was in the pool area during last night.",
+            "category": "suspect",
+            "target": "Carlos",
+            "is_true": true,
+            "type": "document"
+          }
+        ]
+      }
+    },
+    "42": {
+      "solution": {
+        "culprit": "Ana",
+        "weapon": "knife",
+        "motive": "revenge"
+      },
+      "context": {
+        "murder_room": "security office",
+        "murder_time": "early evening",
+        "culprit": "Ana",
+        "suspects": [
+          "Ana",
+          "Bruno",
+          "Carlos",
+          "Diana"
+        ]
+      },
+      "clues": [
+        {
+          "name": "Statement Record",
+          "description": "Record shows Bruno was in the restaurant during early evening.",
+          "category": "suspect",
+          "target": "Bruno",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Gossip",
+          "description": "An employee approached you. They claimed that Ana held a personal grudge against the victim.",
+          "category": "motive",
+          "target": "revenge",
+          "is_true": true,
+          "type": "gossip"
+        },
+        {
+          "name": "Report",
+          "description": "On a nearby surface, there's a document mentioning that sports gear were scheduled for replacement due to heavy usage.",
+          "category": "weapon",
+          "target": "bat",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Rope",
+          "description": "You found a rope. There are tension marks and loose fibers.",
+          "category": "weapon",
+          "target": "rope",
+          "is_true": false,
+          "type": "object"
+        },
+        {
+          "name": "Knife",
+          "description": "You found a knife. There is dried blood along the blade.",
+          "category": "weapon",
+          "target": "knife",
+          "is_true": true,
+          "type": "object"
+        },
+        {
+          "name": "Gossip",
+          "description": "A guest was worried about the hotel's safety. They mentioned that Bruno had a financial dispute with the victim.",
+          "category": "motive",
+          "target": "money",
+          "is_true": false,
+          "type": "gossip"
+        },
+        {
+          "name": "Gossip",
+          "description": "A guest was worried about the hotel's safety. They mentioned that Diana was acting suspicious late evening.",
+          "category": "suspect",
+          "target": "Diana",
+          "is_true": false,
+          "type": "gossip"
+        },
+        {
+          "name": "Record",
+          "description": "Records show Bruno's issue with the victim had already been resolved.",
+          "category": "motive",
+          "target": "money",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Statement Record",
+          "description": "Record shows Diana was in the restaurant during early evening.",
+          "category": "suspect",
+          "target": "Diana",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Statement Record",
+          "description": "Record shows Carlos was in the guest room during early evening.",
+          "category": "suspect",
+          "target": "Carlos",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Report",
+          "description": "There is a log entry indicating that several equipment were used to move heavy equipment.",
+          "category": "weapon",
+          "target": "rope",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Bat",
+          "description": "You found a bat. There are dents consistent with strong force.",
+          "category": "weapon",
+          "target": "bat",
+          "is_true": false,
+          "type": "object"
+        },
+        {
+          "name": "Gossip",
+          "description": "Before you enter the room, you overheard chatter that Carlos was acting suspicious early evening.",
+          "category": "suspect",
+          "target": "Carlos",
+          "is_true": false,
+          "type": "gossip"
+        },
+        {
+          "name": "Gossip",
+          "description": "Before you enter the room, you overheard chatter that Bruno was involved in a jealousy-related argument with the victim.",
+          "category": "motive",
+          "target": "jealousy",
+          "is_true": false,
+          "type": "gossip"
+        },
+        {
+          "name": "Report",
+          "description": "You come across a note saying that the item was used earlier.",
+          "category": "weapon",
+          "target": "poison",
+          "is_true": true,
+          "type": "document"
+        },
+        {
+          "name": "Gossip",
+          "description": "You hear over the wall that Bruno was seen nearby early evening.",
+          "category": "suspect",
+          "target": "Bruno",
+          "is_true": false,
+          "type": "gossip"
+        },
+        {
+          "name": "Poison",
+          "description": "You found a poison. there are unusual traces.",
+          "category": "weapon",
+          "target": "poison",
+          "is_true": false,
+          "type": "object"
+        },
+        {
+          "name": "Gossip",
+          "description": "Before you enter the room, you overheard chatter that Ana was near the security office early evening.",
+          "category": "suspect",
+          "target": "Ana",
+          "is_true": true,
+          "type": "gossip"
+        }
+      ],
+      "rooms": {
+        "guest room": [
+          {
+            "name": "Statement Record",
+            "description": "Record shows Bruno was in the restaurant during early evening.",
+            "category": "suspect",
+            "target": "Bruno",
+            "is_true": true,
+            "type": "document"
+          },
+          {
+            "name": "Gossip",
+            "description": "Before you enter the room, you overheard chatter that Carlos was acting suspicious early evening.",
+            "category": "suspect",
+            "target": "Carlos",
+            "is_true": false,
+            "type": "gossip"
+          },
+          {
+            "name": "Gossip",
+            "description": "A guest was worried about the hotel's safety. They mentioned that Bruno had a financial dispute with the victim.",
+            "category": "motive",
+            "target": "money",
+            "is_true": false,
+            "type": "gossip"
+          }
+        ],
+        "hallway": [
+          {
+            "name": "Gossip",
+            "description": "A guest was worried about the hotel's safety. They mentioned that Diana was acting suspicious late evening.",
+            "category": "suspect",
+            "target": "Diana",
+            "is_true": false,
+            "type": "gossip"
+          },
+          {
+            "name": "Gossip",
+            "description": "You hear over the wall that Bruno was seen nearby early evening.",
+            "category": "suspect",
+            "target": "Bruno",
+            "is_true": false,
+            "type": "gossip"
+          },
+          {
+            "name": "Gossip",
+            "description": "Before you enter the room, you overheard chatter that Bruno was involved in a jealousy-related argument with the victim.",
+            "category": "motive",
+            "target": "jealousy",
+            "is_true": false,
+            "type": "gossip"
+          }
+        ],
+        "pool area": [
+          {
+            "name": "Report",
+            "description": "On a nearby surface, there's a document mentioning that sports gear were scheduled for replacement due to heavy usage.",
+            "category": "weapon",
+            "target": "bat",
+            "is_true": true,
+            "type": "document"
+          },
+          {
+            "name": "Report",
+            "description": "There is a log entry indicating that several equipment were used to move heavy equipment.",
+            "category": "weapon",
+            "target": "rope",
+            "is_true": true,
+            "type": "document"
+          },
+          {
+            "name": "Gossip",
+            "description": "An employee approached you. They claimed that Ana held a personal grudge against the victim.",
+            "category": "motive",
+            "target": "revenge",
+            "is_true": true,
+            "type": "gossip"
+          }
+        ],
+        "restaurant": [
+          {
+            "name": "Report",
+            "description": "You come across a note saying that the item was used earlier.",
+            "category": "weapon",
+            "target": "poison",
+            "is_true": true,
+            "type": "document"
+          },
+          {
+            "name": "Gossip",
+            "description": "Before you enter the room, you overheard chatter that Ana was near the security office early evening.",
+            "category": "suspect",
+            "target": "Ana",
+            "is_true": true,
+            "type": "gossip"
+          }
+        ],
+        "bathroom": [
+          {
+            "name": "Statement Record",
+            "description": "Record shows Diana was in the restaurant during early evening.",
+            "category": "suspect",
+            "target": "Diana",
+            "is_true": true,
+            "type": "document"
+          }
+        ],
+        "main lobby": [
+          {
+            "name": "Statement Record",
+            "description": "Record shows Carlos was in the guest room during early evening.",
+            "category": "suspect",
+            "target": "Carlos",
+            "is_true": true,
+            "type": "document"
+          }
+        ],
+        "security office": [
+          {
+            "name": "Knife",
+            "description": "You found a knife. There is dried blood along the blade.",
+            "category": "weapon",
+            "target": "knife",
+            "is_true": true,
+            "type": "object"
+          },
+          {
+            "name": "Bat",
+            "description": "You found a bat. There are dents consistent with strong force.",
+            "category": "weapon",
+            "target": "bat",
+            "is_true": false,
+            "type": "object"
+          },
+          {
+            "name": "Poison",
+            "description": "You found a poison. there are unusual traces.",
+            "category": "weapon",
+            "target": "poison",
+            "is_true": false,
+            "type": "object"
+          }
+        ],
+        "kitchen": [
+          {
+            "name": "Rope",
+            "description": "You found a rope. There are tension marks and loose fibers.",
+            "category": "weapon",
+            "target": "rope",
+            "is_true": false,
+            "type": "object"
+          }
+        ]
+      }
+    }
+  }
+}

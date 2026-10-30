@@ -1,0 +1,252 @@
+{
+	"accessible_counts": {
+		"attendance": 4,
+		"conflict": 8,
+		"death_window": 1,
+		"fiber": 1,
+		"followup": 8,
+		"incident": 3,
+		"injury": 2,
+		"object": 4,
+		"seam": 1,
+		"sighting": 4,
+		"wardrobe": 1
+	},
+	"generator_version": "0.2.0",
+	"minimum_selected_evidence": 9,
+	"rooms": [
+		{
+			"accessible": true,
+			"items": [
+				{
+					"id": "incident_1",
+					"text": "Registro de serviço · 05:20\n\nAna usou um frasco de produto concentrado na limpeza das instalações. O formulário menciona respingos na tampa e odor persistente.",
+					"title": "Ocorrência de serviço · 02"
+				},
+				{
+					"id": "secondary_0_followup",
+					"text": "Anotação H-099 · pasta de Ana\n\nVicente confirmou que os encontros continuariam. A carta de resposta foi devolvida sem conciliação.",
+					"title": "Anotação administrativa · H-099"
+				},
+				{
+					"id": "alibi_0",
+					"text": "Livro de atividades · Ana\n\nAna participou da atividade em Restaurante entre 19:55 e 20:20. O responsável registra sua presença durante todo o intervalo, com assinaturas de abertura e encerramento.",
+					"title": "Livro de serviços · Ana"
+				},
+				{
+					"id": "death_window",
+					"text": "O responsável pelo exame situa a morte entre 19:55 e 20:10. A anotação ressalva que se trata de uma estimativa, não de um horário exato.",
+					"title": "Estimativa do horário"
+				},
+				{
+					"id": "secondary_2_followup",
+					"text": "Anotação H-133 · pasta de Carlos\n\nUma troca posterior esclarece a origem antiga das cartas. Há um pedido de desculpas e a anotação de que o assunto foi encerrado.",
+					"title": "Anotação administrativa · H-133"
+				},
+				{
+					"id": "alibi_2",
+					"text": "Livro de atividades · Carlos\n\nCarlos participou da atividade em Jardim entre 19:55 e 20:20. O responsável registra sua presença durante todo o intervalo, com assinaturas de abertura e encerramento.",
+					"title": "Livro de serviços · Carlos"
+				},
+				{
+					"id": "medical_record",
+					"text": "A parte posterior do crânio apresenta uma fratura sob uma área larga de contusão. Não há corte limpo nem perfuração estreita.",
+					"title": "Anotações do exame"
+				},
+				{
+					"id": "alibi_3",
+					"text": "Livro de atividades · Diana\n\nReserva para a atividade em Restaurante, das 19:55 às 20:20. O campo de comparecimento está em branco.",
+					"title": "Livro de serviços · Diana"
+				},
+				{
+					"id": "incident_3",
+					"text": "Registro de serviço · 06:00\n\nDurante uma inspeção acompanhada por Ana, houve um disparo acidental da pistola guardada no estojo. A ocorrência foi registrada antes da abertura do jardim.",
+					"title": "Ocorrência de serviço · 04"
+				},
+				{
+					"id": "conflict_2_followup",
+					"text": "Anotação H-065 · pasta de Carlos\n\nRetratação assinada por Vicente e comunicação de reintegração. O requerimento foi arquivado como atendido.",
+					"title": "Anotação administrativa · H-065"
+				},
+				{
+					"id": "conflict_0_followup",
+					"text": "Anotação H-031 · pasta de Ana\n\nVicente manteve a acusação e recusou a retratação. O requerimento permanece indeferido.",
+					"title": "Anotação administrativa · H-031"
+				},
+				{
+					"id": "alibi_1",
+					"text": "Livro de atividades · Bruno\n\nBruno participou da atividade em Cozinha entre 19:55 e 20:20. O responsável registra sua presença durante todo o intervalo, com assinaturas de abertura e encerramento.",
+					"title": "Livro de serviços · Bruno"
+				}
+			],
+			"room": "Recepção"
+		},
+		{
+			"accessible": true,
+			"items": [
+				{
+					"id": "seam",
+					"text": "Um fragmento de linha cinza está preso no punho da camisa de Vicente. Parece ter se soltado de uma costura, não do tecido da própria camisa.",
+					"title": "Linha presa no punho"
+				},
+				{
+					"id": "fiber",
+					"text": "Entre os dedos de Vicente há pequenas fibras de lã cinza-escura. Não há etiqueta, nome ou peça inteira junto ao corpo.",
+					"title": "Fibras junto à mão"
+				},
+				{
+					"id": "body",
+					"text": "A parte posterior do crânio apresenta uma fratura sob uma área larga de contusão. Não há corte limpo nem perfuração estreita.",
+					"title": "Exame do corpo"
+				}
+			],
+			"room": "Salão"
+		},
+		{
+			"accessible": true,
+			"items": [],
+			"room": "Cozinha"
+		},
+		{
+			"accessible": true,
+			"items": [
+				{
+					"id": "conflict_3_note",
+					"text": "Correspondência H-082\n\nUm requerimento de Diana exige que Vicente retire uma acusação que provocou seu afastamento: ‘Você assinou aquilo sabendo o que faria comigo.’",
+					"title": "Correspondência · H-082"
+				},
+				{
+					"id": "secondary_1_note",
+					"text": "Correspondência H-116\n\nUm bilhete de Bruno a Vicente menciona cartas escondidas e encontros: ‘Você me fez promessas. Agora encontro isso entre as suas coisas.’",
+					"title": "Correspondência · H-116"
+				},
+				{
+					"id": "sighting_0",
+					"text": "Amadeu, o porteiro, lembra de ter visto Ana na passagem para o salão, por volta de 19:45. A pessoa vinha da recepção. Ele continuou atendendo no balcão e não acompanhou o trajeto.",
+					"title": "Conversa com o porteiro · Ana"
+				},
+				{
+					"id": "sighting_1",
+					"text": "Amadeu, o porteiro, lembra de ter visto Bruno na passagem para o salão, por volta de 19:40. A pessoa vinha da recepção. Ele continuou atendendo no balcão e não acompanhou o trajeto.",
+					"title": "Conversa com o porteiro · Bruno"
+				},
+				{
+					"id": "secondary_3_note",
+					"text": "Correspondência H-150\n\nUma carta de Diana a Vicente cobra um pagamento retido: ‘Não vou aceitar mais uma prorrogação. Esse dinheiro não é seu para guardar.’",
+					"title": "Correspondência · H-150"
+				},
+				{
+					"id": "incident_2",
+					"text": "Registro de serviço · 05:40\n\nCarlos usou a corda do depósito para suspender uma peça de manutenção. A carga escorregou e deixou marcas de compressão na trama.",
+					"title": "Ocorrência de serviço · 03"
+				},
+				{
+					"id": "conflict_1_note",
+					"text": "Correspondência H-048\n\nUma carta de Bruno a Vicente cobra um pagamento retido: ‘Não vou aceitar mais uma prorrogação. Esse dinheiro não é seu para guardar.’",
+					"title": "Correspondência · H-048"
+				},
+				{
+					"id": "sighting_2",
+					"text": "Amadeu, o porteiro, lembra de ter visto Carlos na passagem para o salão, por volta de 19:35. A pessoa vinha da recepção. Ele continuou atendendo no balcão e não acompanhou o trajeto.",
+					"title": "Conversa com o porteiro · Carlos"
+				},
+				{
+					"id": "sighting_3",
+					"text": "Amadeu, o porteiro, lembra de ter visto Diana na passagem para o salão, por volta de 19:30. A pessoa vinha da recepção. Ele continuou atendendo no balcão e não acompanhou o trajeto.",
+					"title": "Conversa com o porteiro · Diana"
+				}
+			],
+			"room": "Restaurante"
+		},
+		{
+			"accessible": true,
+			"items": [
+				{
+					"id": "wardrobe",
+					"text": "Fichas da lavanderia e chapelaria, preenchidas à tarde. As peças foram devolvidas antes do jantar.\n\nAna — casaco de lã cinza-escura; reparo da manga com linha cor de cobre.\n\nBruno — casaco de lã azul-marinho; reparo da manga com linha cinza.\n\nCarlos — casaco de lã azul-marinho; reparo da manga com linha cor de cobre.\n\nDiana — casaco de lã cinza-escura; reparo da manga com linha cinza.",
+					"title": "Fichas de peças recebidas"
+				},
+				{
+					"id": "secondary_3_followup",
+					"text": "Anotação H-150 · pasta de Diana\n\nRecibo de quitação integral, assinado por ambas as partes. A cobrança foi retirada.",
+					"title": "Anotação administrativa · H-150"
+				},
+				{
+					"id": "conflict_1_followup",
+					"text": "Anotação H-048 · pasta de Bruno\n\nRecibo de quitação integral, assinado por ambas as partes. A cobrança foi retirada.",
+					"title": "Anotação administrativa · H-048"
+				},
+				{
+					"id": "object_1",
+					"text": "Um pequeno frasco. Há resíduo junto à tampa e um odor químico forte. O rótulo está gasto e não permite ler a composição.",
+					"title": "Frasco no armário"
+				},
+				{
+					"id": "secondary_1_followup",
+					"text": "Anotação H-116 · pasta de Bruno\n\nVicente confirmou que os encontros continuariam. A carta de resposta foi devolvida sem conciliação.",
+					"title": "Anotação administrativa · H-116"
+				},
+				{
+					"id": "conflict_3_followup",
+					"text": "Anotação H-082 · pasta de Diana\n\nVicente manteve a acusação e recusou a retratação. O requerimento permanece indeferido.",
+					"title": "Anotação administrativa · H-082"
+				}
+			],
+			"room": "Lavanderia"
+		},
+		{
+			"accessible": true,
+			"items": [
+				{
+					"id": "secondary_2_note",
+					"text": "Correspondência H-133\n\nUm bilhete de Carlos a Vicente menciona cartas escondidas e encontros: ‘Você me fez promessas. Agora encontro isso entre as suas coisas.’",
+					"title": "Correspondência · H-133"
+				},
+				{
+					"id": "object_2",
+					"text": "Uma corda de trama grossa, com marcas de tensão e fibras soltas. Um trecho está mais comprimido que o restante.",
+					"title": "Corda enrolada"
+				},
+				{
+					"id": "secondary_0_note",
+					"text": "Correspondência H-099\n\nUm bilhete de Ana a Vicente menciona cartas escondidas e encontros: ‘Você me fez promessas. Agora encontro isso entre as suas coisas.’",
+					"title": "Correspondência · H-099"
+				},
+				{
+					"id": "conflict_0_note",
+					"text": "Correspondência H-031\n\nUm requerimento de Ana exige que Vicente retire uma acusação que provocou seu afastamento: ‘Você assinou aquilo sabendo o que faria comigo.’",
+					"title": "Correspondência · H-031"
+				},
+				{
+					"id": "conflict_2_note",
+					"text": "Correspondência H-065\n\nUm requerimento de Carlos exige que Vicente retire uma acusação que provocou seu afastamento: ‘Você assinou aquilo sabendo o que faria comigo.’",
+					"title": "Correspondência · H-065"
+				}
+			],
+			"room": "Depósito"
+		},
+		{
+			"accessible": true,
+			"items": [
+				{
+					"id": "object_0",
+					"text": "Um bastão de madeira pesada. Apresenta amassados, manchas escuras e desgaste concentrado em uma das extremidades.",
+					"title": "Bastão de madeira"
+				},
+				{
+					"id": "object_3",
+					"text": "Uma pistola no estojo. Há cheiro de pólvora e resíduos escuros perto do mecanismo. O estojo tem marcas de uso.",
+					"title": "Pistola no estojo"
+				}
+			],
+			"room": "Jardim"
+		},
+		{
+			"accessible": false,
+			"items": [],
+			"room": "Arquivo"
+		}
+	],
+	"seed": 914368,
+	"total_observations": 38
+}

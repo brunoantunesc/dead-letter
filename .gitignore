@@ -1,4 +1,7 @@
 # Godot 4.2+ specific ignores
+.DS_Store
+__pycache__/
+*.pyc
 ~*.dll
 
 # Godot 4+ specific ignores

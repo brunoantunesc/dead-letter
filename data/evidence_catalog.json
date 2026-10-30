@@ -1,0 +1,413 @@
+{
+  "version": 1,
+  "definitions": {
+    "sighting.0": {
+      "match": {
+        "observation_type": "sighting",
+        "activity": 0
+      },
+      "title_key": "evidence.sighting.0.title",
+      "text_key": "evidence.sighting.0.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        },
+        "time": {
+          "field": "time",
+          "format": "time"
+        }
+      }
+    },
+    "sighting.1": {
+      "match": {
+        "observation_type": "sighting",
+        "activity": 1
+      },
+      "title_key": "evidence.sighting.1.title",
+      "text_key": "evidence.sighting.1.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        },
+        "time": {
+          "field": "time",
+          "format": "time"
+        }
+      }
+    },
+    "sighting.2": {
+      "match": {
+        "observation_type": "sighting",
+        "activity": 2
+      },
+      "title_key": "evidence.sighting.2.title",
+      "text_key": "evidence.sighting.2.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        },
+        "time": {
+          "field": "time",
+          "format": "time"
+        }
+      }
+    },
+    "sighting.3": {
+      "match": {
+        "observation_type": "sighting",
+        "activity": 3
+      },
+      "title_key": "evidence.sighting.3.title",
+      "text_key": "evidence.sighting.3.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        },
+        "time": {
+          "field": "time",
+          "format": "time"
+        }
+      }
+    },
+    "contact": {
+      "match": {
+        "observation_type": "contact"
+      },
+      "title_key": "evidence.contact.title",
+      "text_key": "evidence.contact.body",
+      "parameters": {
+        "fabric": {
+          "field": "fabric",
+          "format": "term"
+        },
+        "thread": {
+          "field": "thread",
+          "format": "term"
+        }
+      }
+    },
+    "wardrobe": {
+      "match": {
+        "observation_type": "wardrobe"
+      },
+      "title_key": "evidence.wardrobe.title",
+      "text_key": "evidence.wardrobe.body",
+      "parameters": {},
+      "rows": {
+        "field": "entries",
+        "text_key": "evidence.wardrobe.row",
+        "parameters": {
+          "person": {
+            "field": "person",
+            "format": "person"
+          },
+          "fabric": {
+            "field": "fabric",
+            "format": "term"
+          },
+          "thread": {
+            "field": "thread",
+            "format": "term"
+          }
+        }
+      }
+    },
+    "activity_register": {
+      "match": {
+        "observation_type": "activity_register"
+      },
+      "title_key": "evidence.activity_register.title",
+      "text_key": "evidence.activity_register.body",
+      "parameters": {},
+      "rows": {
+        "field": "entries",
+        "text_key": "evidence.activities.row",
+        "parameters": {
+          "person": {
+            "field": "person",
+            "format": "person"
+          },
+          "place": {
+            "field": "place",
+            "format": "location"
+          },
+          "start": {
+            "field": "start",
+            "format": "time"
+          },
+          "end": {
+            "field": "end",
+            "format": "time"
+          },
+          "status": {
+            "field": "status",
+            "format": "term"
+          }
+        }
+      }
+    },
+    "examination": {
+      "match": {
+        "observation_type": "examination"
+      },
+      "title_key": "evidence.examination.title",
+      "text_key": "evidence.examination.body",
+      "parameters": {
+        "injury": {
+          "field": "pattern",
+          "format": "term"
+        },
+        "start": {
+          "field": "start",
+          "format": "time"
+        },
+        "end": {
+          "field": "end",
+          "format": "time"
+        }
+      }
+    },
+    "object.knife": {
+      "match": {
+        "observation_type": "object",
+        "weapon": "knife"
+      },
+      "title_key": "evidence.object.knife.title",
+      "text_key": "evidence.object.knife.body",
+      "parameters": {}
+    },
+    "object.rope": {
+      "match": {
+        "observation_type": "object",
+        "weapon": "rope"
+      },
+      "title_key": "evidence.object.rope.title",
+      "text_key": "evidence.object.rope.body",
+      "parameters": {}
+    },
+    "object.pistol": {
+      "match": {
+        "observation_type": "object",
+        "weapon": "pistol"
+      },
+      "title_key": "evidence.object.pistol.title",
+      "text_key": "evidence.object.pistol.body",
+      "parameters": {}
+    },
+    "object.bat": {
+      "match": {
+        "observation_type": "object",
+        "weapon": "bat"
+      },
+      "title_key": "evidence.object.bat.title",
+      "text_key": "evidence.object.bat.body",
+      "parameters": {}
+    },
+    "object.poison_vial": {
+      "match": {
+        "observation_type": "object",
+        "weapon": "poison_vial"
+      },
+      "title_key": "evidence.object.poison_vial.title",
+      "text_key": "evidence.object.poison_vial.body",
+      "parameters": {}
+    },
+    "incident.cut": {
+      "match": {
+        "observation_type": "incident",
+        "incident": "cut"
+      },
+      "title_key": "evidence.incident.cut.title",
+      "text_key": "evidence.incident.cut.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        },
+        "time": {
+          "field": "time",
+          "format": "time"
+        }
+      }
+    },
+    "incident.lifting": {
+      "match": {
+        "observation_type": "incident",
+        "incident": "lifting"
+      },
+      "title_key": "evidence.incident.lifting.title",
+      "text_key": "evidence.incident.lifting.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        },
+        "time": {
+          "field": "time",
+          "format": "time"
+        }
+      }
+    },
+    "incident.inspection": {
+      "match": {
+        "observation_type": "incident",
+        "incident": "inspection"
+      },
+      "title_key": "evidence.incident.inspection.title",
+      "text_key": "evidence.incident.inspection.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        },
+        "time": {
+          "field": "time",
+          "format": "time"
+        }
+      }
+    },
+    "incident.sports": {
+      "match": {
+        "observation_type": "incident",
+        "incident": "sports"
+      },
+      "title_key": "evidence.incident.sports.title",
+      "text_key": "evidence.incident.sports.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        },
+        "time": {
+          "field": "time",
+          "format": "time"
+        }
+      }
+    },
+    "incident.cleaning": {
+      "match": {
+        "observation_type": "incident",
+        "incident": "cleaning"
+      },
+      "title_key": "evidence.incident.cleaning.title",
+      "text_key": "evidence.incident.cleaning.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        },
+        "time": {
+          "field": "time",
+          "format": "time"
+        }
+      }
+    },
+    "grievance.withheld_payment.open": {
+      "match": {
+        "observation_type": "grievance",
+        "topic": "withheld_payment",
+        "state": "open"
+      },
+      "title_key": "evidence.grievance.withheld_payment.open.title",
+      "text_key": "evidence.grievance.withheld_payment.open.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        }
+      }
+    },
+    "grievance.withheld_payment.settled": {
+      "match": {
+        "observation_type": "grievance",
+        "topic": "withheld_payment",
+        "state": "settled"
+      },
+      "title_key": "evidence.grievance.withheld_payment.settled.title",
+      "text_key": "evidence.grievance.withheld_payment.settled.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        }
+      }
+    },
+    "grievance.private_letters.open": {
+      "match": {
+        "observation_type": "grievance",
+        "topic": "private_letters",
+        "state": "open"
+      },
+      "title_key": "evidence.grievance.private_letters.open.title",
+      "text_key": "evidence.grievance.private_letters.open.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        }
+      }
+    },
+    "grievance.private_letters.settled": {
+      "match": {
+        "observation_type": "grievance",
+        "topic": "private_letters",
+        "state": "settled"
+      },
+      "title_key": "evidence.grievance.private_letters.settled.title",
+      "text_key": "evidence.grievance.private_letters.settled.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        }
+      }
+    },
+    "grievance.dismissal.open": {
+      "match": {
+        "observation_type": "grievance",
+        "topic": "dismissal",
+        "state": "open"
+      },
+      "title_key": "evidence.grievance.dismissal.open.title",
+      "text_key": "evidence.grievance.dismissal.open.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        }
+      }
+    },
+    "grievance.dismissal.settled": {
+      "match": {
+        "observation_type": "grievance",
+        "topic": "dismissal",
+        "state": "settled"
+      },
+      "title_key": "evidence.grievance.dismissal.settled.title",
+      "text_key": "evidence.grievance.dismissal.settled.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        }
+      }
+    },
+    "room_request": {
+      "match": {
+        "observation_type": "room_request"
+      },
+      "title_key": "evidence.room_request.title",
+      "text_key": "evidence.room_request.body",
+      "parameters": {
+        "person": {
+          "field": "person",
+          "format": "person"
+        }
+      }
+    }
+  }
+}

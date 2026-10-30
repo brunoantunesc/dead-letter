@@ -1,0 +1,196 @@
+key,pt_BR,en
+evidence.sighting.0.title,O telefonema,The telephone call
+evidence.sighting.0.body,"Amadeu, o porteiro: “Por volta de {time}, {person} parou na recepção para usar o telefone; ao desligar, seguiu pela passagem do salão. Depois voltei ao balcão.”","Amadeu, the porter: “At about {time}, {person} stopped at reception to use the telephone, then headed towards the lounge. Then I returned to the desk.”"
+evidence.sighting.1.title,A saída do salão,Leaving the lounge
+evidence.sighting.1.body,"Amadeu, o porteiro: “Por volta de {time}, {person} saiu pela porta do salão e perguntou a que horas começaria a atividade da noite. Depois voltei ao balcão.”","Amadeu, the porter: “At about {time}, {person} came through the lounge door and asked when the evening activity would begin. Then I returned to the desk.”"
+evidence.sighting.2.title,A bandeja,The tray
+evidence.sighting.2.body,"Amadeu, o porteiro: “Por volta de {time}, {person} cruzou a recepção levando uma bandeja vazia em direção à cozinha. Depois voltei ao balcão.”","Amadeu, the porter: “At about {time}, {person} crossed reception carrying an empty tray towards the kitchen. Then I returned to the desk.”"
+evidence.sighting.3.title,A procura pelas chaves,The missing keys
+evidence.sighting.3.body,"Amadeu, o porteiro: “Por volta de {time}, {person} procurou um molho de chaves perto da entrada do salão e depois saiu do campo de visão. Depois voltei ao balcão.”","Amadeu, the porter: “At about {time}, {person} looked for a set of keys near the lounge entrance, then moved out of sight. Then I returned to the desk.”"
+evidence.contact.title,Vestígios na camisa,Traces on the shirt
+evidence.contact.body,Na mão e no punho da camisa de Vicente foram recolhidos pequenos fragmentos de {fabric} e {thread}. Parecem ter vindo de uma peça de roupa; não há etiqueta ou identificação.,Small fragments of {fabric} and {thread} were recovered from Vicente’s hand and shirt cuff. They appear to come from a garment; there is no label or identification.
+evidence.wardrobe.row,{person} — casaco de {fabric}; manga reparada com {thread}.,{person} — coat: {fabric}; sleeve repaired with {thread}.
+evidence.wardrobe.title,Fichas das peças devolvidas,Returned garment records
+evidence.wardrobe.body,"Peças devolvidas pela lavanderia antes do jantar:
+
+{entries}","Garments returned by the laundry before dinner:
+
+{entries}"
+evidence.activities.row,{person} · {place} · {start}–{end} · {status}.,{person} · {place} · {start}–{end} · {status}.
+evidence.activity_register.title,Livro de atividades da noite,Evening activity register
+evidence.activity_register.body,"Registro da noite. As participações confirmadas foram acompanhadas durante todo o intervalo; uma reserva sem assinatura não comprova comparecimento.
+
+{entries}","Evening register. Confirmed participants were observed throughout the interval; an unsigned reservation does not establish attendance.
+
+{entries}"
+evidence.examination.title,Laudo preliminar,Preliminary examination
+evidence.examination.body,"{injury}
+
+Horário estimado da morte: entre {start} e {end}. O intervalo é aproximado.","{injury}
+
+Estimated time of death: between {start} and {end}. This is an approximate interval."
+evidence.object.knife.title,Faca na bancada,Knife on the counter
+evidence.object.knife.body,Uma faca de lâmina estreita. Há sangue seco junto ao cabo e manchas na lâmina. O objeto não traz identificação de proprietário.,A narrow-bladed knife. There is dried blood near the handle and staining on the blade. There is no owner’s identification.
+evidence.object.rope.title,Corda enrolada,Coiled rope
+evidence.object.rope.body,"Uma corda de trama grossa, com marcas de tensão e fibras soltas. Um trecho está mais comprimido que o restante.",A thick braided rope with tension marks and loose fibres. One section is more compressed than the rest.
+evidence.object.pistol.title,Pistola no estojo,Pistol in its case
+evidence.object.pistol.body,Uma pistola no estojo. Há cheiro de pólvora e resíduos escuros perto do mecanismo. O estojo tem marcas de uso.,A pistol in its case. There is a smell of gunpowder and dark residue near the mechanism. The case shows signs of use.
+evidence.object.bat.title,Bastão de madeira,Wooden bat
+evidence.object.bat.body,"Um bastão de madeira pesada. Apresenta amassados, manchas escuras e desgaste concentrado em uma das extremidades.","A heavy wooden bat. It has dents, dark stains and wear concentrated at one end."
+evidence.object.poison_vial.title,Frasco no armário,Vial in the cabinet
+evidence.object.poison_vial.body,Um pequeno frasco. Há resíduo junto à tampa e um odor químico forte. O rótulo está gasto e não permite ler a composição.,A small vial. There is residue around the cap and a strong chemical smell. The label is too worn to identify the contents.
+evidence.incident.cut.title,Ocorrência do turno da manhã,Morning shift incident
+evidence.incident.cut.body,"Registro de serviço · {time}
+
+Durante o preparo da refeição, {person} sofreu um corte com a faca da bancada. Houve sangramento e atendimento no posto do hotel.","Service record · {time}
+
+While preparing a meal, {person} was cut by the counter knife. There was bleeding and treatment at the hotel’s first-aid station."
+evidence.incident.lifting.title,Ocorrência do turno da manhã,Morning shift incident
+evidence.incident.lifting.body,"Registro de serviço · {time}
+
+{person} usou a corda do depósito para suspender uma peça de manutenção. A carga escorregou e deixou marcas de compressão na trama.","Service record · {time}
+
+{person} used the storage rope to lift a maintenance part. The load slipped, leaving compression marks on the braid."
+evidence.incident.inspection.title,Ocorrência do turno da manhã,Morning shift incident
+evidence.incident.inspection.body,"Registro de serviço · {time}
+
+Durante uma inspeção acompanhada por {person}, houve um disparo acidental da pistola guardada no estojo. A ocorrência foi registrada antes da abertura do jardim.","Service record · {time}
+
+During an inspection attended by {person}, the cased pistol discharged accidentally. The incident was recorded before the garden opened."
+evidence.incident.sports.title,Ocorrência do turno da manhã,Morning shift incident
+evidence.incident.sports.body,"Registro de serviço · {time}
+
+{person} registrou a retirada de um bastão do material esportivo após uso intenso. A ficha menciona amassados e manchas antigas na madeira.","Service record · {time}
+
+{person} recorded the removal of a heavily used bat from the sports equipment. The form mentions dents and old stains on the wood."
+evidence.incident.cleaning.title,Ocorrência do turno da manhã,Morning shift incident
+evidence.incident.cleaning.body,"Registro de serviço · {time}
+
+{person} usou um frasco de produto concentrado na limpeza das instalações. O formulário menciona respingos na tampa e odor persistente.","Service record · {time}
+
+{person} used a vial of concentrated product to clean the facilities. The form mentions splashes on the cap and a lingering odour."
+evidence.grievance.withheld_payment.open.title,Acerto de contas,Account settlement
+evidence.grievance.withheld_payment.open.body,Um acerto de contas entre Vicente e {person} registra um pagamento retido. O pedido de liberação foi negado por Vicente; a cobrança continua sem quitação.,An account settlement between Vicente and {person} records a withheld payment. Vicente denied its release; the claim remains unpaid.
+evidence.grievance.withheld_payment.settled.title,Acerto de contas,Account settlement
+evidence.grievance.withheld_payment.settled.body,"Um acerto de contas entre Vicente e {person} registra um pagamento retido. Um recibo posterior, assinado por ambos, comprova o pagamento integral.","An account settlement between Vicente and {person} records a withheld payment. A later receipt, signed by both, confirms full payment."
+evidence.grievance.private_letters.open.title,Bilhete guardado,A kept letter
+evidence.grievance.private_letters.open.body,"Um bilhete de {person} a Vicente menciona promessas íntimas e cartas escondidas. Na resposta, Vicente confirma que os encontros com outra pessoa continuariam. O bilhete foi rasgado ao meio.","A note from {person} to Vicente mentions intimate promises and hidden letters. In his reply, Vicente confirms that his meetings with someone else would continue. The note was torn in half."
+evidence.grievance.private_letters.settled.title,Bilhete guardado,A kept letter
+evidence.grievance.private_letters.settled.body,Um bilhete de {person} a Vicente menciona promessas íntimas e cartas escondidas. Uma resposta anexada esclarece a origem antiga das cartas. Há um pedido de desculpas pelo mal-entendido.,A note from {person} to Vicente mentions intimate promises and hidden letters. An attached reply explains that the letters were old. There is an apology for the misunderstanding.
+evidence.grievance.dismissal.open.title,Pedido de retratação,Request for a retraction
+evidence.grievance.dismissal.open.body,Um requerimento de {person} responsabiliza Vicente por uma acusação que causou seu afastamento. Vicente manteve a acusação e recusou assinar a retratação solicitada.,A request from {person} holds Vicente responsible for an accusation that led to suspension. Vicente maintained the accusation and refused to sign the requested retraction.
+evidence.grievance.dismissal.settled.title,Pedido de retratação,Request for a retraction
+evidence.grievance.dismissal.settled.body,Um requerimento de {person} responsabiliza Vicente por uma acusação que causou seu afastamento. O requerimento traz uma retratação assinada por Vicente e a confirmação de reintegração.,A request from {person} holds Vicente responsible for an accusation that led to suspension. The request includes Vicente’s signed retraction and confirmation of reinstatement.
+evidence.room_request.title,Pedido de mudança de quarto,Room change request
+evidence.room_request.body,{person} solicitou mudança de quarto por barulho no encanamento.,{person} requested a room change because of noisy plumbing.
+term.money,Interesse financeiro,Financial interest
+term.jealousy,Ciúme,Jealousy
+term.revenge,Vingança,Revenge
+term.stabbing,Esfaqueamento,Stabbing
+term.strangulation,Estrangulamento,Strangulation
+term.gunshot,Disparo de arma de fogo,Gunshot
+term.blunt_force,Trauma por objeto contundente,Blunt-force trauma
+term.poisoning,Envenenamento,Poisoning
+term.culprit,Autoria,Identity
+term.motive,Motivação,Motive
+term.method,Método,Method
+term.object,OBJETO,OBJECT
+term.trace,VESTÍGIO,TRACE
+term.document,DOCUMENTO,DOCUMENT
+term.testimony,DEPOIMENTO,TESTIMONY
+term.navy_wool,lã azul-marinho,navy wool
+term.charcoal_wool,lã cinza-escura,charcoal wool
+term.copper,linha cor de cobre,copper-coloured thread
+term.gray,linha cinza,grey thread
+term.attended,presença registrada,attendance confirmed
+term.reserved,reserva; comparecimento sem assinatura,reserved; attendance unsigned
+term.narrow_cut,"Há uma lesão estreita e profunda no tronco, de bordas regulares. Não foram encontrados fragmentos metálicos no trajeto.","There is a narrow, deep wound in the torso with regular edges. No metal fragments were found along its path."
+term.neck_band,"Um sulco contínuo atravessa o pescoço. A pele conserva pequenas impressões repetidas, semelhantes a uma trama. Não há perfuração.",A continuous groove crosses the neck. The skin retains small repeated impressions resembling a braid. There is no puncture wound.
+term.round_perforation,Uma perfuração arredondada apresenta escurecimento nas bordas. Foi retirado um pequeno fragmento metálico do trajeto interno.,A rounded puncture has darkened edges. A small metal fragment was recovered from the internal wound path.
+term.broad_impact,A parte posterior do crânio apresenta uma fratura sob uma área larga de contusão. Não há corte limpo nem perfuração estreita.,The back of the skull is fractured beneath a broad area of bruising. There is no clean cut or narrow puncture.
+term.internal_reaction,Não há ferida externa que explique a morte. O exame registra uma reação interna aguda e resíduos de odor químico na boca e no copo usado por Vicente.,There is no external wound explaining the death. The examination records an acute internal reaction and chemical-smelling residue in Vicente’s mouth and drinking glass.
+location.lobby,Recepção,Reception
+location.salon,Salão,Lounge
+location.kitchen,Cozinha,Kitchen
+location.restaurant,Restaurante,Restaurant
+location.laundry,Lavanderia,Laundry
+location.storage,Depósito,Storage
+location.garden,Jardim,Garden
+location.archive,Arquivo,Archive
+role.manager,gerente,manager
+role.guest,hóspede,guest
+role.cook,cozinheiro,cook
+role.administrator,administrador,administrator
+role.porter,porteiro,porter
+role.examiner,perito,examiner
+person.examiner,Responsável pelo exame,Examiner
+ui.window_title,Dead Letter · Caso curto,Dead Letter · Short case
+ui.subtitle,MESA DE INVESTIGAÇÃO   /   CASO CURTO,INVESTIGATION DESK   /   SHORT CASE
+ui.seed,Seed,Seed
+ui.case_number,Número do caso,Case number
+ui.open_seed,Abrir seed,Open seed
+ui.new_case,Outro caso,New case
+ui.locations,01  /  LOCAIS,01  /  LOCATIONS
+ui.choose_location,Escolha um local,Choose a location
+ui.examine,02  /  EXAME,02  /  EXAMINATION
+ui.what_happened,O que aconteceu aqui?,What happened here?
+ui.notes,SUAS ANOTAÇÕES,YOUR NOTES
+ui.notes_placeholder,"Registre hipóteses, dúvidas e relações. Este espaço é seu.","Record hypotheses, questions and connections. This space is yours."
+ui.report,03  /  RELATÓRIO FINAL,03  /  FINAL REPORT
+ui.build_accusation,Construa sua acusação,Build your accusation
+ui.report_help,Escolha sua explicação e apresente as provas.,Choose your explanation and submit evidence.
+ui.accused,Pessoa acusada,Accused person
+ui.motive,Motivação alegada,Alleged motive
+ui.method,Método do crime,Method of murder
+ui.discoveries,DESCOBERTAS A APRESENTAR,EVIDENCE TO SUBMIT
+ui.debug,Diagnóstico após o veredito,Diagnostics after the verdict
+ui.debug_tooltip,Revela a solução e os cálculos somente depois de encerrar o caso.,Reveals the solution and calculations only after closing the case.
+ui.submit,Encerrar e apresentar acusação,Close case and submit accusation
+ui.final_warning,A submissão encerra este caso. Você pode apresentar provas insuficientes.,Submission closes this case. Your evidence may be insufficient.
+ui.choose,Escolher…,Choose…
+ui.inspect_help,Examine itens para registrar suas descobertas.,Examine items to record your discoveries.
+ui.closed_location,{name} · fechado,{name} · closed
+ui.items,Itens do local,Items at this location
+ui.intro_title,A morte de Vicente,The death of Vicente
+ui.intro,"Um assassinato no hotel. Quatro pessoas, relatos e objetos que podem admitir interpretações diferentes.
+
+Escolha um local e examine cada item por conta própria. Suas descobertas serão registradas no relatório, mas cabe a você decidir o que apresentar como prova.
+
+Você pode encerrar a investigação quando quiser. Não é necessário examinar tudo.","A murder at the hotel. Four people, accounts and objects that may admit different interpretations.
+
+Choose a location and examine individual items. Your discoveries will be recorded, but you decide which ones to submit as evidence.
+
+You may close the investigation whenever you choose. You do not need to examine everything."
+ui.include_proof,Incluir no relatório final,Include in the final report
+ui.verdict,Veredito,Verdict
+ui.invalid_seed,Digite um número inteiro para abrir um caso.,Enter a whole number to open a case.
+ui.generation_failed,Não foi possível gerar este caso. Tente outra seed.,This case could not be generated. Try another seed.
+ui.case_opened,Caso {seed} aberto. Escolha um local para começar. Anotações e descobertas ficam apenas nesta sessão.,Case {seed} opened. Choose a location to begin. Notes and discoveries are kept only for this session.
+ui.discovered,"Descoberta registrada. Se desejar, marque-a no relatório para apresentá-la como prova.",Discovery recorded. Select it in the report if you wish to submit it as evidence.
+ui.incomplete_report,"Escolha a pessoa acusada, a motivação e o método antes de apresentar o relatório.","Choose the accused person, motive and method before submitting your report."
+ui.finished,"Investigação encerrada. Use Outro caso para investigar novamente, ou Abrir seed para repetir o mesmo caso.","Investigation closed. Use New case to start again, or Open seed to repeat this case."
+verdict.solved_title,CASO SUSTENTADO,CASE SUBSTANTIATED
+verdict.wrong_culprit_title,ACUSAÇÃO INCORRETA,WRONG ACCUSATION
+verdict.insufficient_case_title,CASO INSUFICIENTE,INSUFFICIENT CASE
+verdict.solved_body,A acusação identifica o culpado e reúne sustentação suficiente para a explicação apresentada.,The accusation identifies the culprit and sufficiently supports the explanation submitted.
+verdict.wrong_culprit_body,A pessoa acusada não cometeu o assassinato.,The accused person did not commit the murder.
+verdict.insufficient_case_body,"Você identificou o culpado, mas a explicação ou as provas apresentadas não sustentam a condenação.","You identified the culprit, but your explanation or evidence does not support a conviction."
+verdict.debug,"DIAGNÓSTICO DE DESENVOLVIMENTO
+
+Verdade do caso: {person} · {motive} · {method}.
+
+Força das provas apresentadas:
+Autoria: {identity_score} · Motivação: {motive_score} · Método: {method_score}
+Total: {total}","DEVELOPMENT DIAGNOSTICS
+
+Case truth: {person} · {motive} · {method}.
+
+Strength of submitted evidence:
+Identity: {identity_score} · Motive: {motive_score} · Method: {method_score}
+Total: {total}"
+verdict.incorrect,• Informação incorreta: {claim},• Incorrect information: {claim}
+verdict.insufficient,• Sustentação insuficiente: {claim},• Insufficient support: {claim}
+verdict.total,total,total
+cli.open,aberto,open
+cli.closed,fechado,closed
+cli.help,"Use --inspect=id,id para examinar; --culprit=person_0 --motive=money --method=stabbing --evidence=id,id para apresentar provas. --debug revela a solução somente após o veredito.","Use --inspect=id,id to examine; --culprit=person_0 --motive=money --method=stabbing --evidence=id,id to submit evidence. --debug reveals the solution only after the verdict."

@@ -1,0 +1,1874 @@
+{
+	"attempt": 0,
+	"characters": {
+		"examiner": {
+			"accusable": false,
+			"known_events": [
+				"examination"
+			],
+			"name": "Responsável pelo exame",
+			"role": "perito"
+		},
+		"person_0": {
+			"accusable": true,
+			"known_events": [
+				"sighting_0",
+				"attendance_0",
+				"conflict_0",
+				"conflict_0_status",
+				"secondary_0",
+				"secondary_0_status",
+				"wardrobe",
+				"use_1",
+				"use_3"
+			],
+			"name": "Ana",
+			"role": "gerente"
+		},
+		"person_1": {
+			"accusable": true,
+			"known_events": [
+				"sighting_1",
+				"attendance_1",
+				"conflict_1",
+				"conflict_1_status",
+				"secondary_1",
+				"secondary_1_status",
+				"wardrobe"
+			],
+			"name": "Bruno",
+			"role": "hóspede"
+		},
+		"person_2": {
+			"accusable": true,
+			"known_events": [
+				"sighting_2",
+				"attendance_2",
+				"conflict_2",
+				"conflict_2_status",
+				"secondary_2",
+				"secondary_2_status",
+				"wardrobe",
+				"use_2"
+			],
+			"name": "Carlos",
+			"role": "cozinheiro"
+		},
+		"person_3": {
+			"accusable": true,
+			"known_events": [
+				"sighting_3",
+				"booking_3",
+				"conflict_3",
+				"conflict_3_status",
+				"secondary_3",
+				"secondary_3_status",
+				"wardrobe",
+				"murder",
+				"use_0"
+			],
+			"name": "Diana",
+			"role": "hóspede"
+		},
+		"porter": {
+			"accusable": false,
+			"known_events": [
+				"sighting_0",
+				"sighting_1",
+				"sighting_2",
+				"sighting_3"
+			],
+			"name": "Amadeu",
+			"role": "porteiro"
+		},
+		"victim": {
+			"accusable": false,
+			"known_events": [
+				"conflict_0",
+				"conflict_0_status",
+				"secondary_0",
+				"secondary_0_status",
+				"conflict_1",
+				"conflict_1_status",
+				"secondary_1",
+				"secondary_1_status",
+				"conflict_2",
+				"conflict_2_status",
+				"secondary_2",
+				"secondary_2_status",
+				"conflict_3",
+				"conflict_3_status",
+				"secondary_3",
+				"secondary_3_status",
+				"murder"
+			],
+			"name": "Vicente",
+			"role": "administrador"
+		}
+	},
+	"content_version": "hotel_competing_leads_2",
+	"entry_location": "lobby",
+	"events": {
+		"attendance_0": {
+			"actors": [
+				"person_0"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_0"
+			},
+			"end": 1220,
+			"id": "attendance_0",
+			"kind": "attendance",
+			"location": "restaurant",
+			"observations": {
+				"alibi_0": {
+					"end": 1220,
+					"observation_type": "attendance",
+					"person": "person_0",
+					"place": "Restaurante",
+					"start": 1195,
+					"status": "attended"
+				}
+			},
+			"start": 1195
+		},
+		"attendance_1": {
+			"actors": [
+				"person_1"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_1"
+			},
+			"end": 1220,
+			"id": "attendance_1",
+			"kind": "attendance",
+			"location": "kitchen",
+			"observations": {
+				"alibi_1": {
+					"end": 1220,
+					"observation_type": "attendance",
+					"person": "person_1",
+					"place": "Cozinha",
+					"start": 1195,
+					"status": "attended"
+				}
+			},
+			"start": 1195
+		},
+		"attendance_2": {
+			"actors": [
+				"person_2"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_2"
+			},
+			"end": 1220,
+			"id": "attendance_2",
+			"kind": "attendance",
+			"location": "garden",
+			"observations": {
+				"alibi_2": {
+					"end": 1220,
+					"observation_type": "attendance",
+					"person": "person_2",
+					"place": "Jardim",
+					"start": 1195,
+					"status": "attended"
+				}
+			},
+			"start": 1195
+		},
+		"booking_3": {
+			"actors": [
+				"person_3"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_3"
+			},
+			"end": 816,
+			"id": "booking_3",
+			"kind": "booking",
+			"location": "lobby",
+			"observations": {
+				"alibi_3": {
+					"end": 1220,
+					"observation_type": "attendance",
+					"person": "person_3",
+					"place": "Restaurante",
+					"start": 1195,
+					"status": "reserved"
+				}
+			},
+			"start": 815
+		},
+		"conflict_0": {
+			"actors": [
+				"person_0",
+				"victim"
+			],
+			"causes": [],
+			"effects": {
+				"motive": "revenge",
+				"open": true,
+				"reference": "H-031",
+				"subject": "person_0",
+				"victim": "victim"
+			},
+			"end": 605,
+			"id": "conflict_0",
+			"kind": "conflict",
+			"location": "lobby",
+			"observations": {
+				"conflict_0_note": {
+					"observation_type": "conflict",
+					"person": "person_0",
+					"reference": "H-031",
+					"topic": "dismissal"
+				}
+			},
+			"start": 600
+		},
+		"conflict_0_status": {
+			"actors": [
+				"person_0",
+				"victim"
+			],
+			"causes": [
+				"conflict_0"
+			],
+			"effects": {
+				"motive": "revenge",
+				"open": true,
+				"reference": "H-031",
+				"subject": "person_0"
+			},
+			"end": 608,
+			"id": "conflict_0_status",
+			"kind": "decision",
+			"location": "lobby",
+			"observations": {
+				"conflict_0_followup": {
+					"observation_type": "followup",
+					"person": "person_0",
+					"reference": "H-031",
+					"state": "open",
+					"topic": "dismissal"
+				}
+			},
+			"start": 607
+		},
+		"conflict_1": {
+			"actors": [
+				"person_1",
+				"victim"
+			],
+			"causes": [],
+			"effects": {
+				"motive": "money",
+				"open": false,
+				"reference": "H-048",
+				"subject": "person_1",
+				"victim": "victim"
+			},
+			"end": 620,
+			"id": "conflict_1",
+			"kind": "conflict",
+			"location": "lobby",
+			"observations": {
+				"conflict_1_note": {
+					"observation_type": "conflict",
+					"person": "person_1",
+					"reference": "H-048",
+					"topic": "withheld_payment"
+				}
+			},
+			"start": 615
+		},
+		"conflict_1_status": {
+			"actors": [
+				"person_1",
+				"victim"
+			],
+			"causes": [
+				"conflict_1"
+			],
+			"effects": {
+				"motive": "money",
+				"open": false,
+				"reference": "H-048",
+				"subject": "person_1"
+			},
+			"end": 623,
+			"id": "conflict_1_status",
+			"kind": "settlement",
+			"location": "lobby",
+			"observations": {
+				"conflict_1_followup": {
+					"observation_type": "followup",
+					"person": "person_1",
+					"reference": "H-048",
+					"state": "settled",
+					"topic": "withheld_payment"
+				}
+			},
+			"start": 622
+		},
+		"conflict_2": {
+			"actors": [
+				"person_2",
+				"victim"
+			],
+			"causes": [],
+			"effects": {
+				"motive": "revenge",
+				"open": false,
+				"reference": "H-065",
+				"subject": "person_2",
+				"victim": "victim"
+			},
+			"end": 635,
+			"id": "conflict_2",
+			"kind": "conflict",
+			"location": "lobby",
+			"observations": {
+				"conflict_2_note": {
+					"observation_type": "conflict",
+					"person": "person_2",
+					"reference": "H-065",
+					"topic": "dismissal"
+				}
+			},
+			"start": 630
+		},
+		"conflict_2_status": {
+			"actors": [
+				"person_2",
+				"victim"
+			],
+			"causes": [
+				"conflict_2"
+			],
+			"effects": {
+				"motive": "revenge",
+				"open": false,
+				"reference": "H-065",
+				"subject": "person_2"
+			},
+			"end": 638,
+			"id": "conflict_2_status",
+			"kind": "settlement",
+			"location": "lobby",
+			"observations": {
+				"conflict_2_followup": {
+					"observation_type": "followup",
+					"person": "person_2",
+					"reference": "H-065",
+					"state": "settled",
+					"topic": "dismissal"
+				}
+			},
+			"start": 637
+		},
+		"conflict_3": {
+			"actors": [
+				"person_3",
+				"victim"
+			],
+			"causes": [],
+			"effects": {
+				"motive": "revenge",
+				"open": true,
+				"reference": "H-082",
+				"subject": "person_3",
+				"victim": "victim"
+			},
+			"end": 650,
+			"id": "conflict_3",
+			"kind": "conflict",
+			"location": "lobby",
+			"observations": {
+				"conflict_3_note": {
+					"observation_type": "conflict",
+					"person": "person_3",
+					"reference": "H-082",
+					"topic": "dismissal"
+				}
+			},
+			"start": 645
+		},
+		"conflict_3_status": {
+			"actors": [
+				"person_3",
+				"victim"
+			],
+			"causes": [
+				"conflict_3"
+			],
+			"effects": {
+				"motive": "revenge",
+				"open": true,
+				"reference": "H-082",
+				"subject": "person_3"
+			},
+			"end": 653,
+			"id": "conflict_3_status",
+			"kind": "decision",
+			"location": "lobby",
+			"observations": {
+				"conflict_3_followup": {
+					"observation_type": "followup",
+					"person": "person_3",
+					"reference": "H-082",
+					"state": "open",
+					"topic": "dismissal"
+				}
+			},
+			"start": 652
+		},
+		"examination": {
+			"actors": [
+				"examiner"
+			],
+			"causes": [
+				"murder"
+			],
+			"effects": {
+				"pattern": "broad_impact",
+				"window_end": 1210,
+				"window_start": 1195
+			},
+			"end": 1245,
+			"id": "examination",
+			"kind": "examination",
+			"location": "salon",
+			"observations": {
+				"body": {
+					"observation_type": "injury",
+					"pattern": "broad_impact"
+				},
+				"death_window": {
+					"end": 1210,
+					"observation_type": "death_window",
+					"place": "Salão",
+					"start": 1195
+				},
+				"medical_record": {
+					"observation_type": "injury",
+					"pattern": "broad_impact"
+				}
+			},
+			"start": 1230
+		},
+		"murder": {
+			"actors": [
+				"person_3",
+				"victim"
+			],
+			"causes": [
+				"conflict_3"
+			],
+			"effects": {
+				"contact": "sleeve_gripped",
+				"culprit": "person_3",
+				"fabric": "charcoal_wool",
+				"method": "blunt_force",
+				"thread": "gray",
+				"victim": "victim",
+				"weapon": "bat"
+			},
+			"end": 1205,
+			"id": "murder",
+			"kind": "murder",
+			"location": "salon",
+			"observations": {
+				"fiber": {
+					"fabric": "charcoal_wool",
+					"observation_type": "fiber"
+				},
+				"seam": {
+					"observation_type": "seam",
+					"thread": "gray"
+				}
+			},
+			"start": 1200
+		},
+		"secondary_0": {
+			"actors": [
+				"person_0",
+				"victim"
+			],
+			"causes": [],
+			"effects": {
+				"motive": "jealousy",
+				"open": true,
+				"reference": "H-099",
+				"subject": "person_0",
+				"victim": "victim"
+			},
+			"end": 685,
+			"id": "secondary_0",
+			"kind": "conflict",
+			"location": "lobby",
+			"observations": {
+				"secondary_0_note": {
+					"observation_type": "conflict",
+					"person": "person_0",
+					"reference": "H-099",
+					"topic": "private_letters"
+				}
+			},
+			"start": 680
+		},
+		"secondary_0_status": {
+			"actors": [
+				"person_0",
+				"victim"
+			],
+			"causes": [
+				"secondary_0"
+			],
+			"effects": {
+				"motive": "jealousy",
+				"open": true,
+				"reference": "H-099",
+				"subject": "person_0"
+			},
+			"end": 688,
+			"id": "secondary_0_status",
+			"kind": "decision",
+			"location": "lobby",
+			"observations": {
+				"secondary_0_followup": {
+					"observation_type": "followup",
+					"person": "person_0",
+					"reference": "H-099",
+					"state": "open",
+					"topic": "private_letters"
+				}
+			},
+			"start": 687
+		},
+		"secondary_1": {
+			"actors": [
+				"person_1",
+				"victim"
+			],
+			"causes": [],
+			"effects": {
+				"motive": "jealousy",
+				"open": true,
+				"reference": "H-116",
+				"subject": "person_1",
+				"victim": "victim"
+			},
+			"end": 700,
+			"id": "secondary_1",
+			"kind": "conflict",
+			"location": "lobby",
+			"observations": {
+				"secondary_1_note": {
+					"observation_type": "conflict",
+					"person": "person_1",
+					"reference": "H-116",
+					"topic": "private_letters"
+				}
+			},
+			"start": 695
+		},
+		"secondary_1_status": {
+			"actors": [
+				"person_1",
+				"victim"
+			],
+			"causes": [
+				"secondary_1"
+			],
+			"effects": {
+				"motive": "jealousy",
+				"open": true,
+				"reference": "H-116",
+				"subject": "person_1"
+			},
+			"end": 703,
+			"id": "secondary_1_status",
+			"kind": "decision",
+			"location": "lobby",
+			"observations": {
+				"secondary_1_followup": {
+					"observation_type": "followup",
+					"person": "person_1",
+					"reference": "H-116",
+					"state": "open",
+					"topic": "private_letters"
+				}
+			},
+			"start": 702
+		},
+		"secondary_2": {
+			"actors": [
+				"person_2",
+				"victim"
+			],
+			"causes": [],
+			"effects": {
+				"motive": "jealousy",
+				"open": false,
+				"reference": "H-133",
+				"subject": "person_2",
+				"victim": "victim"
+			},
+			"end": 715,
+			"id": "secondary_2",
+			"kind": "conflict",
+			"location": "lobby",
+			"observations": {
+				"secondary_2_note": {
+					"observation_type": "conflict",
+					"person": "person_2",
+					"reference": "H-133",
+					"topic": "private_letters"
+				}
+			},
+			"start": 710
+		},
+		"secondary_2_status": {
+			"actors": [
+				"person_2",
+				"victim"
+			],
+			"causes": [
+				"secondary_2"
+			],
+			"effects": {
+				"motive": "jealousy",
+				"open": false,
+				"reference": "H-133",
+				"subject": "person_2"
+			},
+			"end": 718,
+			"id": "secondary_2_status",
+			"kind": "settlement",
+			"location": "lobby",
+			"observations": {
+				"secondary_2_followup": {
+					"observation_type": "followup",
+					"person": "person_2",
+					"reference": "H-133",
+					"state": "settled",
+					"topic": "private_letters"
+				}
+			},
+			"start": 717
+		},
+		"secondary_3": {
+			"actors": [
+				"person_3",
+				"victim"
+			],
+			"causes": [],
+			"effects": {
+				"motive": "money",
+				"open": false,
+				"reference": "H-150",
+				"subject": "person_3",
+				"victim": "victim"
+			},
+			"end": 730,
+			"id": "secondary_3",
+			"kind": "conflict",
+			"location": "lobby",
+			"observations": {
+				"secondary_3_note": {
+					"observation_type": "conflict",
+					"person": "person_3",
+					"reference": "H-150",
+					"topic": "withheld_payment"
+				}
+			},
+			"start": 725
+		},
+		"secondary_3_status": {
+			"actors": [
+				"person_3",
+				"victim"
+			],
+			"causes": [
+				"secondary_3"
+			],
+			"effects": {
+				"motive": "money",
+				"open": false,
+				"reference": "H-150",
+				"subject": "person_3"
+			},
+			"end": 733,
+			"id": "secondary_3_status",
+			"kind": "settlement",
+			"location": "lobby",
+			"observations": {
+				"secondary_3_followup": {
+					"observation_type": "followup",
+					"person": "person_3",
+					"reference": "H-150",
+					"state": "settled",
+					"topic": "withheld_payment"
+				}
+			},
+			"start": 732
+		},
+		"sighting_0": {
+			"actors": [
+				"person_0",
+				"porter"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_0"
+			},
+			"end": 1186,
+			"id": "sighting_0",
+			"kind": "passing",
+			"location": "lobby",
+			"observations": {
+				"sighting_0": {
+					"observation_type": "sighting",
+					"person": "person_0",
+					"place": "passagem para o salão",
+					"time": 1185
+				}
+			},
+			"start": 1185
+		},
+		"sighting_1": {
+			"actors": [
+				"person_1",
+				"porter"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_1"
+			},
+			"end": 1181,
+			"id": "sighting_1",
+			"kind": "passing",
+			"location": "lobby",
+			"observations": {
+				"sighting_1": {
+					"observation_type": "sighting",
+					"person": "person_1",
+					"place": "passagem para o salão",
+					"time": 1180
+				}
+			},
+			"start": 1180
+		},
+		"sighting_2": {
+			"actors": [
+				"person_2",
+				"porter"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_2"
+			},
+			"end": 1176,
+			"id": "sighting_2",
+			"kind": "passing",
+			"location": "lobby",
+			"observations": {
+				"sighting_2": {
+					"observation_type": "sighting",
+					"person": "person_2",
+					"place": "passagem para o salão",
+					"time": 1175
+				}
+			},
+			"start": 1175
+		},
+		"sighting_3": {
+			"actors": [
+				"person_3",
+				"porter"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_3"
+			},
+			"end": 1171,
+			"id": "sighting_3",
+			"kind": "passing",
+			"location": "lobby",
+			"observations": {
+				"sighting_3": {
+					"observation_type": "sighting",
+					"person": "person_3",
+					"place": "passagem para o salão",
+					"time": 1170
+				}
+			},
+			"start": 1170
+		},
+		"use_0": {
+			"actors": [
+				"person_3"
+			],
+			"causes": [
+				"murder"
+			],
+			"effects": {
+				"weapon": "bat"
+			},
+			"end": 1216,
+			"id": "use_0",
+			"kind": "discard",
+			"location": "garden",
+			"observations": {
+				"object_0": {
+					"form": "heavy_wood",
+					"observation_type": "object",
+					"weapon": "bat"
+				}
+			},
+			"start": 1215
+		},
+		"use_1": {
+			"actors": [
+				"person_0"
+			],
+			"causes": [],
+			"effects": {
+				"weapon": "poison_vial"
+			},
+			"end": 330,
+			"id": "use_1",
+			"kind": "cleaning",
+			"location": "laundry",
+			"observations": {
+				"incident_1": {
+					"incident": "cleaning",
+					"observation_type": "incident",
+					"person": "person_0",
+					"time": 320,
+					"weapon": "poison_vial"
+				},
+				"object_1": {
+					"form": "chemical_residue",
+					"observation_type": "object",
+					"weapon": "poison_vial"
+				}
+			},
+			"start": 320
+		},
+		"use_2": {
+			"actors": [
+				"person_2"
+			],
+			"causes": [],
+			"effects": {
+				"weapon": "rope"
+			},
+			"end": 350,
+			"id": "use_2",
+			"kind": "lifting",
+			"location": "storage",
+			"observations": {
+				"incident_2": {
+					"incident": "lifting",
+					"observation_type": "incident",
+					"person": "person_2",
+					"time": 340,
+					"weapon": "rope"
+				},
+				"object_2": {
+					"form": "braided_loop",
+					"observation_type": "object",
+					"weapon": "rope"
+				}
+			},
+			"start": 340
+		},
+		"use_3": {
+			"actors": [
+				"person_0"
+			],
+			"causes": [],
+			"effects": {
+				"weapon": "pistol"
+			},
+			"end": 370,
+			"id": "use_3",
+			"kind": "inspection",
+			"location": "garden",
+			"observations": {
+				"incident_3": {
+					"incident": "inspection",
+					"observation_type": "incident",
+					"person": "person_0",
+					"time": 360,
+					"weapon": "pistol"
+				},
+				"object_3": {
+					"form": "small_bore",
+					"observation_type": "object",
+					"weapon": "pistol"
+				}
+			},
+			"start": 360
+		},
+		"wardrobe": {
+			"actors": [
+				"person_0",
+				"person_1",
+				"person_2",
+				"person_3"
+			],
+			"causes": [],
+			"effects": {
+				"entries": [
+					{
+						"fabric": "charcoal_wool",
+						"person": "person_0",
+						"thread": "copper"
+					},
+					{
+						"fabric": "navy_wool",
+						"person": "person_1",
+						"thread": "gray"
+					},
+					{
+						"fabric": "navy_wool",
+						"person": "person_2",
+						"thread": "copper"
+					},
+					{
+						"fabric": "charcoal_wool",
+						"person": "person_3",
+						"thread": "gray"
+					}
+				]
+			},
+			"end": 920,
+			"id": "wardrobe",
+			"kind": "cloakroom_intake",
+			"location": "laundry",
+			"observations": {
+				"wardrobe": {
+					"entries": [
+						{
+							"fabric": "charcoal_wool",
+							"person": "person_0",
+							"thread": "copper"
+						},
+						{
+							"fabric": "navy_wool",
+							"person": "person_1",
+							"thread": "gray"
+						},
+						{
+							"fabric": "navy_wool",
+							"person": "person_2",
+							"thread": "copper"
+						},
+						{
+							"fabric": "charcoal_wool",
+							"person": "person_3",
+							"thread": "gray"
+						}
+					],
+					"observation_type": "wardrobe"
+				},
+				"wardrobe_copy": {
+					"entries": [
+						{
+							"fabric": "charcoal_wool",
+							"person": "person_0",
+							"thread": "copper"
+						},
+						{
+							"fabric": "navy_wool",
+							"person": "person_1",
+							"thread": "gray"
+						},
+						{
+							"fabric": "navy_wool",
+							"person": "person_2",
+							"thread": "copper"
+						},
+						{
+							"fabric": "charcoal_wool",
+							"person": "person_3",
+							"thread": "gray"
+						}
+					],
+					"observation_type": "wardrobe"
+				}
+			},
+			"start": 900
+		}
+	},
+	"evidence": {
+		"alibi_0": {
+			"event_id": "attendance_0",
+			"id": "alibi_0",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"end": 1220,
+				"observation_type": "attendance",
+				"person": "person_0",
+				"place": "Restaurante",
+				"start": 1195,
+				"status": "attended"
+			},
+			"source_character": "",
+			"title": "Livro de serviços · Ana"
+		},
+		"alibi_1": {
+			"event_id": "attendance_1",
+			"id": "alibi_1",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"end": 1220,
+				"observation_type": "attendance",
+				"person": "person_1",
+				"place": "Cozinha",
+				"start": 1195,
+				"status": "attended"
+			},
+			"source_character": "",
+			"title": "Livro de serviços · Bruno"
+		},
+		"alibi_2": {
+			"event_id": "attendance_2",
+			"id": "alibi_2",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"end": 1220,
+				"observation_type": "attendance",
+				"person": "person_2",
+				"place": "Jardim",
+				"start": 1195,
+				"status": "attended"
+			},
+			"source_character": "",
+			"title": "Livro de serviços · Carlos"
+		},
+		"alibi_3": {
+			"event_id": "booking_3",
+			"id": "alibi_3",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"end": 1220,
+				"observation_type": "attendance",
+				"person": "person_3",
+				"place": "Restaurante",
+				"start": 1195,
+				"status": "reserved"
+			},
+			"source_character": "",
+			"title": "Livro de serviços · Diana"
+		},
+		"body": {
+			"event_id": "examination",
+			"id": "body",
+			"kind": "trace",
+			"location": "salon",
+			"properties": {
+				"observation_type": "injury",
+				"pattern": "broad_impact"
+			},
+			"source_character": "examiner",
+			"title": "Exame do corpo"
+		},
+		"conflict_0_followup": {
+			"event_id": "conflict_0_status",
+			"id": "conflict_0_followup",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"observation_type": "followup",
+				"person": "person_0",
+				"reference": "H-031",
+				"state": "open",
+				"topic": "dismissal"
+			},
+			"source_character": "",
+			"title": "Anotação administrativa · H-031"
+		},
+		"conflict_0_note": {
+			"event_id": "conflict_0",
+			"id": "conflict_0_note",
+			"kind": "document",
+			"location": "storage",
+			"properties": {
+				"observation_type": "conflict",
+				"person": "person_0",
+				"reference": "H-031",
+				"topic": "dismissal"
+			},
+			"source_character": "",
+			"title": "Correspondência · H-031"
+		},
+		"conflict_1_followup": {
+			"event_id": "conflict_1_status",
+			"id": "conflict_1_followup",
+			"kind": "document",
+			"location": "laundry",
+			"properties": {
+				"observation_type": "followup",
+				"person": "person_1",
+				"reference": "H-048",
+				"state": "settled",
+				"topic": "withheld_payment"
+			},
+			"source_character": "",
+			"title": "Anotação administrativa · H-048"
+		},
+		"conflict_1_note": {
+			"event_id": "conflict_1",
+			"id": "conflict_1_note",
+			"kind": "document",
+			"location": "restaurant",
+			"properties": {
+				"observation_type": "conflict",
+				"person": "person_1",
+				"reference": "H-048",
+				"topic": "withheld_payment"
+			},
+			"source_character": "",
+			"title": "Correspondência · H-048"
+		},
+		"conflict_2_followup": {
+			"event_id": "conflict_2_status",
+			"id": "conflict_2_followup",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"observation_type": "followup",
+				"person": "person_2",
+				"reference": "H-065",
+				"state": "settled",
+				"topic": "dismissal"
+			},
+			"source_character": "",
+			"title": "Anotação administrativa · H-065"
+		},
+		"conflict_2_note": {
+			"event_id": "conflict_2",
+			"id": "conflict_2_note",
+			"kind": "document",
+			"location": "storage",
+			"properties": {
+				"observation_type": "conflict",
+				"person": "person_2",
+				"reference": "H-065",
+				"topic": "dismissal"
+			},
+			"source_character": "",
+			"title": "Correspondência · H-065"
+		},
+		"conflict_3_followup": {
+			"event_id": "conflict_3_status",
+			"id": "conflict_3_followup",
+			"kind": "document",
+			"location": "laundry",
+			"properties": {
+				"observation_type": "followup",
+				"person": "person_3",
+				"reference": "H-082",
+				"state": "open",
+				"topic": "dismissal"
+			},
+			"source_character": "",
+			"title": "Anotação administrativa · H-082"
+		},
+		"conflict_3_note": {
+			"event_id": "conflict_3",
+			"id": "conflict_3_note",
+			"kind": "document",
+			"location": "restaurant",
+			"properties": {
+				"observation_type": "conflict",
+				"person": "person_3",
+				"reference": "H-082",
+				"topic": "dismissal"
+			},
+			"source_character": "",
+			"title": "Correspondência · H-082"
+		},
+		"death_window": {
+			"event_id": "examination",
+			"id": "death_window",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"end": 1210,
+				"observation_type": "death_window",
+				"place": "Salão",
+				"start": 1195
+			},
+			"source_character": "examiner",
+			"title": "Estimativa do horário"
+		},
+		"fiber": {
+			"event_id": "murder",
+			"id": "fiber",
+			"kind": "trace",
+			"location": "salon",
+			"properties": {
+				"fabric": "charcoal_wool",
+				"observation_type": "fiber"
+			},
+			"source_character": "",
+			"title": "Fibras junto à mão"
+		},
+		"incident_1": {
+			"event_id": "use_1",
+			"id": "incident_1",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"incident": "cleaning",
+				"observation_type": "incident",
+				"person": "person_0",
+				"time": 320,
+				"weapon": "poison_vial"
+			},
+			"source_character": "",
+			"title": "Ocorrência de serviço · 02"
+		},
+		"incident_2": {
+			"event_id": "use_2",
+			"id": "incident_2",
+			"kind": "document",
+			"location": "restaurant",
+			"properties": {
+				"incident": "lifting",
+				"observation_type": "incident",
+				"person": "person_2",
+				"time": 340,
+				"weapon": "rope"
+			},
+			"source_character": "",
+			"title": "Ocorrência de serviço · 03"
+		},
+		"incident_3": {
+			"event_id": "use_3",
+			"id": "incident_3",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"incident": "inspection",
+				"observation_type": "incident",
+				"person": "person_0",
+				"time": 360,
+				"weapon": "pistol"
+			},
+			"source_character": "",
+			"title": "Ocorrência de serviço · 04"
+		},
+		"medical_record": {
+			"event_id": "examination",
+			"id": "medical_record",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"observation_type": "injury",
+				"pattern": "broad_impact"
+			},
+			"source_character": "examiner",
+			"title": "Anotações do exame"
+		},
+		"object_0": {
+			"event_id": "use_0",
+			"id": "object_0",
+			"kind": "object",
+			"location": "garden",
+			"properties": {
+				"form": "heavy_wood",
+				"observation_type": "object",
+				"weapon": "bat"
+			},
+			"source_character": "",
+			"title": "Bastão de madeira"
+		},
+		"object_1": {
+			"event_id": "use_1",
+			"id": "object_1",
+			"kind": "object",
+			"location": "laundry",
+			"properties": {
+				"form": "chemical_residue",
+				"observation_type": "object",
+				"weapon": "poison_vial"
+			},
+			"source_character": "",
+			"title": "Frasco no armário"
+		},
+		"object_2": {
+			"event_id": "use_2",
+			"id": "object_2",
+			"kind": "object",
+			"location": "storage",
+			"properties": {
+				"form": "braided_loop",
+				"observation_type": "object",
+				"weapon": "rope"
+			},
+			"source_character": "",
+			"title": "Corda enrolada"
+		},
+		"object_3": {
+			"event_id": "use_3",
+			"id": "object_3",
+			"kind": "object",
+			"location": "garden",
+			"properties": {
+				"form": "small_bore",
+				"observation_type": "object",
+				"weapon": "pistol"
+			},
+			"source_character": "",
+			"title": "Pistola no estojo"
+		},
+		"seam": {
+			"event_id": "murder",
+			"id": "seam",
+			"kind": "trace",
+			"location": "salon",
+			"properties": {
+				"observation_type": "seam",
+				"thread": "gray"
+			},
+			"source_character": "",
+			"title": "Linha presa no punho"
+		},
+		"secondary_0_followup": {
+			"event_id": "secondary_0_status",
+			"id": "secondary_0_followup",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"observation_type": "followup",
+				"person": "person_0",
+				"reference": "H-099",
+				"state": "open",
+				"topic": "private_letters"
+			},
+			"source_character": "",
+			"title": "Anotação administrativa · H-099"
+		},
+		"secondary_0_note": {
+			"event_id": "secondary_0",
+			"id": "secondary_0_note",
+			"kind": "document",
+			"location": "storage",
+			"properties": {
+				"observation_type": "conflict",
+				"person": "person_0",
+				"reference": "H-099",
+				"topic": "private_letters"
+			},
+			"source_character": "",
+			"title": "Correspondência · H-099"
+		},
+		"secondary_1_followup": {
+			"event_id": "secondary_1_status",
+			"id": "secondary_1_followup",
+			"kind": "document",
+			"location": "laundry",
+			"properties": {
+				"observation_type": "followup",
+				"person": "person_1",
+				"reference": "H-116",
+				"state": "open",
+				"topic": "private_letters"
+			},
+			"source_character": "",
+			"title": "Anotação administrativa · H-116"
+		},
+		"secondary_1_note": {
+			"event_id": "secondary_1",
+			"id": "secondary_1_note",
+			"kind": "document",
+			"location": "restaurant",
+			"properties": {
+				"observation_type": "conflict",
+				"person": "person_1",
+				"reference": "H-116",
+				"topic": "private_letters"
+			},
+			"source_character": "",
+			"title": "Correspondência · H-116"
+		},
+		"secondary_2_followup": {
+			"event_id": "secondary_2_status",
+			"id": "secondary_2_followup",
+			"kind": "document",
+			"location": "lobby",
+			"properties": {
+				"observation_type": "followup",
+				"person": "person_2",
+				"reference": "H-133",
+				"state": "settled",
+				"topic": "private_letters"
+			},
+			"source_character": "",
+			"title": "Anotação administrativa · H-133"
+		},
+		"secondary_2_note": {
+			"event_id": "secondary_2",
+			"id": "secondary_2_note",
+			"kind": "document",
+			"location": "storage",
+			"properties": {
+				"observation_type": "conflict",
+				"person": "person_2",
+				"reference": "H-133",
+				"topic": "private_letters"
+			},
+			"source_character": "",
+			"title": "Correspondência · H-133"
+		},
+		"secondary_3_followup": {
+			"event_id": "secondary_3_status",
+			"id": "secondary_3_followup",
+			"kind": "document",
+			"location": "laundry",
+			"properties": {
+				"observation_type": "followup",
+				"person": "person_3",
+				"reference": "H-150",
+				"state": "settled",
+				"topic": "withheld_payment"
+			},
+			"source_character": "",
+			"title": "Anotação administrativa · H-150"
+		},
+		"secondary_3_note": {
+			"event_id": "secondary_3",
+			"id": "secondary_3_note",
+			"kind": "document",
+			"location": "restaurant",
+			"properties": {
+				"observation_type": "conflict",
+				"person": "person_3",
+				"reference": "H-150",
+				"topic": "withheld_payment"
+			},
+			"source_character": "",
+			"title": "Correspondência · H-150"
+		},
+		"sighting_0": {
+			"event_id": "sighting_0",
+			"id": "sighting_0",
+			"kind": "testimony",
+			"location": "restaurant",
+			"properties": {
+				"observation_type": "sighting",
+				"person": "person_0",
+				"place": "passagem para o salão",
+				"time": 1185
+			},
+			"source_character": "porter",
+			"title": "Conversa com o porteiro · Ana"
+		},
+		"sighting_1": {
+			"event_id": "sighting_1",
+			"id": "sighting_1",
+			"kind": "testimony",
+			"location": "restaurant",
+			"properties": {
+				"observation_type": "sighting",
+				"person": "person_1",
+				"place": "passagem para o salão",
+				"time": 1180
+			},
+			"source_character": "porter",
+			"title": "Conversa com o porteiro · Bruno"
+		},
+		"sighting_2": {
+			"event_id": "sighting_2",
+			"id": "sighting_2",
+			"kind": "testimony",
+			"location": "restaurant",
+			"properties": {
+				"observation_type": "sighting",
+				"person": "person_2",
+				"place": "passagem para o salão",
+				"time": 1175
+			},
+			"source_character": "porter",
+			"title": "Conversa com o porteiro · Carlos"
+		},
+		"sighting_3": {
+			"event_id": "sighting_3",
+			"id": "sighting_3",
+			"kind": "testimony",
+			"location": "restaurant",
+			"properties": {
+				"observation_type": "sighting",
+				"person": "person_3",
+				"place": "passagem para o salão",
+				"time": 1170
+			},
+			"source_character": "porter",
+			"title": "Conversa com o porteiro · Diana"
+		},
+		"wardrobe": {
+			"event_id": "wardrobe",
+			"id": "wardrobe",
+			"kind": "document",
+			"location": "laundry",
+			"properties": {
+				"entries": [
+					{
+						"fabric": "charcoal_wool",
+						"person": "person_0",
+						"thread": "copper"
+					},
+					{
+						"fabric": "navy_wool",
+						"person": "person_1",
+						"thread": "gray"
+					},
+					{
+						"fabric": "navy_wool",
+						"person": "person_2",
+						"thread": "copper"
+					},
+					{
+						"fabric": "charcoal_wool",
+						"person": "person_3",
+						"thread": "gray"
+					}
+				],
+				"observation_type": "wardrobe"
+			},
+			"source_character": "",
+			"title": "Fichas de peças recebidas"
+		},
+		"wardrobe_copy": {
+			"event_id": "wardrobe",
+			"id": "wardrobe_copy",
+			"kind": "document",
+			"location": "archive",
+			"properties": {
+				"entries": [
+					{
+						"fabric": "charcoal_wool",
+						"person": "person_0",
+						"thread": "copper"
+					},
+					{
+						"fabric": "navy_wool",
+						"person": "person_1",
+						"thread": "gray"
+					},
+					{
+						"fabric": "navy_wool",
+						"person": "person_2",
+						"thread": "copper"
+					},
+					{
+						"fabric": "charcoal_wool",
+						"person": "person_3",
+						"thread": "gray"
+					}
+				],
+				"observation_type": "wardrobe"
+			},
+			"source_character": "",
+			"title": "Segunda via das fichas de peças"
+		}
+	},
+	"generator_version": "0.2.0",
+	"locations": {
+		"archive": {
+			"accessible": false,
+			"name": "Arquivo",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"garden": {
+			"accessible": true,
+			"name": "Jardim",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"kitchen": {
+			"accessible": true,
+			"name": "Cozinha",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"laundry": {
+			"accessible": true,
+			"name": "Lavanderia",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"lobby": {
+			"accessible": true,
+			"name": "Recepção",
+			"neighbors": {
+				"archive": 5,
+				"garden": 5,
+				"kitchen": 5,
+				"laundry": 5,
+				"restaurant": 5,
+				"salon": 5,
+				"storage": 5
+			}
+		},
+		"restaurant": {
+			"accessible": true,
+			"name": "Restaurante",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"salon": {
+			"accessible": true,
+			"name": "Salão",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"storage": {
+			"accessible": true,
+			"name": "Depósito",
+			"neighbors": {
+				"lobby": 5
+			}
+		}
+	},
+	"policy": {
+		"minimum_by_claim": {
+			"culprit": 3,
+			"method": 2,
+			"motive": 2
+		},
+		"minimum_total": 7
+	},
+	"relations": [
+		{
+			"from": "person_0",
+			"open": true,
+			"to": "victim",
+			"type": "revenge"
+		},
+		{
+			"from": "person_0",
+			"open": true,
+			"to": "victim",
+			"type": "jealousy"
+		},
+		{
+			"from": "person_1",
+			"open": false,
+			"to": "victim",
+			"type": "money"
+		},
+		{
+			"from": "person_1",
+			"open": true,
+			"to": "victim",
+			"type": "jealousy"
+		},
+		{
+			"from": "person_2",
+			"open": false,
+			"to": "victim",
+			"type": "revenge"
+		},
+		{
+			"from": "person_2",
+			"open": false,
+			"to": "victim",
+			"type": "jealousy"
+		},
+		{
+			"from": "person_3",
+			"open": true,
+			"to": "victim",
+			"type": "revenge"
+		},
+		{
+			"from": "person_3",
+			"open": false,
+			"to": "victim",
+			"type": "money"
+		}
+	],
+	"schema_version": 2,
+	"seed": "914368",
+	"support_rules": {
+		"exclusion:sighting_3:death_window": {
+			"claim": "culprit",
+			"independence_group": "identity:person_3",
+			"requires": [
+				"alibi_0",
+				"alibi_1",
+				"alibi_2",
+				"death_window"
+			],
+			"subject": "person_3",
+			"value": "person_3",
+			"weight": 2
+		},
+		"material:person_3:wardrobe": {
+			"claim": "culprit",
+			"independence_group": "identity:person_3",
+			"requires": [
+				"fiber",
+				"seam",
+				"wardrobe"
+			],
+			"subject": "person_3",
+			"value": "person_3",
+			"weight": 2
+		},
+		"material:person_3:wardrobe_copy": {
+			"claim": "culprit",
+			"independence_group": "identity:person_3",
+			"requires": [
+				"fiber",
+				"seam",
+				"wardrobe_copy"
+			],
+			"subject": "person_3",
+			"value": "person_3",
+			"weight": 2
+		},
+		"method:body:object_0": {
+			"claim": "method",
+			"independence_group": "injury_mechanism",
+			"requires": [
+				"body",
+				"object_0"
+			],
+			"subject": "",
+			"value": "blunt_force",
+			"weight": 2
+		},
+		"method:medical_record:object_0": {
+			"claim": "method",
+			"independence_group": "injury_mechanism",
+			"requires": [
+				"medical_record",
+				"object_0"
+			],
+			"subject": "",
+			"value": "blunt_force",
+			"weight": 2
+		},
+		"motive:conflict_0_note:conflict_0_followup": {
+			"claim": "motive",
+			"independence_group": "conflict:H-031",
+			"requires": [
+				"conflict_0_followup",
+				"conflict_0_note"
+			],
+			"subject": "person_0",
+			"value": "revenge",
+			"weight": 2
+		},
+		"motive:conflict_3_note:conflict_3_followup": {
+			"claim": "motive",
+			"independence_group": "conflict:H-082",
+			"requires": [
+				"conflict_3_followup",
+				"conflict_3_note"
+			],
+			"subject": "person_3",
+			"value": "revenge",
+			"weight": 2
+		},
+		"motive:secondary_0_note:secondary_0_followup": {
+			"claim": "motive",
+			"independence_group": "conflict:H-099",
+			"requires": [
+				"secondary_0_followup",
+				"secondary_0_note"
+			],
+			"subject": "person_0",
+			"value": "jealousy",
+			"weight": 2
+		},
+		"motive:secondary_1_note:secondary_1_followup": {
+			"claim": "motive",
+			"independence_group": "conflict:H-116",
+			"requires": [
+				"secondary_1_followup",
+				"secondary_1_note"
+			],
+			"subject": "person_1",
+			"value": "jealousy",
+			"weight": 2
+		},
+		"presence:sighting_0:death_window": {
+			"claim": "culprit",
+			"independence_group": "presence:person_0",
+			"requires": [
+				"death_window",
+				"sighting_0"
+			],
+			"subject": "person_0",
+			"value": "person_0",
+			"weight": 1
+		},
+		"presence:sighting_1:death_window": {
+			"claim": "culprit",
+			"independence_group": "presence:person_1",
+			"requires": [
+				"death_window",
+				"sighting_1"
+			],
+			"subject": "person_1",
+			"value": "person_1",
+			"weight": 1
+		},
+		"presence:sighting_2:death_window": {
+			"claim": "culprit",
+			"independence_group": "presence:person_2",
+			"requires": [
+				"death_window",
+				"sighting_2"
+			],
+			"subject": "person_2",
+			"value": "person_2",
+			"weight": 1
+		},
+		"presence:sighting_3:death_window": {
+			"claim": "culprit",
+			"independence_group": "presence:person_3",
+			"requires": [
+				"death_window",
+				"sighting_3"
+			],
+			"subject": "person_3",
+			"value": "person_3",
+			"weight": 1
+		}
+	},
+	"truth": {
+		"culprit": "person_3",
+		"event_id": "murder",
+		"method": "blunt_force",
+		"motive": "revenge",
+		"victim": "victim",
+		"weapon": "bat"
+	}
+}
