@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-30",
+  "papers": {
+    "author": "Marim_Studio",
+    "source": "https://sketchfab.com/3d-models/low-poly-papers-set-2edf57ce2e6c4475bd4897b9c91b0a77",
+    "license": "CC BY 4.0",
+    "evidence": [
+      "embedded license.txt",
+      "glTF asset.extras"
+    ],
+    "credit_required": true
+  },
+  "mega_pack": {
+    "probable_author": "Pizza Doggy",
+    "candidate_source": "https://pizzadoggy.itch.io/psx-mega-pack",
+    "origin_confidence": "Visual correspondence of included previews; purchase page not provided",
+    "license_in_archive": false,
+    "public_license_pdf_date": "2026-09-01",
+    "public_license_downloaded": "2026-10-30",
+    "public_license_sha256": "22e90e1ca9e2f01d0a6917eb867ba74613dd958ed7ff6405ef5c5ea6337d27f4",
+    "purchase_information": "User reports having purchased on itch.io; exact date/version not supplied",
+    "integration_status": "Confirm applicable purchase-time license before integration and any AI-assisted asset creation/adaptation",
+    "observations": [
+      "Current public agreement permits commercial games and asset modification subject to restrictions",
+      "Standalone redistribution and reusable-source distribution restricted",
+      "AI-related restrictions in section 4",
+      "Section 12 refers to terms in effect when assets were obtained"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceRelation" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_relation.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "contact_after_cleaning"
+source_definition_id = "prior_contact"
+target_definition_id = "trace_cleaning"
+source_claim_id = "residue_persists"
+target_claim_id = "cleaning_effective"
+conditions = [{"left": "source.properties.time", "op": "gt", "right": "target.properties.time"}, {"left": "source.properties.time", "op": "lt", "right": "context.properties.start"}]
+equal_fields = {"fabric": "fabric", "thread": "thread"}
+subject_field = "source.properties.person"
+source_rows = ""
+target_rows = ""
+context_definition_id = "examination"

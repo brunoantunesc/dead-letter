@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "examination"
+selector = {"observation_type": "examination"}
+title_key = "evidence.examination.title"
+text_key = "evidence.examination.body"
+parameters = {"injury": {"field": "pattern", "format": "term"}, "start": {"field": "start", "format": "time"}, "end": {"field": "end", "format": "time"}}
+rows = {}
+visual_id = "visual.examination"
+category_id = "record.medical"
+claim_ids = PackedStringArray("injury_method")
+causal_kinds = PackedStringArray("examination")
+observation_fields = PackedStringArray("pattern", "place", "start", "end")

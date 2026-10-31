@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "room_request"
+selector = {"observation_type": "room_request"}
+title_key = "evidence.room_request.title"
+text_key = "evidence.room_request.body"
+parameters = {"person": {"field": "person", "format": "person"}}
+rows = {}
+visual_id = "visual.room_request"
+category_id = "record.administrative"
+claim_ids = PackedStringArray("room_problem")
+causal_kinds = PackedStringArray("room_request")
+observation_fields = PackedStringArray("person", "reason")

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "medical_addendum"
+selector = {"observation_type": "medical_addendum"}
+title_key = "evidence.medical_addendum.title"
+text_key = "evidence.medical_addendum.body"
+parameters = {"pattern": {"field": "pattern", "format": "term"}, "time": {"field": "time", "format": "time"}}
+rows = {}
+visual_id = "visual.medical_addendum"
+category_id = "record.medical"
+claim_ids = PackedStringArray("primary_injury")
+causal_kinds = PackedStringArray("medical_addendum")
+observation_fields = PackedStringArray("pattern", "time", "report_id")

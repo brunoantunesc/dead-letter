@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "object_use_record"
+selector = {"observation_type": "object_use_record"}
+title_key = "evidence.object_use_record.title"
+text_key = "evidence.object_use_record.body"
+parameters = {"person": {"field": "person", "format": "person"}, "weapon": {"field": "weapon", "format": "term"}, "time": {"field": "time", "format": "time"}}
+rows = {}
+visual_id = "visual.object_use_record"
+category_id = "record.administrative"
+claim_ids = PackedStringArray("documented_use", "last_documented_use")
+causal_kinds = PackedStringArray("documented_use")
+observation_fields = PackedStringArray("person", "weapon", "time", "object_id")

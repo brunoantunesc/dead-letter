@@ -1,0 +1,4840 @@
+{
+  "attendance_limits_sighting_0": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "activity_register",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "activity_register",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "attended"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "sighting.0",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 80,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "sighting",
+          "activity": 0,
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 200,
+        "end": 202,
+        "kind": "activity_register",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 80,
+        "end": 82,
+        "kind": "passing",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "The witness saw a passage before the crime; a causally grounded attendance entry places that person elsewhere throughout the crime window. Earlier proximity alone does not show participation."
+  },
+  "attendance_limits_sighting_1": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "activity_register",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "activity_register",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "attended"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "sighting.1",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 80,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "sighting",
+          "activity": 1,
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 200,
+        "end": 202,
+        "kind": "activity_register",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 80,
+        "end": 82,
+        "kind": "passing",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "The witness saw a passage before the crime; a causally grounded attendance entry places that person elsewhere throughout the crime window. Earlier proximity alone does not show participation."
+  },
+  "attendance_limits_sighting_2": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "activity_register",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "activity_register",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "attended"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "sighting.2",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 80,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "sighting",
+          "activity": 2,
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 200,
+        "end": 202,
+        "kind": "activity_register",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 80,
+        "end": 82,
+        "kind": "passing",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "The witness saw a passage before the crime; a causally grounded attendance entry places that person elsewhere throughout the crime window. Earlier proximity alone does not show participation."
+  },
+  "attendance_limits_sighting_3": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "activity_register",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "activity_register",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "attended"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "sighting.3",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 80,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "sighting",
+          "activity": 3,
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 200,
+        "end": 202,
+        "kind": "activity_register",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 80,
+        "end": 82,
+        "kind": "passing",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "The witness saw a passage before the crime; a causally grounded attendance entry places that person elsewhere throughout the crime window. Earlier proximity alone does not show participation."
+  },
+  "coat_changed_assignment": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "garment_transfer",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "garment_transfer",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "wardrobe",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "wardrobe",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "garment_transfer",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "cloakroom_intake",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "coat_changed_hands": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "garment_transfer",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "garment_transfer",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "wardrobe",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "wardrobe",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "garment_transfer",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "cloakroom_intake",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "contact_after_cleaning": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "prior_contact",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "prior_contact",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "trace_cleaning",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "trace_cleaning",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "prior_contact",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "trace_cleaning",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "earlier_contact": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "prior_contact",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "prior_contact",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "contact",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "contact",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "prior_contact",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "murder",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "incident_after_checkout_bat": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.sports",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "sports",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object_use_record",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "cut",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "documented_use",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same inventory item was used again after the earlier documented activity. That activity cannot be assumed to explain all subsequent handling or every trace."
+  },
+  "incident_after_checkout_knife": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cut",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cut",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object_use_record",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "cut",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "documented_use",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same inventory item was used again after the earlier documented activity. That activity cannot be assumed to explain all subsequent handling or every trace."
+  },
+  "incident_after_checkout_pistol": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.inspection",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "inspection",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object_use_record",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "cut",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "documented_use",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same inventory item was used again after the earlier documented activity. That activity cannot be assumed to explain all subsequent handling or every trace."
+  },
+  "incident_after_checkout_poison_vial": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cleaning",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cleaning",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object_use_record",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "cut",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "documented_use",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same inventory item was used again after the earlier documented activity. That activity cannot be assumed to explain all subsequent handling or every trace."
+  },
+  "incident_after_checkout_rope": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.lifting",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "lifting",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object_use_record",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "cut",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "documented_use",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same inventory item was used again after the earlier documented activity. That activity cannot be assumed to explain all subsequent handling or every trace."
+  },
+  "independent_use_bat": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.sports",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "sports",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object.bat",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "independent_use_knife": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cut",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cut",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object.knife",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "independent_use_pistol": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.inspection",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "inspection",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object.pistol",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "independent_use_poison_vial": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cleaning",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cleaning",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object.poison_vial",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "independent_use_rope": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.lifting",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "lifting",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object.rope",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "later_garment_intake": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "wardrobe",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "wardrobe",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "garment_transfer",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "garment_transfer",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "cloakroom_intake",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "garment_transfer",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "later_use_bat": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "object_use_record",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "incident.sports",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "sports",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "documented_use",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same inventory item was used again after the earlier documented activity. That activity cannot be assumed to explain all subsequent handling or every trace."
+  },
+  "later_use_knife": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "object_use_record",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "incident.cut",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cut",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "documented_use",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same inventory item was used again after the earlier documented activity. That activity cannot be assumed to explain all subsequent handling or every trace."
+  },
+  "later_use_pistol": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "object_use_record",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "incident.inspection",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "inspection",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "documented_use",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same inventory item was used again after the earlier documented activity. That activity cannot be assumed to explain all subsequent handling or every trace."
+  },
+  "later_use_poison_vial": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "object_use_record",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "incident.cleaning",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cleaning",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "documented_use",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same inventory item was used again after the earlier documented activity. That activity cannot be assumed to explain all subsequent handling or every trace."
+  },
+  "later_use_rope": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "object_use_record",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "incident.lifting",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "lifting",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "documented_use",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same inventory item was used again after the earlier documented activity. That activity cannot be assumed to explain all subsequent handling or every trace."
+  },
+  "primary_finding_revised": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "medical_addendum",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "medical_addendum",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "examination",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "round_perforation",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 200,
+        "end": 202,
+        "kind": "medical_addendum",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "examination",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A later addendum distinguishes a principal finding from a real secondary lesion described in the earlier examination."
+  },
+  "reopened_dismissal": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "grievance.dismissal.open",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "dismissal",
+          "state": "open",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "grievance.dismissal.settled",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "dismissal",
+          "state": "settled",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "Before the crime window, the same dispute of the same person changed state. The newer decision qualifies the earlier document, without proving guilt or innocence."
+  },
+  "reopened_private_letters": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "grievance.private_letters.open",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "private_letters",
+          "state": "open",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "grievance.private_letters.settled",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "private_letters",
+          "state": "settled",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "Before the crime window, the same dispute of the same person changed state. The newer decision qualifies the earlier document, without proving guilt or innocence."
+  },
+  "reopened_withheld_payment": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "grievance.withheld_payment.open",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "withheld_payment",
+          "state": "open",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "grievance.withheld_payment.settled",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "withheld_payment",
+          "state": "settled",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "Before the crime window, the same dispute of the same person changed state. The newer decision qualifies the earlier document, without proving guilt or innocence."
+  },
+  "residue_removed": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "trace_cleaning",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "trace_cleaning",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "prior_contact",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "prior_contact",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "trace_cleaning",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "prior_contact",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "room_problem_recurred": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "room_request",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "room_request",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "room_resolution",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "room_resolution",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "room_request",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "room_resolution",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same guest reports the same plumbing problem after completion of the earlier repair; completion did not guarantee the problem stayed resolved."
+  },
+  "room_problem_repaired": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "room_resolution",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "room_resolution",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "room_request",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "room_request",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "room_resolution",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "room_request",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A repair completion closes an earlier plumbing complaint from the same guest; it is a parallel event unrelated to guilt."
+  },
+  "routine_use_before_discovery_bat": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "object_use_record",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object.bat",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "documented_use",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "routine_use_before_discovery_knife": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "object_use_record",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object.knife",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "documented_use",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "routine_use_before_discovery_pistol": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "object_use_record",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object.pistol",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "documented_use",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "routine_use_before_discovery_poison_vial": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "object_use_record",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object.poison_vial",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "documented_use",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "routine_use_before_discovery_rope": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "object_use_record",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object.rope",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "documented_use",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A documented earlier event qualifies a later inference about the same person or inventory item."
+  },
+  "settled_dismissal": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "grievance.dismissal.settled",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "dismissal",
+          "state": "settled",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "grievance.dismissal.open",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "dismissal",
+          "state": "open",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "Before the crime window, the same dispute of the same person changed state. The newer decision qualifies the earlier document, without proving guilt or innocence."
+  },
+  "settled_private_letters": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "grievance.private_letters.settled",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "private_letters",
+          "state": "settled",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "grievance.private_letters.open",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "private_letters",
+          "state": "open",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "Before the crime window, the same dispute of the same person changed state. The newer decision qualifies the earlier document, without proving guilt or innocence."
+  },
+  "settled_withheld_payment": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "grievance.withheld_payment.settled",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "withheld_payment",
+          "state": "settled",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "grievance.withheld_payment.open",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "grievance",
+          "topic": "withheld_payment",
+          "state": "open",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "decision",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "Before the crime window, the same dispute of the same person changed state. The newer decision qualifies the earlier document, without proving guilt or innocence."
+  },
+  "sighting_limits_reservation_0": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "sighting.0",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "sighting",
+          "activity": 0,
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "activity_register",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "activity_register",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "passing",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 200,
+        "end": 202,
+        "kind": "activity_register",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The activity entry is only a reservation. The witness actually saw the guest elsewhere during the reserved interval; booking cannot be treated as continuous attendance."
+  },
+  "sighting_limits_reservation_1": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "sighting.1",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "sighting",
+          "activity": 1,
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "activity_register",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "activity_register",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "passing",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 200,
+        "end": 202,
+        "kind": "activity_register",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The activity entry is only a reservation. The witness actually saw the guest elsewhere during the reserved interval; booking cannot be treated as continuous attendance."
+  },
+  "sighting_limits_reservation_2": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "sighting.2",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "sighting",
+          "activity": 2,
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "activity_register",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "activity_register",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "passing",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 200,
+        "end": 202,
+        "kind": "activity_register",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The activity entry is only a reservation. The witness actually saw the guest elsewhere during the reserved interval; booking cannot be treated as continuous attendance."
+  },
+  "sighting_limits_reservation_3": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "sighting.3",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "sighting",
+          "activity": 3,
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "activity_register",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "activity_register",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "passing",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 200,
+        "end": 202,
+        "kind": "activity_register",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The activity entry is only a reservation. The witness actually saw the guest elsewhere during the reserved interval; booking cannot be treated as continuous attendance."
+  },
+  "subsequent_checkout": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "object_use_record",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "object_use_record",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "object_use_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 102,
+        "kind": "documented_use",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "documented_use",
+        "location": "lobby"
+      }
+    },
+    "explanation": "The same inventory item was used again after the earlier documented activity. That activity cannot be assumed to explain all subsequent handling or every trace."
+  },
+  "subsequent_examination": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "examination",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "medical_addendum",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "round_perforation",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "medical_addendum",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 200,
+        "end": 202,
+        "kind": "examination",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "medical_addendum",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A subsequent examination documents a different physical finding and supersedes the earlier assignment of primacy; the earlier recorded lesion still exists."
+  },
+  "subsequent_garment_transfer": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "garment_transfer",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 70,
+          "from_person": "person_1",
+          "to_person": "person_2",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "garment_transfer",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "garment_transfer",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "garment_transfer",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "window": {
+        "id": "window",
+        "definition_id": "examination",
+        "event_id": "window",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 210,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "examination",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 70,
+        "end": 72,
+        "kind": "garment_transfer",
+        "location": "lobby"
+      },
+      "target": {
+        "id": "target",
+        "start": 50,
+        "end": 52,
+        "kind": "garment_transfer",
+        "location": "lobby"
+      },
+      "window": {
+        "id": "window",
+        "start": 210,
+        "end": 215,
+        "kind": "examination",
+        "location": "salon"
+      }
+    },
+    "explanation": "A garment already handed from A to B is subsequently handed from B to C before the crime. The first handover does not establish B retained it until the crime."
+  }
+}

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "activity_register"
+selector = {"observation_type": "activity_register"}
+title_key = "evidence.activity_register.title"
+text_key = "evidence.activity_register.body"
+parameters = {}
+rows = {"field": "entries", "text_key": "evidence.activities.row", "parameters": {"person": {"field": "person", "format": "person"}, "place": {"field": "place", "format": "location"}, "start": {"field": "start", "format": "time"}, "end": {"field": "end", "format": "time"}, "status": {"field": "status", "format": "term"}}}
+visual_id = "visual.activity_register"
+category_id = "record.administrative"
+claim_ids = PackedStringArray("attendance", "reservation_alibi")
+causal_kinds = PackedStringArray("activity_register")
+observation_fields = PackedStringArray()

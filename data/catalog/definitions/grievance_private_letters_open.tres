@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "grievance.private_letters.open"
+selector = {"observation_type": "grievance", "topic": "private_letters", "state": "open"}
+title_key = "evidence.grievance.private_letters.open.title"
+text_key = "evidence.grievance.private_letters.open.body"
+parameters = {"person": {"field": "person", "format": "person"}}
+rows = {}
+visual_id = "visual.grievance.private_letters.open"
+category_id = "record.personal"
+claim_ids = PackedStringArray("active_motive", "settlement")
+causal_kinds = PackedStringArray("decision", "settlement")
+observation_fields = PackedStringArray("person", "topic", "state")

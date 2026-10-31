@@ -1,18 +1,19 @@
 extends RefCounted
 ## Private simulation snapshot. Never pass this dictionary directly to a player UI.
 
-const SCHEMA_VERSION = 4
-const GENERATOR_VERSION = "0.4.0"
-const CONTENT_VERSION = "hotel_short_case_4"
+const SCHEMA_VERSION = 5
+const GENERATOR_VERSION = "0.5.0"
+const CONTENT_VERSION = "hotel_network_1"
 
 static func create(case_seed: int) -> Dictionary:
 	return {
 		"schema_version": SCHEMA_VERSION, "generator_version": GENERATOR_VERSION,
 		"content_version": CONTENT_VERSION, "seed": case_seed,
 		"characters": {}, "locations": {}, "entry_location": "lobby", "relations": [], "events": {},
-		"support_rules": {}, "evidence": {}, "truth": {},
+		"support_rules": {}, "counterproofs": [], "placements": {}, "evidence": {}, "truth": {},
 		# Experimental policy for the logic test, not final balancing.
-		"policy": {"minimum_by_claim": {"culprit": 3, "motive": 2, "method": 2}, "minimum_total": 7}
+		"policy": {"minimum_by_claim": {"culprit": 3, "motive": 2, "method": 2}, "minimum_total": 7,
+			"counterproof_scope": "existing"}
 	}
 
 static func encode(data: Dictionary) -> String:

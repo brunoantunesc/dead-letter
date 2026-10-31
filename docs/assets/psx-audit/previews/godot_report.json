@@ -1,0 +1,2963 @@
+{
+	"engine": "4.6.2-stable (official)",
+	"filter": "as_imported",
+	"renderer": "gl_compatibility",
+	"samples": [
+		{
+			"collision_objects": 0,
+			"id": "sofa_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "fabric_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/sofa_1.glb",
+			"size": [
+				2.59999942779541,
+				1.14956665039062,
+				1.00000166893005
+			],
+			"triangles": 772
+		},
+		{
+			"collision_objects": 0,
+			"id": "sofa_3",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "fabric_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/sofa_3.glb",
+			"size": [
+				2.11999797821045,
+				0.977034211158752,
+				0.934607088565826
+			],
+			"triangles": 508
+		},
+		{
+			"collision_objects": 0,
+			"id": "chair_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/chair_mp_1.glb",
+			"size": [
+				0.47065207362175,
+				0.593999981880188,
+				0.470000058412552
+			],
+			"triangles": 212
+		},
+		{
+			"collision_objects": 0,
+			"id": "chair_mp_3",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/chair_mp_3.glb",
+			"size": [
+				0.476341754198074,
+				0.996742129325867,
+				0.512624382972717
+			],
+			"triangles": 264
+		},
+		{
+			"collision_objects": 0,
+			"id": "coffee_table_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/coffee_table_1.glb",
+			"size": [
+				1.62000107765198,
+				0.660000026226044,
+				0.620000064373016
+			],
+			"triangles": 104
+		},
+		{
+			"collision_objects": 0,
+			"id": "table_large_3",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/table_large_3.glb",
+			"size": [
+				1.60000109672546,
+				0.90999972820282,
+				0.690000057220459
+			],
+			"triangles": 54
+		},
+		{
+			"collision_objects": 0,
+			"id": "wardrobe_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						192
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						192
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						192
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 4,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/wardrobe_mp_1.glb",
+			"size": [
+				1.34000897407532,
+				2.10000061988831,
+				0.64000016450882
+			],
+			"triangles": 1426
+		},
+		{
+			"collision_objects": 0,
+			"id": "display_cabinet_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "glass_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 4
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						192
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 2,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/display_cabinet_mp_1.glb",
+			"size": [
+				0.740008950233459,
+				2.10000061988831,
+				0.540000200271606
+			],
+			"triangles": 636
+		},
+		{
+			"collision_objects": 0,
+			"id": "bed_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_mp_5",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "old_mattress_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						800,
+						467
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bed_1.glb",
+			"size": [
+				2.70000243186951,
+				1.26999986171722,
+				1.39999938011169
+			],
+			"triangles": 744
+		},
+		{
+			"collision_objects": 0,
+			"id": "bed_4",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "old_mattress_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						800,
+						467
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bed_4.glb",
+			"size": [
+				2.74067258834839,
+				0.962134420871735,
+				2.29067182540894
+			],
+			"triangles": 940
+		},
+		{
+			"collision_objects": 0,
+			"id": "bedside_table_2",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						192
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 2,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bedside_table_2.glb",
+			"size": [
+				0.504003524780273,
+				0.587999999523163,
+				0.446292161941528
+			],
+			"triangles": 484
+		},
+		{
+			"collision_objects": 0,
+			"id": "shelf_mp_2",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/shelf_mp_2.glb",
+			"size": [
+				0.740008950233459,
+				1.40000057220459,
+				0.440000206232071
+			],
+			"triangles": 168
+		},
+		{
+			"collision_objects": 0,
+			"id": "wall_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_frame_wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/wall_1.glb",
+			"size": [
+				4.09000015258789,
+				3.0,
+				0.180000931024551
+			],
+			"triangles": 48
+		},
+		{
+			"collision_objects": 0,
+			"id": "wall_2_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_frame_wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/wall_2_1.glb",
+			"size": [
+				4.09000015258789,
+				3.0,
+				0.180000931024551
+			],
+			"triangles": 48
+		},
+		{
+			"collision_objects": 0,
+			"id": "doorway_door_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_frame_wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						197,
+						412
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_handle_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						84,
+						124
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_handle_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						84,
+						124
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 3,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/doorway_door_mp_1.glb",
+			"size": [
+				4.09000015258789,
+				3.0,
+				0.199999988079071
+			],
+			"triangles": 392
+		},
+		{
+			"collision_objects": 0,
+			"id": "doorway_2_wide",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_frame_wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_4_double",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						394,
+						412
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_handle_2",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						84,
+						124
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_handle_2",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						84,
+						124
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_4_double",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						394,
+						412
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_handle_2",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						84,
+						124
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_handle_2",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						84,
+						124
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 5,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/doorway_2_wide.glb",
+			"size": [
+				4.09000015258789,
+				3.0,
+				0.199999988079071
+			],
+			"triangles": 784
+		},
+		{
+			"collision_objects": 0,
+			"id": "elevator_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "floor_3_metal",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "concrete_4",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_4",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "elevator_buttons_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						100,
+						181
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "elevator_screen_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						50
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_painted_white",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "elevator_door_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						248,
+						405
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "elevator_door_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						248,
+						405
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "elevator_door_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						248,
+						405
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "elevator_door_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						248,
+						405
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 5,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/elevator_1.glb",
+			"size": [
+				2.60000038146973,
+				3.0,
+				2.91000080108643
+			],
+			"triangles": 926
+		},
+		{
+			"collision_objects": 0,
+			"id": "floor_ceiling_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "floor_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "concrete_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/floor_ceiling_1.glb",
+			"size": [
+				4.03999996185303,
+				0.0200007073581219,
+				4.03999996185303
+			],
+			"triangles": 20
+		},
+		{
+			"collision_objects": 0,
+			"id": "stairs_3",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "concrete_4",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/stairs_3.glb",
+			"size": [
+				4.00000095367432,
+				1.70000004768372,
+				2.07658314704895
+			],
+			"triangles": 68
+		},
+		{
+			"collision_objects": 0,
+			"id": "window_2_double",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_frame_wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "window_2",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						186,
+						264
+					],
+					"transparency": 4
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/window_2_double.glb",
+			"size": [
+				4.09000015258789,
+				3.0,
+				0.520000219345093
+			],
+			"triangles": 502
+		},
+		{
+			"collision_objects": 0,
+			"id": "arc_1_wall_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_frame_wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/arc_1_wall_1.glb",
+			"size": [
+				3.00000166893005,
+				3.0,
+				0.460000395774841
+			],
+			"triangles": 78
+		},
+		{
+			"collision_objects": 0,
+			"id": "pillar_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "door_frame_wood_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/pillar_1.glb",
+			"size": [
+				0.520000338554382,
+				3.0,
+				0.520000338554382
+			],
+			"triangles": 64
+		},
+		{
+			"collision_objects": 0,
+			"id": "beam_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "concrete_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/beam_1.glb",
+			"size": [
+				4.0,
+				0.460001051425934,
+				0.260000824928284
+			],
+			"triangles": 16
+		},
+		{
+			"collision_objects": 0,
+			"id": "half_arc_pillar_1_wall_1_plain",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wall_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						682,
+						517
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/half_arc_pillar_1_wall_1_plain.glb",
+			"size": [
+				1.5,
+				3.0,
+				0.400000065565109
+			],
+			"triangles": 34
+		},
+		{
+			"collision_objects": 0,
+			"id": "notebook_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "notebook_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						81,
+						59
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/notebook_1.glb",
+			"size": [
+				0.14740115404129,
+				0.0260101351886988,
+				0.214980602264404
+			],
+			"triangles": 936
+		},
+		{
+			"collision_objects": 0,
+			"id": "book_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "books_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/book_mp_1.glb",
+			"size": [
+				0.180012986063957,
+				0.0480000153183937,
+				0.269999980926514
+			],
+			"triangles": 42
+		},
+		{
+			"collision_objects": 0,
+			"id": "open_book_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "books_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/open_book_mp_1.glb",
+			"size": [
+				0.420016348361969,
+				0.0458178445696831,
+				0.270000010728836
+			],
+			"triangles": 78
+		},
+		{
+			"collision_objects": 0,
+			"id": "cassette_tape_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "cassette_tape_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						48,
+						32
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "cassette_tape_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						48,
+						32
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cassette_tape_mp_1.glb",
+			"size": [
+				0.165600031614304,
+				0.0216000098735094,
+				0.108000010251999
+			],
+			"triangles": 144
+		},
+		{
+			"collision_objects": 0,
+			"id": "key_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "keys_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/key_mp_1.glb",
+			"size": [
+				0.0352345407009125,
+				0.00301433634012938,
+				0.0735098421573639
+			],
+			"triangles": 220
+		},
+		{
+			"collision_objects": 0,
+			"id": "cash_2",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "money_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						128
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cash_2.glb",
+			"size": [
+				0.1050655990839,
+				0.00620233220979571,
+				0.224096029996872
+			],
+			"triangles": 38
+		},
+		{
+			"collision_objects": 0,
+			"id": "clock_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "clock_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						387,
+						179
+					],
+					"transparency": 2
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "clock_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						387,
+						179
+					],
+					"transparency": 2
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "clock_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						387,
+						179
+					],
+					"transparency": 2
+				}
+			],
+			"mesh_instances": 3,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/clock_1.glb",
+			"size": [
+				0.402310252189636,
+				0.399999976158142,
+				0.0300000589340925
+			],
+			"triangles": 524
+		},
+		{
+			"collision_objects": 0,
+			"id": "plate_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "plate_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						191,
+						96
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/plate_mp_1.glb",
+			"size": [
+				0.327600002288818,
+				0.0220500007271767,
+				0.327600002288818
+			],
+			"triangles": 524
+		},
+		{
+			"collision_objects": 0,
+			"id": "spoon_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "misc_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						192
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/spoon_mp_1.glb",
+			"size": [
+				0.0585403814911842,
+				0.0168436523526907,
+				0.274106234312057
+			],
+			"triangles": 238
+		},
+		{
+			"collision_objects": 0,
+			"id": "glass_bottle_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "glass_bottles_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						144,
+						192
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/glass_bottle_1.glb",
+			"size": [
+				0.10368000715971,
+				0.35377448797226,
+				0.103679999709129
+			],
+			"triangles": 274
+		},
+		{
+			"collision_objects": 0,
+			"id": "ashtray_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "plastic_4",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						192
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "cigs_packet_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						48,
+						51
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "ash_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						32,
+						32
+					],
+					"transparency": 4
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/ashtray_1.glb",
+			"size": [
+				0.143197432160378,
+				0.0360000059008598,
+				0.143197417259216
+			],
+			"triangles": 816
+		},
+		{
+			"collision_objects": 0,
+			"id": "butcher_knife_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "kitchen_knife_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						128,
+						50
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/butcher_knife_mp_1.glb",
+			"size": [
+				0.174555957317352,
+				0.0333709828555584,
+				0.509458065032959
+			],
+			"triangles": 112
+		},
+		{
+			"collision_objects": 0,
+			"id": "pc_monitor_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "pc_monitor_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "pc_monitor_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "crt_screen_mp_2",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						85,
+						70
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 2,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/pc_monitor_mp_1.glb",
+			"size": [
+				0.480000168085098,
+				0.50834047794342,
+				0.411973148584366
+			],
+			"triangles": 354
+		},
+		{
+			"collision_objects": 0,
+			"id": "pc_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "pc_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						409,
+						443
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/pc_mp_1.glb",
+			"size": [
+				0.229500025510788,
+				0.550800025463104,
+				0.550800085067749
+			],
+			"triangles": 32
+		},
+		{
+			"collision_objects": 0,
+			"id": "tv_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "tvs_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						354,
+						423
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "crt_screen_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						85,
+						70
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/tv_mp_1.glb",
+			"size": [
+				0.510000050067902,
+				0.789265513420105,
+				0.418315172195435
+			],
+			"triangles": 670
+		},
+		{
+			"collision_objects": 0,
+			"id": "cell_phone_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "cell_phone_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						72,
+						64
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cell_phone_1.glb",
+			"size": [
+				0.0876500383019447,
+				0.0437400005757809,
+				0.210600018501282
+			],
+			"triangles": 178
+		},
+		{
+			"collision_objects": 0,
+			"id": "cell_phone_3",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "cell_phone_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						128,
+						96
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/cell_phone_3.glb",
+			"size": [
+				0.091229110956192,
+				0.0350000001490116,
+				0.222183853387833
+			],
+			"triangles": 216
+		},
+		{
+			"collision_objects": 0,
+			"id": "walkie_talkie_2",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "walkie_talkie_2",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						128,
+						134
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/walkie_talkie_2.glb",
+			"size": [
+				0.113881729543209,
+				0.0459671802818775,
+				0.376132637262344
+			],
+			"triangles": 238
+		},
+		{
+			"collision_objects": 0,
+			"id": "monitoring_screen_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "pc_monitor_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "pc_monitor_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "pc_monitor_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "crt_screen_mp_2",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						85,
+						70
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 3,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/monitoring_screen_mp_1.glb",
+			"size": [
+				0.527012884616852,
+				0.366410255432129,
+				0.501254141330719
+			],
+			"triangles": 494
+		},
+		{
+			"collision_objects": 0,
+			"id": "elevator_buttons_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "elevator_buttons_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						100,
+						181
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_buttons_1.glb",
+			"size": [
+				0.265193372964859,
+				0.5,
+				0.0346275866031647
+			],
+			"triangles": 368
+		},
+		{
+			"collision_objects": 0,
+			"id": "elevator_sign_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "elevator_sign_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						50
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_sign_1.glb",
+			"size": [
+				0.763461470603943,
+				0.199999988079071,
+				0.0800000056624413
+			],
+			"triangles": 320
+		},
+		{
+			"collision_objects": 0,
+			"id": "elevator_screen_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "elevator_screen_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						50
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_screen_1.glb",
+			"size": [
+				0.6934614777565,
+				0.199999988079071,
+				0.0580000057816505
+			],
+			"triangles": 312
+		},
+		{
+			"collision_objects": 0,
+			"id": "ceiling_fan_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "plastic_mp_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "plastic_mp_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 2,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/ceiling_fan_mp_1.glb",
+			"size": [
+				1.02148246765137,
+				0.591521918773651,
+				0.897922456264496
+			],
+			"triangles": 708
+		},
+		{
+			"collision_objects": 0,
+			"id": "keypad_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "keypad_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						82
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/keypad_1.glb",
+			"size": [
+				0.28999999165535,
+				0.25,
+				0.0300002470612526
+			],
+			"triangles": 400
+		},
+		{
+			"collision_objects": 0,
+			"id": "lamp_1_off",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "lamp_1_off",
+					"shading_mode": 1,
+					"texture_filter": 3,
+					"texture_size": [
+						64,
+						64
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_mp_4",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "plastic_mp_2",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_1_off.glb",
+			"size": [
+				0.753202378749847,
+				0.343000531196594,
+				0.139300510287285
+			],
+			"triangles": 1118
+		},
+		{
+			"collision_objects": 0,
+			"id": "lamp_1_on",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "lamp_1_on_yellow",
+					"shading_mode": 1,
+					"texture_filter": 3,
+					"texture_size": [
+						64,
+						64
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_mp_4",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "plastic_mp_2",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_1_on.glb",
+			"size": [
+				0.753202378749847,
+				0.343000292778015,
+				0.139300510287285
+			],
+			"triangles": 1118
+		},
+		{
+			"collision_objects": 0,
+			"id": "lamp_3_on",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "lamp_3_on",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						128
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_3_on.glb",
+			"size": [
+				1.19999885559082,
+				0.247487440705299,
+				0.247487336397171
+			],
+			"triangles": 32
+		},
+		{
+			"collision_objects": 0,
+			"id": "ceiling_lamp_4_on",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "lamp_3_on",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						128
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/ceiling_lamp_4_on.glb",
+			"size": [
+				1.19999885559082,
+				0.0999999940395355,
+				0.299999982118607
+			],
+			"triangles": 36
+		},
+		{
+			"collision_objects": 0,
+			"id": "ceiling_lamp_1_on",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_mp_4",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "ceiling_lamp_1_on",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						170,
+						170
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_mp_4",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 2,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/ceiling_lamp_1_on.glb",
+			"size": [
+				1.04999017715454,
+				0.149999767541885,
+				1.03999018669128
+			],
+			"triangles": 1132
+		},
+		{
+			"collision_objects": 0,
+			"id": "ceiling_fan_mp_1_1_light_on",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "plastic_mp_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "lamp_1_on_yellow",
+					"shading_mode": 1,
+					"texture_filter": 3,
+					"texture_size": [
+						64,
+						64
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "plastic_mp_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wood_3",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 2,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/ceiling_fan_mp_1_1_light_on.glb",
+			"size": [
+				1.02148246765137,
+				0.712830722332001,
+				0.897922456264496
+			],
+			"triangles": 1058
+		},
+		{
+			"collision_objects": 0,
+			"id": "fake_light_window_2_single",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "fake_light_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 3,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 4
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/fake_light_window_2_single.glb",
+			"size": [
+				1.11800003051758,
+				1.9980001449585,
+				1.47000002861023
+			],
+			"triangles": 32
+		},
+		{
+			"collision_objects": 0,
+			"id": "vent_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "vent_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						143,
+						143
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/vent_1.glb",
+			"size": [
+				0.820000171661377,
+				0.800000071525574,
+				0.0299999993294477
+			],
+			"triangles": 52
+		},
+		{
+			"collision_objects": 0,
+			"id": "cobweb_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "cobweb_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						195,
+						115
+					],
+					"transparency": 4
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Decals/cobweb_1.glb",
+			"size": [
+				1.36291122436523,
+				0.799999952316284,
+				0.00200003501959145
+			],
+			"triangles": 4
+		},
+		{
+			"collision_objects": 0,
+			"id": "curtain_rod_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "plastic_mp_2",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_mp_6",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/curtain_rod_mp_1.glb",
+			"size": [
+				3.01999926567078,
+				0.0800000131130219,
+				0.20439288020134
+			],
+			"triangles": 1070
+		},
+		{
+			"collision_objects": 0,
+			"id": "carpet_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "carpet_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						675,
+						427
+					],
+					"transparency": 4
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/carpet_mp_1.glb",
+			"size": [
+				3.22784829139709,
+				0.0102000003680587,
+				2.04000020027161
+			],
+			"triangles": 18
+		},
+		{
+			"collision_objects": 0,
+			"id": "painting_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "painting_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						384,
+						215
+					],
+					"transparency": 2
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/painting_1.glb",
+			"size": [
+				0.610485970973969,
+				0.684000015258789,
+				0.0615603663027287
+			],
+			"triangles": 92
+		},
+		{
+			"collision_objects": 0,
+			"id": "toilet_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "toilet_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						512,
+						512
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/toilet_mp_1.glb",
+			"size": [
+				0.572804868221283,
+				1.00635659694672,
+				0.882225215435028
+			],
+			"triangles": 1258
+		},
+		{
+			"collision_objects": 0,
+			"id": "vending_machine_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "vending_machine_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						930,
+						783
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/vending_machine_1.glb",
+			"size": [
+				0.952000141143799,
+				2.00600028038025,
+				0.675128400325775
+			],
+			"triangles": 188
+		},
+		{
+			"collision_objects": 0,
+			"id": "cardboard_box_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "cardboard_box_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						128
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/cardboard_box_1.glb",
+			"size": [
+				0.726893424987793,
+				0.367002069950104,
+				0.720000028610229
+			],
+			"triangles": 56
+		},
+		{
+			"collision_objects": 0,
+			"id": "metal_barrel_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "metal_barrel_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						384,
+						384
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/metal_barrel_mp_1.glb",
+			"size": [
+				0.748799979686737,
+				1.08000004291534,
+				0.748800039291382
+			],
+			"triangles": 380
+		},
+		{
+			"collision_objects": 0,
+			"id": "pipe_valve_holder_large_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "pipe_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						209,
+						209
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "valve_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						97,
+						97
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 2,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/pipe_valve_holder_large_1.glb",
+			"size": [
+				0.281143486499786,
+				0.283052265644073,
+				0.176708996295929
+			],
+			"triangles": 294
+		},
+		{
+			"collision_objects": 0,
+			"id": "supply_crate_1_empty",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "wooden_crate_7",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/supply_crate_1_empty.glb",
+			"size": [
+				0.667998909950256,
+				0.200000092387199,
+				0.42617928981781
+			],
+			"triangles": 260
+		},
+		{
+			"collision_objects": 0,
+			"id": "meat_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "meat_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						96,
+						96
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/meat_1.glb",
+			"size": [
+				0.342000007629395,
+				0.0751606523990631,
+				0.261900007724762
+			],
+			"triangles": 304
+		},
+		{
+			"collision_objects": 0,
+			"id": "canned_food_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "canned_foods_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				},
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "canned_foods_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						256,
+						256
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/canned_food_mp_1.glb",
+			"size": [
+				0.112000003457069,
+				0.168000027537346,
+				0.112000048160553
+			],
+			"triangles": 311
+		},
+		{
+			"collision_objects": 0,
+			"id": "jerrycan_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "jerrycan_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						384,
+						384
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/jerrycan_1.glb",
+			"size": [
+				0.336353242397308,
+				0.503030061721802,
+				0.419762164354324
+			],
+			"triangles": 728
+		},
+		{
+			"collision_objects": 0,
+			"id": "flashlight_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": true,
+					"name": "flashlight_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						128,
+						64
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/flashlight_1.glb",
+			"size": [
+				0.380114555358887,
+				0.274479359388351,
+				0.165600001811981
+			],
+			"triangles": 510
+		},
+		{
+			"collision_objects": 0,
+			"id": "dosimeter_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "dosimeter_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						128,
+						156
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/dosimeter_1.glb",
+			"size": [
+				0.309718638658524,
+				0.0656000003218651,
+				0.145916134119034
+			],
+			"triangles": 559
+		},
+		{
+			"collision_objects": 0,
+			"id": "syringe_mp_1",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "misc_mp_1",
+					"shading_mode": 1,
+					"texture_filter": 2,
+					"texture_size": [
+						192,
+						192
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/syringe_mp_1.glb",
+			"size": [
+				0.0399999991059303,
+				0.0199999995529652,
+				0.167999997735023
+			],
+			"triangles": 290
+		},
+		{
+			"collision_objects": 0,
+			"id": "low_poly_papers_set",
+			"materials": [
+				{
+					"cull_mode": 2,
+					"emission_enabled": false,
+					"name": "lambert3SG",
+					"shading_mode": 1,
+					"texture_filter": 3,
+					"texture_size": [
+						2048,
+						2048
+					],
+					"transparency": 0
+				}
+			],
+			"mesh_instances": 1,
+			"native_lights": 0,
+			"ok": true,
+			"path": "Texturas PSX/low-poly_papers_set/scene.gltf",
+			"size": [
+				24.0202713012695,
+				1.89397394657135,
+				22.5767574310303
+			],
+			"triangles": 174
+		}
+	]
+}

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceRelation" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_relation.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "reopened_private_letters"
+source_definition_id = "grievance.private_letters.open"
+target_definition_id = "grievance.private_letters.settled"
+source_claim_id = "active_motive"
+target_claim_id = "settlement"
+conditions = [{"left": "source_event.start", "op": "gt", "right": "target_event.end"}, {"left": "source_event.end", "op": "lt", "right": "context.properties.start"}]
+equal_fields = {"person": "person", "topic": "topic"}
+subject_field = "source.properties.person"
+source_rows = ""
+target_rows = ""
+context_definition_id = "examination"

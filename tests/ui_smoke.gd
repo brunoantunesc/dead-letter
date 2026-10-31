@@ -83,7 +83,7 @@ func _run() -> void:
 	var listed = 0
 	for location in desk.session.locations():
 		listed += desk.session.objects_at(location.id).size()
-	check(listed == 15, "reported seed lists fifteen observations in UI")
+	check(listed == 16, "reported seed lists sixteen observations in UI")
 	await _capture("desk_short_initial")
 	desk._show_room("lobby", "Recepção")
 	desk._inspect("activity_register")

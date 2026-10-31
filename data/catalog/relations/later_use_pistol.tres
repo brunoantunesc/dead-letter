@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceRelation" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_relation.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "later_use_pistol"
+source_definition_id = "object_use_record"
+target_definition_id = "incident.inspection"
+source_claim_id = "documented_use"
+target_claim_id = "exclusive_origin"
+conditions = [{"left": "source.properties.time", "op": "gt", "right": "target.properties.time"}]
+equal_fields = {"object_id": "object_id", "weapon": "weapon"}
+subject_field = ""
+source_rows = ""
+target_rows = ""
+context_definition_id = ""

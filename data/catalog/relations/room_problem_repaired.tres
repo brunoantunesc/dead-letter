@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceRelation" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_relation.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "room_problem_repaired"
+source_definition_id = "room_resolution"
+target_definition_id = "room_request"
+source_claim_id = "room_resolved"
+target_claim_id = "room_problem"
+conditions = [{"left": "source.properties.time", "op": "gt", "right": "target_event.end"}]
+equal_fields = {"person": "person", "reason": "reason"}
+subject_field = "source.properties.person"
+source_rows = ""
+target_rows = ""
+context_definition_id = ""

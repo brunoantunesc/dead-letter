@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceRelation" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_relation.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "attendance_limits_sighting_3"
+source_definition_id = "activity_register"
+target_definition_id = "sighting.3"
+source_claim_id = "attendance"
+target_claim_id = "opportunity"
+conditions = [{"left": "source_row.person", "op": "eq", "right": "target.properties.person"}, {"left": "source_row.status", "op": "eq", "value": "attended"}, {"left": "source_row.start", "op": "lte", "right": "context.properties.start"}, {"left": "source_row.end", "op": "gte", "right": "context.properties.end"}, {"left": "source_row.place", "op": "ne", "right": "context.properties.place"}]
+equal_fields = {}
+subject_field = "target.properties.person"
+source_rows = "entries"
+target_rows = ""
+context_definition_id = "examination"

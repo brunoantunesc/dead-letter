@@ -35,6 +35,7 @@ func _initialize() -> void:
 		var properties: Dictionary = definition.match.duplicate(true)
 		properties.merge({"person": "person_0", "time": 1175, "fabric": "navy_wool", "thread": "gray",
 			"pattern": "broad_impact", "start": 1195, "end": 1210, "place": "salon",
+			"weapon": "knife", "from_person": "person_0", "to_person": "person_1",
 			"entries": [{"person": "person_0", "fabric": "navy_wool", "thread": "gray", "place": "garden", "start": 1195, "end": 1220, "status": "attended"}]}, false)
 		var observation = {"id": "sample", "definition_id": id, "properties": properties}
 		var rendered = {}

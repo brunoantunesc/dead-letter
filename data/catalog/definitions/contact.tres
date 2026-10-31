@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "contact"
+selector = {"observation_type": "contact"}
+title_key = "evidence.contact.title"
+text_key = "evidence.contact.body"
+parameters = {"fabric": {"field": "fabric", "format": "term"}, "thread": {"field": "thread", "format": "term"}}
+rows = {}
+visual_id = "visual.contact"
+category_id = "material.trace"
+claim_ids = PackedStringArray("material_identity")
+causal_kinds = PackedStringArray("murder")
+observation_fields = PackedStringArray("fabric", "thread")

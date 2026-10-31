@@ -3,13 +3,51 @@ extends RefCounted
 
 const Evaluator = preload("res://core/accusation_evaluator.gd")
 const Validator = preload("res://core/case_validator.gd")
+const BoardState = preload("res://core/investigation_board.gd")
 var _data: Dictionary
 var _discovered: Array = []
 var _finished = false
 var notes: Array = [] # Free hypotheses; never read by the evaluator.
+var board = BoardState.new() # Player organization; not part of factual case data.
+var _visited: Array = []
+var _known_people: Dictionary = {}
 
 func _init(data: Dictionary) -> void:
 	_data = data.duplicate(true)
+	visit_location(_data.entry_location)
+	mention_character(_data.truth.victim) # Named in the initial briefing, never culprit.
+
+func visit_location(id: String) -> bool:
+	if (_finished and id not in _visited) or id not in Validator.reachable_locations(_data): return false
+	if id not in _visited: _visited.append(id)
+	return true
+
+func visited_locations() -> Array:
+	return locations().filter(func(room): return room.id in _visited)
+
+func known_characters() -> Array:
+	return characters().filter(func(person): return _known_people.has(person.id))
+
+func mention_character(id: String) -> bool:
+	return _know(id, "mention")
+
+func record_conversation(id: String) -> bool:
+	return _know(id, "conversation")
+
+func _know(id: String, reason: String) -> bool:
+	if not _data.characters.has(id): return false
+	if not _known_people.has(id): _known_people[id] = []
+	if reason not in _known_people[id]: _known_people[id].append(reason)
+	return true
+
+func _mentions(value: Variant) -> void:
+	if value is Dictionary:
+		for field in value:
+			if field in ["person", "from_person", "to_person"] and value[field] is String:
+				mention_character(value[field])
+			elif value[field] is Array or value[field] is Dictionary: _mentions(value[field])
+	elif value is Array:
+		for entry in value: _mentions(entry)
 
 func locations() -> Array:
 	var result: Array = []
@@ -33,6 +71,9 @@ func inspect(evidence_id: String) -> Dictionary:
 		return {}
 	if evidence_id not in _discovered:
 		_discovered.append(evidence_id)
+	visit_location(item.location)
+	_mentions(item.properties)
+	if item.get("source_character", "") != "": mention_character(item.source_character)
 	return _observation(item)
 
 func objects_at(location_id: String) -> Array:

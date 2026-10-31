@@ -5,6 +5,8 @@ const Validator = preload("res://core/case_validator.gd")
 const Content = preload("res://core/case_content.gd")
 const Rules = preload("res://core/proof_rules.gd")
 const Catalog = preload("res://core/evidence_catalog.gd")
+const Network = preload("res://core/evidence_network.gd")
+const Placement = preload("res://core/evidence_placement.gd")
 const NAMES = ["Ana", "Bruno", "Carlos", "Diana"]
 
 func generate(case_seed: int, max_attempts: int = 3) -> Dictionary:
@@ -104,9 +106,35 @@ func build_candidate(case_seed: int, attempt: int = 0) -> Dictionary:
 			var owner = "person_2" if profile.incident == "cut" else "person_0"
 			_event(data, event_id, profile.incident, profile.room, 300, 310, [owner], [], {"weapon": profile.weapon})
 			_observe(data, event_id, "incident", "lobby", "document",
-				{"observation_type": "incident", "incident": profile.incident, "person": owner, "time": 300, "weapon": profile.weapon})
+				{"observation_type": "incident", "incident": profile.incident, "person": owner, "time": 300, "weapon": profile.weapon, "object_id": "instrument_" + profile.weapon})
 		_observe(data, event_id, "object_%d" % i, profile.room, "object",
-			{"observation_type": "object", "form": profile.form, "weapon": profile.weapon})
+			{"observation_type": "object", "form": profile.form, "weapon": profile.weapon, "object_id": "instrument_" + profile.weapon})
+		data.events[event_id].effects["object_id"] = "instrument_" + profile.weapon
+	# Routine work belongs to any suspect, independently of guilt.
+	# Adds context to origin, not an automatic refutation of injury compatibility.
+	var context_rng = RandomNumberGenerator.new()
+	context_rng.seed = case_seed ^ 104729
+	var routine_owner = "person_%d" % context_rng.randi_range(0, 3)
+	var weapon_profile: Dictionary = Content.PROFILES[method]
+	_event(data, "routine_checkout", "documented_use", weapon_profile.room, 400, 405, [routine_owner], [],
+		{"person": routine_owner, "weapon": data.truth.weapon, "object_id": "instrument_" + data.truth.weapon, "time": 400})
+	_observe(data, "routine_checkout", "routine_checkout", "lobby", "document",
+		{"observation_type": "object_use_record", "person": routine_owner, "weapon": data.truth.weapon, "object_id": "instrument_" + data.truth.weapon, "time": 400})
+	if case_seed % 3 == 0:
+		var helper_index = context_rng.randi_range(0, 3)
+		var helper = "person_%d" % helper_index
+		var helper_coat: Dictionary = entries[helper_index]
+		var previous_contact = {"person": helper, "fabric": helper_coat.fabric, "thread": helper_coat.thread, "time": 1000}
+		_event(data, "earlier_assistance", "prior_contact", "laundry", 1000, 1002, [helper, "victim"], [], previous_contact.duplicate(true))
+		var observed = previous_contact.duplicate(true)
+		observed["observation_type"] = "prior_contact"
+		_observe(data, "earlier_assistance", "earlier_assistance", "laundry", "document", observed)
+		if case_seed % 6 == 0:
+			var cleaning = {"fabric": helper_coat.fabric, "thread": helper_coat.thread, "time": 1050}
+			_event(data, "residue_removal", "trace_cleaning", "laundry", 1050, 1052, ["victim", "porter"], ["earlier_assistance"], cleaning.duplicate(true))
+			var cleaning_observed = cleaning.duplicate(true)
+			cleaning_observed["observation_type"] = "trace_cleaning"
+			_observe(data, "residue_removal", "residue_removal", "laundry", "document", cleaning_observed, "porter")
 	var ids: Array = data.evidence.keys()
 	_shuffle(ids, rng)
 	var mixed = {}
@@ -114,6 +142,8 @@ func build_candidate(case_seed: int, attempt: int = 0) -> Dictionary:
 		mixed[id] = data.evidence[id]
 	data.evidence = mixed
 	data.support_rules = Rules.derive(data.evidence)
+	data.counterproofs = Network.derive(data)
+	Placement.assign(data, case_seed)
 	return data
 
 func _conflict(data: Dictionary, id: String, person: String, motive: String, remains_open: bool, time: int) -> void:

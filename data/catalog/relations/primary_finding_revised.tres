@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceRelation" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_relation.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "primary_finding_revised"
+source_definition_id = "medical_addendum"
+target_definition_id = "examination"
+source_claim_id = "primary_injury"
+target_claim_id = "injury_method"
+conditions = [{"left": "source.properties.report_id", "op": "eq", "right": "target.id"}, {"left": "source.properties.pattern", "op": "ne", "right": "target.properties.pattern"}, {"left": "source.properties.time", "op": "gt", "right": "target_event.end"}]
+equal_fields = {}
+subject_field = ""
+source_rows = ""
+target_rows = ""
+context_definition_id = ""

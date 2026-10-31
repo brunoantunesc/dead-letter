@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "sighting.0"
+selector = {"observation_type": "sighting", "activity": 0}
+title_key = "evidence.sighting.0.title"
+text_key = "evidence.sighting.0.body"
+parameters = {"person": {"field": "person", "format": "person"}, "time": {"field": "time", "format": "time"}}
+rows = {}
+visual_id = "visual.sighting.0"
+category_id = "support.testimony"
+claim_ids = PackedStringArray("opportunity")
+causal_kinds = PackedStringArray("passing")
+observation_fields = PackedStringArray("person", "time", "activity")

@@ -6,8 +6,8 @@ Eventos, origens, argumentos, descobertas e acusações usam IDs e propriedades 
 
 ## Arquivos de autoria
 
-- `data/evidence_catalog.json`: 25 definições possíveis, com seletor, chave de título, chave de descrição e parâmetros. O caso curto continua com 15 instâncias.
-- `localization/messages.csv`: 143 chaves nas colunas `key`, `pt_BR`, `en`. Contém provas, termos, locais, interface e vereditos.
+- `data/catalog/catalog.tres` e `data/catalog/definitions/*.tres`: 31 definições possíveis em Resources, com seletor, chave de título, chave de descrição, parâmetros e visual_id. O caso curto agora tem 16–18 instâncias. Ver [autoria e referências visuais](evidence-resources.md).
+- `localization/messages.csv`: 199 chaves nas colunas `key`, `pt_BR`, `en`. Contém provas, termos, locais, interface e vereditos.
 - `localization/languages.json`: nomes dos idiomas oferecidos pelo seletor.
 - `ui/localization.gd`: registra mensagens no `TranslationServer` nativo do Godot e aplica parâmetros nomeados.
 - `ui/presentation.gd`: renderiza parâmetros e linhas do catálogo, sem frases por tipo de pista ou acesso à verdade.
@@ -18,7 +18,7 @@ Uma instância com `definition_id: object.knife` resolve, pelo catálogo, a chav
 
 Para um idioma novo, acrescentar uma coluna com código de locale Godot ao CSV, traduzir todas as linhas e acrescentar seu nome em `languages.json`. Preservar parâmetros como `{person}`, `{time}` e `{entries}`; sua posição pode mudar. Não é necessário editar a UI. Os testes percorrem automaticamente os idiomas declarados e verificam suas chaves e parâmetros.
 
-Para uma variante dentro do vocabulário atual, criar um ID estável e seletor sem sobreposição no catálogo, declarar `title_key`, `text_key` e parâmetros, e acrescentar as mensagens em todos os idiomas. Formatos disponíveis: `person`, `term`, `location`, `time` e valor simples; registros com várias linhas usam `rows`.
+Para uma variante dentro do vocabulário atual, criar um Resource com ID estável e seletor sem sobreposição, incluí-lo no índice, declarar `title_key`, `text_key`, parâmetros e visual_id, e acrescentar as mensagens em todos os idiomas. Formatos disponíveis: `person`, `term`, `location`, `time` e `value`; registros com várias linhas usam `rows`. O visual pode permanecer pendente.
 
 Traduzir frases completas. Não concatenar palavras traduzidas para construir frases. Templates próprios para linhas de cadastros permitem reorganização gramatical. Anotações livres do jogador não são traduzidas ou reescritas.
 
@@ -30,14 +30,18 @@ O seletor muda o idioma durante a investigação e após o veredito. Preserva se
 
 O terminal aceita `--language=en`. Dados de observação continuam com IDs e propriedades canônicas, independentes do idioma.
 
-Ao criar um preset de exportação, incluir `data/*.json`, `localization/*.csv` e `localization/*.json` em `include_filter`, pois são lidos com `FileAccess`. O repositório ainda não tem um preset distribuível. Recursos `.translation` que o editor possa importar do CSV não são necessários ao carregador atual.
+Ao criar um preset de exportação, incluir `localization/*.csv` e `localization/*.json` em `include_filter`, pois são lidos com `FileAccess`. O catálogo .tres é uma dependência explícita e suas referências são Resources nativos. Assets visuais futuros, referenciados por caminhos de texto, precisarão de inclusão explícita na exportação e teste no build. O repositório ainda não tem um preset distribuível. Recursos `.translation` que o editor possa importar do CSV não são necessários ao carregador atual.
 
 ## Escopo e contraprovas
 
-O catálogo de apresentação e as traduções agora são orientados por dados. Geração causal e operadores probatórios continuam em GDScript; o sistema inteiro não foi convertido para conteúdo externo nesta entrega.
+O catálogo e a rede de contestação são Resources orientados por dados. A regra de uma contraprova potencial por tipo é validada no catálogo de 31 definições e 46 relações. As condições usam IDs e propriedades canônicas, nunca títulos traduzidos. Ver [rede e limites](evidence-network.md).
 
-A regra aprovada exige ao menos uma contraprova possível por tipo no catálogo, sem obrigar sua presença no caso. Essas relações usarão os mesmos `definition_id` e IDs factuais, nunca títulos traduzidos. A rede completa e seus efeitos no avaliador ainda não foram implementados. Não foram criados pares fictícios apenas para passar uma validação estrutural. Essa migração é o próximo incremento sobre este contrato de identidade.
+Os construtores de acontecimentos e operadores de sustentação ainda usam GDScript. Criar textos ou uma relação não gera automaticamente uma causa nova. A rede permanece oculta na apresentação normal.
 
 ## Verificação
 
-`tests/localization_tests.gd` verifica chaves, parâmetros, resolução das 25 definições, títulos/descrições sem tokens pendentes e invariância da geração ao idioma. `tests/ui_smoke.gd` troca o idioma durante uma investigação e após o veredito, conferindo preservação de estado e capturando a tela em inglês. A revisão visual foi feita em português e inglês; outros idiomas não foram revisados.
+`tests/localization_tests.gd` verifica chaves, parâmetros, resolução das 31 definições, títulos/descrições sem tokens pendentes e invariância da geração ao idioma. `tests/ui_smoke.gd` troca o idioma durante uma investigação e após o veredito, conferindo preservação de estado e capturando a tela em inglês. A revisão visual foi feita em português e inglês; outros idiomas não foram revisados.
+
+## Quadro de investigação
+
+As chaves board.* traduzem controles e tipos de cards. O conteúdo conhecido continua usando os IDs de provas, pessoas e locais. Textos de notas e rótulos de conexões são autorais e não são traduzidos. Trocar idioma preserva o estado do quadro e da acusação. Ver [controles e limites](investigation-board.md).

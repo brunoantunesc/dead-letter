@@ -5,6 +5,7 @@ const Investigation = preload("res://core/investigation.gd")
 const Presentation = preload("res://ui/presentation.gd")
 const L = preload("res://ui/localization.gd")
 const Content = preload("res://core/case_content.gd")
+const Board = preload("res://ui/investigation_board.gd")
 const INK = Color("e9e2d2")
 const MUTED = Color("aaa99c")
 const GOLD = Color("c5a76b")
@@ -30,6 +31,7 @@ var language_choice: OptionButton
 var _current_room = ""
 var _inspected_id = ""
 var _last_verdict: Dictionary = {}
+var board: Control
 
 func _ready() -> void:
 	L.initialize()
@@ -69,6 +71,7 @@ func _ready() -> void:
 	_button(seed_controls, "ui.new_case", func():
 		seed_input.text = str(randi_range(0, 999999))
 		_open_seed())
+	_button(seed_controls, "board.open", _open_board)
 	language_choice = OptionButton.new()
 	for locale_id in L.available_locales():
 		language_choice.add_item(L.language_name(locale_id))
@@ -142,6 +145,9 @@ func _ready() -> void:
 	submit_button = _button(right, "ui.submit", _submit)
 	_label(right, "ui.final_warning", 12, MUTED)
 	status = _label(page, "", 13, MUTED)
+	board = Board.new()
+	add_child(board)
+	board.language_requested.connect(_change_language)
 	_open_seed()
 
 func _build_theme() -> void:
@@ -159,7 +165,7 @@ func _build_theme() -> void:
 			box.bg_color = Color("263735") if state == "hover" else Color("192827")
 			box.border_color = GOLD if state == "focus" else Color("42504a")
 			box.set_border_width_all(1)
-			box.set_corner_radius_all(3)
+			box.set_corner_radius_all(0)
 			box.content_margin_left = 12
 			box.content_margin_right = 12
 			box.content_margin_top = 9
@@ -235,6 +241,8 @@ func _open_seed() -> void:
 		return
 	session = Investigation.new(generated.case)
 	people = session.characters()
+	board.new_session(session.board)
+	board.sync(session.known_characters(), session.visited_locations(), session.discoveries())
 	selected_proofs.clear()
 	finished = false
 	_current_room = ""
@@ -264,7 +272,13 @@ func _open_seed() -> void:
 	inspector_body.text = L.text("ui.intro")
 	_set_text(status, "ui.case_opened", {"seed": seed_input.text})
 
+func _open_board() -> void:
+	board.sync(session.known_characters(), session.visited_locations(), session.discoveries())
+	board.open_board()
+
 func _show_room(id: String, _title: String = "") -> void:
+	if not session.visit_location(id): return
+	board.sync(session.known_characters(), session.visited_locations(), session.discoveries())
 	_current_room = id
 	_clear(object_list)
 	room_title.text = L.text("location." + id)
@@ -284,6 +298,7 @@ func _inspect(id: String) -> void:
 	inspector_title.text = Presentation.title(observation)
 	inspector_body.text = Presentation.word(observation.kind) + "\n\n" + Presentation.describe(observation, people)
 	_refresh_discoveries()
+	board.sync(session.known_characters(), session.visited_locations(), session.discoveries())
 	_set_text(status, "ui.discovered")
 
 func _refresh_discoveries() -> void:
@@ -389,6 +404,7 @@ func _change_language(index: int) -> void:
 	else:
 		inspector_title.text = L.text("ui.intro_title")
 		inspector_body.text = L.text("ui.intro")
+	board.sync(session.known_characters(), session.visited_locations(), session.discoveries())
 
 func _refresh_static_text(node: Node) -> void:
 	if node.has_meta("text_key"):

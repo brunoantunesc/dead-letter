@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceRelation" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_relation.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "later_garment_intake"
+source_definition_id = "wardrobe"
+target_definition_id = "garment_transfer"
+source_claim_id = "garment_assignment"
+target_claim_id = "garment_assignment"
+conditions = [{"left": "source_row.person", "op": "eq", "right": "target.properties.from_person"}, {"left": "source_row.fabric", "op": "eq", "right": "target.properties.fabric"}, {"left": "source_row.thread", "op": "eq", "right": "target.properties.thread"}, {"left": "source_event.start", "op": "gt", "right": "target.properties.time"}, {"left": "source_event.end", "op": "lt", "right": "context.properties.start"}]
+equal_fields = {}
+subject_field = "target.properties.from_person"
+source_rows = "entries"
+target_rows = ""
+context_definition_id = "examination"

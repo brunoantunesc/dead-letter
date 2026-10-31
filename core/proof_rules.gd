@@ -15,6 +15,11 @@ static func derive(evidence: Dictionary) -> Dictionary:
 						if entry.fabric == p.fabric and entry.thread == p.thread:
 							_add(rules, "material:" + entry.person, "culprit", entry.person, entry.person,
 								2, "identity:" + entry.person, [item.id, record.id])
+							for transfer in evidence.values():
+								var handover: Dictionary = transfer.properties
+								if handover.get("observation_type") == "garment_transfer" and handover.from_person == entry.person and handover.fabric == p.fabric and handover.thread == p.thread:
+									_add(rules, "handover:" + transfer.id, "culprit", handover.to_person, handover.to_person,
+										2, "identity:" + handover.to_person, [item.id, record.id, transfer.id], "garment_assignment")
 			"sighting":
 				for report in evidence.values():
 					if report.properties.get("observation_type") != "examination":
@@ -33,13 +38,13 @@ static func derive(evidence: Dictionary) -> Dictionary:
 							if alibis.size() == 3:
 								_add(rules, "exclusion:" + p.person, "culprit", p.person, p.person,
 									2, "identity:" + p.person, [register.id, report.id])
-			"examination":
+			"examination", "medical_addendum":
 				for object in evidence.values():
 					if object.properties.get("observation_type") == "object":
 						var method = Content.method_for(p.pattern, object.properties.form)
 						if method != "":
-							_add(rules, "method:" + object.id, "method", method, "", 2,
-								"injury_mechanism", [item.id, object.id])
+							_add(rules, "method:" + object.id + ":" + item.id, "method", method, "", 2,
+								"injury_mechanism", [item.id, object.id], "primary_injury" if p.observation_type == "medical_addendum" else "injury_method")
 			"grievance":
 				if p.state == "open":
 					var motive = Content.motive_for(p.topic)
@@ -49,7 +54,9 @@ static func derive(evidence: Dictionary) -> Dictionary:
 	return rules
 
 static func _add(rules: Dictionary, id: String, claim: String, value: String, subject: String,
-		weight: int, group: String, requires: Array) -> void:
+		weight: int, group: String, requires: Array, inference: String = "") -> void:
 	requires.sort()
 	rules[id] = {"claim": claim, "value": value, "subject": subject, "weight": weight,
-		"independence_group": group, "requires": requires}
+		"independence_group": group, "requires": requires,
+		"inference_id": inference if inference != "" else {"material": "material_identity", "presence": "opportunity",
+			"exclusion": "attendance", "method": "injury_method", "motive": "active_motive"}[id.get_slice(":", 0)]}

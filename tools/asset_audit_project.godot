@@ -1,0 +1,9 @@
+; Isolated visual audit project. Copy into the temporary extraction directory.
+config_version=5
+[application]
+config/name="Dead Letter Asset Audit"
+[display]
+window/size/viewport_width=1600
+window/size/viewport_height=1100
+[rendering]
+renderer/rendering_method="gl_compatibility"

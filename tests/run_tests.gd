@@ -30,8 +30,9 @@ func _initialize() -> void:
 		var data: Dictionary = result.case
 		check(Validator.validate(data).valid, "valid seed %d" % case_seed)
 		check(Data.encode(data) == Data.encode(generator.generate(case_seed).case), "deterministic seed %d" % case_seed)
-		for selection in [proofs(data), proofs(data, true)]:
-			check(evaluate(data, selection).outcome == "solved", "different sufficient argument seed %d" % case_seed)
+		var earlier_explains_material = data.evidence.has("earlier_assistance") and data.evidence.earlier_assistance.properties.person == data.truth.culprit and not data.evidence.has("residue_removal")
+		check(evaluate(data, proofs(data)).outcome == ("insufficient_case" if earlier_explains_material else "solved"), "material argument respects earlier contact seed %d" % case_seed)
+		check(evaluate(data, proofs(data, true)).outcome == "solved", "independent alibi route remains sufficient seed %d" % case_seed)
 		_test_short_case(data)
 		report.seeds.append({"seed": case_seed, "attempt": data.attempt, "valid": true,
 			"observations": data.evidence.size(), "material_route_items": proofs(data).size(), "alibi_route_items": proofs(data, true).size()})
@@ -252,4 +253,4 @@ func _test_reported_seed(current: Dictionary) -> void:
 	var archived = JSON.parse_string(FileAccess.get_file_as_string("res://tests/fixtures/seed_914368_v0_2_0.json"))
 	check(archived.seed == "914368" and archived.generator_version == "0.2.0" and archived.evidence.size() == 38, "reported case preserved verbatim")
 	check(archived.truth == current.truth, "reported seed retains its factual solution")
-	check(current.evidence.size() == 15, "reported seed now has fifteen distinct observations")
+	check(current.evidence.size() == 16, "reported seed retains short case plus one routine-use context")

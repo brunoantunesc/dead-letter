@@ -6,6 +6,8 @@ const Data = preload("res://core/case_data.gd")
 const Content = preload("res://core/case_content.gd")
 const Catalog = preload("res://core/evidence_catalog.gd")
 const Rules = preload("res://core/proof_rules.gd")
+const Network = preload("res://core/evidence_network.gd")
+const Placement = preload("res://core/evidence_placement.gd")
 
 static func validate(data: Dictionary) -> Dictionary:
 	var errors: Array = []
@@ -68,7 +70,12 @@ static func validate(data: Dictionary) -> Dictionary:
 		return _result(errors)
 	_check_timeline(data, errors)
 	_check_consequences(data, errors)
+	if not data.get("counterproofs") is Array or data.counterproofs != Network.derive(data):
+		errors.append("unsupported_counterproof")
+	elif not Network.resolve(data.counterproofs).unresolved.is_empty():
+		errors.append("ungrounded_counterproof_cycle")
 	_check_proof(data, errors)
+	errors.append_array(Placement.validate(data))
 	return _result(errors)
 
 static func _check_truth(data: Dictionary, errors: Array) -> void:
@@ -106,7 +113,9 @@ static func _check_truth(data: Dictionary, errors: Array) -> void:
 		errors.append("missing_examination")
 		return
 	var examination: Dictionary = data.events.examination
-	if data.truth.event_id not in examination.causes or examination.effects.get("pattern") != Content.PROFILES[data.truth.method].pattern:
+	var crime_patterns: Array = [Content.PROFILES[data.truth.method].pattern]
+	crime_patterns.append_array(crime.effects.get("secondary_patterns", []))
+	if data.truth.event_id not in examination.causes or examination.effects.get("pattern") not in crime_patterns:
 		errors.append("incompatible_examination")
 
 static func _check_timeline(data: Dictionary, errors: Array) -> void:
@@ -145,6 +154,9 @@ static func _check_consequences(data: Dictionary, errors: Array) -> void:
 		var event: Dictionary = data.events[item.event_id]
 		var p: Dictionary = item.properties
 		var effects: Dictionary = event.effects
+		for definition in Catalog.CATALOG.definitions:
+			if definition.id == item.definition_id and event.kind not in definition.causal_kinds:
+				errors.append("incompatible_origin:" + id)
 		if item.get("definition_id", "") == "" or item.get("definition_id") != Catalog.resolve(p):
 			errors.append("invalid_definition:" + id)
 		if item.id != id or event.observations.get(id) != p:
@@ -175,7 +187,7 @@ static func _check_consequences(data: Dictionary, errors: Array) -> void:
 						grounded = grounded and ((entry.status == "attended" and cause.kind == "attendance" and cause.start == entry.start and cause.end == entry.end and cause.location == entry.place) or (entry.status == "reserved" and cause.kind == "booking"))
 					compatible = compatible and grounded
 			"object", "incident":
-				compatible = p.get("weapon") == effects.get("weapon")
+				compatible = p.get("weapon") == effects.get("weapon") and p.get("object_id", "") != "" and p.get("object_id") == effects.get("object_id")
 				if p.observation_type == "object":
 					var form_found = false
 					for profile in Content.PROFILES.values():
@@ -193,6 +205,37 @@ static func _check_consequences(data: Dictionary, errors: Array) -> void:
 						parent_found = true
 				compatible = compatible and parent_found
 			"room_request": compatible = p.get("person") == effects.get("person") and p.get("reason") == effects.get("reason")
+			"object_use_record", "prior_contact", "trace_cleaning", "garment_transfer", "medical_addendum", "room_resolution":
+				for field in p:
+					if field == "observation_type": continue
+					if effects.get(field) != p[field]: compatible = false
+				if p.has("time") and p.time != event.start: compatible = false
+				if p.has("person") and p.person not in event.actors: compatible = false
+				if p.observation_type == "garment_transfer":
+					compatible = compatible and p.get("from_person") in event.actors and p.get("to_person") in event.actors and p.get("from_person") != p.get("to_person")
+				if p.observation_type == "prior_contact":
+					compatible = compatible and "victim" in event.actors and event.end < data.events[data.truth.event_id].start
+				if p.observation_type == "trace_cleaning":
+					var prior_residue = false
+					for cause_id in event.causes:
+						var cause: Dictionary = data.events[cause_id]
+						if cause.kind == "prior_contact" and cause.effects.get("fabric") == p.get("fabric") and cause.effects.get("thread") == p.get("thread"):
+							prior_residue = true
+					compatible = compatible and prior_residue and "victim" in event.actors and event.end < data.events[data.truth.event_id].start
+				if p.observation_type == "object_use_record":
+					var object_found = false
+					for other in data.evidence.values():
+						if other.properties.get("observation_type") == "object" and other.properties.get("object_id") == p.get("object_id") and other.properties.get("weapon") == p.get("weapon"):
+							object_found = true
+					compatible = compatible and object_found
+				if p.observation_type == "medical_addendum":
+					var report_id: String = p.get("report_id", "")
+					compatible = compatible and data.evidence.has(report_id) and data.evidence[report_id].get("definition_id") == "examination"
+					if data.evidence.has(report_id):
+						compatible = compatible and data.evidence[report_id].event_id in event.causes
+					var observed_patterns: Array = [Content.PROFILES[data.truth.method].pattern]
+					observed_patterns.append_array(data.events[data.truth.event_id].effects.get("secondary_patterns", []))
+					compatible = compatible and p.get("pattern") in observed_patterns
 			_: compatible = false
 		if not compatible:
 			errors.append("incompatible_consequence:" + id)
@@ -211,12 +254,9 @@ static func _check_consequences(data: Dictionary, errors: Array) -> void:
 	if data.support_rules != Rules.derive(data.evidence):
 		errors.append("unsupported_comparison")
 	var murder: Dictionary = data.events[data.truth.event_id]
-	var entries: Array = data.events.wardrobe.effects.entries
-	var matching_coats = 0
-	for entry in entries:
-		if entry.person == data.truth.culprit and entry.fabric == murder.effects.fabric and entry.thread == murder.effects.thread:
-			matching_coats += 1
-	if matching_coats != 1:
+	var ownership = _garment_ownership(data, errors)
+	var garment_key = str(murder.effects.fabric) + ":" + str(murder.effects.thread)
+	if ownership.get(garment_key) != data.truth.culprit:
 		errors.append("unexplained_material_transfer")
 	for item in data.evidence.values():
 		if item.properties.get("observation_type") != "object":
@@ -233,10 +273,29 @@ static func _check_consequences(data: Dictionary, errors: Array) -> void:
 		if not explained:
 			errors.append("missing_context:" + item.id)
 
+static func _garment_ownership(data: Dictionary, errors: Array) -> Dictionary:
+	var ownership = {}
+	var sequence: Array = data.events.values().filter(func(event): return event.end < data.events[data.truth.event_id].start and event.kind in ["cloakroom_intake", "garment_transfer"])
+	sequence.sort_custom(func(a, b): return a.start < b.start if a.start != b.start else a.id < b.id)
+	for event in sequence:
+		if event.kind == "cloakroom_intake":
+			for entry in event.effects.get("entries", []):
+				ownership[str(entry.fabric) + ":" + str(entry.thread)] = entry.person
+		else:
+			var p: Dictionary = event.effects
+			var key = str(p.get("fabric")) + ":" + str(p.get("thread"))
+			if ownership.get(key) != p.get("from_person"):
+				errors.append("unexplained_garment_handover:" + event.id)
+			else:
+				ownership[key] = p.get("to_person")
+	return ownership
+
 static func _check_proof(data: Dictionary, errors: Array) -> void:
 	if not data.policy.get("minimum_by_claim") is Dictionary or not data.policy.get("minimum_total") is int:
 		errors.append("invalid_policy")
 		return
+	if data.policy.get("counterproof_scope") != "existing":
+		errors.append("invalid_counterproof_policy")
 	for claim in ["culprit", "motive", "method"]:
 		if not data.policy.minimum_by_claim.get(claim) is int or data.policy.minimum_by_claim[claim] <= 0:
 			errors.append("invalid_policy:" + claim)

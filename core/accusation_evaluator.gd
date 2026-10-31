@@ -1,5 +1,6 @@
 extends RefCounted
 ## Internal evaluation only. Score and truth are exposed solely by explicit debug tools.
+const Network = preload("res://core/evidence_network.gd")
 
 static func evaluate(data: Dictionary, accusation: Dictionary, discovered: Array) -> Dictionary:
 	var scores = {"culprit": 0, "motive": 0, "method": 0}
@@ -13,6 +14,9 @@ static func evaluate(data: Dictionary, accusation: Dictionary, discovered: Array
 		if evidence_id not in selected:
 			selected.append(evidence_id)
 	var supported: Array = []
+	var contested: Array = []
+	# All existing applicable counterproofs, even undiscovered/unselected, per approval.
+	var network = Network.resolve(data.get("counterproofs", []))
 	for rule in data.support_rules.values():
 		var claim: String = rule.claim
 		if rule.value != accusation.get(claim, "") or (rule.subject != "" and rule.subject != accusation.get("culprit", "")):
@@ -22,6 +26,13 @@ static func evaluate(data: Dictionary, accusation: Dictionary, discovered: Array
 			if id not in selected:
 				complete = false
 		if complete:
+			var defeated = false
+			for attack in network.active:
+				if attack.target in rule.requires and attack.target_claim == rule.get("inference_id", "") and (attack.subject == "" or rule.subject == "" or attack.subject == rule.subject):
+					defeated = true
+					contested.append({"argument": rule.requires, "counterproof": attack.source, "relation": attack.relation_id})
+			if defeated:
+				continue
 			var key: String = claim + ":" + rule.independence_group
 			groups[key] = max(groups.get(key, 0), rule.weight)
 			supported.append(rule.requires)
@@ -42,4 +53,5 @@ static func evaluate(data: Dictionary, accusation: Dictionary, discovered: Array
 	elif not reasons.is_empty():
 		outcome = "insufficient_case"
 	return {"outcome": outcome, "reasons": reasons, "scores": scores,
-		"total": total, "ignored_evidence": ignored, "supported_comparisons": supported}
+		"total": total, "ignored_evidence": ignored, "supported_comparisons": supported,
+		"contested_comparisons": contested}

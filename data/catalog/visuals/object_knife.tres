@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="EvidenceVisual" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_visual.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "visual.object.knife"
+status = "pending"
+author_note = "Asset ainda não selecionado; não indica relevância investigativa."

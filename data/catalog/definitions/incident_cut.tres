@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "incident.cut"
+selector = {"observation_type": "incident", "incident": "cut"}
+title_key = "evidence.incident.cut.title"
+text_key = "evidence.incident.cut.body"
+parameters = {"person": {"field": "person", "format": "person"}, "time": {"field": "time", "format": "time"}}
+rows = {}
+visual_id = "visual.incident.cut"
+category_id = "record.administrative"
+claim_ids = PackedStringArray("independent_use", "exclusive_origin")
+causal_kinds = PackedStringArray("cut", "lifting", "inspection", "sports", "cleaning")
+observation_fields = PackedStringArray("weapon", "person", "time", "object_id")

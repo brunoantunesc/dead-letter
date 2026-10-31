@@ -1,0 +1,513 @@
+[
+  {
+    "id": "sofa_1",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/sofa_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/sofa_1.glb",
+    "triangles": 772
+  },
+  {
+    "id": "sofa_3",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/sofa_3.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/sofa_3.glb",
+    "triangles": 508
+  },
+  {
+    "id": "chair_mp_1",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/chair_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/chair_mp_1.glb",
+    "triangles": 212
+  },
+  {
+    "id": "chair_mp_3",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/chair_mp_3.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/chair_mp_3.glb",
+    "triangles": 264
+  },
+  {
+    "id": "coffee_table_1",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/coffee_table_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/coffee_table_1.glb",
+    "triangles": 104
+  },
+  {
+    "id": "table_large_3",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/table_large_3.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/table_large_3.glb",
+    "triangles": 54
+  },
+  {
+    "id": "wardrobe_mp_1",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/wardrobe_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/wardrobe_mp_1.glb",
+    "triangles": 1426
+  },
+  {
+    "id": "display_cabinet_mp_1",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/display_cabinet_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/display_cabinet_mp_1.glb",
+    "triangles": 636
+  },
+  {
+    "id": "bed_1",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bed_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bed_1.glb",
+    "triangles": 744
+  },
+  {
+    "id": "bed_4",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bed_4.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bed_4.glb",
+    "triangles": 940
+  },
+  {
+    "id": "bedside_table_2",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bedside_table_2.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bedside_table_2.glb",
+    "triangles": 484
+  },
+  {
+    "id": "shelf_mp_2",
+    "sheet": "furniture",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/shelf_mp_2.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/shelf_mp_2.glb",
+    "triangles": 168
+  },
+  {
+    "id": "wall_1",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/wall_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/wall_1.glb",
+    "triangles": 48
+  },
+  {
+    "id": "wall_2_1",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/wall_2_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/wall_2_1.glb",
+    "triangles": 48
+  },
+  {
+    "id": "doorway_door_mp_1",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/doorway_door_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/doorway_door_mp_1.glb",
+    "triangles": 392
+  },
+  {
+    "id": "doorway_2_wide",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/doorway_2_wide.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/doorway_2_wide.glb",
+    "triangles": 784
+  },
+  {
+    "id": "elevator_1",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/elevator_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/elevator_1.glb",
+    "triangles": 926
+  },
+  {
+    "id": "floor_ceiling_1",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/floor_ceiling_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/floor_ceiling_1.glb",
+    "triangles": 20
+  },
+  {
+    "id": "stairs_3",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/stairs_3.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/stairs_3.glb",
+    "triangles": 68
+  },
+  {
+    "id": "window_2_double",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/window_2_double.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/window_2_double.glb",
+    "triangles": 502
+  },
+  {
+    "id": "arc_1_wall_1",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/arc_1_wall_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/arc_1_wall_1.glb",
+    "triangles": 78
+  },
+  {
+    "id": "pillar_1",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/pillar_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/pillar_1.glb",
+    "triangles": 64
+  },
+  {
+    "id": "beam_1",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/beam_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/beam_1.glb",
+    "triangles": 16
+  },
+  {
+    "id": "half_arc_pillar_1_wall_1_plain",
+    "sheet": "structures",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/half_arc_pillar_1_wall_1_plain.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/half_arc_pillar_1_wall_1_plain.glb",
+    "triangles": 34
+  },
+  {
+    "id": "notebook_1",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/notebook_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/notebook_1.glb",
+    "triangles": 936
+  },
+  {
+    "id": "book_mp_1",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/book_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/book_mp_1.glb",
+    "triangles": 42
+  },
+  {
+    "id": "open_book_mp_1",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/open_book_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/open_book_mp_1.glb",
+    "triangles": 78
+  },
+  {
+    "id": "cassette_tape_mp_1",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cassette_tape_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cassette_tape_mp_1.glb",
+    "triangles": 144
+  },
+  {
+    "id": "key_mp_1",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/key_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/key_mp_1.glb",
+    "triangles": 220
+  },
+  {
+    "id": "cash_2",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cash_2.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cash_2.glb",
+    "triangles": 38
+  },
+  {
+    "id": "clock_1",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/clock_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/clock_1.glb",
+    "triangles": 524
+  },
+  {
+    "id": "plate_mp_1",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/plate_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/plate_mp_1.glb",
+    "triangles": 524
+  },
+  {
+    "id": "spoon_mp_1",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/spoon_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/spoon_mp_1.glb",
+    "triangles": 238
+  },
+  {
+    "id": "glass_bottle_1",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/glass_bottle_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/glass_bottle_1.glb",
+    "triangles": 274
+  },
+  {
+    "id": "ashtray_1",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/ashtray_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/ashtray_1.glb",
+    "triangles": 816
+  },
+  {
+    "id": "butcher_knife_mp_1",
+    "sheet": "investigation_props",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/butcher_knife_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/butcher_knife_mp_1.glb",
+    "triangles": 112
+  },
+  {
+    "id": "pc_monitor_mp_1",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/pc_monitor_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/pc_monitor_mp_1.glb",
+    "triangles": 354
+  },
+  {
+    "id": "pc_mp_1",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/pc_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/pc_mp_1.glb",
+    "triangles": 32
+  },
+  {
+    "id": "tv_mp_1",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/tv_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/tv_mp_1.glb",
+    "triangles": 670
+  },
+  {
+    "id": "cell_phone_1",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cell_phone_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cell_phone_1.glb",
+    "triangles": 178
+  },
+  {
+    "id": "cell_phone_3",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/cell_phone_3.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/cell_phone_3.glb",
+    "triangles": 216
+  },
+  {
+    "id": "walkie_talkie_2",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/walkie_talkie_2.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/walkie_talkie_2.glb",
+    "triangles": 238
+  },
+  {
+    "id": "monitoring_screen_mp_1",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/monitoring_screen_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/monitoring_screen_mp_1.glb",
+    "triangles": 494
+  },
+  {
+    "id": "elevator_buttons_1",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_buttons_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_buttons_1.glb",
+    "triangles": 368
+  },
+  {
+    "id": "elevator_sign_1",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_sign_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_sign_1.glb",
+    "triangles": 320
+  },
+  {
+    "id": "elevator_screen_1",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_screen_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_screen_1.glb",
+    "triangles": 312
+  },
+  {
+    "id": "ceiling_fan_mp_1",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/ceiling_fan_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/ceiling_fan_mp_1.glb",
+    "triangles": 708
+  },
+  {
+    "id": "keypad_1",
+    "sheet": "electronics",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/keypad_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/keypad_1.glb",
+    "triangles": 400
+  },
+  {
+    "id": "lamp_1_off",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_1_off.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_1_off.glb",
+    "triangles": 1118
+  },
+  {
+    "id": "lamp_1_on",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_1_on.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_1_on.glb",
+    "triangles": 1118
+  },
+  {
+    "id": "lamp_3_on",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_3_on.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_3_on.glb",
+    "triangles": 32
+  },
+  {
+    "id": "ceiling_lamp_4_on",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/ceiling_lamp_4_on.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/ceiling_lamp_4_on.glb",
+    "triangles": 36
+  },
+  {
+    "id": "ceiling_lamp_1_on",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/ceiling_lamp_1_on.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/ceiling_lamp_1_on.glb",
+    "triangles": 1132
+  },
+  {
+    "id": "ceiling_fan_mp_1_1_light_on",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/ceiling_fan_mp_1_1_light_on.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/ceiling_fan_mp_1_1_light_on.glb",
+    "triangles": 1058
+  },
+  {
+    "id": "fake_light_window_2_single",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/fake_light_window_2_single.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/fake_light_window_2_single.glb",
+    "triangles": 32
+  },
+  {
+    "id": "vent_1",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/vent_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/vent_1.glb",
+    "triangles": 52
+  },
+  {
+    "id": "cobweb_1",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Decals/cobweb_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Decals/cobweb_1.glb",
+    "triangles": 4
+  },
+  {
+    "id": "curtain_rod_mp_1",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/curtain_rod_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/curtain_rod_mp_1.glb",
+    "triangles": 1070
+  },
+  {
+    "id": "carpet_mp_1",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/carpet_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/carpet_mp_1.glb",
+    "triangles": 18
+  },
+  {
+    "id": "painting_1",
+    "sheet": "lighting_materials",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/painting_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/painting_1.glb",
+    "triangles": 92
+  },
+  {
+    "id": "toilet_mp_1",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/toilet_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/toilet_mp_1.glb",
+    "triangles": 1258
+  },
+  {
+    "id": "vending_machine_1",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/vending_machine_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/vending_machine_1.glb",
+    "triangles": 188
+  },
+  {
+    "id": "cardboard_box_1",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/cardboard_box_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/cardboard_box_1.glb",
+    "triangles": 56
+  },
+  {
+    "id": "metal_barrel_mp_1",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/metal_barrel_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/metal_barrel_mp_1.glb",
+    "triangles": 380
+  },
+  {
+    "id": "pipe_valve_holder_large_1",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/pipe_valve_holder_large_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/pipe_valve_holder_large_1.glb",
+    "triangles": 294
+  },
+  {
+    "id": "supply_crate_1_empty",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/supply_crate_1_empty.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/supply_crate_1_empty.glb",
+    "triangles": 260
+  },
+  {
+    "id": "meat_1",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/meat_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/meat_1.glb",
+    "triangles": 304
+  },
+  {
+    "id": "canned_food_mp_1",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/canned_food_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/canned_food_mp_1.glb",
+    "triangles": 311
+  },
+  {
+    "id": "jerrycan_1",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/jerrycan_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/jerrycan_1.glb",
+    "triangles": 728
+  },
+  {
+    "id": "flashlight_1",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/flashlight_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/flashlight_1.glb",
+    "triangles": 510
+  },
+  {
+    "id": "dosimeter_1",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/dosimeter_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/dosimeter_1.glb",
+    "triangles": 559
+  },
+  {
+    "id": "syringe_mp_1",
+    "sheet": "service",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/syringe_mp_1.glb",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/syringe_mp_1.glb",
+    "triangles": 290
+  },
+  {
+    "id": "low_poly_papers_set",
+    "sheet": "paper_set",
+    "archive_path": "Texturas PSX/low-poly_papers_set/scene.gltf",
+    "local_path": "/tmp/dead-letter-asset-audit/source/Texturas PSX/low-poly_papers_set/scene.gltf",
+    "triangles": null
+  }
+]

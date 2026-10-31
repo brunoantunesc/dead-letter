@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "prior_contact"
+selector = {"observation_type": "prior_contact"}
+title_key = "evidence.prior_contact.title"
+text_key = "evidence.prior_contact.body"
+parameters = {"person": {"field": "person", "format": "person"}, "fabric": {"field": "fabric", "format": "term"}, "thread": {"field": "thread", "format": "term"}, "time": {"field": "time", "format": "time"}}
+rows = {}
+visual_id = "visual.prior_contact"
+category_id = "record.administrative"
+claim_ids = PackedStringArray("residue_persists")
+causal_kinds = PackedStringArray("prior_contact")
+observation_fields = PackedStringArray("person", "fabric", "thread", "time")

@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "object.poison_vial"
+selector = {"observation_type": "object", "weapon": "poison_vial"}
+title_key = "evidence.object.poison_vial.title"
+text_key = "evidence.object.poison_vial.body"
+parameters = {}
+rows = {}
+visual_id = "visual.object.poison_vial"
+category_id = "material.object"
+claim_ids = PackedStringArray("criminal_origin")
+causal_kinds = PackedStringArray("discard", "cut", "lifting", "inspection", "sports", "cleaning")
+observation_fields = PackedStringArray("weapon", "form", "object_id")

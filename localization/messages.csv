@@ -194,3 +194,59 @@ verdict.total,total,total
 cli.open,aberto,open
 cli.closed,fechado,closed
 cli.help,"Use --inspect=id,id para examinar; --culprit=person_0 --motive=money --method=stabbing --evidence=id,id para apresentar provas. --debug revela a solução somente após o veredito.","Use --inspect=id,id to examine; --culprit=person_0 --motive=money --method=stabbing --evidence=id,id to submit evidence. --debug reveals the solution only after the verdict."
+evidence.prior_contact.title,Atendimento antes do jantar,Earlier assistance
+evidence.prior_contact.body,"Às {time}, {person} ajudou Vicente a ajustar a manga. A ficha descreve a peça como {fabric}, com {thread}.","At {time}, {person} helped Vicente adjust his sleeve. The service record describes {fabric} with {thread}."
+evidence.trace_cleaning.title,Registro de remoção de resíduos,Residue removal record
+evidence.trace_cleaning.body,"Às {time}, foram removidos da mão e do punho da camisa de Vicente resíduos de {fabric} e {thread}.","At {time}, residues of {fabric} and {thread} were removed from Vicente’s hand and shirt cuff."
+evidence.garment_transfer.title,Entrega de uma peça emprestada,Borrowed garment handover
+evidence.garment_transfer.body,"Às {time}, {from_person} entregou a {to_person} um casaco de {fabric} com {thread}.","At {time}, {from_person} handed {to_person} a coat of {fabric} with {thread}."
+evidence.medical_addendum.title,Complemento do exame,Examination addendum
+evidence.medical_addendum.body,Complemento registrado às {time}. Achado principal: {pattern} A descrição anterior se referia a uma lesão secundária.,Addendum recorded at {time}. Principal finding: {pattern} The earlier description referred to a secondary injury.
+evidence.room_resolution.title,Fechamento de atendimento,Service completion
+evidence.room_resolution.body,"Às {time}, o atendimento referente ao ruído hidráulico comunicado por {person} foi encerrado após o reparo.","At {time}, the service request concerning the plumbing noise reported by {person} was closed after repairs."
+evidence.object_use_record.title,Controle de retirada de utensílio,Equipment checkout log
+evidence.object_use_record.body,"Às {time}, {person} retirou {weapon} para uma atividade de rotina.","At {time}, {person} checked out {weapon} for routine work."
+term.knife,uma faca,a knife
+term.rope,uma corda,a rope
+term.pistol,uma pistola,a pistol
+term.bat,um bastão,a bat
+term.poison_vial,um frasco de produto químico,a chemical vial
+board.title,Quadro de investigação,Investigation board
+board.open,Abrir quadro,Open board
+board.close,Voltar à investigação,Back to investigation
+board.connect,Conectar cards,Connect cards
+board.cancel_connect,Cancelar conexão,Cancel connection
+board.new_note,Nova anotação,New note
+board.fit,Ver todos,Show all
+board.help,Arraste cards ou o fundo · Roda do mouse: aproximar,Drag cards or background · Mouse wheel: zoom
+board.select_first,Escolha o primeiro card da conexão.,Choose the first card to connect.
+board.select_second,Escolha o segundo card.,Choose the second card.
+board.cards,CARDS,CARDS
+board.connections,CONEXÕES MANUAIS,MANUAL CONNECTIONS
+board.marker,Marcação,Mark
+board.link_label,Sua interpretação,Your interpretation
+board.note_body,Sua anotação,Your note
+board.remove,Remover,Remove
+board.no_marker,Sem símbolo,No symbol
+board.question_marker,?  Dúvida,?  Uncertain
+board.cross_marker,X  Descartada por você,X  Dismissed by you
+board.link_placeholder,Escreva o que essa conexão significa…,Write what this connection means…
+board.note_placeholder,"Hipóteses, perguntas, lembretes…","Hypotheses, questions, reminders…"
+board.choose_card,Selecione um card,Select a card
+board.choose_link,Selecione uma conexão,Select a connection
+board.connection,Conexão manual,Manual connection
+board.selection_help,Escolha um card para ler seu conteúdo completo. As conexões e marcações expressam suas hipóteses.,Select a card to read its full content. Connections and marks express your hypotheses.
+board.note,Anotação livre,Free note
+board.room_known,Cômodo visitado durante a investigação.,Room visited during the investigation.
+board.room_closed,Cômodo conhecido pela planta; encontra-se fechado.,Room known from the floor plan; currently closed.
+board.object_found,Objeto encontrado. A associação com o crime é uma hipótese sua.,Object found. Its association with the crime is your hypothesis.
+board.kind.person,PESSOA,PERSON
+board.kind.room,CÔMODO,ROOM
+board.kind.evidence,PROVA,EVIDENCE
+board.kind.object,OBJETO,OBJECT
+board.kind.note,ANOTAÇÃO,NOTE
+board.pile,FICHAS DISPONÍVEIS · {count},AVAILABLE CARDS · {count}
+board.place,Colocar no quadro,Place on board
+board.stash,Guardar na pilha,Return to pile
+board.on_board,No quadro,On board
+board.in_pile,Na pilha,In pile

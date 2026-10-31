@@ -1,0 +1,586 @@
+[
+  {
+    "id": "sofa_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/sofa_1.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "sofa_3",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/sofa_3.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "chair_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/chair_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "chair_mp_3",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/chair_mp_3.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "coffee_table_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/coffee_table_1.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "table_large_3",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/table_large_3.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "wardrobe_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/wardrobe_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "display_cabinet_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/display_cabinet_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "bed_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bed_1.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "bed_4",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bed_4.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "bedside_table_2",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/bedside_table_2.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "shelf_mp_2",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Furniture/shelf_mp_2.glb",
+    "classification": "adaptar",
+    "reason": "Base de mobiliário aproveitável; madeira/estofado e desgaste precisam seleção para comunicar luxo decadente, não moradia abandonada.",
+    "preview": "previews/furniture.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "wall_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/wall_1.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "wall_2_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/wall_2_1.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "doorway_door_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/doorway_door_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "doorway_2_wide",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/doorway_2_wide.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "elevator_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/elevator_1.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "floor_ceiling_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/floor_ceiling_1.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "stairs_3",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/stairs_3.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "window_2_double",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/window_2_double.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "arc_1_wall_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/arc_1_wall_1.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "pillar_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/pillar_1.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "beam_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/beam_1.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "half_arc_pillar_1_wall_1_plain",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Modular Structures/half_arc_pillar_1_wall_1_plain.glb",
+    "classification": "adaptar",
+    "reason": "Base modular de interior; acabamento e encaixes precisam calibração. Não representa por si só a arquitetura do hotel.",
+    "preview": "previews/structures.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "notebook_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/notebook_1.glb",
+    "classification": "adaptar",
+    "reason": "Suporte físico útil, mas conteúdo textual é textura decorativa. A leitura investigativa deve vir do catálogo localizado.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "book_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/book_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Suporte físico útil, mas conteúdo textual é textura decorativa. A leitura investigativa deve vir do catálogo localizado.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "open_book_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/open_book_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Suporte físico útil, mas conteúdo textual é textura decorativa. A leitura investigativa deve vir do catálogo localizado.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "cassette_tape_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cassette_tape_mp_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Objeto reconhecível e escala utilizável; interação e propriedades probatórias não vêm no modelo.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "key_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/key_mp_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Objeto reconhecível e escala utilizável; interação e propriedades probatórias não vêm no modelo.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "cash_2",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cash_2.glb",
+    "classification": "adaptar",
+    "reason": "Cédulas com iconografia de dólar. Precisa definição visual compatível com o Brasil e ambiguidade temporal.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "clock_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/clock_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Objeto reconhecível e escala utilizável; interação e propriedades probatórias não vêm no modelo.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "plate_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/plate_mp_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Objeto reconhecível e escala utilizável; interação e propriedades probatórias não vêm no modelo.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "spoon_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/spoon_mp_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Objeto reconhecível e escala utilizável; interação e propriedades probatórias não vêm no modelo.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "glass_bottle_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/glass_bottle_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Objeto reconhecível e escala utilizável; interação e propriedades probatórias não vêm no modelo.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "ashtray_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/ashtray_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Objeto reconhecível e escala utilizável; interação e propriedades probatórias não vêm no modelo.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "butcher_knife_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/butcher_knife_mp_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Objeto reconhecível e escala utilizável; interação e propriedades probatórias não vêm no modelo.",
+    "preview": "previews/investigation_props.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "pc_monitor_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/pc_monitor_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Selecionar linguagem eletromecânica e refazer telas/placas. Aparência cotidiana dos anos 1990/2000 não define a direção inteira.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "pc_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/pc_mp_1.glb",
+    "classification": "evitar_no_recorte",
+    "reason": "Não priorizar no primeiro cenário: reforça uma época digital familiar sem resolver a identidade analógica do projeto.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "tv_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/tv_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Selecionar linguagem eletromecânica e refazer telas/placas. Aparência cotidiana dos anos 1990/2000 não define a direção inteira.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "cell_phone_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/cell_phone_1.glb",
+    "classification": "evitar_no_recorte",
+    "reason": "Não priorizar no primeiro cenário: reforça uma época digital familiar sem resolver a identidade analógica do projeto.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "cell_phone_3",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/cell_phone_3.glb",
+    "classification": "evitar_no_recorte",
+    "reason": "Não priorizar no primeiro cenário: reforça uma época digital familiar sem resolver a identidade analógica do projeto.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "walkie_talkie_2",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/walkie_talkie_2.glb",
+    "classification": "adaptar",
+    "reason": "Selecionar linguagem eletromecânica e refazer telas/placas. Aparência cotidiana dos anos 1990/2000 não define a direção inteira.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "monitoring_screen_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/monitoring_screen_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Selecionar linguagem eletromecânica e refazer telas/placas. Aparência cotidiana dos anos 1990/2000 não define a direção inteira.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "elevator_buttons_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_buttons_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Forma material plausível para o hotel; componentes e respostas funcionais ainda precisam implementação.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "elevator_sign_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_sign_1.glb",
+    "classification": "adaptar",
+    "reason": "Selecionar linguagem eletromecânica e refazer telas/placas. Aparência cotidiana dos anos 1990/2000 não define a direção inteira.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "elevator_screen_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/elevator_screen_1.glb",
+    "classification": "adaptar",
+    "reason": "Selecionar linguagem eletromecânica e refazer telas/placas. Aparência cotidiana dos anos 1990/2000 não define a direção inteira.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "ceiling_fan_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/ceiling_fan_mp_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Forma material plausível para o hotel; componentes e respostas funcionais ainda precisam implementação.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "keypad_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/keypad_1.glb",
+    "classification": "adaptar",
+    "reason": "Selecionar linguagem eletromecânica e refazer telas/placas. Aparência cotidiana dos anos 1990/2000 não define a direção inteira.",
+    "preview": "previews/electronics.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "lamp_1_off",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_1_off.glb",
+    "classification": "adaptar",
+    "reason": "Aparência aproveitável em contexto selecionado. Emissão e geometria de brilho não substituem Light3D nem iluminação de cena.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "lamp_1_on",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_1_on.glb",
+    "classification": "adaptar",
+    "reason": "Aparência aproveitável em contexto selecionado. Emissão e geometria de brilho não substituem Light3D nem iluminação de cena.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "lamp_3_on",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/lamp_3_on.glb",
+    "classification": "adaptar",
+    "reason": "Aparência aproveitável em contexto selecionado. Emissão e geometria de brilho não substituem Light3D nem iluminação de cena.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "ceiling_lamp_4_on",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/ceiling_lamp_4_on.glb",
+    "classification": "adaptar",
+    "reason": "Aparência aproveitável em contexto selecionado. Emissão e geometria de brilho não substituem Light3D nem iluminação de cena.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "ceiling_lamp_1_on",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/ceiling_lamp_1_on.glb",
+    "classification": "adaptar",
+    "reason": "Aparência aproveitável em contexto selecionado. Emissão e geometria de brilho não substituem Light3D nem iluminação de cena.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "ceiling_fan_mp_1_1_light_on",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/ceiling_fan_mp_1_1_light_on.glb",
+    "classification": "adaptar",
+    "reason": "Aparência aproveitável em contexto selecionado. Emissão e geometria de brilho não substituem Light3D nem iluminação de cena.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "fake_light_window_2_single",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Lighting/fake_light_window_2_single.glb",
+    "classification": "adaptar",
+    "reason": "Aparência aproveitável em contexto selecionado. Emissão e geometria de brilho não substituem Light3D nem iluminação de cena.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "vent_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Electronics & Misc/vent_1.glb",
+    "classification": "adaptar",
+    "reason": "Aparência aproveitável em contexto selecionado. Emissão e geometria de brilho não substituem Light3D nem iluminação de cena.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "cobweb_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Decals/cobweb_1.glb",
+    "classification": "adaptar",
+    "reason": "Decoração disponível; controlar uso para decadência localizada, com seleção de arte, palette e transparência.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "curtain_rod_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/curtain_rod_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Somente o varão: não supre cortinas, tecido ou composição de janela do hotel.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "carpet_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/carpet_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Decoração disponível; controlar uso para decadência localizada, com seleção de arte, palette e transparência.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "painting_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/painting_1.glb",
+    "classification": "adaptar",
+    "reason": "Decoração disponível; controlar uso para decadência localizada, com seleção de arte, palette e transparência.",
+    "preview": "previews/lighting_materials.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "toilet_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/toilet_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Forma utilizável; estado de sujeira é intenso para banheiro de hóspedes e não substitui pia/banheira/utensílios.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "vending_machine_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/vending_machine_1.glb",
+    "classification": "adaptar",
+    "reason": "Rever embalagem/marca/rotulagem para contexto brasileiro e função no hotel.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "cardboard_box_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/cardboard_box_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Base para serviço/manutenção; evitar usar sujeira industrial como linguagem de todo o hotel.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "metal_barrel_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/metal_barrel_mp_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Base para serviço/manutenção; evitar usar sujeira industrial como linguagem de todo o hotel.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "pipe_valve_holder_large_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/pipe_valve_holder_large_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Base para serviço/manutenção; evitar usar sujeira industrial como linguagem de todo o hotel.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "supply_crate_1_empty",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Large Props/supply_crate_1_empty.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Base para serviço/manutenção; evitar usar sujeira industrial como linguagem de todo o hotel.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "meat_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/meat_1.glb",
+    "classification": "adaptar",
+    "reason": "Rever embalagem/marca/rotulagem para contexto brasileiro e função no hotel.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "canned_food_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/canned_food_mp_1.glb",
+    "classification": "adaptar",
+    "reason": "Rever embalagem/marca/rotulagem para contexto brasileiro e função no hotel.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "jerrycan_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Small Props/jerrycan_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Base para serviço/manutenção; evitar usar sujeira industrial como linguagem de todo o hotel.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "flashlight_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/flashlight_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Base para serviço/manutenção; evitar usar sujeira industrial como linguagem de todo o hotel.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "dosimeter_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/dosimeter_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Base para serviço/manutenção; evitar usar sujeira industrial como linguagem de todo o hotel.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "syringe_mp_1",
+    "archive_path": "Texturas PSX/PSX Mega Pack/Models/GLB (recommended)/Items & Weapons/syringe_mp_1.glb",
+    "classification": "reutilizar_como_base",
+    "reason": "Base para serviço/manutenção; evitar usar sujeira industrial como linguagem de todo o hotel.",
+    "preview": "previews/service.png",
+    "godot_import_ok": true
+  },
+  {
+    "id": "low_poly_papers_set",
+    "archive_path": "Texturas PSX/low-poly_papers_set/scene.gltf",
+    "classification": "adaptar",
+    "reason": "Uma malha reúne pilhas/folhas em escala de conjunto muito grande; separar, calibrar escala e substituir texto decorativo por conteúdo legível/localizado. Atribuição CC BY 4.0.",
+    "preview": "previews/paper_set.png",
+    "godot_import_ok": true
+  }
+]

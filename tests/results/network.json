@@ -1,0 +1,33 @@
+{
+	"checks": 387,
+	"failures": [],
+	"families": {
+		"cleaned": 17,
+		"culprit_routine": 23,
+		"earlier": 17,
+		"innocent_routine": 77,
+		"none": 66
+	},
+	"generator": "0.5.0",
+	"relations": 46,
+	"review_pair": [
+		{
+			"material_supported": true,
+			"seed": 0,
+			"trace": {
+				"fabric": "navy_wool",
+				"observation_type": "contact",
+				"thread": "gray"
+			}
+		},
+		{
+			"material_supported": false,
+			"seed": 87,
+			"trace": {
+				"fabric": "navy_wool",
+				"observation_type": "contact",
+				"thread": "gray"
+			}
+		}
+	]
+}

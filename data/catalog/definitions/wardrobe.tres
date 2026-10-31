@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "wardrobe"
+selector = {"observation_type": "wardrobe"}
+title_key = "evidence.wardrobe.title"
+text_key = "evidence.wardrobe.body"
+parameters = {}
+rows = {"field": "entries", "text_key": "evidence.wardrobe.row", "parameters": {"person": {"field": "person", "format": "person"}, "fabric": {"field": "fabric", "format": "term"}, "thread": {"field": "thread", "format": "term"}}}
+visual_id = "visual.wardrobe"
+category_id = "record.administrative"
+claim_ids = PackedStringArray("material_identity", "garment_assignment")
+causal_kinds = PackedStringArray("cloakroom_intake")
+observation_fields = PackedStringArray()
