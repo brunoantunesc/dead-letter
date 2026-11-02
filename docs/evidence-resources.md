@@ -1,52 +1,52 @@
-# Autoria do catálogo em Resources
+# Catalog authoring with Resources
 
-Implementação da [#11](https://github.com/brunoantunesc/dead-letter/issues/11), complementada pela rede causal da [#2](https://github.com/brunoantunesc/dead-letter/issues/2). A autoria mantém IDs e textos separados da lógica. A integração posterior da rede está descrita em [rede e posicionamento](evidence-network.md).
+Implementation of [#11](https://github.com/brunoantunesc/dead-letter/issues/11), extended by the causal network in [#2](https://github.com/brunoantunesc/dead-letter/issues/2). Authoring keeps IDs and text separate from logic. Later network integration is described in [network and placement](evidence-network.md).
 
-## Onde editar
+## Where to edit
 
-Abrir o projeto no Godot 4.6.2. No painel FileSystem, abrir um arquivo de `data/catalog/definitions/`: os campos aparecem no Inspector. Os tipos também estão disponíveis em **New Resource**, como EvidenceDefinition, EvidenceVisual, EvidenceRelation e EvidenceCatalogData.
+Open the project in Godot 4.6.2. Open a file under `data/catalog/definitions/` in the FileSystem panel to edit its Inspector fields. Types such as EvidenceDefinition, EvidenceVisual, EvidenceRelation and EvidenceCatalogData are also available through **New Resource**.
 
-- `data/catalog/catalog.tres`: índice explícito das definições, visuais e relações incluídas. Adicionar um arquivo à pasta não o inclui automaticamente.
-- `definitions/*.tres`: um modelo por arquivo, com ID estável, seletor, chaves de tradução, parâmetros e visual_id.
-- `visuals/*.tres`: entradas visuais independentes. As 37 atuais estão pendentes.
-- Relações futuras: salvar Resources EvidenceRelation e adicioná-los ao índice. O índice atual inclui 73 relações de produção, com exemplos de escopo e condições.
-- `localization/messages.csv`: textos por idioma, preservados.
+- `data/catalog/catalog.tres`: explicit index of included definitions, visuals and relations. Adding a file to a folder does not include it automatically.
+- `definitions/*.tres`: one model per file, with stable ID, selector, translation keys, parameters and `visual_id`.
+- `visuals/*.tres`: independent visual entries. All 37 current entries are pending.
+- Relations: save EvidenceRelation Resources and add them to the index. The current index includes 73 production relations with scope and condition examples.
+- `localization/messages.csv`: text by language.
 
-O JSON anterior foi movido para `tests/fixtures/evidence_catalog_v1.json`, apenas como referência de migração. Não é lido pelo jogo nem deve receber conteúdo novo.
+The previous JSON was moved to `tests/fixtures/evidence_catalog_v1.json` as a migration reference only. The game does not read it; do not add production content there.
 
-## Cadastrar uma definição
+## Register a definition
 
-1. Criar um EvidenceDefinition e salvar em `definitions/`.
-2. Definir um `id` único e permanente. Títulos e nomes de arquivos não identificam a prova.
-3. Preencher `selector` com propriedades canônicas. Seletores não podem se sobrepor: um achado deve resolver exatamente um modelo.
-4. Informar `title_key`, `text_key` e os parâmetros. Cada parâmetro possui `field` e `format`: person, term, location, time ou value. Formato de linhas segue o contrato de localização existente.
-5. Criar um EvidenceVisual com ID próprio e atribuir esse ID a `visual_id`.
-6. Adicionar ambos ao índice, criar traduções e executar validação e testes.
+1. Create an EvidenceDefinition and save it under `definitions/`.
+2. Assign a unique, permanent `id`. Titles and filenames do not identify evidence.
+3. Fill `selector` with canonical properties. Selectors cannot overlap: each finding must resolve to exactly one model.
+4. Set `title_key`, `text_key` and parameters. Each parameter has `field` and `format`: person, term, location, time or value. Row formatting follows the existing localization contract.
+5. Create an EvidenceVisual with its own ID and assign it to `visual_id`.
+6. Add both entries to the index, create translations, then run validation and tests.
 
-Criar um modelo não cria um acontecimento: vocabulário e regras causais novos continuam exigindo implementação e testes. Preencher também category_id, claim_ids, causal_kinds e observation_fields; a validação exige categorias e cobertura de contraprovas. Os parâmetros ainda são Dictionaries editáveis pelo Inspector; não há formulário especializado ou editor gráfico de redes nesta entrega.
+A model does not create an event: new causal vocabulary and rules still require implementation and tests. Also fill `category_id`, `claim_ids`, `causal_kinds` and `observation_fields`; validation requires categories and counterproof coverage. Parameters are still Inspector-editable Dictionaries; this delivery has no specialized form or graphical network editor.
 
-## Referência visual sem arte
+## Visual reference without artwork
 
-Uma definição sempre possui `visual_id`, apontando para uma entrada existente. Várias definições podem compartilhar uma entrada quando houver justificativa visual.
+A definition always has a `visual_id` pointing to an existing entry. Several definitions may share an entry when visually justified.
 
-- `pending`: `asset_path` vazio. Significa que a representação ainda será produzida ou selecionada. É um estado válido; não gera objeto automaticamente.
-- `ready`: caminho `res://` existente, de Texture2D, Mesh ou PackedScene. O campo aceita imagens, recursos e cenas/modelos; o validador de autoria confere o tipo realmente carregado.
+- `pending`: empty `asset_path`. The representation has yet to be produced or selected. This is valid and does not automatically generate an object.
+- `ready`: existing `res://` path to a Texture2D, Mesh or PackedScene. The field accepts images, resources and scenes/models; authoring validation checks the loaded type.
 
-`author_note` é anotação de produção, sem texto para o jogador. Atribuir um asset não certifica licença nem legibilidade; essas revisões continuam nas issues de assets e apresentação.
+`author_note` is a production note, not player text. Assigning an asset does not certify its license or readability; those reviews remain part of asset/presentation issues.
 
-`EvidenceCatalog.visual_for(definition_id)` devolve cópia de ID, estado e caminho. A resolução de definição e a validação de metadados em runtime não carregam a arte. A futura camada visual decide quando carregar esse caminho. O vínculo identifica uma representação de apresentação, não prova adicional, relevância, variante de culpa ou regra de acusação.
+`EvidenceCatalog.visual_for(definition_id)` returns a copy of ID, state and path. Definition resolution and runtime metadata validation do not load artwork. The future visual layer decides when to load the path. The reference identifies a presentation representation, not additional proof, relevance, a guilt variant or an accusation rule.
 
-Variações procedurais de aparência e texto sobre objetos ainda não são materializadas. Não usar versões “culpado/inocente” de um asset para revelar a solução.
+Procedural object appearance and text are not yet materialized on 3D objects. Do not use “guilty/innocent” asset versions to reveal the solution.
 
-## Relações
+## Relations
 
-O contrato agora inclui afirmação de origem, afirmação contestada, linhas de registros, contexto adicional e predicados finitos. As relações usam IDs, sem ciclos de carregamento de arquivos. Ver [rede, condições e exemplos](evidence-network.md).
+The contract includes source claim, contested claim, record rows, additional context and finite predicates. Relations use IDs without file-loading cycles. See [network, conditions and examples](evidence-network.md).
 
-O catálogo verifica a estrutura; a geração e o validador do caso verificam origens, aplicabilidade, cadeias e suficiência. Uma relação nova precisa de um exemplo realizável; referências válidas sozinhas não provam qualidade investigativa.
+The catalog checks structure; generation and case validation check origins, applicability, chains and sufficiency. A new relation needs a realizable example; valid references alone do not establish investigative quality.
 
-## Verificação
+## Verification
 
-Com o executável Godot instalado:
+Using the installed Godot executable:
 
 ```sh
 godot --headless --path . --script tools/validate_catalog.gd
@@ -57,24 +57,24 @@ godot --headless --path . --script tests/run_tests.gd
 godot --headless --path . --script tests/ui_smoke.gd
 ```
 
-O validador de autoria carrega assets preenchidos para verificar seus tipos, sem instanciar cenas. A validação usada pelo núcleo verifica metadados e existência dos caminhos sem carregar arte. Rodar a validação completa antes de integrar conteúdo.
+Authoring validation loads assigned assets to check types, without instantiating scenes. Core validation checks metadata and path existence without loading artwork. Run full validation before integrating content.
 
-Os testes comparam as 25 apresentações originais ao catálogo anterior, verificam cópias independentes, ciclo de relações, ResourceSaver/load, referências quebradas, seletores ambíguos, parâmetros inválidos, estado visual pendente e preenchido. Uma malha BoxMesh própria nos fixtures testa o vínculo preenchido; não é arte de produção.
+Tests compare the 25 original presentations with the previous catalog and check independent copies, relation cycles, ResourceSaver/load, broken references, ambiguous selectors, invalid parameters, pending visuals and assigned assets. An original BoxMesh fixture tests a populated reference; it is not production artwork.
 
-O catálogo é cacheado durante uma execução. Reiniciar o teste/jogo depois de editar conteúdo; recarga dinâmica não foi implementada. IDs permanecem iguais nesta migração, mas não há promessa de reprodução entre futuras versões diferentes do conteúdo.
+The catalog is cached during a run. Restart the test/game after editing content; dynamic reload is not implemented. IDs were retained during migration, but reproduction across future content versions is not guaranteed.
 
-## Estado atual
+## Current state
 
-A autoria em Resources foi complementada por 37 modelos, 73 relações e categorias recursivas. Os resultados atuais estão em tests/results/catalog.json, network.json, localization.json e latest.json. O editor reconhece os tipos nativos; a ergonomia do Inspector e a qualidade dos casos ainda precisam de revisão humana. Não houve inclusão de arte de terceiros ou mudança do GDD.
+Resource authoring now includes 37 models, 73 relations and recursive categories. Results are in `tests/results/catalog.json`, `network.json`, `localization.json` and `latest.json`. The editor recognizes native types; Inspector ergonomics and case quality still need human review. No third-party artwork or GDD changes were introduced.
 
-A autoria dos novos vestígios e perfis de ambiente está descrita em [gameplay-feedback.md](gameplay-feedback.md). O catálogo conserva modelos médicos para testes e evolução, mas não os distribui nos casos atuais.
+New trace/room-profile authoring is described in [gameplay-feedback.md](gameplay-feedback.md). The catalog retains medical models for tests and future development but does not distribute them in current cases.
 
-Os modelos podem registrar alternativas localizadas em `text_variants` e `initial_text_variants`. Ver [autoria e validação de redações](prose-variations.md).
+Models can register localized alternatives in `text_variants` and `initial_text_variants`. See [prose authoring and validation](prose-variations.md).
 
-## Nomes dos vestígios físicos
+## Physical trace names
 
-`EvidenceDefinition.observable_titles` associa um token de detalhe observável às chaves `title_key` e `short_key`. Os cinco modelos de vestígios de cenário possuem 25 pares de nomes PT/EN, correspondentes aos detalhes físicos já existentes. A identificação usa o detalhe observado, sem consultar culpa ou relevância: por exemplo, no jardim, corte no tecido, sulcos no cascalho, vaso perfurado, lascas no banco e resíduo no copo.
+`EvidenceDefinition.observable_titles` maps an observable detail token to `title_key` and `short_key`. The five scene-trace models have 25 PT/EN name pairs corresponding to existing physical details. Identification uses the observed detail without consulting guilt or relevance: for example, cut fabric, gravel grooves, a punctured pot, bench splinters and residue in a glass in the garden.
 
-`Presentation.title` e `short_title` resolvem os nomes para cenário, inspeção, seleção de provas, conversas, diagnóstico e quadro. `Investigation.objects_at` oferece `title_token` para a identificação inicial, sem descobrir a prova ou expor sua origem causal. As descrições e regras probatórias permanecem iguais. O quadro mantém o cômodo acima do nome curto.
+`Presentation.title` and `short_title` resolve names for room lists, inspection, evidence selection, conversations, diagnostics and the board. `Investigation.objects_at` provides `title_token` for initial identification without discovering the evidence or exposing its causal origin. Descriptions and proof rules are unchanged. The board retains the room above the short name.
 
-`tests/trace_title_tests.gd`: 583 verificações, cobrindo os 25 detalhes nos dois idiomas, unicidade dos nomes completos e curtos por ambiente, encaixe no card, consistência entre lista e inspeção e 100 seeds. A seed 83 reproduz dois vestígios distintos no jardim; a captura `tests/results/trace_titles.png` foi inspecionada. Se a geração futura permitir dois vestígios do mesmo tipo no mesmo cômodo, será necessário diferenciá-los por suporte/posição física; este recorte gera métodos distintos.
+`tests/trace_title_tests.gd`: 583 checks covering 25 details in both languages, unique full/short names per room, card fit, list/inspection consistency and 100 seeds. Seed 83 reproduces two distinct traces in the garden; `tests/results/trace_titles.png` was inspected. If future generation allows two traces of the same type in the same room, they will need distinct physical supports/positions; the current slice generates different methods.

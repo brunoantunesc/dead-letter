@@ -19,19 +19,19 @@ Early development / pre-production.
 
 The first logic prototype runs on **Godot 4.6.2**. Its GDScript core is independent of scenes and UI. No 3D hotel or final investigation interface is included yet.
 
-## Experimentar a investigação
+## Try the investigation
 
-Abra `project.godot` no Godot e pressione **F5**. A cena principal já está configurada; não é necessário usar o terminal.
+Open `project.godot` in Godot and press **F5**. The main scene is already configured; no terminal is required.
 
-1. Escolha um local e examine objetos e documentos. Para ouvir depoimentos, converse com os NPCs presentes e retome trechos clicáveis da fala. Apresentar uma prova pode abrir outro assunto.
-2. Abra o quadro para organizar cards, conexões e anotações. Volte às descobertas quando quiser.
-3. No relatório à direita, escolha acusado, motivação e método. Marque as descobertas que deseja apresentar como provas.
-4. Clique em **Encerrar e apresentar acusação**. Com **Diagnóstico após o veredito** marcado, o resultado explica argumentos aceitos, lacunas e contestações, além da verdade e dos cálculos para depuração.
-5. Use **Outro caso** para uma seed aleatória ou **Abrir seed** para repetir um caso. Iniciar um caso apaga as descobertas e anotações da sessão anterior.
+1. Choose a room and examine objects and documents. For testimony, talk to the NPCs present and click phrases in their speech to follow up. Presenting evidence can introduce another subject.
+2. Open the board to organize cards, connections and notes. Return to discoveries whenever needed.
+3. In the report on the right, choose the accused, motive and method. Check the discoveries you want to submit as evidence.
+4. Click **Close case and submit accusation**. With **Diagnostics after the verdict** enabled, the result explains accepted arguments, gaps and counterproofs, along with the truth and calculations used for development.
+5. Use **New case** for a random seed or **Open seed** to repeat a case. Starting a case clears discoveries and notes from the previous session.
 
-Esta mesa é uma interface de teste lógico, em português e inglês. As análises dos vestígios já estão disponíveis ao examinar os itens; ferramentas e exploração 3D serão integradas posteriormente. A tela não revela relevância ou pontuação durante a investigação.
+This is a logic-testing desk in Portuguese and English. Trace observations are available when examining items; forensic tools and 3D exploration will be integrated later. The screen does not reveal relevance or scores during the investigation.
 
-O caso curto reúne 15–16 observações e recupera alternativas do Python: dois relatos concretos de encontros com a vítima, dois objetos aparentemente incriminadores e histórias financeira, pessoal e profissional de pessoas diferentes. As pistas não nomeiam quem cometeu o crime. A acusação exige cruzar informações, e pode usar vestígios ou a reconstrução de álibis. Ainda há padrões recorrentes no pequeno catálogo; a dificuldade precisa de teste humano.
+A short case contains 15–16 observations and recovers alternatives from the Python reference: two concrete accounts of encounters with the victim, two apparently incriminating objects, and financial, personal and professional histories involving different people. Clues do not name the murderer. Accusations require cross-referencing information and can use material traces or reconstructed alibis. The small catalog still has recurring patterns; difficulty requires human playtesting.
 
 ## Run the logic tests
 
@@ -61,37 +61,38 @@ To accuse, add `--culprit=person_0 --motive=money --method=stabbing --evidence=i
 
 See [architecture and scope](docs/architecture.md), [original prototype analysis](reference/README.md), and [GDD](GDD.md). Numerical weights are experimental test configuration, not final balancing.
 
-A seed 914368 foi preservada antes da redução em `tests/fixtures/`. Para comparar a revisão na tela, digite **914368** e clique em **Abrir seed**. A verdade factual foi mantida; a distribuição e os documentos foram refeitos. A versão atual inclui contexto de uso cotidiano e totaliza 15 observações nessa seed.
+Seed 914368 was preserved before the reduction in `tests/fixtures/`. To compare the revised case in the UI, enter **914368** and click **Open seed**. Its factual truth was retained; distribution and documents were revised. The current version includes routine-use context and contains 15 observations for this seed.
 
-## Idioma e autoria de textos
+## Localization and text authoring
 
-O seletor no cabeçalho alterna entre **Português (BR)** e **English**, inclusive no meio de um caso, preservando descobertas, anotações e relatório. Cada prova tem um ID de instância e um ID de tipo; títulos e descrições são resolvidos pelo idioma e não ficam no snapshot do núcleo.
+The header selector switches between **Português (BR)** and **English**, including during a case, preserving discoveries, notes and the report. Each clue has an instance ID and a definition ID; titles and descriptions are resolved in the selected language and are not stored in the core snapshot.
 
-O catálogo está em `data/catalog/catalog.tres`, com definições e vínculos visuais em Resources individuais; traduções estão em `localization/messages.csv`. Consulte [a autoria no Godot](docs/evidence-resources.md). Para adicionar idioma, incluir a coluna e o nome em `localization/languages.json`. Consulte [o contrato de IDs e tradução](docs/localization.md). A [rede de contraprovas e posicionamento por categorias](docs/evidence-network.md) já participa da geração e avaliação; a revisão humana de qualidade investigativa continua pendente.
+The catalog is in `data/catalog/catalog.tres`, with definitions and visual references in individual Resources; translations are in `localization/messages.csv`. See [Godot authoring](docs/evidence-resources.md). To add a language, add its column and its name in `localization/languages.json`. See [the ID and localization contract](docs/localization.md). The [counterproof network and placement categories](docs/evidence-network.md) already participate in generation and evaluation; human review of investigative quality is still pending.
 
 ```sh
 godot --headless --path . --script tests/localization_tests.gd
 godot --headless --path . --script tools/investigate.gd -- --seed=914368 --language=en
 ```
 
-## Auditoria do pack PSX
+## PSX pack audit
 
-A [primeira avaliação de assets](docs/assets/psx-audit/README.md) registra o inventário do ZIP local, 73 amostras renderizadas no Godot, cobertura do hotel, lacunas prioritárias e pendências de licença. Os modelos-fonte não foram integrados ao jogo.
+The [initial asset assessment](docs/assets/psx-audit/README.md) records the local ZIP inventory, 73 samples rendered in Godot, hotel coverage, priority gaps and outstanding provenance/license questions. Source models have not been integrated into the game.
 
-## Organização do desenvolvimento
+## Development organization
 
-O [quadro livre de investigação](docs/investigation-board.md) já pode ser usado na mesa de teste: **Abrir quadro**, selecionar fichas na pilha e **Colocar no quadro**, arrastar, conectar e marcar com **?** ou **X**. Cômodos entram após visita; pessoas, após menção ou conversa. Fechar/reabrir preserva o estado na sessão; iniciar outra run limpa o quadro.
+The [free investigation board](docs/investigation-board.md) is available in the testing desk: **Open board**, choose cards from the pile and **Place on board**, then drag, connect and mark them with **?** or **X**. Rooms become available after a visit; people after a mention or conversation. Closing/reopening preserves session state; a new run clears the board.
 
-O [fluxo de desenvolvimento](docs/development-flow.md) documenta o primeiro recorte investigativo jogável, as issues, dependências, ordem de execução e critérios de revisão. As entregas estão reunidas no [marco do GitHub](https://github.com/brunoantunesc/dead-letter/milestone/1).
+The [development workflow](docs/development-flow.md) documents the first playable investigation slice, issues, dependencies, execution order and review criteria. Deliverables are grouped in the [GitHub milestone](https://github.com/brunoantunesc/dead-letter/milestone/1).
 
-## Revisão de gameplay
+## Gameplay review
 
-A [revisão da seed 708272](docs/gameplay-feedback.md) removeu a autópsia disponível e as anotações da mesa, refinou os relatos e distribuiu provas por cinco ambientes possíveis na planta fixa. Para comparar locais: seeds 0, 1, 4, 9 e 14.
+The [seed 708272 review](docs/gameplay-feedback.md) removed the available autopsy and separate desk notes, refined witness accounts and distributed evidence across five possible crime environments within the fixed floor plan. To compare rooms, use seeds 0, 1, 4, 9 and 14.
 
-Conversas com NPCs e esclarecimento de pistas: [fluxo e limites](docs/interrogation.md).
+- [NPC conversations and clue clarification](docs/interrogation.md): flow and limits.
+- [Evidence prose variations](docs/prose-variations.md): alternative wording reproducible by seed in Portuguese and English.
+- [Post-verdict diagnostics](docs/verdict-feedback.md): accepted arguments, gaps and counterproofs for case testing.
+- [Consolidated validation](docs/validation.md): executed tests, screenshots and current limitations.
 
-[Variações de escrita das provas](docs/prose-variations.md): redações alternativas reproduzíveis por seed em português e inglês.
+## Documentation language
 
-[Diagnóstico após o veredito](docs/verdict-feedback.md): argumentos aceitos, lacunas e contestações para testar os casos.
-
-[Validação consolidada da etapa](docs/validation.md): testes executados, capturas e limitações atuais.
+Technical documentation and READMEs are maintained in English. Player-facing text uses the localization system. Original design and agent-instruction documents retain their source language.

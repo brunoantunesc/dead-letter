@@ -1,66 +1,66 @@
-# Quadro livre de investigação
+# Free investigation board
 
-Primeira versão da [issue #9](https://github.com/brunoantunesc/dead-letter/issues/9), antecipada por aprovação do responsável para testar as provas na mesa atual. A exploração 3D da #7 não é pré-requisito desta entrega. O GDD não foi modificado.
+First version of [issue #9](https://github.com/brunoantunesc/dead-letter/issues/9), brought forward with the owner's approval to test evidence in the current desk. Issue #7's 3D exploration is not a prerequisite. The GDD was not changed.
 
-## Uso
+## Usage
 
-Executar a cena principal, abrir uma seed, examinar elementos e clicar em **Abrir quadro**. O canvas começa vazio; as fichas conhecidas ficam na pilha lateral. Selecionar uma ficha e clicar em **Colocar no quadro** para posicioná-la manualmente.
+Run the main scene, open a seed, examine items and click **Open board**. The canvas starts empty; known cards stay in the side pile. Select a card and choose **Place on board** to position it manually.
 
-- Arrastar um card muda sua posição; sobreposições são permitidas.
-- Arrastar o fundo ou usar o botão central desloca a visão; a roda aproxima/afasta em torno do cursor.
-- **Ver todos** enquadra o conjunto dentro dos limites de aproximação, sem reorganizar cards. Quadros muito espalhados podem exigir navegação adicional.
-- Selecionar um card mostra seu conteúdo integral no painel lateral. O seletor também permite localizá-lo e centralizá-lo com aproximação legível.
-- **Conectar cards** inicia a escolha manual de duas pontas. Clicar novamente no botão ou pressionar Escape cancela.
-- Selecionar uma conexão pela linha ou pelo seletor permite editar marcação/texto ou removê-la.
-- Marcações: sem símbolo, **?** (dúvida), **X** (descartada pelo jogador). A legenda no quadro pode ser abreviada; o texto integral permanece no painel.
-- **Nova anotação** cria um card no centro da visão. Editar no painel, mover e conectar como os demais. Excluir a nota remove suas conexões.
-- **Voltar à investigação** ou Escape fecha o quadro; reabrir preserva a organização.
+- Drag a card to move it; overlap is allowed.
+- Drag the background or use the middle button to pan; the wheel zooms around the cursor.
+- **Show all** fits the set within zoom limits without rearranging cards. Widely spread boards may require additional navigation.
+- Selecting a card shows its full content in the side panel. The picker also locates and centers it at a readable zoom.
+- **Connect cards** starts manual endpoint selection. Click again or press Escape to cancel.
+- Select a connection by line or picker to edit its mark/text or remove it.
+- Marks: no symbol, **?** (uncertain), **X** (dismissed by the player). Canvas labels may be abbreviated; full text stays in the panel.
+- **New note** creates a card at the view center. Edit, move and connect it like other cards. Deleting a note removes its connections.
+- **Back to investigation** or Escape closes the board; reopening preserves organization.
 
-Há uma conexão sem direção por par; selecionar o par novamente abre a existente. Não há conexão de um card consigo mesmo. **Guardar na pilha** retira um card do canvas, preservando posição, nota e ligações. As conexões ficam ocultas enquanto uma ponta estiver na pilha e reaparecem ao recolocar os cards. Remover uma nota, ao contrário, exclui suas ligações.
+There is one undirected connection per pair; selecting the pair again opens it. Cards cannot connect to themselves. **Return to pile** removes a card from the canvas while preserving position, note and links. Links are hidden while either endpoint is in the pile and return when the cards are placed again. Deleting a note instead removes its links.
 
-## Identidade e conhecimento
+## Identity and knowledge
 
-| Card | Entrada | Referência |
+| Card | Entry condition | Reference |
 |---|---|---|
-| Pessoa | Menção ou conversa registrada | ID da pessoa |
-| Cômodo | Visita registrada | ID do local |
-| Prova | Observação descoberta | ID da observação |
-| Objeto | Objeto físico examinado | ID da instância do objeto |
-| Anotação | Criação do jogador | ID próprio do quadro |
+| Person | Recorded mention or conversation | Person ID |
+| Room | Recorded visit | Location ID |
+| Evidence | Discovered observation | Observation ID |
+| Object | Examined physical object | Object-instance ID |
+| Note | Player creation | Board-specific ID |
 
-A planta e a lista de suspeitos da mesa de desenvolvimento não alimentam automaticamente o quadro. Só entram cômodos visitados e personagens citados por descobertas/depoimentos ou registrados por conversa. A entrada inicial da investigação conta como visitada; a vítima, nomeada na apresentação do caso, conta como mencionada. No início há somente as fichas da recepção e de Vicente na pilha, sem nenhum card no canvas.
+The development desk's map and suspect roster do not automatically populate the board. Only visited rooms and characters named in discoveries/testimony or recorded conversations enter. The investigation entry counts as visited; the victim named in the briefing counts as mentioned. Initially only reception and Vicente cards are in the pile, with none on the canvas.
 
-Inspecionar um elemento registra a visita ao seu local e as pessoas explicitamente citadas em suas propriedades/linhas. A fonte de um relato ou laudo também conta como menção. Isso não cria conversas ou interrogatórios; record_conversation é o ponto de integração para esse sistema futuro.
+Inspecting an item records its location visit and people explicitly named in properties/rows. A testimony/report source also counts as a mention. This does not create conversations by itself; `record_conversation` records that separate action.
 
-Um objeto examinado tem um único card que reúne suas observações descobertas. Novos achados físicos sobre o mesmo object_id atualizam esse card e sua leitura ampliada. Na acusação há uma única entrada por objeto, que apresenta em conjunto os achados descobertos. Documentos e relatos permanecem fontes separadas; mencionar uma faca em um documento não descobre a faca física.
+An examined object has a single card collecting its discovered observations. New physical findings about the same `object_id` update that card and its expanded reading view. The accusation has one object entry grouping discovered findings. Documents and accounts remain separate sources; mentioning a knife in a document does not discover the physical knife.
 
-O rótulo **OBJETO** não identifica uma arma verdadeira. Cards novos ficam na pilha até serem colocados; sincronizar conhecimento não move nem coloca cards. Nenhuma conexão é criada automaticamente, inclusive entre objeto e observação.
+The **OBJECT** label does not identify the actual weapon. New cards remain in the pile until placed; knowledge synchronization does not move/place cards. Connections are never created automatically.
 
-## Estado e arquitetura
+## State and architecture
 
-- `core/investigation_board.gd`: cards, posições, notas e conexões; não importa gerador, avaliador, catálogo ou rede causal.
-- `core/investigation.gd`: possui o quadro por sessão, separado do snapshot factual, das descobertas e das anotações gerais.
-- `ui/investigation_board.gd`: recebe cópias das APIs públicas, resolve traduções e edita o estado do jogador.
-- `ui/board_canvas.gd`: arraste, navegação, aproximação e desenho.
-- `ui/main.gd`: integra a mesa ao quadro e cria outra sessão a cada run.
+- `core/investigation_board.gd`: cards, positions, notes and connections; imports no generator, evaluator, catalog or causal network.
+- `core/investigation.gd`: owns the session board separately from the factual snapshot and discoveries.
+- `ui/investigation_board.gd`: receives public API copies, resolves translations and edits player state.
+- `ui/board_canvas.gd`: dragging, navigation, zoom and drawing.
+- `ui/main.gd`: integrates the desk and board; creates another session for each run.
 
-IDs usam namespaces `person:`, `room:`, `evidence:`, `object:` e `note:`. Redescobertas não duplicam entidades. O estado pertence à sessão e pode ser reaproveitado por outra apresentação.
+IDs use `person:`, `room:`, `evidence:`, `object:` and `note:` namespaces. Rediscovery does not duplicate entities. State belongs to the session and can be reused by another presentation.
 
-Notas e conexões não são lidas pelo avaliador. Um X não invalida prova, uma ligação não demonstra autoria e o quadro não escolhe anexos do relatório. A acusação continua usando a seleção explícita existente na mesa. Hipóteses erradas são aceitas sem correção.
+The evaluator does not read notes or connections. An X does not invalidate proof, a link does not demonstrate authorship and the board does not select report attachments. Accusations still use explicit desk selection. Incorrect hypotheses are accepted without correction.
 
-## Idioma e estética
+## Language and aesthetics
 
-Interface e conteúdo conhecido são traduzidos em PT/EN. Posições, IDs, marcações e textos escritos pelo jogador permanecem iguais ao trocar idioma. As anotações ficam somente no quadro; o campo separado da mesa foi removido.
+Controls and known content are translated in PT/EN. Positions, IDs, marks and player text remain unchanged when switching languages. Notes exist only on the board; the separate desk field was removed.
 
-Direção PSX reafirmada pelo responsável: paleta contida, fichas físicas, bordas duras, linhas sem suavização e tipografia de aspecto raster. A textura do suporte é desenhada por código, sem novo asset externo. Usa fontes monoespaçadas do sistema com alternativas por plataforma.
+The owner reaffirmed PSX direction: restrained palette, physical cards, hard edges, unsmoothed lines and raster-like lettering. The support texture is drawn in code without a new external asset. System monospace fonts have platform fallbacks.
 
-A leitura padrão usa controles de 20 px, conteúdo lateral de 20 px e títulos de cards de 22 px. O quadro começa em aproximação 1:1; localizar um card pelo seletor restaura no mínimo essa aproximação. Categorias usam 14 px nos cards e 16 px no painel. O painel lateral tem largura mínima de 360 px e as instruções ficam em uma linha separada dos botões. Os cards podem ficar pequenos ao afastar a visão geral; o conteúdo integral permanece em tamanho fixo no painel. Os vínculos visuais do catálogo continuam pendentes, sem imagens inventadas para as provas.
+Default readability uses 20 px controls/side text and 22 px card titles. The board starts at 1:1 zoom; locating a card through the picker restores at least that zoom. Categories use 14 px on cards and 16 px in the panel. The side panel has a 360 px minimum width; instructions occupy a separate row. Cards can become small when zoomed out; full content remains fixed-size in the panel. Catalog visual references remain pending; evidence artwork has not been invented.
 
-## Validação e limites
+## Validation and limits
 
-Cada card colocado possui um alfinete vermelho com haste metálica e sombra em pixels no topo. É decoração idêntica em todos os tipos de card, sem área de interação nem significado investigativo.
+Every placed card has the same decorative red pushpin with metal shaft and pixel shadow. It has no hit area or investigative meaning.
 
-A interface usa o tamanho real da janela, sem esticar um canvas lógico fixo. Aumentar/maximizar a janela amplia a área útil do quadro; diminuir reduz essa área. Cards mantêm suas posições e a aproximação escolhida. O painel lateral preserva uma largura legível. `tests/board_resize.gd` verifica e renderiza a transição 1280×820 → 1600×1000 → 1280×820.
+The UI uses actual window size rather than stretching a fixed logical canvas. Enlarging/maximizing increases usable board area; shrinking reduces it. Cards retain positions and chosen zoom. The side panel keeps a readable width. `tests/board_resize.gd` checks/renders 1280×820 → 1600×1000 → 1280×820.
 
 ```sh
 godot --headless --path . --script tests/board_tests.gd
@@ -68,26 +68,26 @@ godot --headless --path . --script tests/board_ui_smoke.gd
 godot --path . --script tests/board_ui_smoke.gd
 ```
 
-O teste renderizado gera `tests/results/board_pile.png` (início vazio), `board_evidence.png` e `board_connection.png`. A organização dessas capturas foi montada deliberadamente pelo teste como exemplo de ações do jogador; não é uma disposição automática do jogo.
+The rendered test generates `tests/results/board_pile.png` (empty start), `board_evidence.png` and `board_connection.png`. Their arrangement is deliberately authored by the test as an example of player actions, not automatically applied by the game.
 
-As verificações cobrem identidades, conteúdo desconhecido, menções sem descoberta, múltiplas observações reunidas no mesmo objeto, arraste real por eventos de mouse com aproximação, marcações, notas, remoção, idioma, reabertura, reinício e preservação do veredito com hipóteses erradas. A revisão humana de gameplay/ergonomia permanece necessária e a issue fica aberta.
+Checks cover identities, unknown content, mentions without discovery, observations grouped by object, actual mouse dragging with zoom, marks, notes, removal, language, reopening, restart and unchanged verdicts despite incorrect hypotheses. Human gameplay/ergonomic review is still required; the issue stays open.
 
-Nesta entrega, no Godot 4.6.2 instalado: 30 verificações do estado do quadro, 103 da cena renderizada, 2.048 de localização e 4.101 do núcleo em 101 seeds passaram, além do smoke test da mesa. As capturas em PT/EN foram inspecionadas visualmente. Não houve sessão humana completa de investigação.
+On installed Godot 4.6.2, 30 board-state checks, 103 rendered-scene checks, 2,048 localization checks and 4,101 core checks across 101 seeds passed, as did the desk smoke test. PT/EN captures were visually inspected. No complete human investigation session was performed.
 
-Fechar/reabrir preserva estado na mesma sessão; repetir a seed como nova run cria outro quadro. Não há salvamento em disco, desfazer/refazer, fotos do mundo, filtros, editor da rede causal ou resolução automática de sobreposições. Posição e interpretação são estado lógico; câmera e aproximação pertencem à apresentação.
+Closing/reopening preserves the current session; repeating the seed as a new run creates another board. No disk saving, undo/redo, world photos, filters, causal-network editor or automatic overlap resolution is included. Position and interpretation are logical state; camera and zoom belong to presentation.
 
-## Revisão de entrada dos cards
+## Card-entry revision
 
-A pilha é separada da colocação manual (placed/was_placed). A sessão expõe visited_locations e known_characters; abrir o quadro sincroniza essas listas, sem usar a lista completa do gerador. A organização visual continua independente da verdade, da força probatória e da acusação.
+The pile is separate from manual placement (`placed`/`was_placed`). The session exposes `visited_locations` and `known_characters`; opening the board synchronizes these lists, not the full generator roster. Visual organization remains independent of truth, probative strength and accusation.
 
-A [revisão de gameplay](gameplay-feedback.md) retirou a autópsia das descobertas, adicionou vestígios por ambiente e registros de horário, mantendo a entrada progressiva dos cards.
+The [gameplay review](gameplay-feedback.md) removed the autopsy from discoveries and added room-specific traces and timing records while retaining progressive card availability.
 
-## Identificação e leitura ampliada das pistas
+## Clue identification and expanded reading
 
-Cards de provas e objetos exibem o local de descoberta e um nome curto traduzido (por exemplo, **Salão — Fibras**). Quando uma pista cita uma pessoa em seu campo próprio, o nome aparece em uma segunda linha para distinguir registros semelhantes. Os nomes curtos ficam na localização, separados do título completo; os 37 modelos são verificados em PT/EN contra a largura do card.
+Evidence/object cards show discovery location and a short translated name, such as **Lounge — Fibres**. If a clue's dedicated person field names someone, the name appears on a second line to distinguish similar records. Short names are localized separately from full titles; the 37 models are checked against card width in PT/EN.
 
-O ícone **+** no canto do card abre uma janela de leitura com local, título completo e descrição integral, com rolagem. Fechar retorna ao mesmo quadro sem mudar organização, descobertas ou hipóteses. A janela recebe apenas o conteúdo público já descoberto.
+The **+** icon opens a scrollable reading window with location, full title and complete description. Closing returns to the same board without changing organization, discoveries or hypotheses. It receives only already-discovered public content.
 
-A lixeira é representada somente pelo ícone, sem texto, e fica fixa no canto inferior direito do canvas, independente da aproximação e navegação. Arrastar e soltar um card sobre ela devolve-o à pilha; o alvo acende durante o arraste. Não apaga descobertas, notas ou conexões. Recolocar o card restaura sua posição anterior ao arraste. Soltar fora da lixeira apenas move o card normalmente.
+The bin is icon-only and fixed at the canvas's bottom-right corner, independent of pan/zoom. Dropping a card over it returns the card to the pile; the target lights up while dragging. It does not delete discoveries, notes or links. Replacing the card restores its pre-drag position. Dropping elsewhere moves it normally.
 
-Os vestígios de cenário usam nomes curtos do detalhe observado (por exemplo, **Jardim — Sulcos** ou **Jardim — Lascas**), definidos em `observable_titles` no catálogo. O mesmo detalhe identifica a prova nas outras telas.
+Scene traces use short observable-detail names, such as **Garden — Grooves** or **Garden — Splinters**, authored in catalog `observable_titles`. The same detail identifies the evidence on other screens.

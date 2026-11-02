@@ -1,43 +1,43 @@
-# Diagnóstico após o veredito
+# Post-verdict diagnostics
 
-Melhoria aprovada para ajudar nos testes de investigação. O GDD e as regras de avaliação não foram alterados. A análise detalhada é exclusiva da opção **Diagnóstico após o veredito**, após encerrar definitivamente a run.
+Approved improvement to help investigation testing. The GDD and evaluation rules were not changed. Detailed analysis is exclusive to **Diagnostics after the verdict**, after permanently closing the run.
 
-## O que aparece
+## What is shown
 
-- Resumo das lacunas em combinações parcialmente apresentadas.
-- Autoria, motivação e método: sustentação suficiente ou insuficiente; hipótese incorreta é identificada separadamente.
-- Argumentos aceitos, com as provas envolvidas e a relação que sustentam.
-- Argumentos incompletos, indicando o complemento que não foi apresentado naquela combinação.
-- Contraprovas causalmente aplicáveis, com conteúdo explicativo e estado de descoberta/apresentação/esclarecimento.
-- Outros anexos que não formaram um argumento adicional para a acusação.
-- Totais técnicos comparados aos mínimos reais da política do caso, além da verdade interna já exposta pelo diagnóstico anterior.
+- Summary of gaps in partially submitted combinations.
+- Authorship, motive and method: sufficient/insufficient support, with incorrect hypotheses identified separately.
+- Accepted arguments, their evidence and the relation they support.
+- Incomplete arguments and missing evidence in that combination.
+- Causally applicable counterproofs with explanations and discovery/submission/clarification state.
+- Other attachments that formed no additional argument for the accusation.
+- Technical totals compared with actual policy minimums, plus the internal truth already exposed by the earlier diagnostic.
 
-Uma prova faltante é identificada como **não descoberta** ou **descoberta, mas não apresentada**. Isso evita confundir o que o jogador encontrou com o que anexou ao relatório. O resumo não afirma que uma pista específica seja obrigatória em qualquer rota: descreve lacunas nos argumentos que o jogador começou a apresentar.
+Missing evidence is labeled **not discovered** or **discovered, but not submitted**. This separates what the player found from what they attached. The summary does not declare a specific clue mandatory for every route; it describes gaps in arguments the player started presenting.
 
-A análise também explica que argumentos sobre o mesmo fato não acumulam força em duplicidade e que uma contestação invalida apenas a inferência afetada. Contraprovas existentes e aplicáveis continuam valendo mesmo quando não descobertas, conforme a decisão anterior do responsável. O diagnóstico deixa isso explícito.
+Analysis also explains that arguments about the same fact do not accumulate duplicate strength and a counterproof defeats only the affected inference. Existing, applicable counterproofs remain effective when undiscovered, following the owner's earlier decision. The diagnostic states this explicitly.
 
-## Regressão 258361
+## Regression 258361
 
-Com as sete provas do relato do jogador, a autoria permanece 2/3, a motivação 2/2 e o método 2/2. O registro do encontro do corpo foi descoberto, mas não apresentado. Sem ele, os argumentos temporais do depoimento e do livro de atividades ficam incompletos. A ligação material entre fibras e roupas continua aceita.
+With the seven proofs reported by the player, authorship remains 2/3, motive 2/2 and method 2/2. The body-discovery timing record was discovered but not submitted. Without it, temporal arguments from testimony and the activity register are incomplete. The material link between fibres and garment records remains accepted.
 
-Apresentar também o registro sustenta o caso, preservando os limiares e a avaliação anteriores. O diagnóstico agora explica essa relação, em vez de apenas mostrar “autoria insuficiente”.
+Submitting the timing record too supports the case, preserving earlier thresholds and evaluation. The diagnostic now explains that relation instead of only stating insufficient authorship support.
 
-## Contratos
+## Contracts
 
-`AccusationEvaluator.evaluate` produz um rastro estruturado por argumento: inferência, provas exigidas, complementos faltantes, contestações e grupo de independência. Ele deriva esse rastro dos mesmos requisitos e ataques usados para calcular o resultado, sem reavaliar a acusação por outra regra.
+`AccusationEvaluator.evaluate` produces a structured trace per argument: inference, required evidence, missing elements, counterproofs and independence group. It derives the trace from the same requirements/attacks used for the result, not a separate evaluation rule.
 
-Os campos anteriores (`scores`, `reasons`, comparações aceitas/contestadas) são preservados. `minimum_by_claim` e `minimum_total` refletem a política real, sem depender apenas de valores fixos no texto.
+Previous fields (`scores`, `reasons`, supported/contested comparisons) are preserved. `minimum_by_claim` and `minimum_total` reflect actual policy rather than only fixed text values.
 
-`Investigation.submit` continua retornando somente o resultado normal quando o diagnóstico está desligado. Com diagnóstico explicitamente habilitado, acrescenta um índice de observações para nomear e explicar as provas, incluindo as não descobertas. Esse índice nunca integra as descobertas durante a investigação.
+`Investigation.submit` returns only the normal result with diagnostics disabled. Explicitly enabled diagnostics add an observation index for naming/explaining evidence, including undiscovered entries. This index never becomes part of live investigation discoveries.
 
-`Presentation.verdict_text` traduz o rastro em PT/EN. As explicações dos tipos de inferência ficam na localização. Depoimentos usam o local descrito na fala, sem exibir o antigo slot físico onde eram listados antes da implementação de conversas.
+`Presentation.verdict_text` translates the trace in PT/EN. Inference-type explanations are localized. Testimony uses the location described in speech, not its legacy physical slot from before conversations existed.
 
-Ler ou traduzir o diagnóstico não descobre pistas, não esclarece provas na sessão, não muda o quadro e não reabre a acusação. Explicações ocultas usadas pelo diagnóstico são renderizadas sobre cópias.
+Reading/translating diagnostics does not discover clues, clarify session evidence, change the board or reopen the accusation. Hidden explanations used in diagnostics are rendered on copies.
 
-## Validação e limites
+## Validation and limits
 
-`tests/verdict_feedback_tests.gd`: 24 verificações. Reproduz a seed 258361, distingue provas não descobertas das não apresentadas, confirma solução ao completar a cronologia, verifica contraprova não descoberta, diagnóstico desligado, hipótese incorreta, anexos inválidos, ausência de pontuação duplicada, imutabilidade e apresentação na cena real.
+`tests/verdict_feedback_tests.gd`: 24 checks. Reproduces seed 258361, distinguishes undiscovered/unsubmitted evidence, confirms solution after supplying timing, checks undiscovered counterproofs, diagnostics disabled, incorrect hypotheses, invalid attachments, no duplicate scoring, immutability and the real scene.
 
-A captura `tests/results/verdict_feedback.png` mostra o diagnóstico na mesa, com rolagem para a análise completa. Textos longos não alteram o tamanho do quadro nem a estética existente. A revisão humana do conteúdo durante partidas continua necessária.
+`tests/results/verdict_feedback.png` shows the desk diagnostic with scrolling for the complete analysis. Long text does not change board size or the established aesthetic. Human review during play remains necessary.
 
-A explicação corresponde aos argumentos codificados atualmente; não é análise de linguagem natural das hipóteses do jogador. Novos tipos de inferência precisam de uma explicação localizada própria. Há uma descrição genérica de segurança para tipos ainda sem texto específico.
+Explanations correspond to currently encoded arguments, not natural-language analysis of player hypotheses. New inference types need their own localized explanation. A generic fallback covers types without specific text.

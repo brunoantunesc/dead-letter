@@ -1,109 +1,109 @@
-# Núcleo procedural — investigação com suspeitas concorrentes
+# Procedural core — competing investigative hypotheses
 
-## Direção aprovada
+## Approved direction
 
-Godot **4.6.2.stable.official.71f334935**, instalado neste computador. GDScript é o runtime de produção, Python permanece como referência executável. A acusação é estruturada, com seleção de provas, sem interpretação de texto livre. Pontuação fica oculta durante a investigação; o diagnóstico completo após o veredito está autorizado para desenvolvimento.
+Godot **4.6.2.stable.official.71f334935** is installed on this computer. GDScript is the production runtime; Python remains an executable reference. Accusations are structured and use selected evidence, without free-text interpretation. Scores remain hidden during investigation; full post-verdict diagnostics are approved for development.
 
-A primeira versão entregava autoria, motivo e método explicitamente e empobrecia a referência. Após o teste do responsável pelo projeto, a direção aprovada foi recuperar a estrutura do Python: relatos de proximidade, várias armas suspeitas, conflitos concorrentes e explicações distribuídas, agora com causas e validação. O GDD não foi alterado.
+The first version stated authorship, motive and method explicitly and weakened the reference experience. Following the project owner's playtest, the approved direction was to recover the Python structure: proximity accounts, multiple suspicious weapons, competing conflicts and distributed explanations, now backed by causes and validation. The GDD was not changed.
 
-Após o teste da seed 914368, o responsável aprovou um caso curto de 14–18 observações e duas linhas falsas distintas. Pediu também diversidade de funções e histórias: conflitos financeiros não devem ser repetidos para todos os suspeitos. O snapshot e a transcrição anteriores foram preservados em `tests/fixtures/`.
+After testing seed 914368, the owner approved a short case with 14–18 observations and two distinct false leads. They also requested different investigative functions and histories: financial conflicts must not be repeated for every suspect. The previous snapshot and transcript were preserved in `tests/fixtures/`.
 
-## Responsabilidades
+## Responsibilities
 
-- `case_data.gd`: snapshot privado, esquema 6, gerador 0.7.0 e catálogo `hotel_prose_1`.
-- `evidence_catalog.gd`, `core/catalog/` e `data/catalog/catalog.tres`: Resources de definições, relações e referências visuais; apresentação exposta em cópias de dados, sem carregar arte no núcleo. Ver [autoria](evidence-resources.md).
-- `case_content.gd`: vocabulário pequeno de métodos, formas físicas e conflitos, recuperado da referência.
-- `case_generator.gd`: personagens, relações, acontecimentos, consequências e posições. PRNG local; no máximo três tentativas. Retorna os snapshots e diagnósticos dos candidatos rejeitados.
-- `proof_rules.gd`: deriva cruzamentos internos a partir das propriedades observáveis, sem consultar a verdade do crime. Não é chamado pela interface para orientar o jogador.
-- `case_validator.gd`: verifica referências, tempo, deslocamentos, causas, conhecimento das fontes, propriedades, material de roupas, explicações contextuais, regras probatórias e suficiência das provas alcançáveis.
-- `accusation_evaluator.gd`: avalia precisão e suficiência das provas explicitamente selecionadas e descobertas.
-- `investigation.gd`: mantém o snapshot privado, descobertas e anotações separados. Expõe apenas observações permitidas.
-- `investigation_board.gd`: organização livre por sessão, sem acesso à verdade ou à rede causal; apresentação em `ui/investigation_board.gd` e `ui/board_canvas.gd`. Ver [contrato e controles](investigation-board.md).
-- `ui/main.gd` e `ui/presentation.gd`: mesa de teste em português e descrições. Não decidem relevância ou veredito.
-- `tools/investigate.gd`: consumidor de terminal, sem regras centrais.
+- `case_data.gd`: private snapshot, schema 6, generator 0.7.0 and content `hotel_prose_1`.
+- `evidence_catalog.gd`, `core/catalog/` and `data/catalog/catalog.tres`: Resources for definitions, relations and visual references; presentation uses data copies without loading artwork in the core. See [authoring](evidence-resources.md).
+- `case_content.gd`: small vocabulary of methods, physical forms and conflicts recovered from the reference.
+- `case_generator.gd`: characters, relations, events, consequences and positions. Local PRNG; at most three attempts. Returns snapshots and diagnostics for rejected candidates.
+- `proof_rules.gd`: derives internal comparisons from observable properties without consulting crime truth. The UI does not call it to guide the player.
+- `case_validator.gd`: checks references, timing, travel, causes, source knowledge, properties, clothing material, contextual explanations, proof rules and sufficiency of reachable evidence.
+- `accusation_evaluator.gd`: evaluates accuracy and sufficiency of explicitly selected, discovered evidence.
+- `investigation.gd`: separates the private snapshot, discoveries and notes. Exposes only permitted observations.
+- `investigation_board.gd`: free organization per session, without access to truth or the causal network; presented by `ui/investigation_board.gd` and `ui/board_canvas.gd`. See [contract and controls](investigation-board.md).
+- `ui/main.gd` and `ui/presentation.gd`: testing desk and descriptions. They do not decide relevance or verdicts.
+- `tools/investigate.gd`: terminal consumer, without core rules.
 
-Nenhuma classe do núcleo depende de Node, cenas, HUD ou assets. As regras não dependem de carregar o hotel 3D.
+No core class depends on Node, scenes, HUDs or assets. The rules do not require loading the 3D hotel.
 
-## Modelo e causalidade
+## Model and causality
 
-O snapshot contém `characters`, `locations`, `entry_location`, `relations`, `events`, `evidence`, `support_rules`, `counterproofs`, `placements`, `truth` e `policy`.
+The snapshot contains `characters`, `locations`, `entry_location`, `relations`, `events`, `evidence`, `support_rules`, `counterproofs`, `placements`, `truth` and `policy`, plus versioning and investigation-time metadata.
 
-Personagens possuem identidade, papel, flag pública de elegibilidade para acusação e acontecimentos conhecidos. Há quatro suspeitos (Ana, Bruno, Carlos e Diana), Vicente como vítima, Amadeu como porteiro e um responsável pelo exame. O porteiro presencia passagens pela recepção, não o assassinato; o responsável recolhe o corpo; não há exame concluído nos casos gerados atualmente.
+Characters have identity, role, a public accusation-eligibility flag and known events. There are four suspects (Ana, Bruno, Carlos and Diana), Vicente as the victim, Amadeu as the porter and an examination/removal officer. The porter witnesses encounters at reception, not the murder; the officer removes the body. No completed examination is available in currently generated cases.
 
-A topologia de oito locais permanece fixa. O arquivo pode estar fechado. Conexões têm custos de deslocamento; acessibilidade refere-se ao momento da investigação. Os acontecimentos são anteriores à sessão, com intervalos relativos em minutos. Participações não podem se sobrepor nem exigir deslocamento impossível.
+The eight-location topology remains fixed. The archive may be closed. Connections have travel costs; accessibility refers to the investigation phase. Events precede the session and use relative intervals in minutes. Participation cannot overlap or require impossible travel.
 
-Cada acontecimento possui participantes, lugar, intervalo, causas, efeitos e consequências observáveis. A evidência guarda sua origem, local, forma de apresentação, propriedades e fonte humana quando aplicável. O validador compara consequências com os efeitos do acontecimento e rejeita alterações e descartes silenciosos. Documentos podem representar um acontecimento ocorrido em outro local; objetos e vestígios físicos permanecem em seu local de origem. O descarte da arma é um acontecimento posterior ao assassinato, com deslocamento verificável.
+Each event has participants, location, interval, causes, effects and observable consequences. Evidence stores its origin, location, presentation form, properties and human source where applicable. The validator compares consequences with event effects and rejects tampering and silent omissions. Documents may describe events elsewhere; physical objects and traces stay at their origin. Discarding the weapon is a later event with verifiable travel.
 
-Na geração atual não há exame disponível: registros de serviço delimitam horários e vestígios ambientais sustentam mecanismos. Os modelos médicos permanecem somente no catálogo legado e nos testes autorais. As fibras e a linha derivam de contato físico durante o acontecimento; a arma é descartada depois. Cada objeto alternativo decorre de um uso independente: acidente de cozinha, trabalho com corda, inspeção de arma, desgaste esportivo ou limpeza. Cada conflito tem uma decisão posterior que o mantém aberto ou o encerra.
+Current generation provides no completed examination: service records establish timing and environmental traces support mechanisms. Medical models remain in the legacy catalog and authored tests. Fabric and thread come from physical contact during the event; the weapon is discarded later. Each alternative object comes from an independent use: kitchen accident, rope work, firearm inspection, sporting wear or cleaning. Each conflict has a later decision that leaves it open or settles it.
 
-## Caso curto e diversidade
+## Short cases and diversity
 
-A [revisão de gameplay](gameplay-feedback.md) define o recorte atual: 15–16 observações, dois contatos concretos com a vítima, cinco locais possíveis na planta fixa e autópsia pendente. Horários são registros de serviço; mecanismo é inferido a partir de marcas específicas do ambiente. As consequências físicas são registradas no acontecimento de origem e respeitam deslocamentos e acessibilidade.
+The [gameplay review](gameplay-feedback.md) defines the current slice: 15–16 observations, two concrete contacts with the victim, five possible rooms within the fixed floor plan and a pending autopsy. Times are service records; mechanisms are inferred from room-specific marks. Physical consequences are stored in their originating event and respect travel and accessibility.
 
-O catálogo possui 37 modelos e 73 relações. Perfis autorais em data/catalog/scenes descrevem consequências diferentes por local e método. A geração não atribui uma explicação de uso independente à arma verdadeira neste recorte. Pistas falsas continuam possuindo acontecimentos próprios.
+The catalog has 37 models and 73 relations. Authored profiles in `data/catalog/scenes` describe different consequences by room and method. This slice does not assign an independent-use explanation to the actual weapon. False leads still have their own events.
 
-## Acusação e provas
+## Accusation and proof
 
-Entrada: `culprit`, `motive`, `method`, `evidence_ids`. IDs desconhecidos ou não descobertos são ignorados. Ter descoberto uma informação não a inclui automaticamente no relatório.
+Input: `culprit`, `motive`, `method`, `evidence_ids`. Unknown or undiscovered IDs are ignored. Discovering information does not automatically include it in the report.
 
-`support_rules` representa argumentos probatórios, não verdade factual nem conhecimento do jogador. Cada regra exige um conjunto de observações, candidato/afirmação compatíveis, peso e grupo de independência. O validador recalcula essas regras a partir das propriedades para impedir que uma etiqueta arbitrária transforme uma pista em prova.
+`support_rules` represents evidentiary arguments, not factual truth or player knowledge. Each rule requires observations, a compatible candidate/claim, a weight and an independence group. The validator derives these rules again from properties so an arbitrary label cannot turn a clue into proof.
 
-No recorte atual:
+In the current slice:
 
-- Autoria: a comparação do achado material (fibras e costura) com o cadastro de roupas sustenta identidade; há uma rota alternativa por exclusão de três álibis que cobrem a janela do crime. Um relato de proximidade compatível com o horário complementa a oportunidade. As rotas de identidade são alternativas no mesmo grupo, sem inflar pontos quando ambas são apresentadas.
-- Método: requer compatibilidade entre as características clínicas e um objeto apresentado. O laudo contém características clínicas e horário em uma única observação; a arma apresentada precisa ser compatível com as lesões.
-- Motivo: o registro contextualizado de um conflito aberto sustenta o motivo da própria pessoa. Ele já contém o histórico e a resposta; não se exige selecionar uma segunda ficha para repetir a mesma informação. Um problema resolvido ou de outra pessoa não subsidia a acusação.
+- Authorship: comparing material traces (fabric and stitching) with clothing records supports identity. An alternative route excludes three alibis covering the crime window. A temporally compatible proximity account supplies the additional opportunity argument. Identity routes share a group and do not inflate points when both are submitted.
+- Method: relevant physical scene traces support the alleged mechanism without requiring the weapon object. The earlier clinical-findings/object route remains in legacy authored tests; it is not an available autopsy in current generation.
+- Motive: the contextualized record of an open conflict supports that person's motive. It already includes history and response; no second record is required to repeat the same information. A resolved problem or another person's conflict does not support the accusation.
 
-A configuração experimental exige autoria 3 (identidade 2 e oportunidade 1), motivo 2, método 2 e total 7. Esses números são configuração do teste de lógica, não balanceamento final. Para cada afirmação/grupo, usa-se o maior peso uma única vez. Repetir provas ou cópias não acumula pontuação.
+Experimental policy requires authorship 3 (identity 2 and opportunity 1), motive 2, method 2 and total 7. These are logic-test settings, not final balancing. For each claim/group, only the highest weight counts once. Repeated evidence or copies do not accumulate points.
 
-Há conjuntos suficientes de cinco ou seis achados, conforme a linha argumentativa; não há exigência de nove anexos. Há múltiplos conjuntos suficientes: a autoria pode ser sustentada por vestígios ou pela reconstrução dos álibis. O arquivo fechado não bloqueia a investigação. Não há cópias de provas adicionadas para preencher o mapa. A validação automática usa o mesmo avaliador com as provas alcançáveis. Isso é válido porque não existem ações consumíveis, exclusão mútua entre descobertas ou pré-requisitos de ferramentas neste recorte.
+Sufficient sets contain five or six findings depending on the argument; nine attachments are not required. Authorship can use traces or reconstructed alibis. A closed archive does not block investigation. Evidence copies are not added to fill the map. Automatic validation uses the same evaluator with reachable evidence. This is valid because this slice has no consumable actions, mutually exclusive discoveries or tool prerequisites.
 
-Os resultados são `wrong_culprit`, `insufficient_case` e `solved`. Não há penalidade extra por anexar uma pista irrelevante; ela não contribui. A política aprovada considera todas as contraprovas existentes e aplicáveis, mesmo não descobertas/apresentadas; somente argumentos afetados deixam de contribuir. Ver [rede e posicionamento](evidence-network.md).
+Outcomes are `wrong_culprit`, `insufficient_case` and `solved`. Irrelevant attachments incur no extra penalty; they do not contribute. Approved policy considers every existing, applicable counterproof, even if undiscovered/unsubmitted; only affected arguments stop contributing. See [network and placement](evidence-network.md).
 
-## Fronteira da interface
+## UI boundary
 
-`Investigation.characters()` retorna apenas ID, nome, papel e elegibilidade para acusação. `locations()` e `objects_at()` permitem navegação; `inspect()` revela um item individualmente, sem descobertas em lote. `discoveries()` retorna cópias das observações. As anotações não são lidas pelo avaliador.
+`Investigation.characters()` returns only ID, name, role and accusation eligibility. `locations()` and `objects_at()` support navigation; `inspect()` reveals one item at a time, without batch discoveries. Testimony is acquired through conversations. `discoveries()` returns observation copies. The evaluator does not read notes.
 
-`submit()` encerra definitivamente a sessão. Sem debug, retorna somente o resultado. Com debug, acrescenta verdade, motivos de falha, pontuação e comparações sustentadas, somente depois da submissão. A mesa habilita esse diagnóstico por padrão para desenvolvimento; ele pode ser desmarcado.
+`submit()` permanently closes the session. Without debug it returns only the outcome. Debug adds truth, failure reasons, scores and argument diagnostics only after submission. The desk enables this development diagnostic by default; it can be unchecked.
 
-A interface possui rolagem nas listas de itens e descobertas, mantendo o botão de envio visível. Abrir outra seed ou repetir a mesma inicia uma sessão limpa, sem salvamento ou confirmação. A interface de teste não é o quadro investigativo definitivo nem a exploração 3D.
+Lists support scrolling while the submission button remains visible. Opening another seed or repeating the same seed starts a clean session, without saving or confirmation. The test UI is not the final investigative interface or 3D exploration.
 
-## Reprodução, testes e limites
+## Reproduction, tests and limits
 
-Registrar seed, tentativa, engine, versão do gerador e conteúdo. Na tentativa N, o PRNG local usa seed + N. Não há promessa de identidade entre versões do Godot ou do catálogo, nem sequência aleatória idêntica à do Python. IDs só são estáveis dentro da mesma versão e caso.
+Record seed, attempt, engine, generator version and content version. Attempt N uses seed + N for the local PRNG. There is no promise of identical results across Godot/catalog versions or an identical random sequence to Python. IDs are stable only within a case and version.
 
-`CaseData.encode/decode` faz roundtrip JSON do snapshot privado; a seed é string para preservar inteiros de 64 bits. Os esquemas 1, 2, 3 e 4 foram substituídos e são rejeitados, sem migração de saves de sessões (que nunca foram implementados). A leitura só valida formato básico: chamar o validador antes de consumir o snapshot. Não é um parser endurecido para conteúdo hostil.
+`CaseData.encode/decode` round-trips the private snapshot through JSON; the seed is a string to preserve 64-bit integers. Previous schemas are rejected, without session-save migration (session saving was never implemented). Decoding checks basic format only: validate before consuming a snapshot. This is not a hardened parser for hostile content.
 
-`tests/run_tests.gd` cobre seeds 0–99 e a regressão 914368: reprodução, rotas suficientes ou legitimamente contestadas conforme o contexto, orçamento de observações, diversidade temática, candidato alternativo, ambiguidade das características materiais, ausência de frases que entregavam autoria, deduplicação, causalidade, cronologia, origem dos depoimentos e dos registros de atividade, contexto da pessoa correta, acessibilidade e serialização. O relatório fica em `tests/results/latest.json`; falhas de geração incluem snapshots rejeitados.
+`tests/run_tests.gd` covers seeds 0–99 and regression 914368: reproduction, sufficient or legitimately contested routes, observation budget, thematic diversity, alternative candidates, material ambiguity, absence of wording that revealed authorship, deduplication, causality, chronology, testimony/activity-record sources, the correct person's context, accessibility and serialization. Reports are in `tests/results/latest.json`; generation failures include rejected snapshots.
 
-`tests/ui_smoke.gd` exercita controles da cena real, três vereditos, reinício e seed inválida. Com renderização, captura telas para inspeção visual. `tools/characterize_legacy.py` continua verificando os exemplos originais e seus defeitos conhecidos.
+`tests/ui_smoke.gd` exercises real controls, three verdicts, restart and invalid seeds. Rendered runs capture screens for visual inspection. `tools/characterize_legacy.py` continues checking original examples and known defects.
 
-Limites: os acontecimentos e a estrutura temporal ainda usam um vocabulário autoral pequeno. As roupas seguem uma combinação pequena de características; os álibis documentais são confiáveis neste recorte. Há formas recorrentes que podem ficar previsíveis depois de várias runs. As análises estão disponíveis diretamente; não há ferramentas completas, simulação contínua, mentira sistêmica, autenticação documental ou progressão. O quadro livre da mesa atual já permite organização manual, sem integração 3D. A verificação automática garante propriedades específicas, não mede dificuldade, sutileza ou prazer de dedução. A revisão humana de casos continua sendo o critério de qualidade investigativa.
+Limits: events and temporal structure still use a small authored vocabulary. Clothing uses a small combination of features; documented alibis are reliable in this slice. Recurring forms may become predictable after several runs. Observations are directly available; there are no complete forensic tools, continuous simulation, systemic lying, document authentication or progression. The desk's free board allows manual organization without 3D integration. Automated checks guarantee specific properties, not difficulty, subtlety or enjoyable deduction. Human case review remains the investigative-quality criterion.
 
-O validador rejeita casos com mais de 18 observações ou repetição de um mesmo tema de conflito, além das verificações de consistência. A fixture original da seed 914368 guarda 38 observações da versão 0.2.0; o teste exige a mesma verdade factual na versão curta e mede a preservação do recorte curto (15 observações sem autópsia pública).
+The validator rejects cases over 18 observations or repeated conflict themes, in addition to consistency checks. The original seed 914368 fixture has 38 observations from version 0.2.0; the short-case test requires the same factual truth and measures the current scope (15 observations without a public autopsy).
 
-## Localização
+## Localization
 
-Cada observação expõe `id`, `definition_id`, forma, local e propriedades canônicas, sem título traduzido no núcleo. O renderizador resolve chaves e parâmetros externos no idioma selecionado. Locais e papéis também usam IDs. A troca entre português e inglês preserva a sessão. Ver [contrato de localização](localization.md), e [rede de contraprovas](evidence-network.md), incluindo os limites do vocabulário e das regras de sustentação ainda em GDScript.
+Each observation exposes `id`, `definition_id`, form, location and canonical properties, without translated titles in the core. Rendering resolves external keys and parameters in the selected language. Locations and roles also use IDs. Switching between Portuguese and English preserves the session. See [localization](localization.md) and [counterproof network](evidence-network.md), including vocabulary/support-rule limits still in GDScript.
 
-## Rede e posicionamento lógico
+## Network and logical placement
 
-A [especificação atual](evidence-network.md) descreve 37 modelos, 73 relações, nove categorias, contextos rotativos e árvore de pontos de inspeção. O conhecimento do jogador não controla a existência nem a eficácia de uma contraprova. O posicionador usa categorias de suporte, não rótulos de relevância; mantém o local causal e não carrega cenas.
+The [current specification](evidence-network.md) describes 37 models, 73 relations, nine categories, rotating contexts and an inspection-point tree. Player knowledge does not control counterproof existence or effectiveness. Placement uses support categories, not relevance labels; it preserves causal locations and loads no scenes.
 
-Os operadores atuais de sustentação foram preservados e complementados para empréstimos e achados médicos. As relações de contestação são externas e parametrizadas. Posse de roupas é reconstruída pela cronologia de entradas e entregas; não se presume que a ficha inicial permaneça válida após um empréstimo. Esses cenários adicionais existem nos testes, sem sorteio de todas as famílias na geração padrão.
+Existing support operators were retained and extended for garment handovers and medical findings. Counterproof relations are external and parameterized. Garment possession is reconstructed through intake/handover chronology; the initial record is not presumed valid after a loan. These additional scenarios exist in tests; default generation does not rotate every family yet.
 
-O quadro recebe apenas visited_locations() e known_characters(), além das descobertas. O elenco completo e a planta da mesa não geram fichas automaticamente. Cards disponíveis ficam na pilha; placed controla somente a colocação feita pelo jogador. Menções e conversas são registradas na sessão, sem consultar relevância.
+The board receives only `visited_locations()` and `known_characters()`, plus discoveries. The full roster and desk map do not automatically create cards. Available cards stay in the pile; `placed` controls player placement only. Mentions and conversations are recorded without consulting relevance.
 
-Na versão 0.6.0, a mesa não tem campo separado de anotações. As hipóteses e notas ficam somente no quadro; o antigo campo session.notes foi removido. O briefing público informa a descoberta do corpo e autópsia pendente sem expor o culpado.
+Since version 0.6.0, the desk has no separate notes field. Hypotheses and notes belong to the board; the old `session.notes` field was removed. The public briefing gives body-discovery location and pending-autopsy status without exposing the culprit.
 
-O [primeiro recorte de interrogatórios](interrogation.md) move os dois relatos do porteiro para conversas, acrescenta posições atuais dos NPCs e esclarecimento do registro de utensílio na mesma prova.
+The [first interrogation slice](interrogation.md) moves the two porter accounts into conversations, adds NPC positions and clarifies the equipment record within the same evidence entry.
 
-[Variações de redação das provas](prose-variations.md): alternativas localizadas por Resource, escolhidas por seed sem alterar fatos ou avaliação.
+[Prose variations](prose-variations.md) are localized Resource alternatives selected by seed without changing facts or evaluation.
 
-O [diagnóstico pós-veredito](verdict-feedback.md) traduz o rastro do avaliador em explicações localizadas. O índice de provas ocultas é exposto somente no retorno de diagnóstico de uma acusação encerrada.
+[Post-verdict diagnostics](verdict-feedback.md) turns the evaluator's trace into localized explanations. The hidden-evidence index is exposed only in the diagnostic return from a closed accusation.
 
-## Legibilidade da mesa de investigação
+## Investigation desk readability
 
-A mesa utiliza fonte padrão de 20 px nos controles, texto de leitura/conversa/veredito de 22 px com separação entre linhas, rótulos de 16–18 px e títulos ampliados. As colunas laterais têm mínimos de 260 px e 380 px. O formulário e a lista de provas compartilham uma rolagem, enquanto o diagnóstico, o botão de submeter e o aviso de encerramento permanecem fixos no rodapé do relatório. Isso preserva acesso à submissão em janelas menores sem reduzir a fonte. Nomes longos de NPCs usam reticências e tooltip no seletor do cômodo. O quadro mantém sua apresentação própria.
+The desk uses 20 px controls, 22 px reading/conversation/verdict text with line spacing, 16–18 px labels and enlarged headings. Side columns have minimum widths of 260 px and 380 px. The form and evidence list share a scroll area; diagnostics, submission and the closure warning stay in the report footer. This keeps submission accessible in smaller windows without reducing font size. Long NPC names use ellipsis and a tooltip. The board retains its own presentation.
 
-`tests/board_resize.gd` também confere a leitura e o rodapé da mesa em 1280×820 e 1920×1080, com capturas `desk_readable.png` e `desk_readable_large.png`.
+`tests/board_resize.gd` also checks desk reading/footer layout at 1280×820 and 1920×1080, with `desk_readable.png` and `desk_readable_large.png` captures.

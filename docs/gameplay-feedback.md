@@ -1,57 +1,57 @@
-# Revisão de gameplay — 31/10/2026
+# Gameplay review — 2026-10-31
 
-Direção aprovada pelo responsável após jogar a seed **708272**: notas somente no quadro; relatos concretos em vez de proximidade genérica; autópsia indisponível; informações distribuídas pela cena; local do crime variável dentro da planta fixa.
+Direction approved by the owner after playing seed **708272**: notes only on the board; concrete accounts instead of generic proximity; unavailable autopsy; information distributed around the scene; variable crime location within the fixed floor plan.
 
-## Regressão preservada
+## Preserved regression
 
-`tests/fixtures/seed_708272_v0_5_0.json` guarda o caso anterior. As cinco provas informadas foram livro de atividades, vestígios na camisa, laudo, bilhete e fichas de roupas. Reproduzem autoria 2, motivo 2, método 0.
+`tests/fixtures/seed_708272_v0_5_0.json` stores the previous case. The five reported proofs were the activity register, shirt traces, preliminary examination, letter and garment records. They reproduce authorship 2, motive 2 and method 0.
 
-A regra antiga de método exigia o laudo junto de um objeto. A autoria ainda precisava de um relato adicional. A sugestão de aceitar automaticamente a convergência sem relato não foi adotada: o responsável preferiu relatos realmente informativos. Os limiares permanecem autoria 3, motivo 2, método 2, total 7.
+The old method rule required the examination together with an object. Authorship still needed an additional account. Automatically accepting convergence without an account was not adopted: the owner preferred genuinely informative accounts. Thresholds remain authorship 3, motive 2, method 2 and total 7.
 
-Na reprodução anterior, a ocorrência da manhã explica a **corda**. Há um registro separado de retirada da **pistola** por Ana. A nova geração remove esse uso cotidiano da arma verdadeira e torna os títulos das ocorrências mais específicos para reduzir confusões.
+In the previous reproduction, the morning incident explains the **rope**. A separate checkout record concerns Ana's **pistol**. New generation removes routine use of the actual weapon and gives incidents more specific titles to reduce confusion.
 
-## Autópsia pendente
+## Pending autopsy
 
-O caso começa com a informação pública de onde Vicente foi encontrado. O corpo foi recolhido e a autópsia ainda não está disponível. Não há card de laudo, evento de exame concluído ou diagnóstico médico público nos casos gerados.
+The case starts with public information about where Vicente was found. The body has been removed and the autopsy is not yet available. Generated cases have no examination-report card, completed-examination event or public medical diagnosis.
 
-As antigas definições médicas continuam no catálogo e em testes autorais da rede; não são sorteadas nesta fase. Isso não habilita autópsia no jogo.
+Earlier medical definitions remain in the catalog and authored network tests; they are not selected in this phase. This does not enable an in-game autopsy.
 
-As funções antes concentradas no laudo foram separadas:
+Functions formerly concentrated in the examination were separated:
 
-- **Registro do encontro do corpo:** horários de um atendimento em que Vicente respondeu e do encontro sem vida. A origem é um registro de serviço, sem estimativa médica. Seus acontecimentos e fontes são validados.
-- **Vestígios ambientais:** marcas observáveis e consequências físicas específicas do ambiente. Permitem interpretar um mecanismo compatível; não identificam uma arma individual nem apresentam uma conclusão médica.
+- **Body discovery record:** times of a service visit when Vicente responded and of the discovery of his body. Its source is a service record, not a medical estimate. Events and sources are validated.
+- **Environmental traces:** observable marks and room-specific physical consequences. They support interpreting a compatible mechanism, not identifying an individual weapon or presenting a medical conclusion.
 
-O método pode ser sustentado pela evidência física pertinente sem anexar obrigatoriamente o objeto usado no crime. Relatos cotidianos não sustentam oportunidade por si sós.
+Relevant physical evidence can support the method without mandatorily attaching the actual weapon. Everyday accounts do not establish opportunity on their own.
 
-## Relatos e autoria
+## Accounts and authorship
 
-Há dois relatos públicos de contato concreto com Vicente, próximos da janela delimitada pelo registro. Um envolve o culpado e outro um inocente; as ações são distribuídas independentemente da culpa. Não há testemunha ocular do assassinato.
+Two public accounts describe concrete contact with Vicente near the window established by the record. One involves the culprit and another an innocent person; actions are assigned independently of guilt. There is no murder eyewitness.
 
-O porteiro presenciou uma conversa e uma entrega, em um acontecimento compartilhado. Pessoas presentes, horários, local e conhecimento da fonte são rastreáveis. Outros acontecimentos cotidianos podem existir no mundo sem gerar relatos redundantes.
+The porter witnessed a conversation and a handover in a shared event. Participants, times, location and source knowledge are traceable. Other everyday events may exist without generating redundant accounts.
 
-Para pontuar oportunidade, o relato precisa de contato explícito com a vítima e proximidade temporal configurada em minutos. Álibis aplicáveis podem contestar a interpretação. Identificação material, motivação e método continuam exigindo sustentação própria; o relato isolado não soluciona o caso.
+To support opportunity, an account needs explicit contact with the victim and configured temporal proximity in minutes. Applicable alibis may contest the interpretation. Material identification, motive and method still require their own support; an account alone does not solve the case.
 
-## Cinco ambientes de crime
+## Five crime environments
 
-A planta e as rotas não mudam. Um fluxo de seed separado escolhe entre salão, cozinha, jardim, depósito e lavanderia, respeitando acessibilidade e cobertura do método no perfil.
+The floor plan and routes do not change. A separate seed stream chooses lounge, kitchen, garden, storage or laundry, respecting accessibility and profile method coverage.
 
-`core/catalog/crime_scene_profile.gd` e `data/catalog/scenes/*.tres` guardam o conteúdo por ambiente. `core/crime_scenes.gd` seleciona perfis e resolve assinaturas. Cada ambiente possui cinco consequências específicas: 25 descrições observáveis, não apenas troca do nome da sala. Exemplos incluem perfuração em vaso de barro no jardim, em chapa junto ao passe da cozinha ou em divisória do depósito.
+`core/catalog/crime_scene_profile.gd` and `data/catalog/scenes/*.tres` store room-specific content. `core/crime_scenes.gd` selects profiles and resolves signatures. Each environment has five specific consequences: 25 observable descriptions, not just room-name substitutions. Examples include a puncture in a garden clay pot, a kitchen serving-hatch panel or a storage partition.
 
-As consequências são registradas nos efeitos do acontecimento e não posicionadas arbitrariamente. Vestígios ficam no local de origem. Atividades dos inocentes evitam o local do crime, sem viagens ou sobreposições impossíveis. A retirada do objeto após o crime também respeita os trajetos.
+Consequences are recorded in event effects rather than placed arbitrarily. Traces stay at their origin. Innocent activities avoid the crime location without impossible travel or overlaps. Post-crime weapon disposal also respects routes.
 
-Uma ocorrência independente pode deixar uma marca em outro ambiente ou na própria sala do crime. A explicação compartilha a origem causal e a instância do objeto com essa marca, contestando sua interpretação como mecanismo do assassinato.
+An independent incident can leave a mark in another environment or in the crime room itself. Its explanation shares the causal origin and object instance, contesting interpretation of that mark as the murder mechanism.
 
-Na geração atual, as explicações de uso independente se referem apenas ao desvio, nunca à arma verdadeira. Essa restrição do recorte é validada; não é uma regra de que usos legítimos seriam impossíveis no mundo em geral.
+Current independent-use explanations concern only the decoy, never the actual weapon. This validated slice restriction does not mean legitimate uses are impossible in the world in general.
 
-## Quantidade e validação
+## Quantity and validation
 
-Os casos têm **15–16 observações**, dentro do orçamento aprovado de 14–18. A remoção de dois relatos redundantes e do registro cotidiano da arma verdadeira abriu espaço para separar horário e cena.
+Cases have **15–16 observations**, within the approved 14–18 budget. Removing two redundant accounts and the actual weapon's routine-use record made room to separate timing and scene evidence.
 
-Há uma rota suficiente com **cinco provas**, sem exigir encontrar tudo nem anexar a arma: contato recente, horários, mecanismo na cena, motivação e reconstrução dos álibis. A rota por identificação material usa seis. Textos e relações não são classificados como relevantes na interface, e conexões do quadro não são lidas pelo avaliador.
+A sufficient route has **five proofs**, without requiring every discovery or the weapon: recent contact, timing, scene mechanism, motive and reconstructed alibis. The material-identification route uses six. Text and relations are not labeled relevant in the interface; the evaluator does not read board connections.
 
-Esquema de snapshot 5; gerador **0.6.0**, conteúdo **hotel_feedback_1**. A seed 708272 preserva Diana/ciúme/disparo como solução factual, mas as observações mudaram. Conteúdo antigo não é aceito silenciosamente pelo validador atual; o arquivo histórico permite reproduzir o diagnóstico anterior.
+This review introduced snapshot schema 5, generator **0.6.0**, content **hotel_feedback_1**. Seed 708272 retained Diana/jealousy/gunshot as factual truth while observations changed. The current validator does not silently accept old content; the historical file reproduces the previous diagnostic. See [architecture](architecture.md) for subsequent version changes.
 
-Testes:
+Tests:
 
 ```sh
 godot --headless --path . --script tests/gameplay_feedback_tests.gd
@@ -62,12 +62,12 @@ godot --path . --script tests/ui_smoke.gd
 godot --path . --script tests/board_ui_smoke.gd
 ```
 
-`tests/results/gameplay_feedback.json` registra 102 seeds e exemplos para revisão: **0 salão, 1 lavanderia, 4 depósito, 9 cozinha, 14 jardim**. Não é preciso consultar a verdade antes de jogar.
+`tests/results/gameplay_feedback.json` records 102 seeds and review examples: **0 lounge, 1 laundry, 4 storage, 9 kitchen, 14 garden**. Consulting truth before playing is unnecessary.
 
-## Limites
+## Limits
 
-Esta é variação lógica e textual na mesa de teste; móveis, vestígios 3D e ferramentas não foram materializados. Os perfis ainda são autorais e o vocabulário de assinaturas é limitado. Ampliar métodos com sinais ambíguos exige outras combinações probatórias; o resolvedor não escolhe silenciosamente um método quando a assinatura tem mais de uma correspondência.
+This is logical/textual variety in the testing desk; furniture, 3D traces and tools have not been materialized. Profiles are still authored and the signature vocabulary is limited. Ambiguous signals for new methods require other proof combinations; the resolver does not silently select a method when a signature has several matches.
 
-A validação automática verifica propriedades explícitas, não certifica dificuldade ou justiça da dedução humana. A revisão de gameplay continua necessária. Nenhum limiar foi reduzido, nenhuma conexão automática foi criada e o GDD não foi reescrito.
+Automated validation checks explicit properties, not human deduction difficulty or fairness. Gameplay review is still required. No threshold was reduced, no automatic connection was introduced and the GDD was not rewritten.
 
-Resultado da verificação: 1.095 checks específicos em 102 seeds, 4.101 do núcleo em 101 seeds, 468 da rede, 79 do catálogo e 1.208 de localização, sem falhas. Mesa e quadro também passaram pelos fluxos renderizados. Ainda é necessária revisão humana dos novos casos.
+Validation passed 1,095 targeted checks across 102 seeds, 4,101 core checks across 101 seeds and 468 network checks, alongside catalog/localization tests. Desk and board rendered workflows passed. See [consolidated validation](validation.md) for current totals. Human review of the revised cases remains necessary.

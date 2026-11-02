@@ -1,39 +1,39 @@
-# Referência Python original
+# Original Python reference
 
-Os fontes em `python/` foram extraídos sem alteração do arquivo `unnamed-investigation-game.zip`. Metadados macOS, caches e o repositório Git aninhado não foram incorporados à árvore de referência.
+Sources in `python/` were extracted unchanged from `unnamed-investigation-game.zip`. macOS metadata, caches and the nested Git repository were excluded from the reference tree.
 
-SHA256 do ZIP: `72a7e7b9a7bfe9d961656d30c74e85bf7c12a8713720bb00540a6b17cf99b302`.
+ZIP SHA256: `72a7e7b9a7bfe9d961656d30c74e85bf7c12a8713720bb00540a6b17cf99b302`.
 
-Execute `python3 reference/python/main.py` para jogar o terminal original. Seu comportamento foi preservado, inclusive limitações.
+Run `python3 reference/python/main.py` to play the original terminal version. Its behavior, including limitations, is preserved.
 
-`python3 tools/characterize_legacy.py` verifica os snapshots registrados em `characterization.json`; `--record` regenera a caracterização intencionalmente. O arquivo registra versão do Python, seeds 0–99, seeds com pistas descartadas e casos completos das seeds 0 e 42. Não exige equivalência de PRNG entre Python e Godot.
+`python3 tools/characterize_legacy.py` verifies snapshots recorded in `characterization.json`; `--record` intentionally regenerates characterization. The file records Python version, seeds 0–99, seeds with discarded clues and complete cases for seeds 0 and 42. Matching Python and Godot PRNG sequences is not required.
 
-## Diagnóstico e migração
+## Assessment and migration
 
-| Original | Aproveitamento | Mudança no núcleo |
+| Original | Retained concept | Core change |
 |---|---|---|
-| Case / solution | Separação caso/resposta | Snapshot estruturado com vítima e eventos |
-| ObjectClue, GossipClue, DocumentClue | Formas de observação | Dados separados dos fatos e da avaliação |
-| Suspect | Intenção de identidades e relações | Personagens participam de acontecimentos |
-| Pista alternativa + explicação | Exemplo faca/acidente/registro | Consequências da mesma origem causal |
-| Catálogos de armas e motivos | Faca, corda e três motivos | IDs consistentes; conteúdo pequeno e revisável |
-| CaseGenerator / ClueGenerator | Separação de geração/apresentação | Acontecimentos antes de consequências |
-| Terminal | Consumidor simples | Novo consumidor sem regras centrais |
+| Case / solution | Case/answer separation | Structured snapshot with victim and events |
+| ObjectClue, GossipClue, DocumentClue | Observation forms | Data separated from facts and evaluation |
+| Suspect | Identities and relationships | Characters participate in events |
+| Alternative clue + explanation | Knife/accident/record example | Consequences share a causal origin |
+| Weapon and motive catalogs | Knife, rope and three motives | Consistent IDs; small, reviewable content set |
+| CaseGenerator / ClueGenerator | Generation/presentation separation | Events precede consequences |
+| Terminal | Simple consumer | New consumer without core rules |
 
-O gerador anterior sorteia respostas e descrições sem cronologia ou origem causal. Suspect e Solution não são usados pela geração. A vítima não tem identidade própria. Explicações de motivos escolhem pessoas independentemente da pista que deveriam contextualizar. Relatos não têm observador identificável. `poison` não coincide com a chave `poison vial` do catálogo. `is_true` mistura relevância e verdade factual.
+The previous generator selects answers and descriptions without chronology or causal origin. Suspect and Solution are not used by generation. The victim has no separate identity. Motive explanations select people independently of the clue they should contextualize. Accounts have no identifiable observer. `poison` does not match the catalog key `poison vial`. `is_true` conflates relevance and factual truth.
 
-Em 82 das 100 seeds caracterizadas houve pistas geradas que não chegaram às salas. A seed 0 perde um documento contextual sobre um conflito resolvido. A distribuição aleatória e seus descartes foram substituídos por posicionamento causal e validação de suficiência. Esses defeitos não devem virar requisitos de paridade.
+In 82 of the 100 characterized seeds, some generated clues never reached rooms. Seed 0 loses a contextual document about a settled conflict. Random distribution and its discarded clues were replaced by causal placement and sufficiency validation. These defects must not become parity requirements.
 
-O terminal original descobre todas as pistas de cada sala e compara três respostas para vencer, sem provas. Essa experiência não foi migrada: o novo consumidor inspeciona itens individualmente e exige seleção de evidências, respeitando o GDD.
+The original terminal discovers every clue in a room and checks three answers to win, without evidence. That experience was not migrated: the new consumer inspects individual items and requires evidence selection, following the GDD.
 
-## Recuperação da experiência após a primeira revisão
+## Recovering the experience after the first review
 
-A primeira migração tornou a investigação explícita demais: testemunha ocular, autoria identificada na arma e um único acidente paralelo. Isso foi rejeitado pelo responsável pelo projeto. A versão 0.2.0 recupera os aspectos que funcionavam na referência:
+The first migration made investigation too explicit: an eyewitness, authorship identified on the weapon and a single parallel accident. The project owner rejected this. Version 0.2.0 recovered aspects that worked in the reference:
 
-- Proximidade é suspeita, não uma declaração de culpa; os quatro suspeitos têm relatos.
-- A razão padrão `false_count=3` reaparece como três objetos alternativos e ocorrências contextuais próprias.
-- Os objetos apresentam os mesmos tipos de vestígios genéricos independentemente de sua relação com o crime.
-- Conflitos de várias pessoas e documentos posteriores exigem distinguir problemas persistentes de questões já encerradas.
-- Álibis e explicações são descobertas separadas, com eventos e pessoas compatíveis, corrigindo o pareamento aleatório do original.
+- Proximity creates suspicion rather than declaring guilt; all four suspects had accounts.
+- The default `false_count=3` reappeared as three alternative objects with their own contextual incidents.
+- Objects show the same generic trace types regardless of their relationship to the crime.
+- Multiple people's conflicts and subsequent documents require distinguishing persistent problems from settled matters.
+- Alibis and explanations are separate discoveries with compatible events and people, correcting the original's random pairing.
 
-Foram acrescentadas comparações materiais e uma avaliação que exige apresentar as informações cruzadas. Não há tentativa de reproduzir bit a bit o gerador Python, suas contradições ou seus descartes. A base de referência continua preservada sem alteração; a migração deve conservar a experiência de suspeitas concorrentes, não só os nomes das classes.
+Material comparisons and evaluation requiring submission of the cross-referenced information were added. There is no attempt to reproduce the Python generator, contradictions or discarded clues bit for bit. The reference sources remain unchanged; migration should preserve competing suspicions, not just class names.

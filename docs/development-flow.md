@@ -1,73 +1,73 @@
-# Fluxo de desenvolvimento — primeiro recorte investigativo jogável
+# Development workflow — first playable investigation slice
 
-Planejamento autorizado em 30/10/2026. Este documento organiza entregas; não altera o GDD nem aprova decisões de design ainda abertas.
+Planning approved on 2026-10-30. This document organizes delivery; it does not change the GDD or approve unresolved design decisions.
 
-## Objetivo do marco
+## Milestone objective
 
-No [marco Primeiro recorte investigativo jogável](https://github.com/brunoantunesc/dead-letter/milestone/1), uma pessoa deve conseguir investigar dois casos distintos em um pequeno trecho do hotel, examinar provas, organizar hipóteses e apresentar uma acusação. A revisão humana precisa avaliar a investigação, além dos testes de consistência.
+In the [first playable investigation slice milestone](https://github.com/brunoantunesc/dead-letter/milestone/1), a player should be able to investigate two distinct cases in a small hotel section, examine evidence, organize hypotheses and submit a supported accusation. Human review must assess the investigation as well as consistency tests.
 
-## Entregas e dependências
+## Deliverables and dependencies
 
-| Issue | Entrega | Dependências para conclusão |
+| Issue | Deliverable | Completion dependencies |
 |---|---|---|
-| [#11](https://github.com/brunoantunesc/dead-letter/issues/11) | Catálogo em Resources, contrato de relações e vínculos visuais pendentes | Preparação técnica de #2; não implementa política de contestação |
-| [#2](https://github.com/brunoantunesc/dead-letter/issues/2) | Catálogo data driven de provas e contraprovas | Aprovar a política de contestação antes de mudar resultados de acusações |
-| [#3](https://github.com/brunoantunesc/dead-letter/issues/3) | Auditoria dos assets e lacunas | Consolidar relatório, revisão e pendências de origem/licença |
-| [#4](https://github.com/brunoantunesc/dead-letter/issues/4) | Qualidade investigativa dos casos curtos | #2; protocolo pode ser preparado antes |
-| [#5](https://github.com/brunoantunesc/dead-letter/issues/5) | Definição do primeiro recorte do hotel | Resultados de #3 e aprovação do recorte |
-| [#6](https://github.com/brunoantunesc/dead-letter/issues/6) | Preparação dos assets selecionados | #3, #5 e permissões dos assets usados |
-| [#7](https://github.com/brunoantunesc/dead-letter/issues/7) | Caso procedural na exploração 3D | #2, #5 e #6; #4 orienta a seleção dos casos |
-| [#8](https://github.com/brunoantunesc/dead-letter/issues/8) | Provas legíveis e traduzíveis | #7; preparação visual pode acompanhar #6 |
-| [#9](https://github.com/brunoantunesc/dead-letter/issues/9) | Quadro com cards, conexões e marcações | Antecipado para a mesa atual; #7 não bloqueia a primeira versão |
-| [#10](https://github.com/brunoantunesc/dead-letter/issues/10) | Validação do ciclo completo | #4, #7, #8 e #9 |
+| [#11](https://github.com/brunoantunesc/dead-letter/issues/11) | Resource catalog, relation contract and pending visual references | Technical preparation for #2; does not implement counterproof policy |
+| [#2](https://github.com/brunoantunesc/dead-letter/issues/2) | Data-driven evidence and counterproof catalog | Approve counterproof policy before changing accusation outcomes |
+| [#3](https://github.com/brunoantunesc/dead-letter/issues/3) | Asset audit and gap assessment | Consolidate report, review and provenance/license questions |
+| [#4](https://github.com/brunoantunesc/dead-letter/issues/4) | Investigative quality of short cases | #2; protocol can be prepared beforehand |
+| [#5](https://github.com/brunoantunesc/dead-letter/issues/5) | Define the first hotel slice | #3 findings and scope approval |
+| [#6](https://github.com/brunoantunesc/dead-letter/issues/6) | Prepare selected assets | #3, #5 and permissions for assets used |
+| [#7](https://github.com/brunoantunesc/dead-letter/issues/7) | Procedural case in 3D exploration | #2, #5 and #6; #4 guides case selection |
+| [#8](https://github.com/brunoantunesc/dead-letter/issues/8) | Readable, localizable evidence | #7; visual preparation can accompany #6 |
+| [#9](https://github.com/brunoantunesc/dead-letter/issues/9) | Board with cards, connections and marks | Brought forward for the current desk; #7 does not block the first version |
+| [#10](https://github.com/brunoantunesc/dead-letter/issues/10) | Complete-cycle validation | #4, #7, #8 and #9 |
 
-As dependências estão descritas nos corpos das issues; não foram cadastradas como bloqueios nativos do GitHub.
+Dependencies are described in issue bodies; they are not registered as native GitHub blocking relationships.
 
-## Ordem de execução
+## Execution order
 
-1. Preparar autoria em Resources na #11, priorizar #2 e consolidar a auditoria #3. Preparar o protocolo de #4 e a proposta de #5 em paralelo, quando não dependerem de decisões pendentes.
-2. Revisar a qualidade dos casos em #4, usando o quadro antecipado da #9, e aprovar o recorte de #5. Não expandir o conteúdo para disfarçar problemas de lógica ou apresentação.
-3. Preparar apenas a seleção necessária em #6; integrar os dados e a exploração em #7.
-4. Completar a leitura das provas em #8 e integrar o quadro da #9 às descobertas da exploração 3D.
-5. Executar a revisão integrada em #10; registrar falhas antes de encerrar o marco.
+1. Prepare Resource authoring in #11, prioritize #2 and consolidate audit #3. Prepare the #4 protocol and #5 proposal alongside this work where pending decisions do not block them.
+2. Review case quality in #4 using the early #9 board, and approve the #5 slice. Do not expand content to disguise logic or presentation problems.
+3. Prepare only the selected assets in #6; integrate data and exploration in #7.
+4. Complete evidence readability in #8 and integrate the #9 board with 3D discoveries.
+5. Run integrated review in #10; record failures before closing the milestone.
 
-Essa ordem permite investigação técnica em paralelo, mas não autoriza implementar uma decisão criativa pendente.
+This order allows independent technical work but does not authorize unresolved creative decisions.
 
-## Acompanhamento das tarefas
+## Task tracking
 
-Usar os estados conceituais **próximas → prontas para começar → em andamento → em revisão → concluídas**. Eles são o protocolo de acompanhamento; um GitHub Project com essas colunas ainda não foi criado.
+Use the conceptual states **upcoming → ready → in progress → in review → done**. These define the tracking protocol; a GitHub Project with these columns has not been created.
 
-- **Próximas:** escopo definido, mas há dependências ou decisões pendentes.
-- **Prontas:** dependências necessárias satisfeitas, documentação consultada e critérios verificáveis.
-- **Em andamento:** trabalho iniciado; registrar descobertas, impedimentos e mudanças de escopo na issue.
-- **Em revisão:** entrega concreta disponível, validações executadas e limitações descritas; revisão humana pendente quando aplicável.
-- **Concluídas:** critérios de aceite verificados, documentação atualizada e pendências relevantes resolvidas ou transferidas explicitamente para outra issue.
+- **Upcoming:** defined scope with remaining dependencies or decisions.
+- **Ready:** dependencies satisfied, documentation consulted and verifiable criteria available.
+- **In progress:** work started; record findings, blockers and scope changes in the issue.
+- **In review:** concrete delivery, completed validation and documented limits; human review pending where applicable.
+- **Done:** acceptance criteria verified, documentation updated and relevant outstanding items resolved or explicitly moved to another issue.
 
-O estado aberto/fechado da issue é oficial para conclusão. Enquanto não houver quadro, registrar mudanças de etapa relevantes na discussão da própria issue. Evitar manter várias implementações simultâneas sem necessidade.
+Issue open/closed state is authoritative for completion. Until a project board exists, record meaningful stage changes in issue discussions. Avoid unnecessary simultaneous implementations.
 
-## Decisões e validação
+## Decisions and validation
 
-Antes de iniciar uma implementação, ler a issue, o GDD, AGENTS.md e os contratos existentes. Registrar dúvidas que mudem experiência, dificuldade ou regras.
+Before implementation, read the issue, GDD, AGENTS.md and existing contracts. Record questions that affect experience, difficulty or rules.
 
-Decisões importantes devem registrar: problema, opções, proposta, decisão do responsável e link da aprovação. Aprovar a criação de uma issue não aprova automaticamente as alternativas de design nela descritas.
+Important decisions should record the problem, options, proposal, owner's decision and approval link. Approval to create an issue does not automatically approve its design alternatives.
 
-Pontos de aprovação já identificados:
+Identified approval points:
 
-- #2: política aprovada nesta etapa — considerar todas as contraprovas existentes/aplicáveis, retirando apenas argumentos contestados, mesmo sem descoberta ou apresentação. Mudanças futuras dessa política exigem nova decisão.
-- #5: ambientes, câmera/navegação, presença de personagens/corpo e eventual uso de ferramentas.
-- #4 e #10: mudanças relevantes de dificuldade, orçamento de pistas ou regras de vitória.
-- #6: verificar termos aplicáveis antes da incorporação de assets; compras continuam exigindo autorização própria.
+- #2: approved policy for this stage — consider all existing/applicable counterproofs, removing only contested arguments, even without discovery/submission. Future changes require another decision.
+- #5: rooms, camera/navigation, character/body presence and possible tool use.
+- #4 and #10: significant difficulty, clue-budget or victory-rule changes.
+- #6: check applicable terms before incorporating assets; purchases still need separate authorization.
 
-Para encerrar uma tarefa, registrar o que mudou, testes realmente executados, documentação afetada, limitações e revisão humana quando pertinente. Para falhas procedurais, preservar seed, versão e dados de reprodução. Não confundir uma bateria de seeds válida com uma investigação interessante.
+Before closing a task, record changes, tests actually executed, affected documentation, limits and human review where relevant. Preserve seed, version and reproduction data for procedural failures. A valid seed batch is not the same as an interesting investigation.
 
-## Situação de partida e manutenção
+## Starting state and maintenance
 
-A #1 contém a entrega inicial do núcleo e seu comentário de implementação. Permanece aberta até revisão dos critérios; este planejamento não a encerra nem presume que todo o escopo original foi aprovado.
+Issue #1 contains the initial core delivery and implementation comment. It stays open pending criteria review; this plan does not close it or assume approval of the entire original scope.
 
-A auditoria #3 tem relatório local em [docs/assets/psx-audit/README.md](assets/psx-audit/README.md), incluindo pendências. A [pesquisa de outros packs](assets/psx-audit/author-packs.md) é uma recomendação, não compra ou integração.
+Audit #3 has a local report in [docs/assets/psx-audit/README.md](assets/psx-audit/README.md), including outstanding questions. The [other-pack research](assets/psx-audit/author-packs.md) is a recommendation, not a purchase or integration.
 
-Este documento descreve a sequência, não é um espelho diário de progresso. Consultar as issues para o estado atual. Atualizar dependências aqui e nas issues quando o planejamento mudar.
+This document describes the sequence, not daily status. Consult issues for current progress. Update dependencies here and in issues when planning changes.
 
-Hotel completo, progressão roguelite, elenco animado, diálogos avançados e ferramentas forenses completas ficam fora deste marco. Abrir tarefas específicas após comprovar o primeiro ciclo investigativo.
+The full hotel, roguelite progression, animated cast, advanced dialogue and complete forensic tools are outside this milestone. Create specific tasks after demonstrating the first investigative cycle.
 
-A implementação atual da rede e distribuição lógica está descrita em [evidence-network.md](evidence-network.md). A #2 continua exigindo revisão de seus critérios completos: os operadores de sustentação ainda não foram integralmente migrados para dados, e a revisão humana dos casos permanece pendente.
+The current network and logical distribution are described in [evidence-network.md](evidence-network.md). Issue #2 still requires full acceptance review: support operators are not entirely data-driven, and human case review remains pending.

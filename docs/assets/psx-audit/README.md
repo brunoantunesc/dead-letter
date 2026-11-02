@@ -1,35 +1,35 @@
-# Auditoria do pack PSX — primeira entrega
+# PSX pack audit — first delivery
 
-**Data:** 30/10/2026 · **Issue:** [#3](https://github.com/brunoantunesc/dead-letter/issues/3) · **Godot:** 4.6.2.
+**Date:** 2026-10-30 · **Issue:** [#3](https://github.com/brunoantunesc/dead-letter/issues/3) · **Godot:** 4.6.2.
 
-O pacote oferece uma base útil de interiores, móveis e objetos. As lacunas de maior impacto são **a identidade de hotel brasileiro de luxo, os suportes legíveis da investigação e a representação de corpo/roupas**. Grande parte da aparência atual remete a espaços residenciais ou industriais gastos; a adaptação visual deve preservar luxo e decadência localizada.
+The package offers a useful base of interiors, furniture and objects. The most consequential gaps are **a Brazilian luxury hotel's identity, readable investigation supports and body/clothing representation**. Much of the current appearance suggests worn residential or industrial spaces; adaptation should retain luxury with localized decay.
 
-Foram inventariados todos os arquivos e os 489 GLBs. **73 amostras foram importadas e renderizadas no Godot**, com seus materiais originais, sem falhas de importação. O trabalho ocorreu em um projeto temporário, sem inserir os assets no jogo, alterar o GDD ou criar o hotel.
+All files and 489 GLBs were inventoried. **73 samples were imported and rendered in Godot**, using original materials, without import failures. Work used a temporary project without adding assets to the game, changing the GDD or building the hotel.
 
-A licença aplicável à compra do Mega Pack permanece por confirmar. Esta é uma avaliação técnica/artística local, não uma aprovação de incorporação ou publicação dos arquivos-fonte.
+The license applicable to the Mega Pack purchase remains unconfirmed. This is a local technical/artistic assessment, not approval to integrate or publish source files.
 
-## 1. O que existe de fato
+## 1. Actual contents
 
-Arquivo analisado: `Texturas PSX.zip`, 276.777.183 bytes (~264 MiB).
+Analyzed archive: `Texturas PSX.zip`, 276,777,183 bytes (~264 MiB).
 
 SHA256: `f6f464da268b7831bd649f77c39f0b512b0877726c1bfead0ead7318ba1e3a0c`.
 
-| Conteúdo | Quantidade | Observação |
+| Content | Count | Note |
 |---|---:|---|
-| GLBs do Mega Pack | 489 | Base principal do inventário de modelos |
-| FBX / OBJ / DAE | 489 de cada | Exportações correspondentes; não representam mais 1.467 modelos distintos |
-| Grupos de assinatura geométrica | 387 | Agrupamento conservador de atributos/índices/transforms; não equivale a contar famílias artísticas |
-| Imagens de textura | 389 caminhos / 363 hashes únicos | Há arquivos idênticos; não remover variações só pelo nome |
-| Previews fornecidos | 10 | Separados das texturas do inventário |
-| Conjunto de papéis | 1 glTF + buffer + 3 mapas | Uma malha reúne folhas e pilhas |
-| Arquivo Blender | 1 | Não foi aberto nesta auditoria |
-| GLBs com animações / skins | 0 / 0 | Nenhum rig ou animação no conjunto exportado analisado |
+| Mega Pack GLBs | 489 | Main model inventory |
+| FBX / OBJ / DAE | 489 each | Corresponding exports, not another 1,467 distinct models |
+| Geometry-signature groups | 387 | Conservative attribute/index/transform grouping, not artistic-family count |
+| Texture images | 389 paths / 363 unique hashes | Identical files exist; do not remove variants based on names alone |
+| Supplied previews | 10 | Separate from inventory textures |
+| Paper set | 1 glTF + buffer + 3 maps | One mesh combines sheets and stacks |
+| Blender file | 1 | Not opened during this audit |
+| GLBs with animations / skins | 0 / 0 | No rig or animation in the analyzed exports |
 
-Os previews internos citam versões 2.9 e 3.1, mas não há um manifesto que permita afirmar uma versão única do ZIP. A página pública candidata já oferece outra versão. O hash acima identifica o conteúdo efetivamente testado, sem extrapolar os resultados ao pack atual do vendedor.
+Internal previews mention versions 2.9 and 3.1, but no manifest establishes one ZIP version. The candidate public page already offers another version. The hash identifies the content actually tested; results must not be extrapolated to the seller's current pack.
 
-### Categorias dos GLBs
+### GLB categories
 
-| Categoria | Arquivos |
+| Category | Files |
 |---|---:|
 | Furniture | 123 |
 | Items & Weapons | 116 |
@@ -40,105 +40,105 @@ Os previews internos citam versões 2.9 e 3.1, mas não há um manifesto que per
 | Large Props | 32 |
 | Decals | 4 |
 
-A mediana é de 216 triângulos por GLB. O maior é `tunnel_1`, com 18.074. Isso indica geometria geralmente leve, mas **não constitui benchmark de FPS ou memória**. Nenhuma primitiva dos GLBs ficou sem UV0 na leitura estrutural. Há 31 materiais BLEND e 3 MASK no inventário; transparências precisam de revisão por contexto.
+Median triangle count is 216 per GLB; the largest is `tunnel_1` at 18,074. Geometry is generally light, but **this is not an FPS or memory benchmark**. Structural analysis found no GLB primitive missing UV0. The inventory includes 31 BLEND and three MASK materials; transparency needs contextual review.
 
-Detalhes completos: [inventário](inventory.json), [manifesto das amostras](sample_manifest.json), [classificação individual das 73 amostras](sample_assessment.json).
+Full details: [inventory](inventory.json), [sample manifest](sample_manifest.json), [individual assessment of 73 samples](sample_assessment.json).
 
-## 2. Seleção visual observada
+## 2. Observed visual selection
 
-Cada folha mostra o ID do arquivo e suas dimensões importadas. O enquadramento é normalizado para comparação: uma chave aparece grande na miniatura, mas sua medida real continua indicada. Unidades são as importadas pelo glTF/Godot, tratadas como metros nesta avaliação; não se deve normalizar a escala de produção pelas miniaturas.
+Each sheet shows file ID and imported dimensions. Framing is normalized for comparison: a key appears large in its thumbnail, but its actual measurement is still shown. Units are those imported by glTF/Godot, treated as meters in this assessment; production scale must not be normalized from thumbnails.
 
-| Folha | Exemplos e leitura |
+| Sheet | Examples and assessment |
 |---|---|
-| [Móveis](previews/furniture.png) | Sofás, cadeiras, mesas, vitrines e armários aproveitáveis. As camas e o acabamento predominante são mais simples que o hotel pretendido. |
-| [Estruturas](previews/structures.png) | Paredes, portas, pisos, arcos e elevador formam base modular; acabamento e transições ainda exigem direção própria. |
-| [Objetos investigativos](previews/investigation_props.png) | Chave, faca, caderno, fita, relógio e garrafas funcionam como objetos reconhecíveis. Letras impressas nos livros não oferecem o conteúdo de uma prova jogável. |
-| [Eletrônicos](previews/electronics.png) | CRT, rádio e botões têm potencial de adaptação. Interfaces de computador, celulares e placas reconhecíveis puxam para uma época específica. |
-| [Iluminação e materiais](previews/lighting_materials.png) | Há luminárias, tapete, quadro e varão. O varão não traz uma cortina; brilho desenhado não ilumina a cena sozinho. |
-| [Serviço](previews/service.png) | Caixas, tubulação, embalagens e ferramentas ajudam áreas de manutenção. Sanitários muito sujos não representam automaticamente os banheiros de hóspedes. |
-| [Papéis](previews/paper_set.png) | A forma de folhas/pilhas existe, mas a apresentação e a escala precisam de preparação; o atlas contém texto decorativo pré-impresso. |
+| [Furniture](previews/furniture.png) | Usable sofas, chairs, tables, display cabinets and cupboards. Beds and prevailing finishes are simpler than the intended hotel. |
+| [Structures](previews/structures.png) | Walls, doors, floors, arches and an elevator provide a modular base; finishes and transitions still require dedicated direction. |
+| [Investigation props](previews/investigation_props.png) | Key, knife, notebook, tape, clock and bottles are recognizable. Printed book lettering does not supply playable evidence content. |
+| [Electronics](previews/electronics.png) | CRT, radio and buttons have adaptation potential. Computer interfaces, phones and recognizable signs suggest a specific period. |
+| [Lighting and materials](previews/lighting_materials.png) | Lamps, carpet, picture and curtain rod are present. The rod has no curtain; painted highlights do not illuminate a scene. |
+| [Service](previews/service.png) | Boxes, pipes, packaging and tools support maintenance spaces. Very dirty toilets do not automatically represent guest bathrooms. |
+| [Papers](previews/paper_set.png) | Sheet/stack forms exist, but presentation and scale need preparation; the atlas has decorative printed text. |
 
-As classificações “reutilizar como base”, “adaptar” e “evitar no recorte” são avaliações de adequação, condicionadas à licença. Não significam aprovação artística definitiva. “Evitar no recorte” não declara que um objeto jamais possa existir no mundo do jogo.
+“Reuse as a base,” “adapt” and “avoid in this slice” are suitability judgments conditional on licensing, not final art approval. Avoiding an object in this slice does not mean it can never exist in the game's world.
 
-## 3. Resultados técnicos no Godot
+## 3. Godot technical results
 
-- **73/73 amostras carregadas e renderizadas**, sendo 72 GLBs e o glTF dos papéis. O relatório de importação está em [godot_report.json](previews/godot_report.json).
-- **Escala:** sofá `sofa_1` com 2,60 m de largura; `chair_mp_3` com ~1 m de altura; chave `key_mp_1` com ~7,35 cm de comprimento. São proporções utilizáveis como base. Módulos têm medidas externas diferentes: parede ~4,09 m e piso ~4,04 m; arcos selecionados têm 3 m. Isso não prova defeito de encaixe, mas impede adotar todo AABB como um único grid sem teste de montagem.
-- **Orientação:** a amostra ficou reconhecível sem correção global de eixos. Portas e armários têm partes filhas separadas em exemplos testados. Não foram ensaiados todos os pivôs de abertura nem combinações de módulos.
-- **Materiais:** 144 referências de material na amostra usam nearest com mipmaps e 5 usam linear com mipmaps. O Mega Pack já traz filtragem que preserva pixels em grande parte dos exemplos. Redimensionar tudo para 64×64 não é uma solução geral.
-- **Texturas:** as imagens do Mega Pack chegam a 930 pixels em uma dimensão; os três mapas dos papéis são 2048×2048. Há dimensões não potências de dois e atlas diferentes. O material PBR dos papéis precisa harmonização com o restante, sobretudo sob luz forte.
-- **Luzes:** nenhum Light3D veio nos 73 modelos. Alguns materiais emitem e há geometrias de luz falsa. Criar e testar iluminação ambiente, fontes, contraste e eventuais sombras é trabalho de integração/renderização.
-- **Colisões:** nenhum CollisionObject3D veio na amostra carregada por GLTFDocument. Colisores, áreas de clique e regras de interação precisam ser preparados no pipeline; não são um asset visual ausente.
-- **Legibilidade:** o caderno e os livros usam escrita como textura; o atlas dos papéis não tem o conteúdo localizado do jogo. Para nomes, horários, assinaturas e números probatórios, separar a aparência do objeto do texto gerado a partir dos IDs e da língua selecionada.
-- **Papéis:** o conjunto ocupa ~24,02 × 1,89 × 22,58 unidades e chega como uma única malha. Não deve ser colocado como se fosse uma folha A4 pronta. Separação e calibração de escala são necessárias. O enquadramento do conjunto não comprova a legibilidade de cada documento.
+- **73/73 samples loaded and rendered:** 72 GLBs and the paper glTF. See [godot_report.json](previews/godot_report.json).
+- **Scale:** `sofa_1` is 2.60 m wide; `chair_mp_3` is ~1 m tall; `key_mp_1` is ~7.35 cm long. These are usable base proportions. Modules have different outer dimensions: wall ~4.09 m, floor ~4.04 m, selected arches 3 m. This does not prove faulty joins, but prevents treating every AABB as one grid without an assembly test.
+- **Orientation:** samples were recognizable without a global axis correction. Tested doors/cabinets include separate child parts. Not all opening pivots or module combinations were tested.
+- **Materials:** 144 sample material references use nearest filtering with mipmaps; five use linear with mipmaps. Much of Mega Pack already preserves pixels. Resizing everything to 64×64 is not a general solution.
+- **Textures:** Mega Pack images reach 930 pixels on one axis; all three paper maps are 2048×2048. Non-power-of-two dimensions and different atlases exist. Paper PBR materials need harmonization, especially under strong light.
+- **Lights:** none of the 73 models supplied Light3D nodes. Some materials emit and some geometry fakes lights. Ambient/source lighting, contrast and possible shadows are integration/rendering work.
+- **Collisions:** no CollisionObject3D appeared in samples loaded by GLTFDocument. Colliders, click areas and interaction rules need pipeline preparation; they are not missing visual assets.
+- **Readability:** notebooks/books use writing as texture; the paper atlas has no localized game content. Names, times, signatures and evidentiary numbers must separate object appearance from text generated using IDs and selected language.
+- **Papers:** the set spans ~24.02 × 1.89 × 22.58 units and arrives as one mesh. It is not a ready A4 sheet. Separation and scale calibration are required. Framing the set does not establish readability of individual documents.
 
-Não há shader PSX do jogo neste teste, nem benchmark, navegação, interação ou cenário de hotel montado. A renderização padronizada avalia os assets, não valida a atmosfera final do gameplay.
+This test has no game PSX shader, benchmark, navigation, interaction or assembled hotel. Standardized rendering assesses assets, not final gameplay atmosphere.
 
-## 4. Cobertura do primeiro recorte do hotel
+## 4. Coverage for the first hotel slice
 
-| Necessidade | Cobertura observada | Reaproveitamento e lacuna |
+| Need | Observed coverage | Reuse and gap |
 |---|---|---|
-| Recepção | Parcial | Mesas, cadeiras, relógios, chaves e botões existem. Não localizei balcão de recepção, quadro de chaves, campainha ou mobiliário administrativo específico nos exports. |
-| Salão e quarto | Parcial | Sofás, mesas, armários e camas. Falta um conjunto coerente de acabamento/têxteis que comunique sofisticação. |
-| Circulação | Boa base geométrica | Portas, arcos, escadas, elevador, janelas e paredes. Confirmar encaixes, vãos, materiais e iluminação antes de um layout inteiro. |
-| Cozinha e serviço | Parcial | Caixas, faca, pratos e utensílios pontuais. Não localizei pia, fogão, equipamentos de copa e mobiliário de cozinha completo. |
-| Documentos/registros | Forma parcial; conteúdo ausente | Caderno, livros e papéis. Precisam de formulários, identidade do hotel e texto localizado legível. |
-| Suportes das provas atuais | Parcial | Faca, pistola e chaves existem. Não localizei corda, casacos, vestígios de sangue/impressões/fibras ou estados probatórios prontos. Frascos genéricos exigem adaptação à função. |
-| Corpo e pessoas | Ausente no conjunto exportado | Sem personagens/cadáveres identificados, rigs ou animações. Visibilidade e comportamento dos NPCs continuam decisão aberta do GDD; não assumir um elenco 3D completo como requisito imediato. |
-| Equipamentos analógicos | Parcial | Rádio, fita, relógios e CRTs. Não localizei telefone de mesa, máquina de escrever ou equipamento investigativo analógico específico. |
-| Identidade brasileira | Muito limitada | A amostra traz “ELEVATOR”, notas em dólar, embalagens e interfaces externas ao contexto. São necessários sinais, registros e objetos com história local. Um dólar pode existir por contexto; não deve ser a única linguagem financeira disponível. |
-| Luxo e decadência | Precisa de seleção/adaptação | Tapete, vitrine e madeira ajudam. Predominam acabamentos comuns/desgastados; faltam peças de assinatura e variação de estados conservados/usados/danificados. |
-| Exterior/jardim | Sem cobertura relevante identificada | Não localizei vegetação, paisagismo ou fachada de hotel. Adiar se o primeiro recorte for interno. |
+| Reception | Partial | Desks, chairs, clocks, keys and buttons exist. No reception counter, key rack, bell or specific administrative furniture was found in exports. |
+| Lounge and guest room | Partial | Sofas, tables, cupboards and beds. A coherent finish/textile set communicating sophistication is missing. |
+| Circulation | Good geometry base | Doors, arches, stairs, elevator, windows and walls. Confirm joins, openings, materials and lighting before a complete layout. |
+| Kitchen and service | Partial | Boxes, knife, plates and individual utensils. No sink, stove, pantry equipment or complete kitchen furniture was found. |
+| Documents/records | Partial forms; no content | Notebook, books and papers need forms, hotel identity and readable localized text. |
+| Current evidence supports | Partial | Knife, pistol and keys exist. No rope, coats, blood/fingerprint/fibre traces or ready evidentiary states were found. Generic vials need functional adaptation. |
+| Body and people | Absent from exported set | No identified characters/corpses, rigs or animations. NPC visibility/behavior remained an open GDD decision at audit time; do not assume a complete 3D cast is immediately required. |
+| Analog equipment | Partial | Radio, tape, clocks and CRTs. No desk phone, typewriter or specific analog investigation equipment was found. |
+| Brazilian identity | Very limited | Samples include “ELEVATOR,” dollar bills, packaging and interfaces outside the context. Signs, records and objects with local history are needed. Dollars can exist contextually, but must not be the only financial vocabulary. |
+| Luxury and decay | Selection/adaptation needed | Carpet, display cabinets and wood help. Ordinary/worn finishes prevail; signature pieces and maintained/used/damaged states are missing. |
+| Exterior/garden | No relevant coverage identified | No vegetation, landscaping or hotel facade was found. Defer if the first slice is indoors. |
 
-“Ausente/não localizado” refere-se ao inventário dos GLBs, glTF dos papéis e seleção visual. Outros formatos correspondentes e o arquivo Blender não foram examinados como fontes de conteúdo adicional. Não deduzir ausência somente pela quantidade de arquivos ou pelos anúncios de versões mais novas.
+“Absent/not found” refers to the GLB inventory, paper glTF and visual selection. Corresponding formats and the Blender file were not examined for additional content. Do not infer absence solely from file counts or newer-version advertisements.
 
-## 5. Faltas mais gritantes e prioridade
+## 5. Largest gaps and priorities
 
-Esforço é comparativo, não orçamento de horas: **baixo** = seleção/material/texto simples; **médio** = pequenas peças próprias, composição ou preparação de estados; **alto** = personagens/rigs ou um conjunto arquitetônico de grande alcance.
+Effort is comparative, not an hourly estimate: **low** = selection/simple material/text work; **medium** = small original pieces, composition or state preparation; **high** = characters/rigs or a broad architectural set.
 
-| Prioridade | Falta | Impacto | Ação proposta | Esforço |
+| Priority | Gap | Impact | Proposed action | Effort |
 |---|---|---|---|---|
-| P0 — primeiro recorte 3D | Documentos e vestígios legíveis | A investigação depende de distinguir o que foi observado. Textura borrada não pode carregar um horário ou assinatura decisiva. | Preparar um documento, um registro e um objeto com estados observáveis, usando IDs/localização já existentes; reaproveitar só a forma física dos papéis/caderno. | Médio |
-| P0 — primeiro recorte 3D | Corpo/roupa de referência para o crime | O pack não supre os elementos humanos/material de comparação usados pelo núcleo. | Definir um proxy estático para o teste visual e a necessidade real de roupa/corpo inspecionável antes de encomendar um elenco. | Médio; elenco animado é alto |
-| P0 — identidade do cenário | Recepção reconhecível como hotel brasileiro | Um conjunto genérico de móveis tende a comunicar apartamento ou depósito. | Usar mesas/armários como base, acrescentando um pequeno kit de balcão, registro, quadro de chaves e sinalização; submeter a linguagem visual ao responsável. | Médio |
-| P1 | Acabamento de luxo com desgaste localizado | Sem hierarquia de conservação, tudo parece igualmente abandonado. | Selecionar madeira, metal, piso e estofado; criar poucos estados coerentes e uma peça de assinatura, em vez de substituir o pack inteiro. | Baixo a médio |
-| P1 | Equipamento analógico e identidade gráfica | Celular/desktop moderno e placa inglesa enfraquecem a linguagem material estabelecida. | Priorizar telefone de mesa, registro físico e painéis; adaptar telas/placas dos existentes. A seleção definitiva de ferramentas exige decisão de design. | Médio |
-| P1/P2 conforme a sala | Copa/cozinha e utensílios de serviço | Há poucos elementos para ler um ambiente de hotel em funcionamento. | Completar somente o ambiente escolhido; não construir toda a cozinha para um teste de recepção/salão. | Médio |
-| P2 | Fachada, jardim, vegetação e grande elenco | Não bloqueiam uma primeira amostra interna. | Planejar depois de aprovar um enquadramento interno e decidir presença/comportamento dos NPCs. | Alto |
+| P0 — first 3D slice | Readable documents and traces | Investigation requires distinguishing observations; a blurry texture cannot carry a decisive time/signature. | Prepare a document, record and object with observable states using existing IDs/localization; reuse only paper/notebook physical forms. | Medium |
+| P0 — first 3D slice | Reference body/clothing for the crime | The pack does not supply the human/material comparison elements used by the core. | Define a static visual-test proxy and actual inspectable body/clothing needs before commissioning a cast. | Medium; animated cast is high |
+| P0 — environment identity | Reception recognizable as a Brazilian hotel | Generic furniture suggests an apartment or storage room. | Reuse desks/cupboards and add a small counter, register, key-rack and signage kit; submit the visual language to the owner. | Medium |
+| P1 | Luxury finishes with localized wear | Without maintenance hierarchy everything looks equally abandoned. | Select wood, metal, floor and upholstery; make a few coherent states and a signature piece rather than replace the whole pack. | Low to medium |
+| P1 | Analog equipment and graphic identity | Modern phones/desktops and English signs weaken the established material language. | Prioritize desk phone, physical records and panels; adapt existing screens/signs. Final tool selection requires a design decision. | Medium |
+| P1/P2 depending on room | Pantry/kitchen and service utensils | Few elements communicate a functioning hotel. | Complete only the selected room; do not build a whole kitchen for a reception/lounge test. | Medium |
+| P2 | Facade, garden, vegetation and large cast | These do not block an initial interior sample. | Plan after approving an indoor composition and deciding NPC presence/behavior. | High |
 
-Antes de comprar outro pack, vale testar um **único enquadramento de recepção ou salão** com a base disponível, uma peça de assinatura e um documento inspecionável. Isso permite aprovar a linguagem material e a legibilidade. É recomendação para a próxima etapa, não uma cena criada nesta auditoria.
+Before another pack purchase, test a **single reception or lounge composition** using the available base, one signature piece and an inspectable document. This allows material language/readability approval. It is a next-step recommendation, not a scene created by this audit.
 
-## 6. Origem e permissões
+## 6. Provenance and permissions
 
-### Papéis
+### Papers
 
-O `license.txt` e `asset.extras` do glTF identificam **Marim_Studio**, o [modelo de origem](https://sketchfab.com/3d-models/low-poly-papers-set-2edf57ce2e6c4475bd4897b9c91b0a77) e **CC BY 4.0**. A licença requer atribuição; o crédito deve preservar autor, origem/licença e indicar alterações, conforme o [resumo oficial](https://creativecommons.org/licenses/by/4.0/). O acesso web ao modelo retornou 403, mas os dois registros locais concordam. Não estender essa licença ao Mega Pack.
+The glTF's `license.txt` and `asset.extras` identify **Marim_Studio**, the [source model](https://sketchfab.com/3d-models/low-poly-papers-set-2edf57ce2e6c4475bd4897b9c91b0a77) and **CC BY 4.0**. Attribution must retain author, source/license and indicate changes, following the [official summary](https://creativecommons.org/licenses/by/4.0/). Web access to the model returned 403, but both local records agree. Do not extend this license to Mega Pack.
 
-Crédito base fornecido pelo arquivo: Low-poly Papers Set, por Marim_Studio, via Sketchfab, CC BY 4.0. Acrescentar indicação das adaptações efetivamente feitas quando houver.
+Supplied base credit: Low-poly Papers Set, by Marim_Studio, via Sketchfab, CC BY 4.0. Add the actual adaptations when made.
 
 ### Mega Pack
 
-A [página de Pizza Doggy](https://pizzadoggy.itch.io/psx-mega-pack) corresponde aos previews e categorias fornecidos; a origem da compra ainda não foi confirmada por recibo/link. O usuário informou compra no itch.io.
+The [Pizza Doggy page](https://pizzadoggy.itch.io/psx-mega-pack) matches supplied previews/categories; purchase provenance remains unconfirmed by receipt/link. The user reported purchasing it on itch.io.
 
-O contrato público obtido em 30/10/2026, datado de 01/09/2026, permite jogos comerciais e adaptações sob condições; restringe redistribuição de fontes reutilizáveis e usos ligados a IA. A seção 12 associa a licença à data de obtenção. **Confirmar a versão aplicável à compra antes da integração e de criação/adaptação assistida por IA.** Não tratar a compra como licença irrestrita.
+The public agreement retrieved on 2026-10-30, dated 2026-09-01, allows commercial games and adaptations under conditions; it restricts reusable source redistribution and AI-related uses. Section 12 ties the license to acquisition date. **Confirm the version applicable to the purchase before integration or AI-assisted asset creation/adaptation.** Purchase does not imply unrestricted licensing.
 
-PDF consultado: `License Agreement.pdf`, em Downloads; SHA256 `22e90e1ca9e2f01d0a6917eb867ba74613dd958ed7ff6405ef5c5ea6337d27f4`. Evidências e pendências em [license_review.json](license_review.json). Não foram publicados o ZIP ou arquivos-fonte do pack.
+Consulted PDF: `License Agreement.pdf` in Downloads; SHA256 `22e90e1ca9e2f01d0a6917eb867ba74613dd958ed7ff6405ef5c5ea6337d27f4`. Evidence and outstanding questions are in [license_review.json](license_review.json). The ZIP and pack source files were not published.
 
-## 7. Reprodução e estado da entrega
+## 7. Reproduction and delivery state
 
-A partir da raiz do projeto, com o ZIP local disponível:
+From the project root with the local ZIP available:
 
 ```sh
 python3 tools/asset_inventory.py
 cp tools/asset_audit_project.godot /tmp/dead-letter-asset-audit/project.godot
 ```
 
-Executar o Godot instalado com o projeto temporário:
+Run installed Godot using the temporary project:
 
 ```sh
 godot --path /tmp/dead-letter-asset-audit --script "$PWD/tools/render_asset_audit.gd" -- "$PWD/docs/assets/psx-audit/sample_manifest.json" "$PWD/docs/assets/psx-audit/previews"
 ```
 
-O inventário usa Python padrão, sem instalar dependências. O renderizador usa o Godot instalado. Os modelos extraídos ficam em `/tmp/dead-letter-asset-audit/source`, fora do projeto de produção. A documentação mantém caminhos do ZIP, hashes e relatórios; não copia fontes de terceiros para o jogo.
+Inventory uses standard Python without installing dependencies. Rendering uses installed Godot. Extracted models stay in `/tmp/dead-letter-asset-audit/source`, outside production. Documentation retains ZIP paths, hashes and reports; it does not copy third-party sources into the game.
 
-**Entregue:** inventário, deduplicação conservadora, 73 renderizações agrupadas em sete folhas, resultados técnicos, classificação das amostras, matriz de cobertura e prioridades. **Pendente:** confirmação da licença/versão da compra do Mega Pack e revisão das escolhas artísticas pelo responsável. Não houve alteração de gameplay, GDD, assets de produção, commit ou encerramento da issue.
+**Delivered:** inventory, conservative deduplication, 73 renders grouped into seven sheets, technical results, sample assessments, coverage matrix and priorities. **Pending:** applicable Mega Pack purchase license/version and owner review of artistic choices. At audit delivery, gameplay, GDD and production assets were unchanged; no commit or issue closure had been performed by that audit task.

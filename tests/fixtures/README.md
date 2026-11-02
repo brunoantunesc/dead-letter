@@ -1,19 +1,18 @@
-# Regressão de experiência: seed 914368
+# Experience regression: seed 914368
 
-Relato do responsável: muitos documentos parecidos, grande volume de provas e conflitos financeiros repetidos; difícil distinguir hipóteses.
+Owner feedback: too many similar documents, excessive proof volume and repeated financial conflicts made hypotheses difficult to distinguish.
 
-`seed_914368_v0_2_0.json` preserva o snapshot completo anterior às mudanças. `seed_914368_review.json` registra a transcrição pública, distribuição e auditoria daquela versão: 38 observações, 16 entradas de conflitos, mínimo de 9 itens para uma acusação suficiente. Esses arquivos são material de desenvolvimento e podem conter spoilers; não são consumidos pela interface.
+`seed_914368_v0_2_0.json` preserves the complete pre-change snapshot. `seed_914368_review.json` records that version's public transcript, distribution and audit: 38 observations, 16 conflict entries and at least nine items for a sufficient accusation. These development files may contain spoilers; the UI does not consume them.
 
-Não regravar os arquivos com o gerador novo: a seed sozinha não reproduz um gerador antigo. O esquema anterior permanece como fixture histórica, não como save atual.
+Do not overwrite these files with a new generator: a seed alone does not reproduce an older generator. The previous schema remains a historical fixture, not a current save.
 
-Direção aprovada para 0.3.0: 14–18 observações, duas linhas falsas distintas e menos sobreposição temática. Implementação atual: 15 observações; um conflito financeiro, um pessoal e um profissional, em três pessoas diferentes; um problema cotidiano sem relação com o crime. Uma linha alternativa vem de um conflito persistente de um inocente; outra vem de um objeto com origem independente documentada. Não há cartas e acompanhamentos separados repetindo esses mesmos fatos.
+Approved direction for 0.3.0: 14–18 observations, two distinct false leads and less thematic overlap. The current regression has 15 observations: financial, personal and professional conflicts involving three different people, plus an everyday problem unrelated to the crime. One alternative lead comes from an innocent person's persistent conflict; another from an object with a documented independent origin. Separate letters and follow-up documents do not repeat those same facts.
 
-O teste inclui 914368 além de seeds 0–99. Verifica orçamento, diversidade, causas, preservação da verdade da seed relatada e duas formas de sustentar a acusação com 5 ou 6 itens. Isso evita regressões mensuráveis; não certifica dificuldade ou qualidade da experiência.
+Tests include 914368 alongside seeds 0–99. They check budget, diversity, causes, preservation of the reported seed's truth and two sufficient routes using five or six items. This prevents measurable regressions, not difficulty or experience-quality problems.
 
-## Catálogo e rede
+## Catalog and network
 
-- evidence_catalog_v1.json: referência histórica das 25 apresentações anteriores à migração para Resources; não é fonte de produção.
-- catalog_visual_mesh.tres: BoxMesh próprio para validar vínculo visual preenchido.
-- network_witnesses.json: exemplos parciais de aplicabilidade das 73 relações, com contexto e explicação. Não equivalem a 73 mundos completos validados; testes de casos completos estão em network_tests.gd.
-
-- seed_708272_v0_5_0.json: snapshot original do relato do jogador, com cinco provas que reproduzem autoria 2, motivo 2 e método 0. Não é um save compatível com o conteúdo 0.6.0.
+- `evidence_catalog_v1.json`: historical reference for the 25 presentations before Resource migration, not a production source.
+- `catalog_visual_mesh.tres`: original BoxMesh used to validate an assigned visual reference.
+- `network_witnesses.json`: partial applicability examples for 73 relations, with context and explanation. They are not 73 complete validated worlds; full-case tests are in `network_tests.gd`.
+- `seed_708272_v0_5_0.json`: original snapshot from the player's report, with five proofs reproducing authorship 2, motive 2 and method 0. It is not a save compatible with content 0.6.0 or later.
