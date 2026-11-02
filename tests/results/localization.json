@@ -1,8 +1,8 @@
 {
-	"checks": 1018,
-	"definitions": 31,
+	"checks": 2048,
+	"definitions": 37,
 	"failures": [],
-	"keys": 199,
+	"keys": 446,
 	"locales": [
 		"pt_BR",
 		"en"

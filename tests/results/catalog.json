@@ -1,7 +1,7 @@
 {
-	"checks": 77,
-	"definitions": 31,
+	"checks": 82,
+	"definitions": 37,
 	"failures": [],
-	"pending_visuals": 31,
-	"relations": 46
+	"pending_visuals": 37,
+	"relations": 73
 }

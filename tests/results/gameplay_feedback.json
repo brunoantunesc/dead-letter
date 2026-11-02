@@ -1,0 +1,19 @@
+{
+	"checks": 1095,
+	"crime_locations": {
+		"garden": 18,
+		"kitchen": 14,
+		"laundry": 18,
+		"salon": 22,
+		"storage": 30
+	},
+	"failures": [],
+	"reported_seed": 708272,
+	"review_seeds": {
+		"garden": 14,
+		"kitchen": 9,
+		"laundry": 1,
+		"salon": 0,
+		"storage": 4
+	}
+}

@@ -1,15 +1,15 @@
 {
-	"checks": 387,
+	"checks": 468,
 	"failures": [],
 	"families": {
 		"cleaned": 17,
-		"culprit_routine": 23,
+		"culprit_contact": 11,
 		"earlier": 17,
-		"innocent_routine": 77,
+		"innocent_contact": 23,
 		"none": 66
 	},
-	"generator": "0.5.0",
-	"relations": 46,
+	"generator": "0.7.0",
+	"relations": 73,
 	"review_pair": [
 		{
 			"material_supported": true,
@@ -22,7 +22,7 @@
 		},
 		{
 			"material_supported": false,
-			"seed": 87,
+			"seed": 3,
 			"trace": {
 				"fabric": "navy_wool",
 				"observation_type": "contact",
