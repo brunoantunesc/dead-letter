@@ -67,6 +67,9 @@ static func assign(data: Dictionary, case_seed: int, layout: Resource = LAYOUT) 
 	for id in ids:
 		var item: Dictionary = data.evidence[id]
 		var definition = _definition(item.definition_id)
+		if definition == null:
+			item["placement_id"] = ""
+			continue
 		var choices = candidates(data.placements, item.location, definition.category_id)
 		item["placement_id"] = choices[rng.randi_range(0, choices.size() - 1)] if not choices.is_empty() else ""
 

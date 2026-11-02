@@ -7,6 +7,7 @@ const Rules = preload("res://core/proof_rules.gd")
 const Catalog = preload("res://core/evidence_catalog.gd")
 const Network = preload("res://core/evidence_network.gd")
 const Placement = preload("res://core/evidence_placement.gd")
+const Scenes = preload("res://core/crime_scenes.gd")
 const NAMES = ["Ana", "Bruno", "Carlos", "Diana"]
 
 func generate(case_seed: int, max_attempts: int = 3) -> Dictionary:
@@ -42,6 +43,7 @@ func build_candidate(case_seed: int, attempt: int = 0) -> Dictionary:
 	var motive: String = Content.MOTIVES[rng.randi_range(0, 2)]
 	data.truth = {"culprit": culprit, "victim": "victim", "motive": motive, "method": method,
 		"weapon": Content.PROFILES[method].weapon, "event_id": "murder"}
+	var crime_room = Scenes.choose(data.locations, case_seed, method)
 	var others: Array = data.characters.keys().filter(func(id): return data.characters[id].accusable and id != culprit)
 	_shuffle(others, rng)
 	var other_motives: Array = Content.MOTIVES.duplicate()
@@ -60,17 +62,38 @@ func build_candidate(case_seed: int, attempt: int = 0) -> Dictionary:
 	var entries: Array = []
 	var records: Array = []
 	var record_sources: Array = []
-	var times = [1170, 1175, 1180, 1185]
-	_shuffle(times, rng)
+	var context_rng = RandomNumberGenerator.new()
+	context_rng.seed = case_seed ^ 104729
+	var close_people: Array = [culprit, others[context_rng.randi_range(0, 2)]]
+	_shuffle(close_people, context_rng)
+	var ordinary: Array = others.filter(func(person): return person not in close_people)
+	var accounts: Array = []
+	for role in range(2):
+		accounts.append({"person": close_people[role], "activity": role, "with_victim": true, "place": "lobby", "time": 1189})
+	_event(data, "victim_contacts", "victim_contact", "lobby", 1189, 1190,
+		[close_people[0], close_people[1], "victim", "porter"], [], {"accounts": accounts})
 	for i in range(4):
 		var person = "person_%d" % i
 		var entry: Dictionary = outfits[i].duplicate()
 		entry.person = person
 		entries.append(entry)
-		_event(data, "sighting_%d" % i, "passing", "lobby", times[i], times[i] + 1, [person, "porter"], [], {"person": person, "activity": i})
-		_observe(data, "sighting_%d" % i, "sighting_%d" % i, "restaurant", "testimony",
-			{"observation_type": "sighting", "person": person, "time": times[i], "activity": i}, "porter")
+		var sighting_event = "victim_contacts"
+		var account: Dictionary
+		if person in close_people:
+			account = accounts[close_people.find(person)].duplicate(true)
+		else:
+			var role = ordinary.find(person) + 2
+			var place: String = "garden" if role == 2 else "restaurant"
+			var time = 1140 if role == 2 else 1155
+			account = {"person": person, "activity": role, "with_victim": false, "place": place, "time": time}
+			sighting_event = "sighting_%d" % i
+			_event(data, sighting_event, "passing", place, time, time + 1, [person, "porter"], [], account.duplicate(true))
+		account["observation_type"] = "sighting"
+		if person in close_people:
+			_observe(data, sighting_event, "sighting_%d" % i, "restaurant", "testimony", account, "porter")
 		var room: String = ["restaurant", "kitchen", "garden"][i % 3]
+		if room == crime_room:
+			room = "storage" if crime_room != "storage" else "laundry"
 		var attended = person != culprit
 		var source_id = "attendance_%d" % i if attended else "booking_%d" % i
 		_event(data, source_id, "attendance" if attended else "booking", room if attended else "lobby",
@@ -84,13 +107,17 @@ func build_candidate(case_seed: int, attempt: int = 0) -> Dictionary:
 	_event(data, "wardrobe", "cloakroom_intake", "laundry", 900, 920, ["person_0", "person_1", "person_2", "person_3"], [], {"entries": entries})
 	_observe(data, "wardrobe", "wardrobe", "laundry", "document",  {"observation_type": "wardrobe", "entries": entries.duplicate(true)})
 	var coat: Dictionary = entries[int(culprit.trim_prefix("person_"))]
-	_event(data, "murder", "murder", "salon", 1200, 1205, [culprit, "victim"], ["conflict_" + culprit.trim_prefix("person_")],
+	_event(data, "murder", "murder", crime_room, 1200, 1205, [culprit, "victim"], ["conflict_" + culprit.trim_prefix("person_")],
 		{"culprit": culprit, "victim": "victim", "method": method, "weapon": data.truth.weapon, "fabric": coat.fabric, "thread": coat.thread, "contact": "sleeve_gripped"})
-	_observe(data, "murder", "contact", "salon", "trace",  {"observation_type": "contact", "fabric": coat.fabric, "thread": coat.thread})
-	_event(data, "examination", "examination", "salon", 1230, 1245, ["examiner"], ["murder"],
-		{"pattern": Content.PROFILES[method].pattern, "window_start": 1195, "window_end": 1210})
-	_observe(data, "examination", "examination", "salon", "document",
-		{"observation_type": "examination", "pattern": Content.PROFILES[method].pattern, "place": "salon", "start": 1195, "end": 1210}, "examiner")
+	_observe(data, "murder", "contact", crime_room, "trace", {"observation_type": "contact", "fabric": coat.fabric, "thread": coat.thread})
+	_scene_trace(data, "murder", "scene_trace", crime_room, method, "instrument_" + data.truth.weapon)
+	_event(data, "last_contact", "service_visit", crime_room, 1195, 1196, ["porter", "victim"], [], {})
+	_event(data, "body_discovery", "body_discovery", crime_room, 1210, 1211, ["porter", "victim"], ["murder"], {})
+	_event(data, "body_removal", "body_removal", crime_room, 1220, 1222, ["examiner", "victim"], ["body_discovery"], {"autopsy_status": "pending"})
+	_event(data, "time_record", "discovery_record", "lobby", 1223, 1224, ["porter"], ["last_contact", "body_discovery"],
+		{"place": crime_room, "start": 1195, "end": 1210})
+	_observe(data, "time_record", "time_record", "lobby", "document",
+		{"observation_type": "time_record", "place": crime_room, "start": 1195, "end": 1210}, "porter")
 	var alternative_methods: Array = Content.METHODS.duplicate()
 	alternative_methods.erase(method)
 	var misleading_method: String = alternative_methods[rng.randi_range(0, alternative_methods.size() - 1)]
@@ -110,16 +137,8 @@ func build_candidate(case_seed: int, attempt: int = 0) -> Dictionary:
 		_observe(data, event_id, "object_%d" % i, profile.room, "object",
 			{"observation_type": "object", "form": profile.form, "weapon": profile.weapon, "object_id": "instrument_" + profile.weapon})
 		data.events[event_id].effects["object_id"] = "instrument_" + profile.weapon
-	# Routine work belongs to any suspect, independently of guilt.
-	# Adds context to origin, not an automatic refutation of injury compatibility.
-	var context_rng = RandomNumberGenerator.new()
-	context_rng.seed = case_seed ^ 104729
-	var routine_owner = "person_%d" % context_rng.randi_range(0, 3)
-	var weapon_profile: Dictionary = Content.PROFILES[method]
-	_event(data, "routine_checkout", "documented_use", weapon_profile.room, 400, 405, [routine_owner], [],
-		{"person": routine_owner, "weapon": data.truth.weapon, "object_id": "instrument_" + data.truth.weapon, "time": 400})
-	_observe(data, "routine_checkout", "routine_checkout", "lobby", "document",
-		{"observation_type": "object_use_record", "person": routine_owner, "weapon": data.truth.weapon, "object_id": "instrument_" + data.truth.weapon, "time": 400})
+		if candidate != method and case_seed % 3 != 0:
+			_scene_trace(data, event_id, "context_trace", profile.room, candidate, "instrument_" + profile.weapon)
 	if case_seed % 3 == 0:
 		var helper_index = context_rng.randi_range(0, 3)
 		var helper = "person_%d" % helper_index
@@ -135,6 +154,15 @@ func build_candidate(case_seed: int, attempt: int = 0) -> Dictionary:
 			var cleaning_observed = cleaning.duplicate(true)
 			cleaning_observed["observation_type"] = "trace_cleaning"
 			_observe(data, "residue_removal", "residue_removal", "laundry", "document", cleaning_observed, "porter")
+	# Investigation snapshot after body removal, separate from historical event locations.
+	var npc_rng = RandomNumberGenerator.new()
+	npc_rng.seed = case_seed ^ 49999
+	var guest_rooms = ["salon", "restaurant", "garden"]
+	var current_rooms = {"person_0": "lobby", "person_1": guest_rooms[npc_rng.randi_range(0, 2)],
+		"person_2": "kitchen", "person_3": guest_rooms[npc_rng.randi_range(0, 2)], "porter": "lobby", "examiner": "lobby"}
+	for person_id in data.characters:
+		data.characters[person_id]["current_location"] = current_rooms.get(person_id, "")
+		data.characters[person_id]["location_reason_key"] = "conversation.location." + ("guest" if person_id in ["person_1", "person_3"] else person_id)
 	var ids: Array = data.evidence.keys()
 	_shuffle(ids, rng)
 	var mixed = {}
@@ -145,6 +173,14 @@ func build_candidate(case_seed: int, attempt: int = 0) -> Dictionary:
 	data.counterproofs = Network.derive(data)
 	Placement.assign(data, case_seed)
 	return data
+
+func _scene_trace(data: Dictionary, event_id: String, id: String, location: String, method: String, object_id: String) -> void:
+	var properties = {"observation_type": "scene_trace", "scene_profile": location, "signature": Scenes.SIGNATURES[method],
+		"detail_token": Scenes.token(location, method), "object_id": object_id, "place": location}
+	if not data.events[event_id].effects.has("scene_traces"):
+		data.events[event_id].effects["scene_traces"] = {}
+	data.events[event_id].effects.scene_traces[id] = properties.duplicate(true)
+	_observe(data, event_id, id, location, "trace", properties)
 
 func _conflict(data: Dictionary, id: String, person: String, motive: String, remains_open: bool, time: int) -> void:
 	data.relations.append({"from": person, "to": "victim", "type": motive, "open": remains_open})

@@ -15,3 +15,4 @@ category_id = "record.administrative"
 claim_ids = PackedStringArray("residue_persists")
 causal_kinds = PackedStringArray("prior_contact")
 observation_fields = PackedStringArray("person", "fabric", "thread", "time")
+text_variants = PackedStringArray("evidence.prior_contact.body.v1", "evidence.prior_contact.body.v2")

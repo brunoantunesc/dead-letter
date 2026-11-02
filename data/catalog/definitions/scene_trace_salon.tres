@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "scene_trace.salon"
+selector = {"observation_type": "scene_trace", "scene_profile": "salon"}
+title_key = "evidence.scene_trace.salon.title"
+text_key = "evidence.scene_trace.salon.body"
+parameters = {"marks": {"field": "detail_token", "format": "term"}}
+visual_id = "visual.scene_trace.salon"
+category_id = "material.trace"
+claim_ids = PackedStringArray("scene_mechanism")
+causal_kinds = PackedStringArray("murder", "cut", "lifting", "inspection", "sports", "cleaning")
+observation_fields = PackedStringArray("signature", "detail_token", "object_id", "place")
+observable_titles = {"scene.salon.stabbing": {"title_key": "evidence.scene.salon.stabbing.title", "short_key": "evidence.scene.salon.stabbing.short"}, "scene.salon.strangulation": {"title_key": "evidence.scene.salon.strangulation.title", "short_key": "evidence.scene.salon.strangulation.short"}, "scene.salon.gunshot": {"title_key": "evidence.scene.salon.gunshot.title", "short_key": "evidence.scene.salon.gunshot.short"}, "scene.salon.blunt_force": {"title_key": "evidence.scene.salon.blunt_force.title", "short_key": "evidence.scene.salon.blunt_force.short"}, "scene.salon.poisoning": {"title_key": "evidence.scene.salon.poisoning.title", "short_key": "evidence.scene.salon.poisoning.short"}}

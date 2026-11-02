@@ -37,7 +37,11 @@ func _initialize() -> void:
 	accusation.evidence_ids = material
 	check(Evaluator.evaluate(contextual, accusation, material).outcome == "insufficient_case", "unfound counterproof still applies")
 	var session = Investigation.new(contextual)
-	for id in material: session.inspect(id)
+	for id in material:
+		if base.evidence[id].kind == "testimony":
+			session.visit_location("lobby")
+			session.ask("porter", id)
+		else: session.inspect(id)
 	check(session.submit(accusation) == {"outcome": "insufficient_case"}, "counterproof stays hidden from ordinary verdict")
 	check(_evaluate(contextual, material + ["legitimate_contact"]).total == _evaluate(contextual, material).total, "selecting counterproof does not add punishment")
 	var wrong_person = contextual.duplicate(true)
@@ -68,7 +72,6 @@ func _initialize() -> void:
 	check(Validator.validate(cleaned).valid, "removal is causally grounded and case fits budget")
 	check(_evaluate(cleaned, material).outcome == "solved", "counterproof to alternative origin restores argument")
 	var renewed = cleaned.duplicate(true)
-	_drop(renewed, "routine_checkout")
 	_contact(renewed, "new_contact", 1100)
 	_finish(renewed)
 	check(Validator.validate(renewed).valid, "renewed-contact chain remains valid")
@@ -77,9 +80,9 @@ func _initialize() -> void:
 
 	var forged = base.duplicate(true)
 	var wrong_object = base.duplicate(true)
-	wrong_object.evidence.routine_checkout.properties.object_id = "another_instance"
+	wrong_object.evidence.incident.properties.object_id = "another_instance"
 	var attacks = Network.derive(wrong_object)
-	check(not attacks.any(func(a): return a.source == "routine_checkout"), "same weapon type but different object instance does not contest")
+	check(not attacks.any(func(a): return a.source == "incident"), "same weapon type but different object instance does not contest")
 	check(not Validator.validate(wrong_object).valid, "invented object identity rejected causally")
 	forged.counterproofs.append({"fake": true})
 	check(not Validator.validate(forged).valid, "forged relation instance rejected")
@@ -90,15 +93,16 @@ func _initialize() -> void:
 	_test_catalog_errors()
 	_test_relation_witnesses()
 	_test_cycles()
-	var families = {"none": 0, "earlier": 0, "cleaned": 0, "culprit_routine": 0, "innocent_routine": 0}
+	var families = {"none": 0, "earlier": 0, "cleaned": 0, "culprit_contact": 0, "innocent_contact": 0}
 	var review_candidates: Array = []
 	for seed_value in range(100):
 		var data: Dictionary = Generator.new().generate(seed_value).case
 		if data.evidence.has("residue_removal"): families.cleaned += 1
 		elif data.evidence.has("earlier_assistance"): families.earlier += 1
 		else: families.none += 1
-		if data.evidence.routine_checkout.properties.person == data.truth.culprit: families.culprit_routine += 1
-		else: families.innocent_routine += 1
+		if data.evidence.has("earlier_assistance"):
+			if data.evidence.earlier_assistance.properties.person == data.truth.culprit: families.culprit_contact += 1
+			else: families.innocent_contact += 1
 		check(not data.counterproofs.is_empty(), "generated relations " + str(seed_value))
 		check(Network.resolve(data.counterproofs).unresolved.is_empty(), "grounded network " + str(seed_value))
 		review_candidates.append({"seed": seed_value, "trace": data.evidence.contact.properties.duplicate(true),
@@ -118,11 +122,8 @@ func _initialize() -> void:
 
 func _selection(data: Dictionary, alternative: bool = false) -> Array:
 	var index: String = data.truth.culprit.trim_prefix("person_")
-	var result: Array = ["sighting_" + index, "examination", "conflict_" + index + "_record"]
+	var result: Array = ["sighting_" + index, "time_record", "scene_trace", "conflict_" + index + "_record"]
 	result.append_array(["activity_register"] if alternative else ["contact", "wardrobe"])
-	for item in data.evidence.values():
-		if item.properties.get("observation_type") == "object" and item.properties.weapon == data.truth.weapon:
-			result.append(item.id)
 	return result
 
 func _evaluate(data: Dictionary, selection: Array) -> Dictionary:
@@ -235,19 +236,26 @@ func _test_handover(base: Dictionary) -> void:
 
 func _test_examination(base: Dictionary) -> void:
 	var data = base.duplicate(true)
-	var original_pattern: String = data.evidence.examination.properties.pattern
+	# This authored legacy scenario starts after its later medical addendum.
+	data.investigation_time = 1300
+	var original_pattern: String = load("res://core/case_content.gd").PROFILES[data.truth.method].pattern
 	var secondary = "round_perforation" if original_pattern != "round_perforation" else "narrow_cut"
 	data.events.murder.effects.secondary_patterns = [secondary]
-	data.events.examination.effects.pattern = secondary
-	data.events.examination.observations.examination.pattern = secondary
-	data.evidence.examination.properties.pattern = secondary
+	var p = {"observation_type": "examination", "pattern": secondary, "place": data.events.murder.location, "start": 1195, "end": 1210}
+	data.events.examination = {"id": "examination", "kind": "examination", "location": "laundry", "start": 1240, "end": 1250,
+		"actors": ["examiner"], "causes": ["murder"], "effects": {"pattern": secondary, "window_start": 1195, "window_end": 1210}, "observations": {"examination": p.duplicate(true)}}
+	data.characters.examiner.known_events.append("examination")
+	data.evidence.examination = {"id": "examination", "definition_id": "examination", "event_id": "examination", "location": "lobby", "kind": "document", "source_character": "examiner", "properties": p}
 	_record(data, "addendum", "medical_addendum", 1270, {"pattern": original_pattern, "report_id": "examination"}, ["examiner"], ["examination"])
 	_finish(data)
 	check(Validator.validate(data).valid, "primary/secondary findings are grounded in physical crime effects")
 	var selection = _selection(data)
+	selection.erase("scene_trace")
+	selection.append("examination")
+	var without_addendum = selection.duplicate()
 	selection.append("addendum")
 	check(_evaluate(data, selection).outcome == "solved", "corrected primary finding can support method")
-	check(_evaluate(data, _selection(data)).outcome == "insufficient_case", "secondary finding alone cannot support correct mechanism")
+	check(_evaluate(data, without_addendum).outcome == "insufficient_case", "secondary finding alone cannot support correct mechanism")
 
 func _test_cycles() -> void:
 	var first = {"source": "a", "target": "b", "source_claim": "x", "target_claim": "x", "subject": ""}

@@ -1,5 +1,7 @@
 extends SceneTree
 const Generator = preload("res://core/case_generator.gd")
+const PresentationCatalog = preload("res://core/evidence_catalog.gd")
+const Localization = preload("res://ui/localization.gd")
 const Data = preload("res://core/case_data.gd")
 var checks = 0
 var failures: Array = []
@@ -36,9 +38,16 @@ func _run() -> void:
 	for item in data.evidence.values():
 		if item.kind == "object" and item.properties.weapon == data.truth.weapon:
 			weapon = item.id
-	for id in ["contact", "wardrobe", "sighting_0", "examination", "conflict_0_record", weapon]:
-		desk._inspect(id)
-	desk.selected_proofs.assign(["contact", "wardrobe", "sighting_0", "examination", "conflict_0_record", weapon])
+	for id in ["contact", "wardrobe", "sighting_0", "time_record", "scene_trace", "conflict_0_record", weapon]:
+		if id.begins_with("sighting_"):
+			desk._show_room("lobby")
+			desk._talk("porter")
+			desk._ask("porter", id)
+		else:
+			desk._inspect(id)
+	desk.selected_proofs.assign(["contact", "wardrobe", "sighting_0", "time_record", "scene_trace", "conflict_0_record", weapon])
+	check(not state.cards.has("evidence:" + weapon) and state.cards.has("object:" + data.evidence[weapon].properties.object_id), "physical clue has only one card")
+	check(desk.discovery_list.get_child_count() == desk.session.discoveries().size(), "report lists each discovered proof once")
 	var evidence_id = "evidence:contact"
 	check(board.canvas.widgets.is_empty(), "new discoveries do not auto-place cards")
 	board._select_card(evidence_id)
@@ -118,14 +127,51 @@ func _run() -> void:
 	board.canvas._layout()
 	board._select_card(evidence_id)
 	await _capture("board_evidence")
+	board.canvas.widgets[evidence_id].get_node("OpenClue").pressed.emit()
+	await process_frame
+	check(board.clue_window.visible and board.clue_body.text.contains(board.labels[evidence_id].body), "card icon opens full public clue")
+	await _capture("board_clue")
+	board.clue_window.hide()
+	for locale_index in [0, 1]:
+		desk._change_language(locale_index)
+		for definition in PresentationCatalog.definitions().values():
+			var key = str(definition.title_key).trim_suffix(".title") + ".short"
+			var text = Localization.text(key)
+			check(text != key and board.get_theme_default_font().get_string_size(text, HORIZONTAL_ALIGNMENT_LEFT, -1, 22).x <= 192, "short clue title fits: " + key)
+	desk._change_language(0)
 	desk._change_language(1)
-	check(board.detail_title.text == "Traces on the shirt", "selected evidence changes language")
+	check(board.detail_title.text == "Fibres preserved at the scene", "selected evidence changes language")
 	check(state.links == hypothesis and state.cards[note].text.begins_with("Talvez"), "language does not rewrite hypotheses")
-	check(desk.selected_proofs == selected and desk.session.discoveries().size() == 6, "board preserves explicit accusation and discoveries")
+	check(desk.selected_proofs == selected and desk.session.discoveries().size() == 7, "board preserves explicit accusation and discoveries")
 	check(Data.encode(Generator.new().generate(42).case) == original, "board does not affect deterministic truth")
 	board._select_link(link)
 	await _capture("board_connection")
 	desk._change_language(0)
+	# Drag into the fixed bin using actual mouse events, including a note with links.
+	board.canvas.focus_card(note)
+	await process_frame
+	var note_position: Vector2 = state.cards[note].position
+	var drag_start: Vector2 = board.canvas.widgets[note].get_global_rect().position + Vector2(30, 24)
+	var drop: Vector2 = board.canvas.get_global_transform_with_canvas() * board.canvas.trash_rect().get_center()
+	_mouse_button(drag_start, true)
+	await process_frame
+	var trash_motion = InputEventMouseMotion.new()
+	trash_motion.position = drop
+	trash_motion.global_position = drop
+	trash_motion.relative = drop - drag_start
+	trash_motion.button_mask = MOUSE_BUTTON_MASK_LEFT
+	Input.parse_input_event(trash_motion)
+	await process_frame
+	check(board.canvas._trash_hover, "bin highlights while dragging over it")
+	await _capture("board_trash")
+	_mouse_button(drop, false)
+	await process_frame
+	await process_frame
+	check(not state.cards[note].placed and not board.canvas.widgets.has(note), "dropping note in bin returns it to pile")
+	check(state.cards[note].position == note_position and state.links.has(note_link) and state.cards[note].text.begins_with("Talvez"), "bin preserves original position, note and connections")
+	board._select_card(note)
+	board._place_selected()
+	check(state.cards[note].placed and state.links.has(note_link), "binned card can be restored with connections")
 	board._select_link(note_link)
 	board._remove_selected()
 	check(not state.links.has(note_link), "remove connection through UI")

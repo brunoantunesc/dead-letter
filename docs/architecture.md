@@ -10,7 +10,7 @@ Após o teste da seed 914368, o responsável aprovou um caso curto de 14–18 ob
 
 ## Responsabilidades
 
-- `case_data.gd`: snapshot privado, esquema 5, gerador 0.5.0 e catálogo `hotel_network_1`.
+- `case_data.gd`: snapshot privado, esquema 6, gerador 0.7.0 e catálogo `hotel_prose_1`.
 - `evidence_catalog.gd`, `core/catalog/` e `data/catalog/catalog.tres`: Resources de definições, relações e referências visuais; apresentação exposta em cópias de dados, sem carregar arte no núcleo. Ver [autoria](evidence-resources.md).
 - `case_content.gd`: vocabulário pequeno de métodos, formas físicas e conflitos, recuperado da referência.
 - `case_generator.gd`: personagens, relações, acontecimentos, consequências e posições. PRNG local; no máximo três tentativas. Retorna os snapshots e diagnósticos dos candidatos rejeitados.
@@ -28,29 +28,19 @@ Nenhuma classe do núcleo depende de Node, cenas, HUD ou assets. As regras não 
 
 O snapshot contém `characters`, `locations`, `entry_location`, `relations`, `events`, `evidence`, `support_rules`, `counterproofs`, `placements`, `truth` e `policy`.
 
-Personagens possuem identidade, papel, flag pública de elegibilidade para acusação e acontecimentos conhecidos. Há quatro suspeitos (Ana, Bruno, Carlos e Diana), Vicente como vítima, Amadeu como porteiro e um responsável pelo exame. O porteiro presencia passagens pela recepção, não o assassinato; o perito conhece o exame posterior, não a autoria.
+Personagens possuem identidade, papel, flag pública de elegibilidade para acusação e acontecimentos conhecidos. Há quatro suspeitos (Ana, Bruno, Carlos e Diana), Vicente como vítima, Amadeu como porteiro e um responsável pelo exame. O porteiro presencia passagens pela recepção, não o assassinato; o responsável recolhe o corpo; não há exame concluído nos casos gerados atualmente.
 
 A topologia de oito locais permanece fixa. O arquivo pode estar fechado. Conexões têm custos de deslocamento; acessibilidade refere-se ao momento da investigação. Os acontecimentos são anteriores à sessão, com intervalos relativos em minutos. Participações não podem se sobrepor nem exigir deslocamento impossível.
 
 Cada acontecimento possui participantes, lugar, intervalo, causas, efeitos e consequências observáveis. A evidência guarda sua origem, local, forma de apresentação, propriedades e fonte humana quando aplicável. O validador compara consequências com os efeitos do acontecimento e rejeita alterações e descartes silenciosos. Documentos podem representar um acontecimento ocorrido em outro local; objetos e vestígios físicos permanecem em seu local de origem. O descarte da arma é um acontecimento posterior ao assassinato, com deslocamento verificável.
 
-Os registros médicos derivam de um exame posterior ao crime. As fibras e a linha derivam de contato físico durante o acontecimento; a arma é descartada depois. Cada objeto alternativo decorre de um uso independente: acidente de cozinha, trabalho com corda, inspeção de arma, desgaste esportivo ou limpeza. Cada conflito tem uma decisão posterior que o mantém aberto ou o encerra.
+Na geração atual não há exame disponível: registros de serviço delimitam horários e vestígios ambientais sustentam mecanismos. Os modelos médicos permanecem somente no catálogo legado e nos testes autorais. As fibras e a linha derivam de contato físico durante o acontecimento; a arma é descartada depois. Cada objeto alternativo decorre de um uso independente: acidente de cozinha, trabalho com corda, inspeção de arma, desgaste esportivo ou limpeza. Cada conflito tem uma decisão posterior que o mantém aberto ou o encerra.
 
 ## Caso curto e diversidade
 
-A base preservada tem **15 observações**; a versão com rede adiciona 1–3 contextos, totalizando **16–18**, dentro do recorte aprovado de 14–18:
+A [revisão de gameplay](gameplay-feedback.md) define o recorte atual: 15–16 observações, dois contatos concretos com a vítima, cinco locais possíveis na planta fixa e autópsia pendente. Horários são registros de serviço; mecanismo é inferido a partir de marcas específicas do ambiente. As consequências físicas são registradas no acontecimento de origem e respeitam deslocamentos e acessibilidade.
 
-- Quatro depoimentos curtos sobre ações diferentes, sem testemunha ocular do crime.
-- Um livro de atividades com os quatro registros de presença/reserva, em vez de quatro anexos repetidos.
-- Um cadastro de roupas e um achado material que contém as características das fibras e da costura. Cada característica isolada ainda combina com duas pessoas; o cruzamento distingue a peça.
-- Um laudo que reúne lesões e estimativa do horário, em vez de exame, cópia e horário selecionáveis separadamente.
-- Três histórias distintas: um acerto financeiro, um vínculo pessoal e um afastamento profissional, cada uma de uma pessoa diferente. Cada documento já inclui a resposta/encerramento pertinente. Existe uma história financeira por caso, não uma dívida para cada pessoa.
-- Um pedido cotidiano de quarto, sem relação probatória com o assassinato.
-- Dois objetos aparentemente incriminadores e uma ocorrência que explica o uso independente de um deles.
-
-As duas linhas falsas são de naturezas diferentes: um conflito persistente de um inocente, contextualizado pelos álibis, e um objeto com vestígios de um acontecimento paralelo. Outro conflito está encerrado. Não se acrescentam oito disputas e dezesseis papéis para fabricar dificuldade por volume.
-
-Os cinco métodos e três motivos da referência continuam disponíveis; a geração escolhe apenas uma alternativa de objeto por caso. As descrições mostram lesões, conteúdo de documentos e propriedades, não rótulos de verdade/relevância. A ordem dos itens é reproduzível e não sinaliza importância.
+O catálogo possui 37 modelos e 73 relações. Perfis autorais em data/catalog/scenes descrevem consequências diferentes por local e método. A geração não atribui uma explicação de uso independente à arma verdadeira neste recorte. Pistas falsas continuam possuindo acontecimentos próprios.
 
 ## Acusação e provas
 
@@ -90,7 +80,7 @@ Registrar seed, tentativa, engine, versão do gerador e conteúdo. Na tentativa 
 
 Limites: os acontecimentos e a estrutura temporal ainda usam um vocabulário autoral pequeno. As roupas seguem uma combinação pequena de características; os álibis documentais são confiáveis neste recorte. Há formas recorrentes que podem ficar previsíveis depois de várias runs. As análises estão disponíveis diretamente; não há ferramentas completas, simulação contínua, mentira sistêmica, autenticação documental ou progressão. O quadro livre da mesa atual já permite organização manual, sem integração 3D. A verificação automática garante propriedades específicas, não mede dificuldade, sutileza ou prazer de dedução. A revisão humana de casos continua sendo o critério de qualidade investigativa.
 
-O validador rejeita casos com mais de 18 observações ou repetição de um mesmo tema de conflito, além das verificações de consistência. A fixture original da seed 914368 guarda 38 observações da versão 0.2.0; o teste exige a mesma verdade factual na versão curta e mede a preservação do recorte curto (16 observações com contexto de rotina).
+O validador rejeita casos com mais de 18 observações ou repetição de um mesmo tema de conflito, além das verificações de consistência. A fixture original da seed 914368 guarda 38 observações da versão 0.2.0; o teste exige a mesma verdade factual na versão curta e mede a preservação do recorte curto (15 observações sem autópsia pública).
 
 ## Localização
 
@@ -98,8 +88,22 @@ Cada observação expõe `id`, `definition_id`, forma, local e propriedades can�
 
 ## Rede e posicionamento lógico
 
-A [especificação atual](evidence-network.md) descreve 31 modelos, 46 relações, nove categorias, contextos rotativos e árvore de pontos de inspeção. O conhecimento do jogador não controla a existência nem a eficácia de uma contraprova. O posicionador usa categorias de suporte, não rótulos de relevância; mantém o local causal e não carrega cenas.
+A [especificação atual](evidence-network.md) descreve 37 modelos, 73 relações, nove categorias, contextos rotativos e árvore de pontos de inspeção. O conhecimento do jogador não controla a existência nem a eficácia de uma contraprova. O posicionador usa categorias de suporte, não rótulos de relevância; mantém o local causal e não carrega cenas.
 
 Os operadores atuais de sustentação foram preservados e complementados para empréstimos e achados médicos. As relações de contestação são externas e parametrizadas. Posse de roupas é reconstruída pela cronologia de entradas e entregas; não se presume que a ficha inicial permaneça válida após um empréstimo. Esses cenários adicionais existem nos testes, sem sorteio de todas as famílias na geração padrão.
 
 O quadro recebe apenas visited_locations() e known_characters(), além das descobertas. O elenco completo e a planta da mesa não geram fichas automaticamente. Cards disponíveis ficam na pilha; placed controla somente a colocação feita pelo jogador. Menções e conversas são registradas na sessão, sem consultar relevância.
+
+Na versão 0.6.0, a mesa não tem campo separado de anotações. As hipóteses e notas ficam somente no quadro; o antigo campo session.notes foi removido. O briefing público informa a descoberta do corpo e autópsia pendente sem expor o culpado.
+
+O [primeiro recorte de interrogatórios](interrogation.md) move os dois relatos do porteiro para conversas, acrescenta posições atuais dos NPCs e esclarecimento do registro de utensílio na mesma prova.
+
+[Variações de redação das provas](prose-variations.md): alternativas localizadas por Resource, escolhidas por seed sem alterar fatos ou avaliação.
+
+O [diagnóstico pós-veredito](verdict-feedback.md) traduz o rastro do avaliador em explicações localizadas. O índice de provas ocultas é exposto somente no retorno de diagnóstico de uma acusação encerrada.
+
+## Legibilidade da mesa de investigação
+
+A mesa utiliza fonte padrão de 20 px nos controles, texto de leitura/conversa/veredito de 22 px com separação entre linhas, rótulos de 16–18 px e títulos ampliados. As colunas laterais têm mínimos de 260 px e 380 px. O formulário e a lista de provas compartilham uma rolagem, enquanto o diagnóstico, o botão de submeter e o aviso de encerramento permanecem fixos no rodapé do relatório. Isso preserva acesso à submissão em janelas menores sem reduzir a fonte. Nomes longos de NPCs usam reticências e tooltip no seletor do cômodo. O quadro mantém sua apresentação própria.
+
+`tests/board_resize.gd` também confere a leitura e o rodapé da mesa em 1280×820 e 1920×1080, com capturas `desk_readable.png` e `desk_readable_large.png`.

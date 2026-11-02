@@ -14,4 +14,6 @@ O teste inclui 914368 além de seeds 0–99. Verifica orçamento, diversidade, c
 
 - evidence_catalog_v1.json: referência histórica das 25 apresentações anteriores à migração para Resources; não é fonte de produção.
 - catalog_visual_mesh.tres: BoxMesh próprio para validar vínculo visual preenchido.
-- network_witnesses.json: exemplos parciais de aplicabilidade das 46 relações, com contexto e explicação. Não equivalem a 46 mundos completos validados; testes de casos completos estão em network_tests.gd.
+- network_witnesses.json: exemplos parciais de aplicabilidade das 73 relações, com contexto e explicação. Não equivalem a 73 mundos completos validados; testes de casos completos estão em network_tests.gd.
+
+- seed_708272_v0_5_0.json: snapshot original do relato do jogador, com cinco provas que reproduzem autoria 2, motivo 2 e método 0. Não é um save compatível com o conteúdo 0.6.0.

@@ -61,6 +61,16 @@ static func validate(catalog: CatalogData, inspect_assets: bool = true) -> Array
 				errors.append(definition.id + ": invalid selector")
 		if definition.visual_id.is_empty() or not visuals.has(definition.visual_id):
 			errors.append(definition.id + ": unknown visual_id")
+		for token in definition.observable_titles:
+			var titles = definition.observable_titles[token]
+			if not token is String or str(token).is_empty() or not titles is Dictionary or not titles.get("title_key") is String or str(titles.get("title_key", "")).is_empty() or not titles.get("short_key") is String or str(titles.get("short_key", "")).is_empty():
+				errors.append(definition.id + ": invalid observable title")
+		for alternatives in [definition.text_variants, definition.initial_text_variants]:
+			var seen_keys = {}
+			for key in alternatives:
+				if key.is_empty() or key == definition.text_key or seen_keys.has(key):
+					errors.append(definition.id + ": invalid or repeated text variant")
+				seen_keys[key] = true
 		_parameters(definition.parameters, definition.id, errors)
 		if not definition.rows.is_empty():
 			var rows = definition.rows

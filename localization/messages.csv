@@ -1,14 +1,14 @@
 key,pt_BR,en
-evidence.sighting.0.title,O telefonema,The telephone call
-evidence.sighting.0.body,"Amadeu, o porteiro: “Por volta de {time}, {person} parou na recepção para usar o telefone; ao desligar, seguiu pela passagem do salão. Depois voltei ao balcão.”","Amadeu, the porter: “At about {time}, {person} stopped at reception to use the telephone, then headed towards the lounge. Then I returned to the desk.”"
-evidence.sighting.1.title,A saída do salão,Leaving the lounge
-evidence.sighting.1.body,"Amadeu, o porteiro: “Por volta de {time}, {person} saiu pela porta do salão e perguntou a que horas começaria a atividade da noite. Depois voltei ao balcão.”","Amadeu, the porter: “At about {time}, {person} came through the lounge door and asked when the evening activity would begin. Then I returned to the desk.”"
+evidence.sighting.0.title,A conversa com Vicente,Conversation with Vicente
+evidence.sighting.0.body,"Amadeu, o porteiro: “Às {time}, vi {person} conversar com Vicente em {place}. Saí para outro atendimento; não acompanhei o que aconteceu depois.”","Amadeu, the porter: “At {time}, I saw {person} talking with Vicente in {place}. I left to attend to another guest; I did not follow what happened afterwards.”"
+evidence.sighting.1.title,A entrega a Vicente,The handover to Vicente
+evidence.sighting.1.body,"Amadeu, o porteiro: “Às {time}, {person} entregou um papel dobrado a Vicente em {place}. Eles trocaram algumas palavras. Depois precisei atender em outro lugar.”","Amadeu, the porter: “At {time}, {person} handed Vicente a folded paper in {place}. They exchanged a few words. Then I had to attend elsewhere.”"
 evidence.sighting.2.title,A bandeja,The tray
-evidence.sighting.2.body,"Amadeu, o porteiro: “Por volta de {time}, {person} cruzou a recepção levando uma bandeja vazia em direção à cozinha. Depois voltei ao balcão.”","Amadeu, the porter: “At about {time}, {person} crossed reception carrying an empty tray towards the kitchen. Then I returned to the desk.”"
+evidence.sighting.2.body,"Amadeu, o porteiro: “Às {time}, durante minha ronda pelo jardim, vi {person} recolher uma bandeja vazia. Não vi Vicente naquele local.”","Amadeu, the porter: “At {time}, during my garden round, I saw {person} collect an empty tray. I did not see Vicente there.”"
 evidence.sighting.3.title,A procura pelas chaves,The missing keys
-evidence.sighting.3.body,"Amadeu, o porteiro: “Por volta de {time}, {person} procurou um molho de chaves perto da entrada do salão e depois saiu do campo de visão. Depois voltei ao balcão.”","Amadeu, the porter: “At about {time}, {person} looked for a set of keys near the lounge entrance, then moved out of sight. Then I returned to the desk.”"
-evidence.contact.title,Vestígios na camisa,Traces on the shirt
-evidence.contact.body,Na mão e no punho da camisa de Vicente foram recolhidos pequenos fragmentos de {fabric} e {thread}. Parecem ter vindo de uma peça de roupa; não há etiqueta ou identificação.,Small fragments of {fabric} and {thread} were recovered from Vicente’s hand and shirt cuff. They appear to come from a garment; there is no label or identification.
+evidence.sighting.3.body,"Amadeu, o porteiro: “Às {time}, vi {person} procurar um molho de chaves no restaurante. Voltei ao balcão depois disso. Não vi um encontro com Vicente.”","Amadeu, the porter: “At {time}, I saw {person} looking for keys in the restaurant. I returned to the counter afterwards. I did not see a meeting with Vicente.”"
+evidence.contact.title,Fibras preservadas no local,Fibres preserved at the scene
+evidence.contact.body,Entre os vestígios preservados no local há fragmentos de {fabric} e {thread}. Parecem ter vindo de uma peça de roupa; não há etiqueta ou identificação.,Among the traces preserved at the scene are fragments of {fabric} and {thread}. They appear to come from a garment; there is no label or identification.
 evidence.wardrobe.row,{person} — casaco de {fabric}; manga reparada com {thread}.,{person} — coat: {fabric}; sleeve repaired with {thread}.
 evidence.wardrobe.title,Fichas das peças devolvidas,Returned garment records
 evidence.wardrobe.body,"Peças devolvidas pela lavanderia antes do jantar:
@@ -39,31 +39,31 @@ evidence.object.bat.title,Bastão de madeira,Wooden bat
 evidence.object.bat.body,"Um bastão de madeira pesada. Apresenta amassados, manchas escuras e desgaste concentrado em uma das extremidades.","A heavy wooden bat. It has dents, dark stains and wear concentrated at one end."
 evidence.object.poison_vial.title,Frasco no armário,Vial in the cabinet
 evidence.object.poison_vial.body,Um pequeno frasco. Há resíduo junto à tampa e um odor químico forte. O rótulo está gasto e não permite ler a composição.,A small vial. There is residue around the cap and a strong chemical smell. The label is too worn to identify the contents.
-evidence.incident.cut.title,Ocorrência do turno da manhã,Morning shift incident
+evidence.incident.cut.title,Corte no preparo da refeição,Cut during meal preparation
 evidence.incident.cut.body,"Registro de serviço · {time}
 
 Durante o preparo da refeição, {person} sofreu um corte com a faca da bancada. Houve sangramento e atendimento no posto do hotel.","Service record · {time}
 
 While preparing a meal, {person} was cut by the counter knife. There was bleeding and treatment at the hotel’s first-aid station."
-evidence.incident.lifting.title,Ocorrência do turno da manhã,Morning shift incident
+evidence.incident.lifting.title,A peça suspensa com corda,The part lifted with a rope
 evidence.incident.lifting.body,"Registro de serviço · {time}
 
 {person} usou a corda do depósito para suspender uma peça de manutenção. A carga escorregou e deixou marcas de compressão na trama.","Service record · {time}
 
 {person} used the storage rope to lift a maintenance part. The load slipped, leaving compression marks on the braid."
-evidence.incident.inspection.title,Ocorrência do turno da manhã,Morning shift incident
+evidence.incident.inspection.title,Disparo durante uma inspeção,Discharge during an inspection
 evidence.incident.inspection.body,"Registro de serviço · {time}
 
 Durante uma inspeção acompanhada por {person}, houve um disparo acidental da pistola guardada no estojo. A ocorrência foi registrada antes da abertura do jardim.","Service record · {time}
 
 During an inspection attended by {person}, the cased pistol discharged accidentally. The incident was recorded before the garden opened."
-evidence.incident.sports.title,Ocorrência do turno da manhã,Morning shift incident
+evidence.incident.sports.title,Retirada de material esportivo,Sports equipment checkout
 evidence.incident.sports.body,"Registro de serviço · {time}
 
 {person} registrou a retirada de um bastão do material esportivo após uso intenso. A ficha menciona amassados e manchas antigas na madeira.","Service record · {time}
 
 {person} recorded the removal of a heavily used bat from the sports equipment. The form mentions dents and old stains on the wood."
-evidence.incident.cleaning.title,Ocorrência do turno da manhã,Morning shift incident
+evidence.incident.cleaning.title,O serviço de limpeza,The cleaning work
 evidence.incident.cleaning.body,"Registro de serviço · {time}
 
 {person} usou um frasco de produto concentrado na limpeza das instalações. O formulário menciona respingos na tampa e odor persistente.","Service record · {time}
@@ -152,15 +152,11 @@ ui.inspect_help,Examine itens para registrar suas descobertas.,Examine items to 
 ui.closed_location,{name} · fechado,{name} · closed
 ui.items,Itens do local,Items at this location
 ui.intro_title,A morte de Vicente,The death of Vicente
-ui.intro,"Um assassinato no hotel. Quatro pessoas, relatos e objetos que podem admitir interpretações diferentes.
+ui.intro,"Vicente foi encontrado sem vida no seguinte local: {place}. O corpo foi recolhido; a autópsia ainda não está disponível.
 
-Escolha um local e examine cada item por conta própria. Suas descobertas serão registradas no relatório, mas cabe a você decidir o que apresentar como prova.
+Examine os ambientes, interprete os vestígios e organize suas hipóteses no quadro. Você decide o que apresentar na acusação.","Vicente was found dead in {place}. The body has been collected; the autopsy is not yet available.
 
-Você pode encerrar a investigação quando quiser. Não é necessário examinar tudo.","A murder at the hotel. Four people, accounts and objects that may admit different interpretations.
-
-Choose a location and examine individual items. Your discoveries will be recorded, but you decide which ones to submit as evidence.
-
-You may close the investigation whenever you choose. You do not need to examine everything."
+Examine the rooms, interpret the traces and organize your hypotheses on the board. You decide what to present in the accusation."
 ui.include_proof,Incluir no relatório final,Include in the final report
 ui.verdict,Veredito,Verdict
 ui.invalid_seed,Digite um número inteiro para abrir um caso.,Enter a whole number to open a case.
@@ -180,20 +176,20 @@ verdict.debug,"DIAGNÓSTICO DE DESENVOLVIMENTO
 Verdade do caso: {person} · {motive} · {method}.
 
 Força das provas apresentadas:
-Autoria: {identity_score} · Motivação: {motive_score} · Método: {method_score}
-Total: {total}","DEVELOPMENT DIAGNOSTICS
+Autoria: {identity_score}/{identity_required} · Motivação: {motive_score}/{motive_required} · Método: {method_score}/{method_required}
+Total: {total}/{total_required}","DEVELOPMENT DIAGNOSTICS
 
 Case truth: {person} · {motive} · {method}.
 
 Strength of submitted evidence:
-Identity: {identity_score} · Motive: {motive_score} · Method: {method_score}
-Total: {total}"
+Identity: {identity_score}/{identity_required} · Motive: {motive_score}/{motive_required} · Method: {method_score}/{method_required}
+Total: {total}/{total_required}"
 verdict.incorrect,• Informação incorreta: {claim},• Incorrect information: {claim}
 verdict.insufficient,• Sustentação insuficiente: {claim},• Insufficient support: {claim}
 verdict.total,total,total
 cli.open,aberto,open
 cli.closed,fechado,closed
-cli.help,"Use --inspect=id,id para examinar; --culprit=person_0 --motive=money --method=stabbing --evidence=id,id para apresentar provas. --debug revela a solução somente após o veredito.","Use --inspect=id,id to examine; --culprit=person_0 --motive=money --method=stabbing --evidence=id,id to submit evidence. --debug reveals the solution only after the verdict."
+cli.help,"Use --inspect=id,id para examinar; --visit=local --talk=pessoa --ask=id,id para conversar; --culprit=person_0 --motive=money --method=stabbing --evidence=id,id para acusar. --debug revela o diagnóstico somente após o veredito.","Use --inspect=id,id to inspect; --visit=room --talk=person --ask=id,id to converse; --culprit=person_0 --motive=money --method=stabbing --evidence=id,id to accuse. --debug reveals diagnostics only after the verdict."
 evidence.prior_contact.title,Atendimento antes do jantar,Earlier assistance
 evidence.prior_contact.body,"Às {time}, {person} ajudou Vicente a ajustar a manga. A ficha descreve a peça como {fabric}, com {thread}.","At {time}, {person} helped Vicente adjust his sleeve. The service record describes {fabric} with {thread}."
 evidence.trace_cleaning.title,Registro de remoção de resíduos,Residue removal record
@@ -250,3 +246,310 @@ board.place,Colocar no quadro,Place on board
 board.stash,Guardar na pilha,Return to pile
 board.on_board,No quadro,On board
 board.in_pile,Na pilha,In pile
+evidence.time_record.title,Registro do encontro do corpo,Body discovery record
+evidence.time_record.body,"Local registrado: {place}.
+{start} — Vicente respondeu normalmente durante um atendimento.
+{end} — encontrado sem vida.
+Horários anotados por Amadeu no serviço do hotel; não são uma estimativa médica.","Recorded room: {place}.
+{start} — Vicente responded normally during a service visit.
+{end} — found dead.
+Times noted by Amadeu during hotel service; not a medical estimate."
+term.scene.salon.stabbing,"No tecido da poltrona há um rasgo estreito, de bordas regulares. Uma pequena ponta de metal achatada ficou presa na trama, junto a manchas escuras.",The armchair fabric has a narrow tear with regular edges. A small flat metal tip is caught in the weave beside dark stains.
+term.scene.salon.strangulation,Atrás da poltrona há um laço que corre e trava quando puxado. Fibras ficaram presas no acabamento; o tapete conserva sulcos paralelos sob os pés do móvel.,Behind the armchair is a loop that slides and locks when pulled. Fibres caught on the trim; the carpet bears parallel grooves under the furniture legs.
+term.scene.salon.gunshot,"O aparador tem uma perfuração pequena de borda escurecida. Fragmentos metálicos estão presos na madeira, além do revestimento; há lascas sobre o tapete.",The sideboard has a small puncture with a darkened rim. Metal fragments are embedded beyond the veneer; wood splinters lie on the carpet.
+term.scene.salon.blunt_force,O pé do aparador apresenta uma marca larga de impacto. Lascas de madeira e fios presos numa mancha escura se concentram abaixo da quina.,The sideboard leg bears a broad impact mark. Wood splinters and threads caught in a dark stain cluster below the corner.
+term.scene.salon.poisoning,Uma das taças conserva película esbranquiçada no fundo e odor de produto químico. A outra taça da mesma bandeja não apresenta essa película.,One glass retains a whitish film at the bottom and a chemical smell. The other glass on the same tray has no such film.
+evidence.scene_trace.salon.title,Marcas no mobiliário do salão,Marks on the lounge furniture
+evidence.scene_trace.salon.body,{marks},{marks}
+term.scene.kitchen.stabbing,"O avental caído tem uma abertura estreita e profunda entre fios seccionados. Uma lasca metálica fina ficou retida no pano, junto à bancada.",The fallen apron has a narrow deep opening through severed threads. A thin metal chip remains caught in the fabric beside the counter.
+term.scene.kitchen.strangulation,Uma tira trançada forma um laço deslizante atrás de um banco deslocado. A borda do banco reteve fibras tensionadas; farinha no piso mostra o arraste.,A braided strip forms a sliding loop behind a displaced stool. Its edge caught stretched fibres; flour on the floor shows the drag.
+term.scene.kitchen.gunshot,Uma chapa junto ao passe tem um pequeno furo de entrada com borda escura. No azulejo atrás dela ficaram incrustados fragmentos de metal.,A panel by the serving hatch has a small entry hole with a dark rim. Metal fragments are embedded in the tile behind it.
+term.scene.kitchen.blunt_force,"A borda da bancada apresenta uma mossa larga. Há fragmentos de madeira, fios e uma mancha escura espalhados pelo azulejo abaixo dela.","The counter edge has a broad dent. Wood fragments, threads and a dark stain are scattered on the tile below it."
+term.scene.kitchen.poisoning,Uma xícara separada do serviço apresenta uma crosta incomum e odor químico. As xícaras limpas ao lado não têm esse resíduo.,A cup separated from the service has an unusual crust and chemical smell. The clean cups beside it have no such residue.
+evidence.scene_trace.kitchen.title,Vestígios junto à bancada,Traces beside the kitchen counter
+evidence.scene_trace.kitchen.body,{marks},{marks}
+term.scene.garden.stabbing,"No tecido preso a um arbusto há um corte estreito e reto. Um fragmento fino de metal ficou alojado entre os fios, acima das manchas no cascalho.",Fabric caught on a shrub has a narrow straight cut. A thin metal fragment is lodged between its threads above stains on the gravel.
+term.scene.garden.strangulation,Um laço trançado ficou preso sob o banco arrastado. Fibras rompidas e sulcos no cascalho indicam tensão em direções opostas.,A braided loop caught beneath a dragged bench. Broken fibres and grooves in the gravel indicate tension in opposite directions.
+term.scene.garden.gunshot,O vaso atrás do banco tem uma perfuração pequena. Há escurecimento na borda e fragmentos metálicos alojados no barro do lado de dentro.,The pot behind the bench has a small puncture. Its rim is darkened and metal fragments are lodged in the clay on the inside.
+term.scene.garden.blunt_force,O banco de pedra conserva uma marca larga e fragmentos de madeira junto a uma mancha escura. O cascalho está revolvido naquele ponto.,The stone bench bears a broad mark and wood fragments beside a dark stain. The gravel is disturbed at that point.
+term.scene.garden.poisoning,"Um copo deixado sob o banco tem depósito esbranquiçado e odor químico, diferente da água restante na jarra de serviço.",A glass left under the bench has a whitish deposit and chemical smell unlike the water remaining in the service jug.
+evidence.scene_trace.garden.title,Marcas junto ao banco do jardim,Marks by the garden bench
+evidence.scene_trace.garden.body,{marks},{marks}
+term.scene.storage.stabbing,O tecido preso na borda de um caixote foi seccionado em linha estreita. Uma pequena ponta metálica está encaixada na madeira sob ele.,Fabric caught on a crate edge was severed along a narrow line. A small metal tip is wedged in the wood beneath it.
+term.scene.storage.strangulation,"Entre os caixotes há um laço deslizante, com fibras partidas sob tensão. A poeira conserva marcas de um assento que foi puxado de lado.",Between the crates lies a sliding loop with fibres broken under tension. The dust retains marks of a seat pulled sideways.
+term.scene.storage.gunshot,Um caixote tem furo estreito de borda escura. A divisória atrás dele reteve pequenos fragmentos metálicos e lascas.,A crate has a narrow dark-rimmed hole. The partition behind it retained small metal fragments and splinters.
+term.scene.storage.blunt_force,A lateral de um caixote foi amassada numa área larga. Fragmentos de madeira e fios aderiram a uma mancha escura na borda.,A crate side was crushed across a broad area. Wood fragments and threads adhered to a dark stain on the edge.
+term.scene.storage.poisoning,Uma caneca entre as caixas tem película clara e odor químico. O líquido derramado marcou o papelão com um contorno diferente da água.,A mug among the boxes has a pale film and chemical smell. Spilled liquid marked the cardboard with a rim unlike water.
+evidence.scene_trace.storage.title,Vestígios entre os caixotes,Traces among the crates
+evidence.scene_trace.storage.body,{marks},{marks}
+term.scene.laundry.stabbing,Um lençol separado do lote tem corte estreito de bordas regulares. Uma ponta de metal fina ficou presa entre as fibras manchadas.,A sheet separated from the batch has a narrow cut with regular edges. A thin metal tip caught among its stained fibres.
+term.scene.laundry.strangulation,"Uma tira trançada forma um laço que se fecha sob tração, atrás de um carrinho deslocado. Fibras esticadas ficaram presas à alça.",A braided strip forms a loop that tightens under traction behind a displaced trolley. Stretched fibres caught on its handle.
+term.scene.laundry.gunshot,A chapa do carrinho apresenta uma perfuração pequena e escura. No armário atrás dele ficaram fragmentos metálicos incrustados.,The trolley panel has a small dark puncture. Metal fragments are embedded in the cabinet behind it.
+term.scene.laundry.blunt_force,"O carrinho tem uma mossa larga, com lascas de madeira e fios presos em uma mancha escura. Uma roda saiu de sua posição.",The trolley has a broad dent with wood splinters and threads caught in a dark stain. One wheel was dislodged.
+term.scene.laundry.poisoning,Uma caneca ao lado das peças separadas conserva crosta clara e odor químico. Não tem o mesmo cheiro do sabão usado nos tanques.,A mug beside the separated garments retains a pale crust and chemical smell. It does not smell like the soap used in the washbasins.
+evidence.scene_trace.laundry.title,Marcas junto às peças separadas,Marks beside the separated laundry
+evidence.scene_trace.laundry.body,{marks},{marks}
+evidence.sighting.0.short,Conversa,Conversation
+evidence.sighting.1.short,Entrega,Handover
+evidence.sighting.2.short,Bandeja,Tray
+evidence.sighting.3.short,Chaves,Keys
+evidence.contact.short,Fibras,Fibres
+evidence.wardrobe.short,Roupas,Garments
+evidence.activity_register.short,Atividades,Activities
+evidence.examination.short,Exame,Examination
+evidence.object.knife.short,Faca,Knife
+evidence.object.rope.short,Corda,Rope
+evidence.object.pistol.short,Pistola,Pistol
+evidence.object.bat.short,Bastão,Bat
+evidence.object.poison_vial.short,Frasco,Vial
+evidence.incident.cut.short,Corte,Cut
+evidence.incident.lifting.short,Içamento,Lifting
+evidence.incident.inspection.short,Inspeção,Inspection
+evidence.incident.sports.short,Esportes,Sports
+evidence.incident.cleaning.short,Limpeza,Cleaning
+evidence.room_request.short,Mudança,Room change
+evidence.prior_contact.short,Atendimento,Assistance
+evidence.trace_cleaning.short,Remoção,Removal
+evidence.garment_transfer.short,Empréstimo,Loan
+evidence.medical_addendum.short,Complemento,Addendum
+evidence.room_resolution.short,Reparo,Repair
+evidence.object_use_record.short,Retirada,Checkout
+evidence.time_record.short,Encontro,Discovery
+evidence.grievance.withheld_payment.open.short,Contas,Accounts
+evidence.grievance.private_letters.open.short,Bilhete,Letter
+evidence.grievance.dismissal.open.short,Retratação,Retraction
+evidence.grievance.withheld_payment.settled.short,Contas,Accounts
+evidence.grievance.private_letters.settled.short,Bilhete,Letter
+evidence.grievance.dismissal.settled.short,Retratação,Retraction
+evidence.scene_trace.salon.short,Mobiliário,Furniture
+evidence.scene_trace.kitchen.short,Bancada,Counter
+evidence.scene_trace.garden.short,Banco,Bench
+evidence.scene_trace.storage.short,Caixotes,Crates
+evidence.scene_trace.laundry.short,Peças,Laundry
+board.inspect,Abrir pista,Open clue
+board.dismiss,Fechar,Close
+board.trash,"LIXEIRA
+Volta à pilha","BIN
+Back to pile"
+conversation.talk,Conversar com {person},Talk to {person}
+conversation.ask,Perguntar: {topic},Ask: {topic}
+conversation.no_topics,Ainda não há outras perguntas disponíveis nesta versão.,No further questions are available in this version yet.
+conversation.location.person_0,A gerente está na recepção acompanhando o atendimento após a retirada do corpo.,The manager is at reception overseeing service after the body was removed.
+conversation.location.person_2,O cozinheiro permanece na cozinha junto à área de trabalho.,The cook remains in the kitchen near the work area.
+conversation.location.guest,O hóspede aguarda em uma área comum do hotel.,The guest is waiting in a shared area of the hotel.
+conversation.location.porter,Amadeu retomou o posto na recepção. Você pode perguntar sobre os encontros que ele presenciou.,Amadeu has returned to his reception post. You can ask about the encounters he witnessed.
+conversation.location.examiner,O responsável pela remoção está na recepção encerrando o atendimento. A autópsia ainda não está disponível.,The removal officer is at reception completing the paperwork. The autopsy is not available yet.
+conversation.location.victim,O corpo foi retirado.,The body has been removed.
+conversation.present,Apresentar: {topic},Present: {topic}
+conversation.incident_initial,"Registro de retirada · {time}
+Responsável: {person}. Utensílio: {weapon}.
+Há menção a marcas de uso; a ficha não explica como foram produzidas.","Checkout record · {time}
+Responsible: {person}. Item: {weapon}.
+It mentions signs of use; the form does not explain how they were produced."
+conversation.explanation,Esclarecimento de {person}:,Clarification from {person}:
+conversation.incident_title,Registro de utensílio,Equipment record
+conversation.porter_opening,"O balcão não parou naquela noite. Vicente ainda estava por aqui. Lembro de {conversation} e de {handover}, mas logo precisei sair para outro atendimento.","The desk was busy that evening. Vicente was still around. I remember {conversation} and {handover}, but soon had to leave to attend elsewhere."
+conversation.fragment.conversation,uma conversa perto do balcão,a conversation near the desk
+conversation.fragment.handover,um papel que trocaram de mãos,a paper that changed hands
+conversation.incident_response,Reconheço essa retirada. Foi bem antes do jantar. Eu tinha usado o utensílio em {task}.,I recognise that checkout. It was well before dinner. I had used the item for {task}.
+conversation.fragment.task,uma tarefa do dia,an earlier task
+conversation.no_response,Não tenho nada a acrescentar sobre isso.,I have nothing to add about that.
+conversation.choose_proof,Escolher uma prova…,Choose a piece of evidence…
+conversation.show,Mostrar,Show
+conversation.resume,Retomar conversa,Resume conversation
+conversation.help,Retome trechos da fala com um clique ou mostre uma prova que encontrou.,Click phrases to follow up on what was said or show evidence you found.
+conversation.no_response.1,Não sei o que lhe dizer sobre isso.,I don't know what to tell you about that.
+conversation.no_response.2,Sobre isso não tenho o que acrescentar.,I have nothing to add on that subject.
+conversation.no_response.3,Não tenho mais nada a dizer a respeito.,I have nothing further to say about that.
+conversation.opening.default,Pode me dizer o que precisa esclarecer? Se trouxe algum registro podemos olhar.,What would you like to clarify? If you brought a record we can look at it.
+conversation.opening.manager,Ainda estamos atendendo aqui na recepção. Pode me dizer o que precisa esclarecer?,We are still attending to things here at reception. What would you like to clarify?
+conversation.opening.reserved,Prefiro não ficar comentando o que ouvi por aí. Se trouxe algum registro ou objeto sobre o qual quer perguntar pode me mostrar.,I'd rather not discuss things I've heard from others. If you brought a record or an object you want to ask about you can show me.
+conversation.opening.cook,O serviço da cozinha ainda precisa andar. Pode me dizer o que quer saber? Se for sobre algum utensílio ou registro pode mostrar.,The kitchen work still needs to get done. What would you like to know? If it concerns an item or a record you can show me.
+conversation.opening.guest,Estou aguardando por aqui. Pode me dizer sobre o que quer conversar?,I'm waiting here. What would you like to talk about?
+conversation.opening.examiner,Já concluí a retirada do corpo. O exame ainda não está disponível; não tenho um laudo para apresentar.,I have finished removing the body. The examination is not available yet; I have no report to provide.
+evidence.object.rope.body.v1,A trama da corda é grossa. Há fibras se soltando e marcas de tensão ao longo dela; um dos trechos está mais comprimido que os demais.,The rope has a thick braid. Loose fibres and tension marks run along it; one section is more compressed than the rest.
+evidence.object.rope.body.v2,Entre as fibras soltas da corda de trama grossa aparecem marcas de tensão. A compressão é mais forte em um trecho.,Tension marks appear among the loose fibres of the thick braided rope. One section is compressed more strongly than the rest.
+evidence.time_record.body.v1,"Anotações de serviço de Amadeu — {place}
+Às {start}, Vicente respondeu normalmente a um atendimento. Às {end}, foi encontrado sem vida. Os horários são registros do serviço, não uma estimativa médica.","Amadeu’s service notes — {place}
+At {start}, Vicente responded normally during a service visit. At {end}, he was found dead. These are service times, not a medical estimate."
+evidence.time_record.body.v2,"Em {place}:
+• {start}: resposta normal de Vicente durante o atendimento.
+• {end}: corpo encontrado sem vida.
+Amadeu anotou os dois horários no serviço do hotel. Não se trata de estimativa médica.","In {place}:
+• {start}: Vicente responded normally during the service visit.
+• {end}: body found dead.
+Amadeu noted both times during hotel service. This is not a medical estimate."
+evidence.object_use_record.body.v1,A ficha das {time} registra {person} retirando {weapon} para trabalho de rotina.,The {time} form records {person} checking out {weapon} for routine work.
+evidence.object_use_record.body.v2,"Para uma atividade de rotina, {person} fez a retirada de {weapon} às {time}.","For routine work, {person} checked out {weapon} at {time}."
+evidence.object.pistol.body.v1,"Dentro de um estojo com marcas de uso está uma pistola. O cheiro de pólvora permanece, e há resíduos escuros junto ao mecanismo.","A pistol lies inside a case showing signs of use. The smell of gunpowder remains, and there is dark residue beside the mechanism."
+evidence.object.pistol.body.v2,O estojo apresenta desgaste de uso. A pistola guardada nele tem resíduos escuros perto do mecanismo e cheiro de pólvora.,The case shows wear from use. The pistol inside has dark residue near the mechanism and smells of gunpowder.
+evidence.incident.cleaning.body.v1,"Ocorrência de serviço — {time}
+A limpeza das instalações foi feita por {person} com um frasco de produto concentrado. O formulário registra respingos na tampa e um odor que persistiu.","Service incident — {time}
+{person} cleaned the facilities with a vial of concentrated product. The form records splashes on the cap and a smell that lingered."
+evidence.incident.cleaning.body.v2,"Às {time}, o serviço registrou o uso, por {person}, de um frasco de concentrado na limpeza das instalações. Foram anotados respingos na tampa e odor persistente.","At {time}, the service record noted {person} using a vial of concentrate to clean the facilities. Splashes on the cap and a lingering smell were noted."
+evidence.object.bat.body.v1,Uma das pontas deste bastão de madeira pesada concentra o desgaste. A madeira também tem amassados e manchas escuras.,Wear is concentrated at one end of this heavy wooden bat. The wood also has dents and dark stains.
+evidence.object.bat.body.v2,"O bastão é de madeira pesada, marcada por manchas escuras e amassados. Uma extremidade está mais desgastada.",The bat is made of heavy wood marked by dark stains and dents. One end is more worn than the rest.
+evidence.grievance.private_letters.open.body.v1,O bilhete de {person} para Vicente foi rasgado ao meio. Nele há referências a promessas íntimas e cartas escondidas. Vicente respondeu confirmando que continuaria a encontrar outra pessoa.,The note from {person} to Vicente was torn in half. It refers to intimate promises and hidden letters. Vicente replied confirming that he would continue seeing someone else.
+evidence.grievance.private_letters.open.body.v2,Promessas íntimas e cartas escondidas são mencionadas num bilhete de {person} a Vicente. A resposta de Vicente mantém os encontros com outra pessoa. O papel está rasgado ao meio.,Intimate promises and hidden letters are mentioned in a note from {person} to Vicente. Vicente’s reply says his meetings with someone else will continue. The paper is torn in half.
+evidence.room_resolution.body.v1,O reparo no encanamento foi concluído e o atendimento sobre o ruído comunicado por {person} foi encerrado às {time}.,The plumbing repair was completed and the service request about the noise reported by {person} was closed at {time}.
+evidence.room_resolution.body.v2,"Às {time}, foi dado como encerrado o atendimento solicitado por {person} por ruído hidráulico. O reparo havia sido realizado.","At {time}, the service request from {person} about plumbing noise was marked as closed. The repair had been completed."
+evidence.sighting.0.body.v1,"Amadeu, o porteiro: “Às {time}, {person} conversava com Vicente em {place}. Precisei sair para atender outra pessoa e não vi como a conversa terminou.”","Amadeu, the porter: “At {time}, {person} was talking to Vicente in {place}. I had to leave to attend someone else and did not see how the conversation ended.”"
+evidence.sighting.0.body.v2,"Amadeu, o porteiro: “Foi às {time}, em {place}. Vi {person} e Vicente conversando. Depois me chamaram para outro atendimento; o que houve dali em diante eu não acompanhei.”","Amadeu, the porter: “It was at {time}, in {place}. I saw {person} and Vicente talking. Then I was called to attend elsewhere; I did not follow what happened after that.”"
+evidence.sighting.0.body.v3,"Amadeu, o porteiro: “Lembro de {person} falando com Vicente em {place}, às {time}. Não fiquei até o fim. Tive de cuidar de outro atendimento.”","Amadeu, the porter: “I remember {person} speaking with Vicente in {place} at {time}. I did not stay until the end. I had to attend to someone else.”"
+evidence.incident.cut.body.v1,"Ocorrência de serviço — {time}
+{person} se cortou com a faca da bancada enquanto preparava a refeição. O registro menciona sangramento e atendimento no posto do hotel.","Service incident — {time}
+{person} was cut by the counter knife while preparing the meal. The record mentions bleeding and treatment at the hotel’s first-aid station."
+evidence.incident.cut.body.v2,"Às {time}, o serviço registrou um corte sofrido por {person} no preparo da refeição, com a faca da bancada. Houve sangramento; o atendimento ocorreu no posto do hotel.","At {time}, service staff recorded a cut suffered by {person} while preparing a meal with the counter knife. There was bleeding; treatment took place at the hotel’s first-aid station."
+evidence.grievance.withheld_payment.open.body.v1,O acerto entre {person} e Vicente registra um pagamento retido. Vicente recusou o pedido de liberação. A cobrança permanece sem quitação.,The settlement between {person} and Vicente records a withheld payment. Vicente refused the request to release it. The claim remains unpaid.
+evidence.grievance.withheld_payment.open.body.v2,"Há uma cobrança sem quitação no acerto de contas de {person} com Vicente. O pagamento foi retido, e Vicente negou sua liberação.","An unpaid claim appears in the account settlement between {person} and Vicente. The payment was withheld, and Vicente denied its release."
+evidence.object.poison_vial.body.v1,O rótulo gasto do pequeno frasco não deixa identificar sua composição. Junto à tampa há resíduo; o odor químico é forte.,The small vial’s worn label does not identify its contents. There is residue around the cap and a strong chemical smell.
+evidence.object.poison_vial.body.v2,"Um odor químico forte vem do frasco pequeno. Há resíduo ao redor da tampa, mas o desgaste do rótulo impede a leitura da composição.","A strong chemical smell comes from the small vial. Residue surrounds the cap, but the worn label makes the contents unreadable."
+evidence.activity_register.body.v1,"Atividades da noite:
+
+{entries}
+
+As presenças registradas foram acompanhadas durante o intervalo inteiro. Reservas sem assinatura não confirmam que a pessoa esteve no local.","Evening activities:
+
+{entries}
+
+Recorded attendees were observed for the entire interval. Unsigned reservations do not confirm that the person was there."
+evidence.activity_register.body.v2,"O livro separa presenças acompanhadas durante todo o período de reservas sem assinatura. Estas últimas não comprovam comparecimento.
+
+{entries}","The book distinguishes attendance observed throughout the period from unsigned reservations. The latter do not establish attendance.
+
+{entries}"
+evidence.sighting.1.body.v1,"Amadeu, o porteiro: “Às {time}, em {place}, vi um papel dobrado passar das mãos de {person} para as de Vicente. Disseram algumas palavras um ao outro. Não pude ficar; havia outro atendimento.”","Amadeu, the porter: “At {time} in {place}, I saw a folded paper pass from {person} to Vicente. They exchanged a few words. I could not stay; I had someone else to attend.”"
+evidence.sighting.1.body.v2,"Amadeu, o porteiro: “{person} estava com um papel dobrado e o entregou a Vicente. Isso foi em {place}, às {time}. Conversaram brevemente; logo depois precisei atender em outro lugar.”","Amadeu, the porter: “{person} had a folded paper and handed it to Vicente. That was in {place} at {time}. They spoke briefly; shortly afterwards I had to attend elsewhere.”"
+evidence.sighting.1.body.v3,"Amadeu, o porteiro: “O que vi foi {person} entregar um papel dobrado a Vicente, em {place}. Eram {time}. Houve uma breve troca de palavras, mas saí para outro atendimento.”","Amadeu, the porter: “What I saw was {person} handing Vicente a folded paper in {place}. It was {time}. There was a brief exchange of words, but I left to attend elsewhere.”"
+evidence.grievance.dismissal.settled.body.v1,O requerimento de {person} responsabiliza Vicente pela acusação que levou ao afastamento. No mesmo documento constam a retratação assinada por Vicente e a confirmação de reintegração.,The request from {person} holds Vicente responsible for the accusation that led to suspension. The same document contains Vicente’s signed retraction and confirmation of reinstatement.
+evidence.grievance.dismissal.settled.body.v2,Há uma retratação com a assinatura de Vicente e uma confirmação de reintegração no requerimento de {person}. O texto atribui a Vicente a acusação que havia causado o afastamento.,A retraction signed by Vicente and confirmation of reinstatement appear in the request from {person}. The text attributes the accusation that caused the suspension to Vicente.
+evidence.garment_transfer.body.v1,"Um casaco de {fabric}, com {thread}, passou de {from_person} para {to_person} às {time}.","A coat of {fabric}, with {thread}, was handed from {from_person} to {to_person} at {time}."
+evidence.garment_transfer.body.v2,"O registro das {time} descreve a entrega, por {from_person} a {to_person}, de um casaco de {fabric} com {thread}.",The {time} record describes {from_person} handing {to_person} a coat of {fabric} with {thread}.
+evidence.wardrobe.body.v1,"Lavanderia — relação das peças devolvidas antes do jantar:
+
+{entries}","Laundry — list of garments returned before dinner:
+
+{entries}"
+evidence.wardrobe.body.v2,"As fichas da lavanderia registram a devolução destas peças antes do jantar:
+
+{entries}","The laundry records list these garments as returned before dinner:
+
+{entries}"
+evidence.object.knife.body.v1,A lâmina da faca é estreita e tem manchas. Perto do cabo há sangue seco. Não se encontra identificação de quem é o objeto.,"The knife has a narrow, stained blade. There is dried blood near the handle. Nothing identifies the owner."
+evidence.object.knife.body.v2,Sangue seco se acumula junto ao cabo de uma faca de lâmina estreita. A lâmina também está manchada; não há marca que identifique o proprietário.,Dried blood has collected near the handle of a narrow-bladed knife. The blade is also stained; there is no marking identifying its owner.
+evidence.trace_cleaning.body.v1,O registro das {time} informa a remoção de resíduos de {fabric} e {thread} da mão de Vicente e do punho da camisa.,The {time} record notes the removal of {fabric} and {thread} residues from Vicente’s hand and shirt cuff.
+evidence.trace_cleaning.body.v2,Foram retirados resíduos da mão e do punho da camisa de Vicente às {time}. O material foi descrito como {fabric} e {thread}.,Residues were removed from Vicente’s hand and shirt cuff at {time}. The material was described as {fabric} and {thread}.
+evidence.incident.inspection.body.v1,"Ocorrência de serviço — {time}
+A pistola guardada no estojo disparou por acidente durante uma inspeção acompanhada por {person}. O jardim ainda não havia aberto quando a ocorrência foi registrada.","Service incident — {time}
+The pistol kept in the case discharged accidentally during an inspection attended by {person}. The garden had not yet opened when the incident was recorded."
+evidence.incident.inspection.body.v2,"O registro das {time}, anterior à abertura do jardim, menciona um disparo acidental da pistola do estojo. {person} acompanhava a inspeção durante a qual ele ocorreu.","The {time} record, made before the garden opened, mentions an accidental discharge of the cased pistol. {person} was attending the inspection during which it occurred."
+evidence.grievance.dismissal.open.body.v1,"No requerimento, {person} atribui a Vicente a acusação que levou ao seu afastamento e pede retratação. Vicente manteve a acusação e se recusou a assinar o pedido.","In the request, {person} holds Vicente responsible for the accusation that led to suspension and asks for a retraction. Vicente maintained the accusation and refused to sign the request."
+evidence.grievance.dismissal.open.body.v2,A retratação pedida por {person} não foi assinada por Vicente. O requerimento o responsabiliza pela acusação que causou o afastamento; Vicente não retirou a acusação.,The retraction requested by {person} was not signed by Vicente. The request holds him responsible for the accusation that caused the suspension; Vicente did not withdraw it.
+evidence.grievance.withheld_payment.settled.body.v1,"O acerto de {person} com Vicente menciona um pagamento que havia sido retido. Depois dele há um recibo com as duas assinaturas, comprovando quitação integral.",The settlement between {person} and Vicente mentions a payment that had been withheld. A later receipt bears both signatures and confirms full payment.
+evidence.grievance.withheld_payment.settled.body.v2,Um recibo posterior ao acerto de contas comprova o pagamento integral e leva as assinaturas de Vicente e {person}. O acerto anterior registrava a retenção desse pagamento.,A receipt issued after the account settlement confirms full payment and bears the signatures of Vicente and {person}. The earlier settlement recorded the withholding of that payment.
+evidence.grievance.private_letters.settled.body.v1,Junto ao bilhete de {person} para Vicente há uma resposta explicando que as cartas eram antigas. O bilhete fala de promessas íntimas e cartas escondidas; há também um pedido de desculpas pelo mal-entendido.,Beside the note from {person} to Vicente is a reply explaining that the letters were old. The note refers to intimate promises and hidden letters; there is also an apology for the misunderstanding.
+evidence.grievance.private_letters.settled.body.v2,"O bilhete de {person} a Vicente menciona cartas escondidas e promessas íntimas. A origem antiga das cartas é esclarecida na resposta anexada, acompanhada de um pedido de desculpas pelo mal-entendido.",The note from {person} to Vicente mentions hidden letters and intimate promises. The attached reply explains the letters’ old origin and includes an apology for the misunderstanding.
+evidence.incident.lifting.body.v1,"Ocorrência de serviço — {time}
+Uma peça de manutenção foi suspensa por {person} com a corda do depósito. A carga escorregou; a trama ficou marcada pela compressão.","Service incident — {time}
+{person} lifted a maintenance part using the storage rope. The load slipped; compression marks were left on the braid."
+evidence.incident.lifting.body.v2,O registro das {time} descreve {person} usando a corda do depósito para levantar uma peça de manutenção. O deslizamento da carga produziu marcas de compressão na trama.,The {time} record describes {person} using the storage rope to lift a maintenance part. The slipping load left compression marks on the braid.
+evidence.prior_contact.body.v1,"A ficha registra que {person} ajudou Vicente com o ajuste da manga às {time}. A roupa descrita é de {fabric}, com {thread}.","The record notes that {person} helped Vicente adjust his sleeve at {time}. The garment is described as {fabric}, with {thread}."
+evidence.prior_contact.body.v2,"Às {time}, houve ajuda de {person} no ajuste da manga de Vicente. Constam na ficha {fabric} e {thread} como características da peça.","At {time}, {person} helped adjust Vicente’s sleeve. The form lists {fabric} and {thread} as the garment’s characteristics."
+evidence.contact.body.v1,"Há pequenos fragmentos de {fabric} junto a {thread}, preservados entre os vestígios do local. O material parece ser de uma roupa. Nenhuma etiqueta ou identificação acompanha os fios.","Small fragments of {fabric} lie with {thread}, preserved among the traces at the scene. The material appears to come from clothing. No label or identification accompanies the fibres."
+evidence.contact.body.v2,Os vestígios do local incluem {fabric} e {thread}. São fragmentos que parecem ter se soltado de uma peça de roupa; não há etiqueta nem outro identificador.,The traces at the scene include {fabric} and {thread}. The fragments appear to have come loose from a garment; there is no label or other identifier.
+evidence.room_request.body.v1,{person} pediu outro quarto. O motivo anotado é o barulho no encanamento.,{person} asked for another room. The recorded reason is noise from the plumbing.
+evidence.room_request.body.v2,A solicitação de {person} é para trocar de quarto por causa de ruídos no encanamento.,The request from {person} is to change rooms because of plumbing noises.
+evidence.incident.sports.body.v1,"Ocorrência de serviço — {time}
+Após uso intenso, um bastão foi retirado do material esportivo. {person} registrou a retirada e a presença de amassados e manchas antigas na madeira.","Service incident — {time}
+After heavy use, a bat was removed from the sports equipment. {person} recorded its removal and the dents and old stains on the wood."
+evidence.incident.sports.body.v2,"Às {time}, {person} anotou a retirada de um bastão do conjunto esportivo depois de uso intenso. A anotação descreve manchas antigas e amassados na madeira.","At {time}, {person} noted the removal of a bat from the sports equipment after heavy use. The note describes old stains and dents in the wood."
+conversation.incident_initial.v1,"Retirada registrada às {time}: {weapon}.
+A ficha está em nome de {person} e menciona marcas de uso, sem descrever a origem delas.","Checkout recorded at {time}: {weapon}.
+The form names {person} and mentions signs of use without describing their origin."
+conversation.incident_initial.v2,"{person} consta como responsável pela retirada de {weapon}, às {time}. Há uma anotação sobre marcas de uso; a ficha não explica como apareceram.",{person} is named as responsible for checking out {weapon} at {time}. A note mentions signs of use; the form does not explain how they appeared.
+verdict.review.title,ANÁLISE DA ACUSAÇÃO · diagnóstico de desenvolvimento,ACCUSATION REVIEW · development diagnostics
+verdict.review.claim,{claim} — {status},{claim} — {status}
+verdict.review.sufficient,sustentação suficiente,sufficient support
+verdict.review.insufficient,sustentação insuficiente,insufficient support
+verdict.review.incorrect,A hipótese apresentada para {claim} não corresponde à verdade deste caso.,The submitted hypothesis for {claim} does not match the facts of this case.
+verdict.review.supported,"• Aceito: {proofs}.
+  {explanation}","• Accepted: {proofs}.
+  {explanation}"
+verdict.review.incomplete,"• Argumento incompleto: {proofs}.
+  {explanation}","• Incomplete argument: {proofs}.
+  {explanation}"
+verdict.review.contested,"• Argumento contestado: {proofs}.
+  {explanation}","• Contested argument: {proofs}.
+  {explanation}"
+verdict.review.missing,  Faltou apresentar nesta combinação: {proofs}.,  Not submitted as part of this combination: {proofs}.
+verdict.review.counterproof,"  Contestação aplicável: {proof}.
+  {explanation}","  Applicable counterproof: {proof}.
+  {explanation}"
+verdict.review.no_complete,Nenhum argumento completo e suficiente foi apresentado para esta parte da acusação.,No complete and sufficient argument was submitted for this part of the accusation.
+verdict.review.other,Outras provas apresentadas: {proofs}. Não formaram um argumento adicional nesta acusação; quantidade de anexos não substitui a relação entre os fatos.,Other submitted evidence: {proofs}. It did not form an additional argument for this accusation; the number of attachments does not replace connections between facts.
+verdict.review.scope,"Os argumentos acima são avaliados no contexto da sua acusação, não como uma lista obrigatória de pistas. Argumentos sobre o mesmo fato não somam força em duplicidade. Uma contestação retira apenas a inferência afetada. Este diagnóstico considera todas as contraprovas aplicáveis, mesmo não descobertas ou não apresentadas, conforme a regra atual.","The arguments above are evaluated in the context of your accusation, not as a mandatory clue list. Arguments about the same fact do not count twice. A counterproof defeats only the affected inference. These diagnostics consider all applicable counterproofs, including those not discovered or submitted, under the current rule."
+verdict.review.presented,apresentada,submitted
+verdict.review.discovered,"descoberta, mas não apresentada","discovered, but not submitted"
+verdict.review.undiscovered,não descoberta,not discovered
+verdict.review.unclarified,ainda sem esclarecimento,not yet clarified
+verdict.argument.material_identity,"As fibras preservadas no local, comparadas às fichas das roupas, associam o material à peça atribuída ao acusado.","The fibres preserved at the scene, compared with garment records, connect the material to a garment assigned to the accused."
+verdict.argument.opportunity,O depoimento só sustenta contato recente com Vicente quando seu horário é relacionado ao intervalo entre o último atendimento e o encontro do corpo.,The testimony supports recent contact with Vicente only when its time is related to the interval between the last service visit and discovery of the body.
+verdict.argument.attendance,O livro de atividades só permite situar os outros suspeitos fora do local do crime quando é comparado com o registro que estabelece o intervalo do caso.,The activity register places the other suspects away from the crime scene only when compared with the record establishing the case’s time window.
+verdict.argument.active_motive,O conflito registrado em aberto sustenta a motivação alegada para esta pessoa.,The recorded unresolved conflict supports the alleged motive for this person.
+verdict.argument.scene_mechanism,As marcas e os vestígios físicos sustentam o mecanismo alegado; a presença isolada de um objeto não substitui essa demonstração.,The physical marks and traces support the alleged mechanism; an object’s presence alone does not replace this demonstration.
+verdict.argument.injury_method,"Os achados descritos no exame sustentam o método alegado, considerando o objeto quando exigido pelo argumento.","The examination findings support the alleged method, considering the object when required by the argument."
+verdict.argument.primary_injury,O complemento distingue o achado principal da descrição anterior e sustenta o método correspondente.,The addendum distinguishes the principal finding from the earlier description and supports the corresponding method.
+verdict.argument.garment_assignment,"O registro de empréstimo complementa a comparação dos fios com as roupas, atribuindo a peça a quem a recebeu.","The handover record supplements the comparison between fibres and garments, assigning the garment to its recipient."
+verdict.argument.generic,"Esta combinação sustenta uma afirmação específica da hipótese apresentada, sujeita às contestações aplicáveis.","This combination supports a specific claim in the submitted hypothesis, subject to applicable counterproofs."
+verdict.review.gaps,"Nas combinações iniciadas, faltou apresentar: {proofs}.",The combinations you started were missing: {proofs}.
+verdict.review.ignored,Não consideradas: {proofs}. Provas inexistentes ou ainda não descobertas não podem ser apresentadas.,Not considered: {proofs}. Evidence that does not exist or has not been discovered cannot be submitted.
+evidence.scene.salon.stabbing.title,Rasgo na poltrona,Armchair tear
+evidence.scene.salon.stabbing.short,Rasgo,Tear
+evidence.scene.salon.strangulation.title,Laço atrás da poltrona,Loop behind armchair
+evidence.scene.salon.strangulation.short,Laço,Loop
+evidence.scene.salon.gunshot.title,Perfuração no aparador,Sideboard puncture
+evidence.scene.salon.gunshot.short,Perfuração,Puncture
+evidence.scene.salon.blunt_force.title,Lascas no aparador,Sideboard splinters
+evidence.scene.salon.blunt_force.short,Lascas,Splinters
+evidence.scene.salon.poisoning.title,Película na taça,Film in the glass
+evidence.scene.salon.poisoning.short,Película,Film
+evidence.scene.kitchen.stabbing.title,Corte no avental,Apron cut
+evidence.scene.kitchen.stabbing.short,Corte,Cut
+evidence.scene.kitchen.strangulation.title,Laço atrás do banco,Loop behind stool
+evidence.scene.kitchen.strangulation.short,Laço,Loop
+evidence.scene.kitchen.gunshot.title,Furo na chapa,Hole in the panel
+evidence.scene.kitchen.gunshot.short,Furo,Hole
+evidence.scene.kitchen.blunt_force.title,Mossa na bancada,Counter dent
+evidence.scene.kitchen.blunt_force.short,Mossa,Dent
+evidence.scene.kitchen.poisoning.title,Crosta na xícara,Crust in the cup
+evidence.scene.kitchen.poisoning.short,Crosta,Crust
+evidence.scene.garden.stabbing.title,Corte no tecido,Cut fabric
+evidence.scene.garden.stabbing.short,Corte,Cut
+evidence.scene.garden.strangulation.title,Sulcos no cascalho,Gravel grooves
+evidence.scene.garden.strangulation.short,Sulcos,Grooves
+evidence.scene.garden.gunshot.title,Vaso perfurado,Punctured pot
+evidence.scene.garden.gunshot.short,Perfuração,Puncture
+evidence.scene.garden.blunt_force.title,Lascas no banco,Bench splinters
+evidence.scene.garden.blunt_force.short,Lascas,Splinters
+evidence.scene.garden.poisoning.title,Resíduo no copo,Residue in the glass
+evidence.scene.garden.poisoning.short,Resíduo,Residue
+evidence.scene.storage.stabbing.title,Corte no tecido,Cut fabric
+evidence.scene.storage.stabbing.short,Corte,Cut
+evidence.scene.storage.strangulation.title,Laço nos caixotes,Loop among crates
+evidence.scene.storage.strangulation.short,Laço,Loop
+evidence.scene.storage.gunshot.title,Furo no caixote,Hole in the crate
+evidence.scene.storage.gunshot.short,Furo,Hole
+evidence.scene.storage.blunt_force.title,Madeira amassada,Crushed wood
+evidence.scene.storage.blunt_force.short,Madeira,Wood
+evidence.scene.storage.poisoning.title,Película na caneca,Film in the mug
+evidence.scene.storage.poisoning.short,Película,Film
+evidence.scene.laundry.stabbing.title,Corte no lençol,Cut sheet
+evidence.scene.laundry.stabbing.short,Corte,Cut
+evidence.scene.laundry.strangulation.title,Laço no carrinho,Loop on the trolley
+evidence.scene.laundry.strangulation.short,Laço,Loop
+evidence.scene.laundry.gunshot.title,Furo no carrinho,Hole in the trolley
+evidence.scene.laundry.gunshot.short,Furo,Hole
+evidence.scene.laundry.blunt_force.title,Mossa no carrinho,Trolley dent
+evidence.scene.laundry.blunt_force.short,Mossa,Dent
+evidence.scene.laundry.poisoning.title,Crosta na caneca,Crust in the mug
+evidence.scene.laundry.poisoning.short,Crosta,Crust

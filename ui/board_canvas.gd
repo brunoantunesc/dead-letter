@@ -2,17 +2,21 @@ extends Control
 ## Spatial interaction only. No knowledge of causal relations or verdicts.
 signal card_selected(id: String)
 signal link_selected(id: String)
+signal card_opened(id: String)
+signal card_stashed(id: String)
 const CARD_SIZE = Vector2(220, 132)
 var model: RefCounted
 var widgets: Dictionary = {}
 var titles: Dictionary = {}
 var pan = Vector2(30, 30)
-var zoom = 0.65
+var zoom = 1.0
 var selected_card = ""
 var selected_link = ""
 var connecting = false
 var connection_start = ""
 var _drag_card = ""
+var _drag_origin = Vector2.ZERO
+var _trash_hover = false
 var _dragging_background = false
 var _font: Font
 var _annotations: Control
@@ -47,36 +51,74 @@ func rebuild(board: RefCounted, labels: Dictionary) -> void:
 		style.border_color = Color("a45e40") if id == selected_card or id == connection_start else Color("605b46")
 		style.set_border_width_all(2 if id == selected_card or id == connection_start else 1)
 		panel.add_theme_stylebox_override("panel", style)
-		var pin = ColorRect.new()
-		pin.color = Color("645c48")
-		pin.position = Vector2(106, 4)
-		pin.size = Vector2(7, 5)
-		pin.mouse_filter = Control.MOUSE_FILTER_IGNORE
-		panel.add_child(pin)
+		_add_pin(panel)
 		var type_label = Label.new()
 		type_label.text = labels[id].kind
 		type_label.position = Vector2(14, 12)
 		type_label.size = Vector2(192, 20)
-		type_label.add_theme_font_size_override("font_size", 11)
+		type_label.add_theme_font_size_override("font_size", 14)
 		type_label.add_theme_color_override("font_color", Color("504d3a"))
 		type_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		panel.add_child(type_label)
 		var title = Label.new()
-		title.text = labels[id].title
-		title.position = Vector2(14, 38)
-		title.size = Vector2(192, 72)
+		title.text = labels[id].card_title
+		title.position = Vector2(14, 60) if labels[id].location != "" else Vector2(14, 38)
+		title.size = Vector2(192, 64)
 		title.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-		title.max_lines_visible = 3
+		title.clip_text = true
+		title.max_lines_visible = 2
 		title.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
-		title.add_theme_font_size_override("font_size", 17)
+		title.add_theme_font_size_override("font_size", 22)
 		title.add_theme_color_override("font_color", Color("23281f"))
 		title.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		panel.add_child(title)
+		if labels[id].location != "":
+			var location_label = Label.new()
+			location_label.text = labels[id].location + " —"
+			location_label.position = Vector2(14, 36)
+			location_label.add_theme_font_size_override("font_size", 16)
+			location_label.add_theme_color_override("font_color", Color("504d3a"))
+			location_label.mouse_filter = Control.MOUSE_FILTER_IGNORE
+			panel.add_child(location_label)
+			var open_button = Button.new()
+			open_button.name = "OpenClue"
+			open_button.text = "+"
+			open_button.tooltip_text = labels[id].inspect
+			open_button.position = Vector2(180, 4)
+			open_button.custom_minimum_size = Vector2(32, 30)
+			open_button.add_theme_font_size_override("font_size", 20)
+			var button_style = StyleBoxEmpty.new()
+			open_button.add_theme_stylebox_override("normal", button_style)
+			open_button.add_theme_color_override("font_color", Color("23281f"))
+			open_button.pressed.connect(func(): card_opened.emit(id))
+			panel.add_child(open_button)
 		add_child(panel)
 		widgets[id] = panel
 		panel.gui_input.connect(_card_input.bind(id))
 	move_child(_annotations, get_child_count() - 1)
 	_layout()
+
+func _add_pin(card: Control) -> void:
+	# Identical decorative pushpins: pixel silhouette, metal shaft and red head.
+	# No hit area or relationship with evidence relevance.
+	var parts = [
+		[Rect2(111, 9, 10, 4), "302b2550"],
+		[Rect2(109, 8, 3, 6), "55594d"],
+		[Rect2(109, 8, 1, 5), "c6c6aa"],
+		[Rect2(106, 1, 8, 10), "552d25"],
+		[Rect2(104, 3, 12, 6), "552d25"],
+		[Rect2(106, 2, 8, 7), "a45239"],
+		[Rect2(105, 4, 10, 3), "a45239"],
+		[Rect2(107, 2, 4, 2), "ddb080"],
+		[Rect2(112, 5, 2, 3), "74362c"]
+	]
+	for part in parts:
+		var pixel = ColorRect.new()
+		pixel.position = part[0].position
+		pixel.size = part[0].size
+		pixel.color = Color(part[1])
+		pixel.mouse_filter = Control.MOUSE_FILTER_IGNORE
+		card.add_child(pixel)
 
 func _layout() -> void:
 	if model == null: return
@@ -103,7 +145,7 @@ func highlight(card_id: String, link_id: String) -> void:
 
 func focus_card(id: String) -> void:
 	if model != null and model.cards.has(id) and model.cards[id].placed:
-		zoom = maxf(0.8, zoom)
+		zoom = maxf(1.0, zoom)
 		pan = size / 2 - (model.cards[id].position + CARD_SIZE / 2) * zoom
 		_layout()
 
@@ -126,6 +168,7 @@ func _card_input(event: InputEvent, id: String) -> void:
 				card_selected.emit(id)
 				if not connecting:
 					_drag_card = id
+					_drag_origin = model.cards[id].position
 					move_child(widgets[id], maxi(0, get_child_count() - 2))
 			else:
 				_drag_card = ""
@@ -154,10 +197,25 @@ func _gui_input(event: InputEvent) -> void:
 		_layout()
 		accept_event()
 
+func trash_rect() -> Rect2:
+	# Screen-space target: independent of card positions, zoom and pan.
+	return Rect2(size - Vector2(80, 80), Vector2(64, 64))
+
 func _input(event: InputEvent) -> void:
+	if not is_visible_in_tree(): return
+	if event is InputEventMouseMotion and _drag_card != "":
+		_trash_hover = trash_rect().has_point(get_global_transform_with_canvas().affine_inverse() * event.position)
+		refresh_links()
 	if event is InputEventMouseButton and not event.pressed and event.button_index in [MOUSE_BUTTON_LEFT, MOUSE_BUTTON_MIDDLE]:
+		var dragged = _drag_card
+		var dropped_in_trash = event.button_index == MOUSE_BUTTON_LEFT and dragged != "" and trash_rect().has_point(get_global_transform_with_canvas().affine_inverse() * event.position)
 		_drag_card = ""
 		_dragging_background = false
+		_trash_hover = false
+		if dropped_in_trash:
+			model.move_card(dragged, _drag_origin)
+			card_stashed.emit.call_deferred(dragged)
+		refresh_links()
 
 func _zoom_at(point: Vector2, factor: float) -> void:
 	var world = (point - pan) / zoom
@@ -202,6 +260,7 @@ func _draw() -> void:
 
 func _draw_labels(layer: Control) -> void:
 	if model == null or _font == null: return
+	_draw_trash(layer)
 	for id in model.links:
 		var link: Dictionary = model.links[id]
 		if not model.cards[link.from].placed or not model.cards[link.to].placed: continue
@@ -219,3 +278,15 @@ func _draw_labels(layer: Control) -> void:
 		layer.draw_rect(rect, Color("172825"))
 		layer.draw_rect(rect, color, false)
 		layer.draw_string(_font, rect.position + Vector2(8, 20), text, HORIZONTAL_ALIGNMENT_LEFT, -1, 15, Color("efe1c4"))
+
+func _draw_trash(layer: Control) -> void:
+	var area = trash_rect()
+	var ink = Color("efce99") if _trash_hover else Color("b5a680")
+	layer.draw_rect(area, Color("704332") if _trash_hover else Color("20291f"))
+	layer.draw_rect(area, ink, false, 2)
+	var origin = area.position + Vector2(18, 12)
+	layer.draw_rect(Rect2(origin + Vector2(1, 9), Vector2(26, 28)), ink, false, 2)
+	layer.draw_line(origin + Vector2(-3, 5), origin + Vector2(31, 5), ink, 3)
+	layer.draw_rect(Rect2(origin + Vector2(9, 0), Vector2(10, 5)), ink, false, 2)
+	for x in [8, 14, 20]:
+		layer.draw_line(origin + Vector2(x, 15), origin + Vector2(x, 31), ink, 2)

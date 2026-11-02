@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "scene_trace.laundry"
+selector = {"observation_type": "scene_trace", "scene_profile": "laundry"}
+title_key = "evidence.scene_trace.laundry.title"
+text_key = "evidence.scene_trace.laundry.body"
+parameters = {"marks": {"field": "detail_token", "format": "term"}}
+visual_id = "visual.scene_trace.laundry"
+category_id = "material.trace"
+claim_ids = PackedStringArray("scene_mechanism")
+causal_kinds = PackedStringArray("murder", "cut", "lifting", "inspection", "sports", "cleaning")
+observation_fields = PackedStringArray("signature", "detail_token", "object_id", "place")
+observable_titles = {"scene.laundry.stabbing": {"title_key": "evidence.scene.laundry.stabbing.title", "short_key": "evidence.scene.laundry.stabbing.short"}, "scene.laundry.strangulation": {"title_key": "evidence.scene.laundry.strangulation.title", "short_key": "evidence.scene.laundry.strangulation.short"}, "scene.laundry.gunshot": {"title_key": "evidence.scene.laundry.gunshot.title", "short_key": "evidence.scene.laundry.gunshot.short"}, "scene.laundry.blunt_force": {"title_key": "evidence.scene.laundry.blunt_force.title", "short_key": "evidence.scene.laundry.blunt_force.short"}, "scene.laundry.poisoning": {"title_key": "evidence.scene.laundry.poisoning.title", "short_key": "evidence.scene.laundry.poisoning.short"}}

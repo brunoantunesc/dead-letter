@@ -11,17 +11,20 @@ func sync(people: Array, rooms: Array, discoveries: Array) -> void:
 	for room in rooms:
 		_add("room", str(room.id))
 	for observation in discoveries:
-		_add("evidence", str(observation.id))
 		# A mention inside a document does not discover its physical object.
 		if observation.kind == "object":
 			var object_id: String = str(observation.properties.get("object_id", observation.id))
-			_add("object", object_id, str(observation.id))
+			var id = _add("object", object_id, str(observation.id))
+			if observation.id not in cards[id].evidence_ids:
+				cards[id].evidence_ids.append(observation.id)
+		else:
+			_add("evidence", str(observation.id))
 
 func _add(kind: String, reference: String, evidence_id: String = "") -> String:
 	var id = kind + ":" + reference
 	if not cards.has(id):
 		cards[id] = {"id": id, "kind": kind, "reference": reference,
-			"evidence_id": evidence_id, "position": Vector2.ZERO, "text": "", "placed": false, "was_placed": false}
+			"evidence_id": evidence_id, "evidence_ids": [], "position": Vector2.ZERO, "text": "", "placed": false, "was_placed": false}
 	return id
 
 func place_card(id: String, position: Vector2) -> void:

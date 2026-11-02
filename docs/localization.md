@@ -6,8 +6,8 @@ Eventos, origens, argumentos, descobertas e acusações usam IDs e propriedades 
 
 ## Arquivos de autoria
 
-- `data/catalog/catalog.tres` e `data/catalog/definitions/*.tres`: 31 definições possíveis em Resources, com seletor, chave de título, chave de descrição, parâmetros e visual_id. O caso curto agora tem 16–18 instâncias. Ver [autoria e referências visuais](evidence-resources.md).
-- `localization/messages.csv`: 199 chaves nas colunas `key`, `pt_BR`, `en`. Contém provas, termos, locais, interface e vereditos.
+- `data/catalog/catalog.tres` e `data/catalog/definitions/*.tres`: 37 definições possíveis em Resources, com seletor, chave de título, chave de descrição, parâmetros e visual_id. O caso curto agora tem 15–16 instâncias. Ver [autoria e referências visuais](evidence-resources.md).
+- `localization/messages.csv`: 236 chaves nas colunas `key`, `pt_BR`, `en`. Contém provas, termos, locais, interface e vereditos.
 - `localization/languages.json`: nomes dos idiomas oferecidos pelo seletor.
 - `ui/localization.gd`: registra mensagens no `TranslationServer` nativo do Godot e aplica parâmetros nomeados.
 - `ui/presentation.gd`: renderiza parâmetros e linhas do catálogo, sem frases por tipo de pista ou acesso à verdade.
@@ -34,13 +34,13 @@ Ao criar um preset de exportação, incluir `localization/*.csv` e `localization
 
 ## Escopo e contraprovas
 
-O catálogo e a rede de contestação são Resources orientados por dados. A regra de uma contraprova potencial por tipo é validada no catálogo de 31 definições e 46 relações. As condições usam IDs e propriedades canônicas, nunca títulos traduzidos. Ver [rede e limites](evidence-network.md).
+O catálogo e a rede de contestação são Resources orientados por dados. A regra de uma contraprova potencial por tipo é validada no catálogo de 37 definições e 73 relações. As condições usam IDs e propriedades canônicas, nunca títulos traduzidos. Ver [rede e limites](evidence-network.md).
 
 Os construtores de acontecimentos e operadores de sustentação ainda usam GDScript. Criar textos ou uma relação não gera automaticamente uma causa nova. A rede permanece oculta na apresentação normal.
 
 ## Verificação
 
-`tests/localization_tests.gd` verifica chaves, parâmetros, resolução das 31 definições, títulos/descrições sem tokens pendentes e invariância da geração ao idioma. `tests/ui_smoke.gd` troca o idioma durante uma investigação e após o veredito, conferindo preservação de estado e capturando a tela em inglês. A revisão visual foi feita em português e inglês; outros idiomas não foram revisados.
+`tests/localization_tests.gd` verifica chaves, parâmetros, resolução das 37 definições, títulos/descrições sem tokens pendentes e invariância da geração ao idioma. `tests/ui_smoke.gd` troca o idioma durante uma investigação e após o veredito, conferindo preservação de estado e capturando a tela em inglês. A revisão visual foi feita em português e inglês; outros idiomas não foram revisados.
 
 ## Quadro de investigação
 

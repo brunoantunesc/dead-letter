@@ -14,4 +14,4 @@ visual_id = "visual.sighting.3"
 category_id = "support.testimony"
 claim_ids = PackedStringArray("opportunity")
 causal_kinds = PackedStringArray("passing")
-observation_fields = PackedStringArray("person", "time", "activity")
+observation_fields = PackedStringArray("person", "time", "activity", "with_victim", "place")

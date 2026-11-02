@@ -8,8 +8,8 @@ Abrir o projeto no Godot 4.6.2. No painel FileSystem, abrir um arquivo de `data/
 
 - `data/catalog/catalog.tres`: índice explícito das definições, visuais e relações incluídas. Adicionar um arquivo à pasta não o inclui automaticamente.
 - `definitions/*.tres`: um modelo por arquivo, com ID estável, seletor, chaves de tradução, parâmetros e visual_id.
-- `visuals/*.tres`: entradas visuais independentes. As 31 atuais estão pendentes.
-- Relações futuras: salvar Resources EvidenceRelation e adicioná-los ao índice. O índice atual inclui 46 relações de produção, com exemplos de escopo e condições.
+- `visuals/*.tres`: entradas visuais independentes. As 37 atuais estão pendentes.
+- Relações futuras: salvar Resources EvidenceRelation e adicioná-los ao índice. O índice atual inclui 73 relações de produção, com exemplos de escopo e condições.
 - `localization/messages.csv`: textos por idioma, preservados.
 
 O JSON anterior foi movido para `tests/fixtures/evidence_catalog_v1.json`, apenas como referência de migração. Não é lido pelo jogo nem deve receber conteúdo novo.
@@ -65,4 +65,16 @@ O catálogo é cacheado durante uma execução. Reiniciar o teste/jogo depois de
 
 ## Estado atual
 
-A autoria em Resources foi complementada por 31 modelos, 46 relações e categorias recursivas. Os resultados atuais estão em tests/results/catalog.json, network.json, localization.json e latest.json. O editor reconhece os tipos nativos; a ergonomia do Inspector e a qualidade dos casos ainda precisam de revisão humana. Não houve inclusão de arte de terceiros ou mudança do GDD.
+A autoria em Resources foi complementada por 37 modelos, 73 relações e categorias recursivas. Os resultados atuais estão em tests/results/catalog.json, network.json, localization.json e latest.json. O editor reconhece os tipos nativos; a ergonomia do Inspector e a qualidade dos casos ainda precisam de revisão humana. Não houve inclusão de arte de terceiros ou mudança do GDD.
+
+A autoria dos novos vestígios e perfis de ambiente está descrita em [gameplay-feedback.md](gameplay-feedback.md). O catálogo conserva modelos médicos para testes e evolução, mas não os distribui nos casos atuais.
+
+Os modelos podem registrar alternativas localizadas em `text_variants` e `initial_text_variants`. Ver [autoria e validação de redações](prose-variations.md).
+
+## Nomes dos vestígios físicos
+
+`EvidenceDefinition.observable_titles` associa um token de detalhe observável às chaves `title_key` e `short_key`. Os cinco modelos de vestígios de cenário possuem 25 pares de nomes PT/EN, correspondentes aos detalhes físicos já existentes. A identificação usa o detalhe observado, sem consultar culpa ou relevância: por exemplo, no jardim, corte no tecido, sulcos no cascalho, vaso perfurado, lascas no banco e resíduo no copo.
+
+`Presentation.title` e `short_title` resolvem os nomes para cenário, inspeção, seleção de provas, conversas, diagnóstico e quadro. `Investigation.objects_at` oferece `title_token` para a identificação inicial, sem descobrir a prova ou expor sua origem causal. As descrições e regras probatórias permanecem iguais. O quadro mantém o cômodo acima do nome curto.
+
+`tests/trace_title_tests.gd`: 583 verificações, cobrindo os 25 detalhes nos dois idiomas, unicidade dos nomes completos e curtos por ambiente, encaixe no card, consistência entre lista e inspeção e 100 seeds. A seed 83 reproduz dois vestígios distintos no jardim; a captura `tests/results/trace_titles.png` foi inspecionada. Se a geração futura permitir dois vestígios do mesmo tipo no mesmo cômodo, será necessário diferenciá-los por suporte/posição física; este recorte gera métodos distintos.

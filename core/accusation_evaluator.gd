@@ -15,23 +15,30 @@ static func evaluate(data: Dictionary, accusation: Dictionary, discovered: Array
 			selected.append(evidence_id)
 	var supported: Array = []
 	var contested: Array = []
+	var arguments: Array = []
 	# All existing applicable counterproofs, even undiscovered/unselected, per approval.
 	var network = Network.resolve(data.get("counterproofs", []))
-	for rule in data.support_rules.values():
+	for rule_id in data.support_rules:
+		var rule: Dictionary = data.support_rules[rule_id]
 		var claim: String = rule.claim
 		if rule.value != accusation.get(claim, "") or (rule.subject != "" and rule.subject != accusation.get("culprit", "")):
 			continue
-		var complete = true
+		var missing: Array = []
 		for id in rule.requires:
 			if id not in selected:
-				complete = false
-		if complete:
-			var defeated = false
-			for attack in network.active:
-				if attack.target in rule.requires and attack.target_claim == rule.get("inference_id", "") and (attack.subject == "" or rule.subject == "" or attack.subject == rule.subject):
-					defeated = true
+				missing.append(id)
+		var blockers: Array = []
+		for attack in network.active:
+			if attack.target in rule.requires and attack.target_claim == rule.get("inference_id", "") and (attack.subject == "" or rule.subject == "" or attack.subject == rule.subject):
+				blockers.append({"evidence_id": attack.source, "relation_id": attack.relation_id})
+				if missing.is_empty():
 					contested.append({"argument": rule.requires, "counterproof": attack.source, "relation": attack.relation_id})
-			if defeated:
+		arguments.append({"id": rule_id, "claim": claim, "inference_id": rule.get("inference_id", ""),
+			"requires": rule.requires.duplicate(), "missing": missing, "blockers": blockers,
+			"independence_group": rule.independence_group, "weight": rule.weight,
+			"status": "incomplete" if not missing.is_empty() else ("contested" if not blockers.is_empty() else "supported")})
+		if missing.is_empty():
+			if not blockers.is_empty():
 				continue
 			var key: String = claim + ":" + rule.independence_group
 			groups[key] = max(groups.get(key, 0), rule.weight)
@@ -54,4 +61,5 @@ static func evaluate(data: Dictionary, accusation: Dictionary, discovered: Array
 		outcome = "insufficient_case"
 	return {"outcome": outcome, "reasons": reasons, "scores": scores,
 		"total": total, "ignored_evidence": ignored, "supported_comparisons": supported,
-		"contested_comparisons": contested}
+		"contested_comparisons": contested, "arguments": arguments, "selected_evidence": selected,
+		"minimum_by_claim": data.policy.minimum_by_claim.duplicate(), "minimum_total": data.policy.minimum_total}

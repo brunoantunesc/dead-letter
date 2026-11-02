@@ -21,7 +21,7 @@ func _initialize() -> void:
 	check(board.cards.size() == 2, "only briefing victim and entry room initially available")
 	check(_count(board, "evidence") == 0 and _count(board, "object") == 0, "undiscovered evidence and objects absent")
 	check(board.links.is_empty(), "no automatic associations")
-	session.inspect("routine_checkout")
+	session.inspect("incident")
 	board.sync(session.known_characters(), session.visited_locations(), session.discoveries())
 	check(_count(board, "evidence") == 1 and _count(board, "object") == 0, "object mentioned in document is not a found object")
 	var found: Dictionary = {}
@@ -31,8 +31,8 @@ func _initialize() -> void:
 			break
 	board.sync(session.known_characters(), session.visited_locations(), session.discoveries())
 	var physical_id = "object:" + str(found.properties.object_id)
-	var evidence_id = "evidence:" + str(found.id)
-	check(board.cards.has(physical_id) and board.cards.has(evidence_id), "physical object and observation have separate cards")
+	var evidence_id = physical_id
+	check(board.cards.has(physical_id) and not board.cards.has("evidence:" + str(found.id)), "physical object and observation share one card")
 	check(board.links.is_empty(), "finding object does not draw a connection")
 	check(session.visited_locations().size() >= 1 and not session.visited_locations().any(func(room): return room.id == "archive"), "unvisited rooms absent")
 	check(session.record_conversation("person_1") and session.known_characters().any(func(person): return person.id == "person_1"), "conversation registers known person")
@@ -44,7 +44,7 @@ func _initialize() -> void:
 	var repeated_entity = found.duplicate(true)
 	repeated_entity.id = "another_observation"
 	board.sync([], [], [repeated_entity])
-	check(_count(board, "object") == 1 and board.cards.has("evidence:another_observation"), "different observations share one physical object card")
+	check(_count(board, "object") == 1 and not board.cards.has("evidence:another_observation") and board.cards[physical_id].evidence_ids.size() == 2, "different observations collected in one physical object card")
 	check(board.placed_cards().is_empty(), "discoveries enter pile, never canvas")
 	check(board.connect_cards(physical_id, "person:victim") == "", "unplaced cards cannot form visible connections")
 	board.place_card("person:victim", Vector2(100, 100))

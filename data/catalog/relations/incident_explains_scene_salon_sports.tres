@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="EvidenceRelation" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_relation.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "incident_explains_scene_salon_sports"
+source_definition_id = "incident.sports"
+target_definition_id = "scene_trace.salon"
+source_claim_id = "independent_use"
+target_claim_id = "scene_mechanism"
+equal_fields = {"object_id": "object_id"}
+conditions = [{"left": "source.event_id", "op": "eq", "right": "target.event_id"}]

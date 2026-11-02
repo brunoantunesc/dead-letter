@@ -72,7 +72,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -90,7 +90,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -203,7 +203,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -221,7 +221,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -334,7 +334,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -352,7 +352,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -465,7 +465,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -483,7 +483,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -595,7 +595,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -613,7 +613,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -725,7 +725,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -743,7 +743,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -855,7 +855,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -873,7 +873,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -985,7 +985,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -1003,7 +1003,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -2015,7 +2015,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -2033,7 +2033,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -2688,7 +2688,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -2706,7 +2706,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -2822,7 +2822,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -2840,7 +2840,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -2956,7 +2956,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -2974,7 +2974,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -3086,7 +3086,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -3104,7 +3104,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -3843,7 +3843,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -3861,7 +3861,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -3977,7 +3977,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -3995,7 +3995,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -4111,7 +4111,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -4129,7 +4129,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -4779,7 +4779,7 @@
       },
       "window": {
         "id": "window",
-        "definition_id": "examination",
+        "definition_id": "time_record",
         "event_id": "window",
         "location": "lobby",
         "properties": {
@@ -4797,7 +4797,7 @@
           "place": "salon",
           "start": 90,
           "end": 110,
-          "observation_type": "examination",
+          "observation_type": "time_record",
           "entries": [
             {
               "person": "person_0",
@@ -4836,5 +4836,2512 @@
       }
     },
     "explanation": "A garment already handed from A to B is subsequently handed from B to C before the crime. The first handover does not establish B retained it until the crime."
+  },
+  "incident_explains_scene_salon_cut": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cut",
+        "event_id": "source",
+        "location": "salon",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cut",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.salon",
+        "event_id": "source",
+        "location": "salon",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "salon",
+          "signature": "edge_cut",
+          "detail_token": "scene.salon.stabbing"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "salon"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent cut event in salon caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_salon_lifting": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.lifting",
+        "event_id": "source",
+        "location": "salon",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "lifting",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.salon",
+        "event_id": "source",
+        "location": "salon",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "salon",
+          "signature": "loop_marks",
+          "detail_token": "scene.salon.strangulation"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "salon"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent lifting event in salon caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_salon_inspection": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.inspection",
+        "event_id": "source",
+        "location": "salon",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "inspection",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.salon",
+        "event_id": "source",
+        "location": "salon",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "salon",
+          "signature": "metal_impact",
+          "detail_token": "scene.salon.gunshot"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "salon"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent inspection event in salon caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_salon_sports": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.sports",
+        "event_id": "source",
+        "location": "salon",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "sports",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.salon",
+        "event_id": "source",
+        "location": "salon",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "salon",
+          "signature": "heavy_impact",
+          "detail_token": "scene.salon.blunt_force"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "salon"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent sports event in salon caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_salon_cleaning": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cleaning",
+        "event_id": "source",
+        "location": "salon",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cleaning",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.salon",
+        "event_id": "source",
+        "location": "salon",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "salon",
+          "signature": "chemical_residue",
+          "detail_token": "scene.salon.poisoning"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "salon"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent cleaning event in salon caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_kitchen_cut": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cut",
+        "event_id": "source",
+        "location": "kitchen",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cut",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.kitchen",
+        "event_id": "source",
+        "location": "kitchen",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "kitchen",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "kitchen",
+          "signature": "edge_cut",
+          "detail_token": "scene.kitchen.stabbing"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "kitchen"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent cut event in kitchen caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_kitchen_lifting": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.lifting",
+        "event_id": "source",
+        "location": "kitchen",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "lifting",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.kitchen",
+        "event_id": "source",
+        "location": "kitchen",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "kitchen",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "kitchen",
+          "signature": "loop_marks",
+          "detail_token": "scene.kitchen.strangulation"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "kitchen"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent lifting event in kitchen caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_kitchen_inspection": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.inspection",
+        "event_id": "source",
+        "location": "kitchen",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "inspection",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.kitchen",
+        "event_id": "source",
+        "location": "kitchen",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "kitchen",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "kitchen",
+          "signature": "metal_impact",
+          "detail_token": "scene.kitchen.gunshot"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "kitchen"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent inspection event in kitchen caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_kitchen_sports": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.sports",
+        "event_id": "source",
+        "location": "kitchen",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "sports",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.kitchen",
+        "event_id": "source",
+        "location": "kitchen",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "kitchen",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "kitchen",
+          "signature": "heavy_impact",
+          "detail_token": "scene.kitchen.blunt_force"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "kitchen"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent sports event in kitchen caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_kitchen_cleaning": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cleaning",
+        "event_id": "source",
+        "location": "kitchen",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cleaning",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.kitchen",
+        "event_id": "source",
+        "location": "kitchen",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "kitchen",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "kitchen",
+          "signature": "chemical_residue",
+          "detail_token": "scene.kitchen.poisoning"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "kitchen"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent cleaning event in kitchen caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_garden_cut": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cut",
+        "event_id": "source",
+        "location": "garden",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cut",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.garden",
+        "event_id": "source",
+        "location": "garden",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "garden",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "garden",
+          "signature": "edge_cut",
+          "detail_token": "scene.garden.stabbing"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "garden"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent cut event in garden caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_garden_lifting": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.lifting",
+        "event_id": "source",
+        "location": "garden",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "lifting",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.garden",
+        "event_id": "source",
+        "location": "garden",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "garden",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "garden",
+          "signature": "loop_marks",
+          "detail_token": "scene.garden.strangulation"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "garden"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent lifting event in garden caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_garden_inspection": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.inspection",
+        "event_id": "source",
+        "location": "garden",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "inspection",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.garden",
+        "event_id": "source",
+        "location": "garden",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "garden",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "garden",
+          "signature": "metal_impact",
+          "detail_token": "scene.garden.gunshot"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "garden"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent inspection event in garden caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_garden_sports": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.sports",
+        "event_id": "source",
+        "location": "garden",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "sports",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.garden",
+        "event_id": "source",
+        "location": "garden",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "garden",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "garden",
+          "signature": "heavy_impact",
+          "detail_token": "scene.garden.blunt_force"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "garden"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent sports event in garden caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_garden_cleaning": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cleaning",
+        "event_id": "source",
+        "location": "garden",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cleaning",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.garden",
+        "event_id": "source",
+        "location": "garden",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "garden",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "garden",
+          "signature": "chemical_residue",
+          "detail_token": "scene.garden.poisoning"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "garden"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent cleaning event in garden caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_storage_cut": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cut",
+        "event_id": "source",
+        "location": "storage",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cut",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.storage",
+        "event_id": "source",
+        "location": "storage",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "storage",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "storage",
+          "signature": "edge_cut",
+          "detail_token": "scene.storage.stabbing"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "storage"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent cut event in storage caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_storage_lifting": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.lifting",
+        "event_id": "source",
+        "location": "storage",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "lifting",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.storage",
+        "event_id": "source",
+        "location": "storage",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "storage",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "storage",
+          "signature": "loop_marks",
+          "detail_token": "scene.storage.strangulation"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "storage"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent lifting event in storage caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_storage_inspection": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.inspection",
+        "event_id": "source",
+        "location": "storage",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "inspection",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.storage",
+        "event_id": "source",
+        "location": "storage",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "storage",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "storage",
+          "signature": "metal_impact",
+          "detail_token": "scene.storage.gunshot"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "storage"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent inspection event in storage caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_storage_sports": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.sports",
+        "event_id": "source",
+        "location": "storage",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "sports",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.storage",
+        "event_id": "source",
+        "location": "storage",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "storage",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "storage",
+          "signature": "heavy_impact",
+          "detail_token": "scene.storage.blunt_force"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "storage"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent sports event in storage caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_storage_cleaning": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cleaning",
+        "event_id": "source",
+        "location": "storage",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cleaning",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.storage",
+        "event_id": "source",
+        "location": "storage",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "storage",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "storage",
+          "signature": "chemical_residue",
+          "detail_token": "scene.storage.poisoning"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "storage"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent cleaning event in storage caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_laundry_cut": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cut",
+        "event_id": "source",
+        "location": "laundry",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cut",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.laundry",
+        "event_id": "source",
+        "location": "laundry",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "laundry",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "laundry",
+          "signature": "edge_cut",
+          "detail_token": "scene.laundry.stabbing"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "laundry"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent cut event in laundry caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_laundry_lifting": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.lifting",
+        "event_id": "source",
+        "location": "laundry",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "lifting",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.laundry",
+        "event_id": "source",
+        "location": "laundry",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "rope",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "laundry",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "laundry",
+          "signature": "loop_marks",
+          "detail_token": "scene.laundry.strangulation"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "laundry"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent lifting event in laundry caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_laundry_inspection": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.inspection",
+        "event_id": "source",
+        "location": "laundry",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "inspection",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.laundry",
+        "event_id": "source",
+        "location": "laundry",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "pistol",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "laundry",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "laundry",
+          "signature": "metal_impact",
+          "detail_token": "scene.laundry.gunshot"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "laundry"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent inspection event in laundry caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_laundry_sports": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.sports",
+        "event_id": "source",
+        "location": "laundry",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "sports",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.laundry",
+        "event_id": "source",
+        "location": "laundry",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "bat",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "laundry",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "laundry",
+          "signature": "heavy_impact",
+          "detail_token": "scene.laundry.blunt_force"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "laundry"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent sports event in laundry caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "incident_explains_scene_laundry_cleaning": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "incident.cleaning",
+        "event_id": "source",
+        "location": "laundry",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 50,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "incident",
+          "incident": "cleaning",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "scene_trace.laundry",
+        "event_id": "source",
+        "location": "laundry",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "poison_vial",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "laundry",
+          "start": 90,
+          "end": 110,
+          "observation_type": "scene_trace",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "scene_profile": "laundry",
+          "signature": "chemical_residue",
+          "detail_token": "scene.laundry.poisoning"
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 50,
+        "end": 52,
+        "kind": "cut",
+        "location": "laundry"
+      },
+      "target": {
+        "id": "target",
+        "start": 100,
+        "end": 102,
+        "kind": "discard",
+        "location": "lobby"
+      }
+    },
+    "explanation": "An independent cleaning event in laundry caused these physical marks on the same object, so they do not by themselves establish a murder mechanism."
+  },
+  "later_live_contact_0": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "sighting.0",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "sighting",
+          "activity": 0,
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "with_victim": true
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "time_record",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "time_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 101,
+        "kind": "victim_contact",
+        "location": "salon"
+      },
+      "target": {
+        "id": "target",
+        "start": 200,
+        "end": 202,
+        "kind": "activity_register",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A witness saw the victim alive in the same room after the earlier recorded service visit. The earlier record remains true, but its visit cannot be treated as the latest known live contact."
+  },
+  "later_live_contact_1": {
+    "evidence": {
+      "source": {
+        "id": "source",
+        "definition_id": "sighting.1",
+        "event_id": "source",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 100,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "sighting",
+          "activity": 1,
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ],
+          "with_victim": true
+        }
+      },
+      "target": {
+        "id": "target",
+        "definition_id": "time_record",
+        "event_id": "target",
+        "location": "lobby",
+        "properties": {
+          "person": "person_0",
+          "fabric": "navy_wool",
+          "thread": "gray",
+          "time": 200,
+          "from_person": "person_0",
+          "to_person": "person_1",
+          "object_id": "inventory_1",
+          "weapon": "knife",
+          "reason": "plumbing_noise",
+          "report_id": "target",
+          "pattern": "narrow_cut",
+          "place": "salon",
+          "start": 90,
+          "end": 110,
+          "observation_type": "time_record",
+          "entries": [
+            {
+              "person": "person_0",
+              "fabric": "navy_wool",
+              "thread": "gray",
+              "place": "kitchen",
+              "start": 90,
+              "end": 120,
+              "status": "reserved"
+            }
+          ]
+        }
+      }
+    },
+    "events": {
+      "source": {
+        "id": "source",
+        "start": 100,
+        "end": 101,
+        "kind": "victim_contact",
+        "location": "salon"
+      },
+      "target": {
+        "id": "target",
+        "start": 200,
+        "end": 202,
+        "kind": "activity_register",
+        "location": "lobby"
+      }
+    },
+    "explanation": "A witness saw the victim alive in the same room after the earlier recorded service visit. The earlier record remains true, but its visit cannot be treated as the latest known live contact."
   }
 }

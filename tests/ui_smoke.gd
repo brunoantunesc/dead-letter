@@ -23,13 +23,18 @@ func _run() -> void:
 	desk._show_room("salon", "Salão")
 	desk.object_list.get_child(0).pressed.emit()
 	check(desk.session.discoveries().size() == 1, "object button discovers only one object")
-	var needed: Array = ["contact", "wardrobe", "sighting_0", "examination", "conflict_0_record"]
+	var needed: Array = ["contact", "wardrobe", "sighting_0", "time_record", "scene_trace", "conflict_0_record"]
 	var data: Dictionary = load("res://core/case_generator.gd").new().generate(42).case
 	for item in data.evidence.values():
 		if item.properties.observation_type == "object" and item.properties.weapon == data.truth.weapon:
 			needed.append(item.id)
 	for id in needed:
-		desk._inspect(id)
+		if id.begins_with("sighting_"):
+			desk._show_room("lobby")
+			desk._talk("porter")
+			desk._ask("porter", id)
+		else:
+			desk._inspect(id)
 	for row in desk.discovery_list.get_children():
 		var checkbox = row.get_child(0)
 		checkbox.button_pressed = true
@@ -37,19 +42,20 @@ func _run() -> void:
 	desk.culprit_choice.select(1) # Seed 42: Ana.
 	desk.motive_choice.select(2) # Ciúme.
 	desk.method_choice.select(1) # Esfaqueamento.
-	desk.notes_edit.text = "Conferir os registros de horário e comparar as amostras com as fichas de roupas."
+	var note_id: String = desk.session.board.add_note(Vector2(40, 40))
+	desk.session.board.edit_note(note_id, "Conferir os registros de horário e comparar as amostras com as fichas de roupas.")
 	desk._inspect("wardrobe")
 	await process_frame
 	await _capture("desk_investigation")
 	var session_before = desk.session
 	var discoveries_before: Array = desk.session.discoveries()
 	var proofs_before: Array = desk.selected_proofs.duplicate()
-	var notes_before: String = desk.notes_edit.text
+	var notes_before: String = desk.session.board.cards[note_id].text
 	desk._change_language(1)
 	check(desk.inspector_title.text == "Returned garment records", "evidence title changes to English")
-	check(desk.inspector_body.text.contains("Garments returned"), "evidence description changes to English")
+	check(desk.inspector_body.text.contains("before dinner"), "evidence description changes to English")
 	check(desk.session == session_before and desk.session.discoveries() == discoveries_before, "locale switch preserves session and discoveries")
-	check(desk.selected_proofs == proofs_before and desk.notes_edit.text == notes_before, "locale switch preserves selected proof and player notes")
+	check(desk.selected_proofs == proofs_before and desk.session.board.cards[note_id].text == notes_before, "locale switch preserves selected proof and player notes")
 	check(desk.culprit_choice.selected == 1 and desk.motive_choice.selected == 2 and desk.method_choice.selected == 1, "locale switch preserves accusation choices")
 	await _capture("desk_english")
 	desk._change_language(0)
@@ -83,7 +89,7 @@ func _run() -> void:
 	var listed = 0
 	for location in desk.session.locations():
 		listed += desk.session.objects_at(location.id).size()
-	check(listed == 16, "reported seed lists sixteen observations in UI")
+	check(listed == 13, "reported seed has thirteen physical observations plus two conversational accounts")
 	await _capture("desk_short_initial")
 	desk._show_room("lobby", "Recepção")
 	desk._inspect("activity_register")

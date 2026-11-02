@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "scene_trace.kitchen"
+selector = {"observation_type": "scene_trace", "scene_profile": "kitchen"}
+title_key = "evidence.scene_trace.kitchen.title"
+text_key = "evidence.scene_trace.kitchen.body"
+parameters = {"marks": {"field": "detail_token", "format": "term"}}
+visual_id = "visual.scene_trace.kitchen"
+category_id = "material.trace"
+claim_ids = PackedStringArray("scene_mechanism")
+causal_kinds = PackedStringArray("murder", "cut", "lifting", "inspection", "sports", "cleaning")
+observation_fields = PackedStringArray("signature", "detail_token", "object_id", "place")
+observable_titles = {"scene.kitchen.stabbing": {"title_key": "evidence.scene.kitchen.stabbing.title", "short_key": "evidence.scene.kitchen.stabbing.short"}, "scene.kitchen.strangulation": {"title_key": "evidence.scene.kitchen.strangulation.title", "short_key": "evidence.scene.kitchen.strangulation.short"}, "scene.kitchen.gunshot": {"title_key": "evidence.scene.kitchen.gunshot.title", "short_key": "evidence.scene.kitchen.gunshot.short"}, "scene.kitchen.blunt_force": {"title_key": "evidence.scene.kitchen.blunt_force.title", "short_key": "evidence.scene.kitchen.blunt_force.short"}, "scene.kitchen.poisoning": {"title_key": "evidence.scene.kitchen.poisoning.title", "short_key": "evidence.scene.kitchen.poisoning.short"}}

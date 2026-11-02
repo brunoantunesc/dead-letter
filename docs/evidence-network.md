@@ -6,7 +6,7 @@ O GDD não foi modificado. Pesos e limiares experimentais permanecem iguais.
 
 ## Dados e responsabilidades
 
-O catálogo tem **31 definições, 46 relações, 9 categorias de suporte e 31 referências visuais pendentes**. Os 25 IDs anteriores foram preservados. Os seis novos modelos são contato anterior, remoção de resíduos, entrega de roupa emprestada, complemento médico, encerramento de atendimento e registro de uso de utensílio.
+O catálogo tem **37 definições, 73 relações, 9 categorias de suporte e 37 referências visuais pendentes**. Os 25 IDs anteriores foram preservados. Os seis novos modelos são contato anterior, remoção de resíduos, entrega de roupa emprestada, complemento médico, encerramento de atendimento e registro de uso de utensílio.
 
 - Resources em `data/catalog/definitions/`: modelos, parâmetros, afirmações possíveis, categorias e tipos de acontecimento de origem.
 - `data/catalog/relations/`: relações de contestação, escopo, condições e dependências de outras afirmações.
@@ -88,19 +88,9 @@ O snapshot guarda árvore e `placement_id` de cada achado. O validador recalcula
 
 ## Geração e reprodução
 
-Esquema **5**, gerador **0.5.0**, conteúdo **hotel_network_1**. Esquemas anteriores não são saves compatíveis; fixtures históricas permanecem preservadas.
+Esquema 6, gerador 0.7.0, conteúdo hotel_prose_1. A [revisão de gameplay](gameplay-feedback.md) substitui o recorte anterior: 15–16 observações, dois contatos concretos com a vítima, autópsia pendente, horários de serviço separados dos vestígios, cinco possíveis ambientes do crime. Explicações de uso independente não são atribuídas à arma verdadeira na geração atual.
 
-Os casos gerados têm **16–18 observações**, dentro do orçamento aprovado de 14–18:
-
-- As 15 observações originais do caso curto.
-- Um registro de uso cotidiano de utensílio, envolvendo qualquer suspeito, independentemente de culpa.
-- Conforme a seed, um contato anterior e um registro posterior de remoção de resíduos.
-
-Tanto culpados quanto inocentes podem participar dos contextos. Nem toda relação potencial aparece em cada caso. Em alguns casos, uma rota material isolada deixa de ser suficiente; a rota independente pelos álibis permanece disponível. Quando o contexto não derrota a identificação material, as duas rotas continuam válidas.
-
-Os contextos usam um PRNG local separado, e o posicionamento outro fluxo determinístico, sem alterar a escolha inicial de culpado/método/motivo da regressão 914368. A mesma seed e versão reproduzem eventos, relações e pontos.
-
-Não foi adicionado histórico global de frequência entre partidas. O catálogo ainda é pequeno e autoral; expansão por variedade de situações e revisão humana continuam necessárias.
+A mesma seed e versão reproduzem eventos, relações e pontos. A planta do hotel permanece fixa. Não há histórico global de frequência entre partidas; o conteúdo ainda é autoral e limitado.
 
 ## Validação e revisão humana
 
@@ -113,16 +103,22 @@ godot --headless --path . --script tests/localization_tests.gd
 godot --headless --path . --script tests/ui_smoke.gd
 ```
 
-O teste da rede verifica ausência/presença, contraprova não descoberta ou selecionada, pessoa/material/objeto/horário incorretos, cadeia de contestação, inocência não automática, empréstimo de roupa, contextualização médica, motivos, ciclos e busca recursiva em recipientes. Há exemplos parciais de aplicabilidade para as 46 relações em `tests/fixtures/network_witnesses.json`; eles não são 46 mundos completos simulados. Casos completos cobrem famílias centrais e a bateria de seeds.
+O teste da rede verifica ausência/presença, contraprova não descoberta ou selecionada, pessoa/material/objeto/horário incorretos, cadeia de contestação, inocência não automática, empréstimo de roupa, contextualização médica, motivos, ciclos e busca recursiva em recipientes. Há exemplos parciais de aplicabilidade para as 73 relações em `tests/fixtures/network_witnesses.json`; eles não são 46 mundos completos simulados. Casos completos cobrem famílias centrais e a bateria de seeds.
 
-**Para revisão na mesa de teste: seeds 0 e 87.** As duas apresentam a mesma descrição de material encontrado, com contextos diferentes. Abrir cada seed e investigar sem consultar a verdade antes do veredito. O relatório privado `tests/results/network.json` registra a diferença esperada. A seed 914368 continua sendo a regressão histórica e agora possui 16 observações.
+**Para revisão na mesa de teste: seeds 0 e 3.** As duas apresentam a mesma descrição de material encontrado, com contextos diferentes. Abrir cada seed e investigar sem consultar a verdade antes do veredito. O relatório privado `tests/results/network.json` registra a diferença esperada. A seed 914368 continua sendo a regressão histórica e agora possui 15 observações.
 
 A revisão humana de dificuldade, legibilidade e justiça investigativa permanece na #4. A validação automática não certifica sutileza. Novas relações devem ter contexto perceptível pelo jogador; comparações de objetos semelhantes precisarão de identificação visual/textual distinguível na futura apresentação.
 
-Resultados desta entrega no Godot 4.6.2: 387 verificações da rede, 77 do catálogo, 862 de localização e 4.236 do núcleo em 101 seeds, sem falhas. O smoke test da interface também passou. As seeds de revisão foram selecionadas automaticamente; isso não equivale a uma sessão humana de gameplay.
+Resultados desta entrega no Godot 4.6.2: 468 verificações da rede, 79 do catálogo, 1.208 de localização e 4.101 do núcleo em 101 seeds, sem falhas. O smoke test da interface também passou. As seeds de revisão foram selecionadas automaticamente; isso não equivale a uma sessão humana de gameplay.
 
 ## Limites da etapa
 
 A rede de contestação é orientada por dados e está integrada. Os construtores de acontecimentos e os operadores de sustentação ainda possuem vocabulário e regras em GDScript; não se trata de um editor completo de simulação ou de todo o sistema probatório convertido em dados. As relações não inventam acontecimentos faltantes.
 
 Casos autorais de empréstimo e complemento médico são exercitados nos testes; a rotação padrão ainda não sorteia todas essas famílias. Não foram adicionadas ferramentas forenses, erros médicos aleatórios, elenco, progressão ou alterações do hotel 3D.
+
+As definições médicas são legadas e não aparecem na geração atual. As relações contextuais de horário usam time_record, não o exame. As marcas de cena têm contraprovas possíveis por ocorrência independente da mesma instância e mesma origem causal. O catálogo não transforma a existência de uma marca em confirmação automática de hipótese.
+
+O [primeiro recorte de interrogatórios](interrogation.md) move os dois relatos do porteiro para conversas, acrescenta posições atuais dos NPCs e esclarecimento do registro de utensílio na mesma prova.
+
+[Variações de redação das provas](prose-variations.md): alternativas localizadas por Resource, escolhidas por seed sem alterar fatos ou avaliação.

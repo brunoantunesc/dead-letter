@@ -8,6 +8,7 @@ const Catalog = preload("res://core/evidence_catalog.gd")
 const Rules = preload("res://core/proof_rules.gd")
 const Network = preload("res://core/evidence_network.gd")
 const Placement = preload("res://core/evidence_placement.gd")
+const Scenes = preload("res://core/crime_scenes.gd")
 
 static func validate(data: Dictionary) -> Dictionary:
 	var errors: Array = []
@@ -18,6 +19,8 @@ static func validate(data: Dictionary) -> Dictionary:
 		return _result(errors)
 	if data.get("schema_version") != Data.SCHEMA_VERSION:
 		errors.append("unsupported_schema")
+	if data.get("generator_version") != Data.GENERATOR_VERSION or data.get("content_version") != Data.CONTENT_VERSION:
+		errors.append("unsupported_content_version")
 	for key in ["culprit", "victim", "method", "motive", "weapon", "event_id"]:
 		if not data.truth.get(key) is String:
 			errors.append("invalid_truth:" + key)
@@ -76,6 +79,20 @@ static func validate(data: Dictionary) -> Dictionary:
 		errors.append("ungrounded_counterproof_cycle")
 	_check_proof(data, errors)
 	errors.append_array(Placement.validate(data))
+	if not data.get("investigation_time") is int:
+		errors.append("invalid_investigation_time")
+		return _result(errors)
+	for person_id in data.characters:
+		var person: Dictionary = data.characters[person_id]
+		var location = person.get("current_location", "")
+		if person_id == "victim":
+			if location != "": errors.append("victim_available_for_conversation")
+		elif location not in reachable_locations(data):
+			errors.append("unreachable_character:" + person_id)
+		else:
+			for event in data.events.values():
+				if person_id in event.actors and event.end + _distance(data.locations, event.location, location) > data.investigation_time:
+					errors.append("impossible_investigation_position:" + person_id)
 	return _result(errors)
 
 static func _check_truth(data: Dictionary, errors: Array) -> void:
@@ -110,7 +127,6 @@ static func _check_truth(data: Dictionary, errors: Array) -> void:
 	if not cause_found:
 		errors.append("missing_causal_motive")
 	if not data.events.has("examination"):
-		errors.append("missing_examination")
 		return
 	var examination: Dictionary = data.events.examination
 	var crime_patterns: Array = [Content.PROFILES[data.truth.method].pattern]
@@ -169,12 +185,35 @@ static func _check_consequences(data: Dictionary, errors: Array) -> void:
 			errors.append("unexplained_object_location:" + id)
 		var compatible = true
 		match p.get("observation_type", ""):
+			"time_record":
+				var alive: Dictionary = data.events.get("last_contact", {})
+				var discovery: Dictionary = data.events.get("body_discovery", {})
+				compatible = event.kind == "discovery_record" and p.get("start") == alive.get("start") and p.get("end") == discovery.get("start")
+				compatible = compatible and p.get("place") == alive.get("location") and p.get("place") == discovery.get("location") and p.get("place") == data.events[data.truth.event_id].location
+				compatible = compatible and "last_contact" in event.causes and "body_discovery" in event.causes and data.truth.victim in alive.get("actors", []) and data.truth.victim in discovery.get("actors", [])
+				compatible = compatible and p.start <= data.events[data.truth.event_id].start and p.end >= data.events[data.truth.event_id].end
+			"scene_trace":
+				var method = Scenes.method_for(p.get("signature", ""))
+				compatible = method != "" and p.get("place") == event.location and p.get("scene_profile") == event.location
+				compatible = compatible and p.get("detail_token") == Scenes.token(event.location, method) and effects.get("scene_traces", {}).get(id) == p
+				if event.kind == "murder":
+					compatible = compatible and method == data.truth.method and p.get("object_id") == "instrument_" + data.truth.weapon
+				else:
+					compatible = compatible and Content.PROFILES.get(method, {}).get("weapon") == effects.get("weapon") and p.get("object_id") == effects.get("object_id")
 			"contact": compatible = p.get("fabric") == effects.get("fabric") and p.get("thread") == effects.get("thread")
 			"examination":
 				var crime: Dictionary = data.events[data.truth.event_id]
 				compatible = event.kind == "examination" and p.get("pattern") == effects.get("pattern") and p.get("start", INF) == effects.get("window_start") and p.get("end", -INF) == effects.get("window_end") and p.start <= crime.start and p.end >= crime.end and p.get("place") == crime.location
 			"wardrobe": compatible = p.get("entries") == effects.get("entries")
-			"sighting": compatible = p.get("person") == effects.get("person") and p.get("time") == event.start and p.get("activity") == effects.get("activity") and source in event.actors
+			"sighting":
+				var account_found = false
+				var accounts: Array = effects.get("accounts", [effects])
+				for account in accounts:
+					if p.get("person") == account.get("person") and p.get("activity") == account.get("activity") and p.get("with_victim") == account.get("with_victim"):
+						account_found = true
+				compatible = account_found and p.get("time") == event.start and p.get("place") == event.location and source in event.actors and p.get("person") in event.actors
+				if p.get("with_victim", false):
+					compatible = compatible and data.truth.victim in event.actors and event.kind == "victim_contact"
 			"activity_register":
 				compatible = p.get("entries") == effects.get("entries")
 				for entry in p.get("entries", []):
@@ -239,6 +278,8 @@ static func _check_consequences(data: Dictionary, errors: Array) -> void:
 			_: compatible = false
 		if not compatible:
 			errors.append("incompatible_consequence:" + id)
+		if p.get("observation_type") in ["incident", "object_use_record"] and p.get("weapon") == data.truth.weapon:
+			errors.append("crime_weapon_context_conflict:" + id)
 	if not errors.is_empty():
 		return
 	if data.evidence.size() > 18:

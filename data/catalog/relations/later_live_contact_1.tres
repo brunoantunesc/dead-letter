@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="EvidenceRelation" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_relation.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "later_live_contact_1"
+source_definition_id = "sighting.1"
+target_definition_id = "time_record"
+source_claim_id = "opportunity"
+target_claim_id = "last_known_alive"
+conditions = [{"left": "source.properties.place", "op": "eq", "right": "target.properties.place"}, {"left": "source.properties.time", "op": "gt", "right": "target.properties.start"}, {"left": "source.properties.time", "op": "lt", "right": "target.properties.end"}, {"left": "source.properties.with_victim", "op": "eq", "value": true}]

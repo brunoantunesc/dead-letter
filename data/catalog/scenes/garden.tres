@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="CrimeSceneProfile" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/crime_scene_profile.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+location_id = "garden"
+trace_tokens = {"stabbing": "scene.garden.stabbing", "strangulation": "scene.garden.strangulation", "gunshot": "scene.garden.gunshot", "blunt_force": "scene.garden.blunt_force", "poisoning": "scene.garden.poisoning"}

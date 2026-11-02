@@ -15,3 +15,4 @@ category_id = "record.administrative"
 claim_ids = PackedStringArray("garment_assignment")
 causal_kinds = PackedStringArray("garment_transfer")
 observation_fields = PackedStringArray("from_person", "to_person", "fabric", "thread", "time")
+text_variants = PackedStringArray("evidence.garment_transfer.body.v1", "evidence.garment_transfer.body.v2")

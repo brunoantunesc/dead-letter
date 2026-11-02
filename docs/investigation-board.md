@@ -32,7 +32,7 @@ A planta e a lista de suspeitos da mesa de desenvolvimento não alimentam automa
 
 Inspecionar um elemento registra a visita ao seu local e as pessoas explicitamente citadas em suas propriedades/linhas. A fonte de um relato ou laudo também conta como menção. Isso não cria conversas ou interrogatórios; record_conversation é o ponto de integração para esse sistema futuro.
 
-Uma observação e o objeto examinado possuem cards separados. Várias observações podem apontar para o mesmo objeto, sem duplicá-lo. Mencionar uma faca em um documento não descobre a faca física.
+Um objeto examinado tem um único card que reúne suas observações descobertas. Novos achados físicos sobre o mesmo object_id atualizam esse card e sua leitura ampliada. Na acusação há uma única entrada por objeto, que apresenta em conjunto os achados descobertos. Documentos e relatos permanecem fontes separadas; mencionar uma faca em um documento não descobre a faca física.
 
 O rótulo **OBJETO** não identifica uma arma verdadeira. Cards novos ficam na pilha até serem colocados; sincronizar conhecimento não move nem coloca cards. Nenhuma conexão é criada automaticamente, inclusive entre objeto e observação.
 
@@ -50,13 +50,17 @@ Notas e conexões não são lidas pelo avaliador. Um X não invalida prova, uma 
 
 ## Idioma e estética
 
-Interface e conteúdo conhecido são traduzidos em PT/EN. Posições, IDs, marcações e textos escritos pelo jogador permanecem iguais ao trocar idioma. Anotações gerais da mesa continuam separadas; não são copiadas nem traduzidas automaticamente como cards.
+Interface e conteúdo conhecido são traduzidos em PT/EN. Posições, IDs, marcações e textos escritos pelo jogador permanecem iguais ao trocar idioma. As anotações ficam somente no quadro; o campo separado da mesa foi removido.
 
 Direção PSX reafirmada pelo responsável: paleta contida, fichas físicas, bordas duras, linhas sem suavização e tipografia de aspecto raster. A textura do suporte é desenhada por código, sem novo asset externo. Usa fontes monoespaçadas do sistema com alternativas por plataforma.
 
-Os cards podem ficar pequenos na visão geral; o conteúdo integral permanece em tamanho fixo no painel. Os vínculos visuais do catálogo continuam pendentes, sem imagens inventadas para as provas.
+A leitura padrão usa controles de 20 px, conteúdo lateral de 20 px e títulos de cards de 22 px. O quadro começa em aproximação 1:1; localizar um card pelo seletor restaura no mínimo essa aproximação. Categorias usam 14 px nos cards e 16 px no painel. O painel lateral tem largura mínima de 360 px e as instruções ficam em uma linha separada dos botões. Os cards podem ficar pequenos ao afastar a visão geral; o conteúdo integral permanece em tamanho fixo no painel. Os vínculos visuais do catálogo continuam pendentes, sem imagens inventadas para as provas.
 
 ## Validação e limites
+
+Cada card colocado possui um alfinete vermelho com haste metálica e sombra em pixels no topo. É decoração idêntica em todos os tipos de card, sem área de interação nem significado investigativo.
+
+A interface usa o tamanho real da janela, sem esticar um canvas lógico fixo. Aumentar/maximizar a janela amplia a área útil do quadro; diminuir reduz essa área. Cards mantêm suas posições e a aproximação escolhida. O painel lateral preserva uma largura legível. `tests/board_resize.gd` verifica e renderiza a transição 1280×820 → 1600×1000 → 1280×820.
 
 ```sh
 godot --headless --path . --script tests/board_tests.gd
@@ -66,12 +70,24 @@ godot --path . --script tests/board_ui_smoke.gd
 
 O teste renderizado gera `tests/results/board_pile.png` (início vazio), `board_evidence.png` e `board_connection.png`. A organização dessas capturas foi montada deliberadamente pelo teste como exemplo de ações do jogador; não é uma disposição automática do jogo.
 
-As verificações cobrem identidades, conteúdo desconhecido, menções sem descoberta, múltiplas observações por objeto, arraste real por eventos de mouse com aproximação, marcações, notas, remoção, idioma, reabertura, reinício e preservação do veredito com hipóteses erradas. A revisão humana de gameplay/ergonomia permanece necessária e a issue fica aberta.
+As verificações cobrem identidades, conteúdo desconhecido, menções sem descoberta, múltiplas observações reunidas no mesmo objeto, arraste real por eventos de mouse com aproximação, marcações, notas, remoção, idioma, reabertura, reinício e preservação do veredito com hipóteses erradas. A revisão humana de gameplay/ergonomia permanece necessária e a issue fica aberta.
 
-Nesta entrega, no Godot 4.6.2 instalado: 30 verificações do estado do quadro, 22 da cena renderizada, 1.018 de localização e 4.236 do núcleo em 101 seeds passaram, além do smoke test da mesa. As capturas em PT/EN foram inspecionadas visualmente. Não houve sessão humana completa de investigação.
+Nesta entrega, no Godot 4.6.2 instalado: 30 verificações do estado do quadro, 103 da cena renderizada, 2.048 de localização e 4.101 do núcleo em 101 seeds passaram, além do smoke test da mesa. As capturas em PT/EN foram inspecionadas visualmente. Não houve sessão humana completa de investigação.
 
 Fechar/reabrir preserva estado na mesma sessão; repetir a seed como nova run cria outro quadro. Não há salvamento em disco, desfazer/refazer, fotos do mundo, filtros, editor da rede causal ou resolução automática de sobreposições. Posição e interpretação são estado lógico; câmera e aproximação pertencem à apresentação.
 
 ## Revisão de entrada dos cards
 
 A pilha é separada da colocação manual (placed/was_placed). A sessão expõe visited_locations e known_characters; abrir o quadro sincroniza essas listas, sem usar a lista completa do gerador. A organização visual continua independente da verdade, da força probatória e da acusação.
+
+A [revisão de gameplay](gameplay-feedback.md) retirou a autópsia das descobertas, adicionou vestígios por ambiente e registros de horário, mantendo a entrada progressiva dos cards.
+
+## Identificação e leitura ampliada das pistas
+
+Cards de provas e objetos exibem o local de descoberta e um nome curto traduzido (por exemplo, **Salão — Fibras**). Quando uma pista cita uma pessoa em seu campo próprio, o nome aparece em uma segunda linha para distinguir registros semelhantes. Os nomes curtos ficam na localização, separados do título completo; os 37 modelos são verificados em PT/EN contra a largura do card.
+
+O ícone **+** no canto do card abre uma janela de leitura com local, título completo e descrição integral, com rolagem. Fechar retorna ao mesmo quadro sem mudar organização, descobertas ou hipóteses. A janela recebe apenas o conteúdo público já descoberto.
+
+A lixeira é representada somente pelo ícone, sem texto, e fica fixa no canto inferior direito do canvas, independente da aproximação e navegação. Arrastar e soltar um card sobre ela devolve-o à pilha; o alvo acende durante o arraste. Não apaga descobertas, notas ou conexões. Recolocar o card restaura sua posição anterior ao arraste. Soltar fora da lixeira apenas move o card normalmente.
+
+Os vestígios de cenário usam nomes curtos do detalhe observado (por exemplo, **Jardim — Sulcos** ou **Jardim — Lascas**), definidos em `observable_titles` no catálogo. O mesmo detalhe identifica a prova nas outras telas.

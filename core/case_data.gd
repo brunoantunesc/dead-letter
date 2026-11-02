@@ -1,14 +1,15 @@
 extends RefCounted
 ## Private simulation snapshot. Never pass this dictionary directly to a player UI.
 
-const SCHEMA_VERSION = 5
-const GENERATOR_VERSION = "0.5.0"
-const CONTENT_VERSION = "hotel_network_1"
+const INVESTIGATION_TIME = 1230 # 20:30, after body removal.
+const SCHEMA_VERSION = 6
+const GENERATOR_VERSION = "0.7.0"
+const CONTENT_VERSION = "hotel_prose_1"
 
 static func create(case_seed: int) -> Dictionary:
 	return {
 		"schema_version": SCHEMA_VERSION, "generator_version": GENERATOR_VERSION,
-		"content_version": CONTENT_VERSION, "seed": case_seed,
+		"content_version": CONTENT_VERSION, "seed": case_seed, "investigation_time": INVESTIGATION_TIME,
 		"characters": {}, "locations": {}, "entry_location": "lobby", "relations": [], "events": {},
 		"support_rules": {}, "counterproofs": [], "placements": {}, "evidence": {}, "truth": {},
 		# Experimental policy for the logic test, not final balancing.

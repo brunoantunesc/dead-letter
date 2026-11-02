@@ -1,6 +1,7 @@
 extends RefCounted
 ## Comparisons are internal and evaluated only on submitted discoveries.
 const Content = preload("res://core/case_content.gd")
+const Scenes = preload("res://core/crime_scenes.gd")
 
 static func derive(evidence: Dictionary) -> Dictionary:
 	var rules = {}
@@ -22,10 +23,10 @@ static func derive(evidence: Dictionary) -> Dictionary:
 										2, "identity:" + handover.to_person, [item.id, record.id, transfer.id], "garment_assignment")
 			"sighting":
 				for report in evidence.values():
-					if report.properties.get("observation_type") != "examination":
+					if report.properties.get("observation_type") != "time_record":
 						continue
 					var window: Dictionary = report.properties
-					if p.time <= window.end and p.time >= window.start - 30:
+					if p.get("with_victim", false) and p.time <= window.end and p.time >= window.start - Content.RECENT_CONTACT_MINUTES:
 						_add(rules, "presence:" + item.id, "culprit", p.person, p.person,
 							1, "presence:" + p.person, [item.id, report.id])
 						for register in evidence.values():
@@ -39,12 +40,21 @@ static func derive(evidence: Dictionary) -> Dictionary:
 								_add(rules, "exclusion:" + p.person, "culprit", p.person, p.person,
 									2, "identity:" + p.person, [register.id, report.id])
 			"examination", "medical_addendum":
+				var clinical_method = Content.method_from_pattern(p.pattern)
+				if clinical_method != "":
+					_add(rules, "method:clinical:" + item.id, "method", clinical_method, "", 2,
+						"injury_mechanism", [item.id], "primary_injury" if p.observation_type == "medical_addendum" else "injury_method")
 				for object in evidence.values():
 					if object.properties.get("observation_type") == "object":
 						var method = Content.method_for(p.pattern, object.properties.form)
 						if method != "":
 							_add(rules, "method:" + object.id + ":" + item.id, "method", method, "", 2,
 								"injury_mechanism", [item.id, object.id], "primary_injury" if p.observation_type == "medical_addendum" else "injury_method")
+			"scene_trace":
+				var mechanism = Scenes.method_for(p.signature)
+				if mechanism != "":
+					_add(rules, "method:scene:" + item.id, "method", mechanism, "", 2,
+						"injury_mechanism", [item.id], "scene_mechanism")
 			"grievance":
 				if p.state == "open":
 					var motive = Content.motive_for(p.topic)

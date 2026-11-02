@@ -1,0 +1,2038 @@
+{
+	"attempt": 0,
+	"characters": {
+		"examiner": {
+			"accusable": false,
+			"known_events": [
+				"examination"
+			],
+			"name": "",
+			"name_key": "person.examiner",
+			"role": "examiner"
+		},
+		"person_0": {
+			"accusable": true,
+			"known_events": [
+				"conflict_0",
+				"conflict_0_status",
+				"sighting_0",
+				"attendance_0",
+				"wardrobe",
+				"use_0",
+				"routine_checkout"
+			],
+			"name": "Ana",
+			"role": "manager"
+		},
+		"person_1": {
+			"accusable": true,
+			"known_events": [
+				"room_request",
+				"sighting_1",
+				"attendance_1",
+				"wardrobe"
+			],
+			"name": "Bruno",
+			"role": "guest"
+		},
+		"person_2": {
+			"accusable": true,
+			"known_events": [
+				"conflict_2",
+				"conflict_2_status",
+				"sighting_2",
+				"attendance_2",
+				"wardrobe"
+			],
+			"name": "Carlos",
+			"role": "cook"
+		},
+		"person_3": {
+			"accusable": true,
+			"known_events": [
+				"conflict_3",
+				"conflict_3_status",
+				"sighting_3",
+				"booking_3",
+				"wardrobe",
+				"murder",
+				"use_1"
+			],
+			"name": "Diana",
+			"role": "guest"
+		},
+		"porter": {
+			"accusable": false,
+			"known_events": [
+				"sighting_0",
+				"sighting_1",
+				"sighting_2",
+				"sighting_3",
+				"activity_register"
+			],
+			"name": "Amadeu",
+			"role": "porter"
+		},
+		"victim": {
+			"accusable": false,
+			"known_events": [
+				"conflict_3",
+				"conflict_3_status",
+				"conflict_2",
+				"conflict_2_status",
+				"conflict_0",
+				"conflict_0_status",
+				"murder"
+			],
+			"name": "Vicente",
+			"role": "administrator"
+		}
+	},
+	"content_version": "hotel_network_1",
+	"counterproofs": [
+		{
+			"context": "examination",
+			"relation_id": "attendance_limits_sighting_0",
+			"source": "activity_register",
+			"source_claim": "attendance",
+			"subject": "person_0",
+			"target": "sighting_0",
+			"target_claim": "opportunity"
+		},
+		{
+			"context": "examination",
+			"relation_id": "attendance_limits_sighting_1",
+			"source": "activity_register",
+			"source_claim": "attendance",
+			"subject": "person_1",
+			"target": "sighting_1",
+			"target_claim": "opportunity"
+		},
+		{
+			"context": "examination",
+			"relation_id": "attendance_limits_sighting_2",
+			"source": "activity_register",
+			"source_claim": "attendance",
+			"subject": "person_2",
+			"target": "sighting_2",
+			"target_claim": "opportunity"
+		},
+		{
+			"context": "",
+			"relation_id": "independent_use_rope",
+			"source": "incident",
+			"source_claim": "independent_use",
+			"subject": "",
+			"target": "object_0",
+			"target_claim": "criminal_origin"
+		},
+		{
+			"context": "",
+			"relation_id": "routine_use_before_discovery_pistol",
+			"source": "routine_checkout",
+			"source_claim": "documented_use",
+			"subject": "",
+			"target": "object_1",
+			"target_claim": "criminal_origin"
+		}
+	],
+	"entry_location": "lobby",
+	"events": {
+		"activity_register": {
+			"actors": [
+				"porter"
+			],
+			"causes": [
+				"attendance_0",
+				"attendance_1",
+				"attendance_2",
+				"booking_3"
+			],
+			"effects": {
+				"entries": [
+					{
+						"end": 1220,
+						"person": "person_0",
+						"place": "restaurant",
+						"start": 1195,
+						"status": "attended"
+					},
+					{
+						"end": 1220,
+						"person": "person_1",
+						"place": "kitchen",
+						"start": 1195,
+						"status": "attended"
+					},
+					{
+						"end": 1220,
+						"person": "person_2",
+						"place": "garden",
+						"start": 1195,
+						"status": "attended"
+					},
+					{
+						"end": 1220,
+						"person": "person_3",
+						"place": "restaurant",
+						"start": 1195,
+						"status": "reserved"
+					}
+				]
+			},
+			"end": 1226,
+			"id": "activity_register",
+			"kind": "activity_register",
+			"location": "lobby",
+			"observations": {
+				"activity_register": {
+					"entries": [
+						{
+							"end": 1220,
+							"person": "person_0",
+							"place": "restaurant",
+							"start": 1195,
+							"status": "attended"
+						},
+						{
+							"end": 1220,
+							"person": "person_1",
+							"place": "kitchen",
+							"start": 1195,
+							"status": "attended"
+						},
+						{
+							"end": 1220,
+							"person": "person_2",
+							"place": "garden",
+							"start": 1195,
+							"status": "attended"
+						},
+						{
+							"end": 1220,
+							"person": "person_3",
+							"place": "restaurant",
+							"start": 1195,
+							"status": "reserved"
+						}
+					],
+					"observation_type": "activity_register"
+				}
+			},
+			"start": 1225
+		},
+		"attendance_0": {
+			"actors": [
+				"person_0"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_0",
+				"place": "restaurant",
+				"planned_end": 1220,
+				"planned_start": 1195
+			},
+			"end": 1220,
+			"id": "attendance_0",
+			"kind": "attendance",
+			"location": "restaurant",
+			"observations": {
+
+			},
+			"start": 1195
+		},
+		"attendance_1": {
+			"actors": [
+				"person_1"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_1",
+				"place": "kitchen",
+				"planned_end": 1220,
+				"planned_start": 1195
+			},
+			"end": 1220,
+			"id": "attendance_1",
+			"kind": "attendance",
+			"location": "kitchen",
+			"observations": {
+
+			},
+			"start": 1195
+		},
+		"attendance_2": {
+			"actors": [
+				"person_2"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_2",
+				"place": "garden",
+				"planned_end": 1220,
+				"planned_start": 1195
+			},
+			"end": 1220,
+			"id": "attendance_2",
+			"kind": "attendance",
+			"location": "garden",
+			"observations": {
+
+			},
+			"start": 1195
+		},
+		"booking_3": {
+			"actors": [
+				"person_3"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_3",
+				"place": "restaurant",
+				"planned_end": 1220,
+				"planned_start": 1195
+			},
+			"end": 816,
+			"id": "booking_3",
+			"kind": "booking",
+			"location": "lobby",
+			"observations": {
+
+			},
+			"start": 815
+		},
+		"conflict_0": {
+			"actors": [
+				"person_0",
+				"victim"
+			],
+			"causes": [],
+			"effects": {
+				"motive": "revenge",
+				"open": false,
+				"subject": "person_0",
+				"victim": "victim"
+			},
+			"end": 645,
+			"id": "conflict_0",
+			"kind": "conflict",
+			"location": "lobby",
+			"observations": {
+
+			},
+			"start": 640
+		},
+		"conflict_0_status": {
+			"actors": [
+				"person_0",
+				"victim"
+			],
+			"causes": [
+				"conflict_0"
+			],
+			"effects": {
+				"motive": "revenge",
+				"open": false,
+				"subject": "person_0"
+			},
+			"end": 648,
+			"id": "conflict_0_status",
+			"kind": "settlement",
+			"location": "lobby",
+			"observations": {
+				"conflict_0_record": {
+					"observation_type": "grievance",
+					"person": "person_0",
+					"state": "settled",
+					"topic": "dismissal"
+				}
+			},
+			"start": 647
+		},
+		"conflict_2": {
+			"actors": [
+				"person_2",
+				"victim"
+			],
+			"causes": [],
+			"effects": {
+				"motive": "money",
+				"open": true,
+				"subject": "person_2",
+				"victim": "victim"
+			},
+			"end": 625,
+			"id": "conflict_2",
+			"kind": "conflict",
+			"location": "lobby",
+			"observations": {
+
+			},
+			"start": 620
+		},
+		"conflict_2_status": {
+			"actors": [
+				"person_2",
+				"victim"
+			],
+			"causes": [
+				"conflict_2"
+			],
+			"effects": {
+				"motive": "money",
+				"open": true,
+				"subject": "person_2"
+			},
+			"end": 628,
+			"id": "conflict_2_status",
+			"kind": "decision",
+			"location": "lobby",
+			"observations": {
+				"conflict_2_record": {
+					"observation_type": "grievance",
+					"person": "person_2",
+					"state": "open",
+					"topic": "withheld_payment"
+				}
+			},
+			"start": 627
+		},
+		"conflict_3": {
+			"actors": [
+				"person_3",
+				"victim"
+			],
+			"causes": [],
+			"effects": {
+				"motive": "jealousy",
+				"open": true,
+				"subject": "person_3",
+				"victim": "victim"
+			},
+			"end": 605,
+			"id": "conflict_3",
+			"kind": "conflict",
+			"location": "lobby",
+			"observations": {
+
+			},
+			"start": 600
+		},
+		"conflict_3_status": {
+			"actors": [
+				"person_3",
+				"victim"
+			],
+			"causes": [
+				"conflict_3"
+			],
+			"effects": {
+				"motive": "jealousy",
+				"open": true,
+				"subject": "person_3"
+			},
+			"end": 608,
+			"id": "conflict_3_status",
+			"kind": "decision",
+			"location": "lobby",
+			"observations": {
+				"conflict_3_record": {
+					"observation_type": "grievance",
+					"person": "person_3",
+					"state": "open",
+					"topic": "private_letters"
+				}
+			},
+			"start": 607
+		},
+		"examination": {
+			"actors": [
+				"examiner"
+			],
+			"causes": [
+				"murder"
+			],
+			"effects": {
+				"pattern": "round_perforation",
+				"window_end": 1210,
+				"window_start": 1195
+			},
+			"end": 1245,
+			"id": "examination",
+			"kind": "examination",
+			"location": "salon",
+			"observations": {
+				"examination": {
+					"end": 1210,
+					"observation_type": "examination",
+					"pattern": "round_perforation",
+					"place": "salon",
+					"start": 1195
+				}
+			},
+			"start": 1230
+		},
+		"murder": {
+			"actors": [
+				"person_3",
+				"victim"
+			],
+			"causes": [
+				"conflict_3"
+			],
+			"effects": {
+				"contact": "sleeve_gripped",
+				"culprit": "person_3",
+				"fabric": "navy_wool",
+				"method": "gunshot",
+				"thread": "copper",
+				"victim": "victim",
+				"weapon": "pistol"
+			},
+			"end": 1205,
+			"id": "murder",
+			"kind": "murder",
+			"location": "salon",
+			"observations": {
+				"contact": {
+					"fabric": "navy_wool",
+					"observation_type": "contact",
+					"thread": "copper"
+				}
+			},
+			"start": 1200
+		},
+		"room_request": {
+			"actors": [
+				"person_1"
+			],
+			"causes": [],
+			"effects": {
+				"person": "person_1",
+				"reason": "plumbing_noise"
+			},
+			"end": 675,
+			"id": "room_request",
+			"kind": "room_request",
+			"location": "lobby",
+			"observations": {
+				"room_request": {
+					"observation_type": "room_request",
+					"person": "person_1",
+					"reason": "plumbing_noise"
+				}
+			},
+			"start": 670
+		},
+		"routine_checkout": {
+			"actors": [
+				"person_0"
+			],
+			"causes": [],
+			"effects": {
+				"object_id": "instrument_pistol",
+				"person": "person_0",
+				"time": 400,
+				"weapon": "pistol"
+			},
+			"end": 405,
+			"id": "routine_checkout",
+			"kind": "documented_use",
+			"location": "garden",
+			"observations": {
+				"routine_checkout": {
+					"object_id": "instrument_pistol",
+					"observation_type": "object_use_record",
+					"person": "person_0",
+					"time": 400,
+					"weapon": "pistol"
+				}
+			},
+			"start": 400
+		},
+		"sighting_0": {
+			"actors": [
+				"person_0",
+				"porter"
+			],
+			"causes": [],
+			"effects": {
+				"activity": 0,
+				"person": "person_0"
+			},
+			"end": 1176,
+			"id": "sighting_0",
+			"kind": "passing",
+			"location": "lobby",
+			"observations": {
+				"sighting_0": {
+					"activity": 0,
+					"observation_type": "sighting",
+					"person": "person_0",
+					"time": 1175
+				}
+			},
+			"start": 1175
+		},
+		"sighting_1": {
+			"actors": [
+				"person_1",
+				"porter"
+			],
+			"causes": [],
+			"effects": {
+				"activity": 1,
+				"person": "person_1"
+			},
+			"end": 1181,
+			"id": "sighting_1",
+			"kind": "passing",
+			"location": "lobby",
+			"observations": {
+				"sighting_1": {
+					"activity": 1,
+					"observation_type": "sighting",
+					"person": "person_1",
+					"time": 1180
+				}
+			},
+			"start": 1180
+		},
+		"sighting_2": {
+			"actors": [
+				"person_2",
+				"porter"
+			],
+			"causes": [],
+			"effects": {
+				"activity": 2,
+				"person": "person_2"
+			},
+			"end": 1186,
+			"id": "sighting_2",
+			"kind": "passing",
+			"location": "lobby",
+			"observations": {
+				"sighting_2": {
+					"activity": 2,
+					"observation_type": "sighting",
+					"person": "person_2",
+					"time": 1185
+				}
+			},
+			"start": 1185
+		},
+		"sighting_3": {
+			"actors": [
+				"person_3",
+				"porter"
+			],
+			"causes": [],
+			"effects": {
+				"activity": 3,
+				"person": "person_3"
+			},
+			"end": 1171,
+			"id": "sighting_3",
+			"kind": "passing",
+			"location": "lobby",
+			"observations": {
+				"sighting_3": {
+					"activity": 3,
+					"observation_type": "sighting",
+					"person": "person_3",
+					"time": 1170
+				}
+			},
+			"start": 1170
+		},
+		"use_0": {
+			"actors": [
+				"person_0"
+			],
+			"causes": [],
+			"effects": {
+				"object_id": "instrument_rope",
+				"weapon": "rope"
+			},
+			"end": 310,
+			"id": "use_0",
+			"kind": "lifting",
+			"location": "storage",
+			"observations": {
+				"incident": {
+					"incident": "lifting",
+					"object_id": "instrument_rope",
+					"observation_type": "incident",
+					"person": "person_0",
+					"time": 300,
+					"weapon": "rope"
+				},
+				"object_0": {
+					"form": "braided_loop",
+					"object_id": "instrument_rope",
+					"observation_type": "object",
+					"weapon": "rope"
+				}
+			},
+			"start": 300
+		},
+		"use_1": {
+			"actors": [
+				"person_3"
+			],
+			"causes": [
+				"murder"
+			],
+			"effects": {
+				"object_id": "instrument_pistol",
+				"weapon": "pistol"
+			},
+			"end": 1216,
+			"id": "use_1",
+			"kind": "discard",
+			"location": "garden",
+			"observations": {
+				"object_1": {
+					"form": "small_bore",
+					"object_id": "instrument_pistol",
+					"observation_type": "object",
+					"weapon": "pistol"
+				}
+			},
+			"start": 1215
+		},
+		"wardrobe": {
+			"actors": [
+				"person_0",
+				"person_1",
+				"person_2",
+				"person_3"
+			],
+			"causes": [],
+			"effects": {
+				"entries": [
+					{
+						"fabric": "charcoal_wool",
+						"person": "person_0",
+						"thread": "copper"
+					},
+					{
+						"fabric": "navy_wool",
+						"person": "person_1",
+						"thread": "gray"
+					},
+					{
+						"fabric": "charcoal_wool",
+						"person": "person_2",
+						"thread": "gray"
+					},
+					{
+						"fabric": "navy_wool",
+						"person": "person_3",
+						"thread": "copper"
+					}
+				]
+			},
+			"end": 920,
+			"id": "wardrobe",
+			"kind": "cloakroom_intake",
+			"location": "laundry",
+			"observations": {
+				"wardrobe": {
+					"entries": [
+						{
+							"fabric": "charcoal_wool",
+							"person": "person_0",
+							"thread": "copper"
+						},
+						{
+							"fabric": "navy_wool",
+							"person": "person_1",
+							"thread": "gray"
+						},
+						{
+							"fabric": "charcoal_wool",
+							"person": "person_2",
+							"thread": "gray"
+						},
+						{
+							"fabric": "navy_wool",
+							"person": "person_3",
+							"thread": "copper"
+						}
+					],
+					"observation_type": "wardrobe"
+				}
+			},
+			"start": 900
+		}
+	},
+	"evidence": {
+		"activity_register": {
+			"definition_id": "activity_register",
+			"event_id": "activity_register",
+			"id": "activity_register",
+			"kind": "document",
+			"location": "lobby",
+			"placement_id": "lobby.slot.record",
+			"properties": {
+				"entries": [
+					{
+						"end": 1220,
+						"person": "person_0",
+						"place": "restaurant",
+						"start": 1195,
+						"status": "attended"
+					},
+					{
+						"end": 1220,
+						"person": "person_1",
+						"place": "kitchen",
+						"start": 1195,
+						"status": "attended"
+					},
+					{
+						"end": 1220,
+						"person": "person_2",
+						"place": "garden",
+						"start": 1195,
+						"status": "attended"
+					},
+					{
+						"end": 1220,
+						"person": "person_3",
+						"place": "restaurant",
+						"start": 1195,
+						"status": "reserved"
+					}
+				],
+				"observation_type": "activity_register"
+			},
+			"source_character": "porter"
+		},
+		"conflict_0_record": {
+			"definition_id": "grievance.dismissal.settled",
+			"event_id": "conflict_0_status",
+			"id": "conflict_0_record",
+			"kind": "document",
+			"location": "storage",
+			"placement_id": "storage.slot.record",
+			"properties": {
+				"observation_type": "grievance",
+				"person": "person_0",
+				"state": "settled",
+				"topic": "dismissal"
+			},
+			"source_character": ""
+		},
+		"conflict_2_record": {
+			"definition_id": "grievance.withheld_payment.open",
+			"event_id": "conflict_2_status",
+			"id": "conflict_2_record",
+			"kind": "document",
+			"location": "lobby",
+			"placement_id": "lobby.slot.record",
+			"properties": {
+				"observation_type": "grievance",
+				"person": "person_2",
+				"state": "open",
+				"topic": "withheld_payment"
+			},
+			"source_character": ""
+		},
+		"conflict_3_record": {
+			"definition_id": "grievance.private_letters.open",
+			"event_id": "conflict_3_status",
+			"id": "conflict_3_record",
+			"kind": "document",
+			"location": "laundry",
+			"placement_id": "laundry.slot.record",
+			"properties": {
+				"observation_type": "grievance",
+				"person": "person_3",
+				"state": "open",
+				"topic": "private_letters"
+			},
+			"source_character": ""
+		},
+		"contact": {
+			"definition_id": "contact",
+			"event_id": "murder",
+			"id": "contact",
+			"kind": "trace",
+			"location": "salon",
+			"placement_id": "salon.slot.material.trace",
+			"properties": {
+				"fabric": "navy_wool",
+				"observation_type": "contact",
+				"thread": "copper"
+			},
+			"source_character": ""
+		},
+		"examination": {
+			"definition_id": "examination",
+			"event_id": "examination",
+			"id": "examination",
+			"kind": "document",
+			"location": "salon",
+			"placement_id": "salon.slot.record",
+			"properties": {
+				"end": 1210,
+				"observation_type": "examination",
+				"pattern": "round_perforation",
+				"place": "salon",
+				"start": 1195
+			},
+			"source_character": "examiner"
+		},
+		"incident": {
+			"definition_id": "incident.lifting",
+			"event_id": "use_0",
+			"id": "incident",
+			"kind": "document",
+			"location": "lobby",
+			"placement_id": "lobby.slot.record",
+			"properties": {
+				"incident": "lifting",
+				"object_id": "instrument_rope",
+				"observation_type": "incident",
+				"person": "person_0",
+				"time": 300,
+				"weapon": "rope"
+			},
+			"source_character": ""
+		},
+		"object_0": {
+			"definition_id": "object.rope",
+			"event_id": "use_0",
+			"id": "object_0",
+			"kind": "object",
+			"location": "storage",
+			"placement_id": "storage.slot.material.object",
+			"properties": {
+				"form": "braided_loop",
+				"object_id": "instrument_rope",
+				"observation_type": "object",
+				"weapon": "rope"
+			},
+			"source_character": ""
+		},
+		"object_1": {
+			"definition_id": "object.pistol",
+			"event_id": "use_1",
+			"id": "object_1",
+			"kind": "object",
+			"location": "garden",
+			"placement_id": "garden.slot.material.object",
+			"properties": {
+				"form": "small_bore",
+				"object_id": "instrument_pistol",
+				"observation_type": "object",
+				"weapon": "pistol"
+			},
+			"source_character": ""
+		},
+		"room_request": {
+			"definition_id": "room_request",
+			"event_id": "room_request",
+			"id": "room_request",
+			"kind": "document",
+			"location": "lobby",
+			"placement_id": "lobby.slot.record",
+			"properties": {
+				"observation_type": "room_request",
+				"person": "person_1",
+				"reason": "plumbing_noise"
+			},
+			"source_character": ""
+		},
+		"routine_checkout": {
+			"definition_id": "object_use_record",
+			"event_id": "routine_checkout",
+			"id": "routine_checkout",
+			"kind": "document",
+			"location": "lobby",
+			"placement_id": "lobby.slot.record",
+			"properties": {
+				"object_id": "instrument_pistol",
+				"observation_type": "object_use_record",
+				"person": "person_0",
+				"time": 400,
+				"weapon": "pistol"
+			},
+			"source_character": ""
+		},
+		"sighting_0": {
+			"definition_id": "sighting.0",
+			"event_id": "sighting_0",
+			"id": "sighting_0",
+			"kind": "testimony",
+			"location": "restaurant",
+			"placement_id": "restaurant.slot.support.testimony",
+			"properties": {
+				"activity": 0,
+				"observation_type": "sighting",
+				"person": "person_0",
+				"time": 1175
+			},
+			"source_character": "porter"
+		},
+		"sighting_1": {
+			"definition_id": "sighting.1",
+			"event_id": "sighting_1",
+			"id": "sighting_1",
+			"kind": "testimony",
+			"location": "restaurant",
+			"placement_id": "restaurant.slot.support.testimony",
+			"properties": {
+				"activity": 1,
+				"observation_type": "sighting",
+				"person": "person_1",
+				"time": 1180
+			},
+			"source_character": "porter"
+		},
+		"sighting_2": {
+			"definition_id": "sighting.2",
+			"event_id": "sighting_2",
+			"id": "sighting_2",
+			"kind": "testimony",
+			"location": "restaurant",
+			"placement_id": "restaurant.slot.support.testimony",
+			"properties": {
+				"activity": 2,
+				"observation_type": "sighting",
+				"person": "person_2",
+				"time": 1185
+			},
+			"source_character": "porter"
+		},
+		"sighting_3": {
+			"definition_id": "sighting.3",
+			"event_id": "sighting_3",
+			"id": "sighting_3",
+			"kind": "testimony",
+			"location": "restaurant",
+			"placement_id": "restaurant.slot.support.testimony",
+			"properties": {
+				"activity": 3,
+				"observation_type": "sighting",
+				"person": "person_3",
+				"time": 1170
+			},
+			"source_character": "porter"
+		},
+		"wardrobe": {
+			"definition_id": "wardrobe",
+			"event_id": "wardrobe",
+			"id": "wardrobe",
+			"kind": "document",
+			"location": "laundry",
+			"placement_id": "laundry.slot.record",
+			"properties": {
+				"entries": [
+					{
+						"fabric": "charcoal_wool",
+						"person": "person_0",
+						"thread": "copper"
+					},
+					{
+						"fabric": "navy_wool",
+						"person": "person_1",
+						"thread": "gray"
+					},
+					{
+						"fabric": "charcoal_wool",
+						"person": "person_2",
+						"thread": "gray"
+					},
+					{
+						"fabric": "navy_wool",
+						"person": "person_3",
+						"thread": "copper"
+					}
+				],
+				"observation_type": "wardrobe"
+			},
+			"source_character": ""
+		}
+	},
+	"generator_version": "0.5.0",
+	"locations": {
+		"archive": {
+			"accessible": true,
+			"name_key": "location.archive",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"garden": {
+			"accessible": true,
+			"name_key": "location.garden",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"kitchen": {
+			"accessible": true,
+			"name_key": "location.kitchen",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"laundry": {
+			"accessible": true,
+			"name_key": "location.laundry",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"lobby": {
+			"accessible": true,
+			"name_key": "location.lobby",
+			"neighbors": {
+				"archive": 5,
+				"garden": 5,
+				"kitchen": 5,
+				"laundry": 5,
+				"restaurant": 5,
+				"salon": 5,
+				"storage": 5
+			}
+		},
+		"restaurant": {
+			"accessible": true,
+			"name_key": "location.restaurant",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"salon": {
+			"accessible": true,
+			"name_key": "location.salon",
+			"neighbors": {
+				"lobby": 5
+			}
+		},
+		"storage": {
+			"accessible": true,
+			"name_key": "location.storage",
+			"neighbors": {
+				"lobby": 5
+			}
+		}
+	},
+	"placements": {
+		"archive.holder.material.object": {
+			"accepts": [
+				"material.object"
+			],
+			"accessible": true,
+			"children": [
+				"archive.slot.material.object"
+			],
+			"id": "archive.holder.material.object",
+			"parent": "room.archive",
+			"room_id": "archive"
+		},
+		"archive.holder.material.trace": {
+			"accepts": [
+				"material.trace"
+			],
+			"accessible": true,
+			"children": [
+				"archive.slot.material.trace"
+			],
+			"id": "archive.holder.material.trace",
+			"parent": "room.archive",
+			"room_id": "archive"
+		},
+		"archive.holder.record": {
+			"accepts": [
+				"record"
+			],
+			"accessible": true,
+			"children": [
+				"archive.slot.record"
+			],
+			"id": "archive.holder.record",
+			"parent": "room.archive",
+			"room_id": "archive"
+		},
+		"archive.holder.support.testimony": {
+			"accepts": [
+				"support.testimony"
+			],
+			"accessible": true,
+			"children": [
+				"archive.slot.support.testimony"
+			],
+			"id": "archive.holder.support.testimony",
+			"parent": "room.archive",
+			"room_id": "archive"
+		},
+		"archive.slot.material.object": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "archive.slot.material.object",
+			"parent": "archive.holder.material.object",
+			"room_id": "archive"
+		},
+		"archive.slot.material.trace": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "archive.slot.material.trace",
+			"parent": "archive.holder.material.trace",
+			"room_id": "archive"
+		},
+		"archive.slot.record": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "archive.slot.record",
+			"parent": "archive.holder.record",
+			"room_id": "archive"
+		},
+		"archive.slot.support.testimony": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "archive.slot.support.testimony",
+			"parent": "archive.holder.support.testimony",
+			"room_id": "archive"
+		},
+		"garden.holder.material.object": {
+			"accepts": [
+				"material.object"
+			],
+			"accessible": true,
+			"children": [
+				"garden.slot.material.object"
+			],
+			"id": "garden.holder.material.object",
+			"parent": "room.garden",
+			"room_id": "garden"
+		},
+		"garden.holder.material.trace": {
+			"accepts": [
+				"material.trace"
+			],
+			"accessible": true,
+			"children": [
+				"garden.slot.material.trace"
+			],
+			"id": "garden.holder.material.trace",
+			"parent": "room.garden",
+			"room_id": "garden"
+		},
+		"garden.holder.record": {
+			"accepts": [
+				"record"
+			],
+			"accessible": true,
+			"children": [
+				"garden.slot.record"
+			],
+			"id": "garden.holder.record",
+			"parent": "room.garden",
+			"room_id": "garden"
+		},
+		"garden.holder.support.testimony": {
+			"accepts": [
+				"support.testimony"
+			],
+			"accessible": true,
+			"children": [
+				"garden.slot.support.testimony"
+			],
+			"id": "garden.holder.support.testimony",
+			"parent": "room.garden",
+			"room_id": "garden"
+		},
+		"garden.slot.material.object": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "garden.slot.material.object",
+			"parent": "garden.holder.material.object",
+			"room_id": "garden"
+		},
+		"garden.slot.material.trace": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "garden.slot.material.trace",
+			"parent": "garden.holder.material.trace",
+			"room_id": "garden"
+		},
+		"garden.slot.record": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "garden.slot.record",
+			"parent": "garden.holder.record",
+			"room_id": "garden"
+		},
+		"garden.slot.support.testimony": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "garden.slot.support.testimony",
+			"parent": "garden.holder.support.testimony",
+			"room_id": "garden"
+		},
+		"hotel": {
+			"accepts": [
+				"evidence"
+			],
+			"accessible": true,
+			"children": [
+				"room.lobby",
+				"room.salon",
+				"room.kitchen",
+				"room.restaurant",
+				"room.laundry",
+				"room.storage",
+				"room.garden",
+				"room.archive"
+			],
+			"id": "hotel",
+			"parent": "",
+			"room_id": ""
+		},
+		"kitchen.holder.material.object": {
+			"accepts": [
+				"material.object"
+			],
+			"accessible": true,
+			"children": [
+				"kitchen.slot.material.object"
+			],
+			"id": "kitchen.holder.material.object",
+			"parent": "room.kitchen",
+			"room_id": "kitchen"
+		},
+		"kitchen.holder.material.trace": {
+			"accepts": [
+				"material.trace"
+			],
+			"accessible": true,
+			"children": [
+				"kitchen.slot.material.trace"
+			],
+			"id": "kitchen.holder.material.trace",
+			"parent": "room.kitchen",
+			"room_id": "kitchen"
+		},
+		"kitchen.holder.record": {
+			"accepts": [
+				"record"
+			],
+			"accessible": true,
+			"children": [
+				"kitchen.slot.record"
+			],
+			"id": "kitchen.holder.record",
+			"parent": "room.kitchen",
+			"room_id": "kitchen"
+		},
+		"kitchen.holder.support.testimony": {
+			"accepts": [
+				"support.testimony"
+			],
+			"accessible": true,
+			"children": [
+				"kitchen.slot.support.testimony"
+			],
+			"id": "kitchen.holder.support.testimony",
+			"parent": "room.kitchen",
+			"room_id": "kitchen"
+		},
+		"kitchen.slot.material.object": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "kitchen.slot.material.object",
+			"parent": "kitchen.holder.material.object",
+			"room_id": "kitchen"
+		},
+		"kitchen.slot.material.trace": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "kitchen.slot.material.trace",
+			"parent": "kitchen.holder.material.trace",
+			"room_id": "kitchen"
+		},
+		"kitchen.slot.record": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "kitchen.slot.record",
+			"parent": "kitchen.holder.record",
+			"room_id": "kitchen"
+		},
+		"kitchen.slot.support.testimony": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "kitchen.slot.support.testimony",
+			"parent": "kitchen.holder.support.testimony",
+			"room_id": "kitchen"
+		},
+		"laundry.holder.material.object": {
+			"accepts": [
+				"material.object"
+			],
+			"accessible": true,
+			"children": [
+				"laundry.slot.material.object"
+			],
+			"id": "laundry.holder.material.object",
+			"parent": "room.laundry",
+			"room_id": "laundry"
+		},
+		"laundry.holder.material.trace": {
+			"accepts": [
+				"material.trace"
+			],
+			"accessible": true,
+			"children": [
+				"laundry.slot.material.trace"
+			],
+			"id": "laundry.holder.material.trace",
+			"parent": "room.laundry",
+			"room_id": "laundry"
+		},
+		"laundry.holder.record": {
+			"accepts": [
+				"record"
+			],
+			"accessible": true,
+			"children": [
+				"laundry.slot.record"
+			],
+			"id": "laundry.holder.record",
+			"parent": "room.laundry",
+			"room_id": "laundry"
+		},
+		"laundry.holder.support.testimony": {
+			"accepts": [
+				"support.testimony"
+			],
+			"accessible": true,
+			"children": [
+				"laundry.slot.support.testimony"
+			],
+			"id": "laundry.holder.support.testimony",
+			"parent": "room.laundry",
+			"room_id": "laundry"
+		},
+		"laundry.slot.material.object": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "laundry.slot.material.object",
+			"parent": "laundry.holder.material.object",
+			"room_id": "laundry"
+		},
+		"laundry.slot.material.trace": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "laundry.slot.material.trace",
+			"parent": "laundry.holder.material.trace",
+			"room_id": "laundry"
+		},
+		"laundry.slot.record": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "laundry.slot.record",
+			"parent": "laundry.holder.record",
+			"room_id": "laundry"
+		},
+		"laundry.slot.support.testimony": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "laundry.slot.support.testimony",
+			"parent": "laundry.holder.support.testimony",
+			"room_id": "laundry"
+		},
+		"lobby.holder.material.object": {
+			"accepts": [
+				"material.object"
+			],
+			"accessible": true,
+			"children": [
+				"lobby.slot.material.object"
+			],
+			"id": "lobby.holder.material.object",
+			"parent": "room.lobby",
+			"room_id": "lobby"
+		},
+		"lobby.holder.material.trace": {
+			"accepts": [
+				"material.trace"
+			],
+			"accessible": true,
+			"children": [
+				"lobby.slot.material.trace"
+			],
+			"id": "lobby.holder.material.trace",
+			"parent": "room.lobby",
+			"room_id": "lobby"
+		},
+		"lobby.holder.record": {
+			"accepts": [
+				"record"
+			],
+			"accessible": true,
+			"children": [
+				"lobby.slot.record"
+			],
+			"id": "lobby.holder.record",
+			"parent": "room.lobby",
+			"room_id": "lobby"
+		},
+		"lobby.holder.support.testimony": {
+			"accepts": [
+				"support.testimony"
+			],
+			"accessible": true,
+			"children": [
+				"lobby.slot.support.testimony"
+			],
+			"id": "lobby.holder.support.testimony",
+			"parent": "room.lobby",
+			"room_id": "lobby"
+		},
+		"lobby.slot.material.object": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "lobby.slot.material.object",
+			"parent": "lobby.holder.material.object",
+			"room_id": "lobby"
+		},
+		"lobby.slot.material.trace": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "lobby.slot.material.trace",
+			"parent": "lobby.holder.material.trace",
+			"room_id": "lobby"
+		},
+		"lobby.slot.record": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "lobby.slot.record",
+			"parent": "lobby.holder.record",
+			"room_id": "lobby"
+		},
+		"lobby.slot.support.testimony": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "lobby.slot.support.testimony",
+			"parent": "lobby.holder.support.testimony",
+			"room_id": "lobby"
+		},
+		"restaurant.holder.material.object": {
+			"accepts": [
+				"material.object"
+			],
+			"accessible": true,
+			"children": [
+				"restaurant.slot.material.object"
+			],
+			"id": "restaurant.holder.material.object",
+			"parent": "room.restaurant",
+			"room_id": "restaurant"
+		},
+		"restaurant.holder.material.trace": {
+			"accepts": [
+				"material.trace"
+			],
+			"accessible": true,
+			"children": [
+				"restaurant.slot.material.trace"
+			],
+			"id": "restaurant.holder.material.trace",
+			"parent": "room.restaurant",
+			"room_id": "restaurant"
+		},
+		"restaurant.holder.record": {
+			"accepts": [
+				"record"
+			],
+			"accessible": true,
+			"children": [
+				"restaurant.slot.record"
+			],
+			"id": "restaurant.holder.record",
+			"parent": "room.restaurant",
+			"room_id": "restaurant"
+		},
+		"restaurant.holder.support.testimony": {
+			"accepts": [
+				"support.testimony"
+			],
+			"accessible": true,
+			"children": [
+				"restaurant.slot.support.testimony"
+			],
+			"id": "restaurant.holder.support.testimony",
+			"parent": "room.restaurant",
+			"room_id": "restaurant"
+		},
+		"restaurant.slot.material.object": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "restaurant.slot.material.object",
+			"parent": "restaurant.holder.material.object",
+			"room_id": "restaurant"
+		},
+		"restaurant.slot.material.trace": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "restaurant.slot.material.trace",
+			"parent": "restaurant.holder.material.trace",
+			"room_id": "restaurant"
+		},
+		"restaurant.slot.record": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "restaurant.slot.record",
+			"parent": "restaurant.holder.record",
+			"room_id": "restaurant"
+		},
+		"restaurant.slot.support.testimony": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "restaurant.slot.support.testimony",
+			"parent": "restaurant.holder.support.testimony",
+			"room_id": "restaurant"
+		},
+		"room.archive": {
+			"accepts": [],
+			"accessible": true,
+			"children": [
+				"archive.holder.record",
+				"archive.holder.material.object",
+				"archive.holder.material.trace",
+				"archive.holder.support.testimony"
+			],
+			"id": "room.archive",
+			"parent": "hotel",
+			"room_id": "archive"
+		},
+		"room.garden": {
+			"accepts": [],
+			"accessible": true,
+			"children": [
+				"garden.holder.record",
+				"garden.holder.material.object",
+				"garden.holder.material.trace",
+				"garden.holder.support.testimony"
+			],
+			"id": "room.garden",
+			"parent": "hotel",
+			"room_id": "garden"
+		},
+		"room.kitchen": {
+			"accepts": [],
+			"accessible": true,
+			"children": [
+				"kitchen.holder.record",
+				"kitchen.holder.material.object",
+				"kitchen.holder.material.trace",
+				"kitchen.holder.support.testimony"
+			],
+			"id": "room.kitchen",
+			"parent": "hotel",
+			"room_id": "kitchen"
+		},
+		"room.laundry": {
+			"accepts": [],
+			"accessible": true,
+			"children": [
+				"laundry.holder.record",
+				"laundry.holder.material.object",
+				"laundry.holder.material.trace",
+				"laundry.holder.support.testimony"
+			],
+			"id": "room.laundry",
+			"parent": "hotel",
+			"room_id": "laundry"
+		},
+		"room.lobby": {
+			"accepts": [],
+			"accessible": true,
+			"children": [
+				"lobby.holder.record",
+				"lobby.holder.material.object",
+				"lobby.holder.material.trace",
+				"lobby.holder.support.testimony"
+			],
+			"id": "room.lobby",
+			"parent": "hotel",
+			"room_id": "lobby"
+		},
+		"room.restaurant": {
+			"accepts": [],
+			"accessible": true,
+			"children": [
+				"restaurant.holder.record",
+				"restaurant.holder.material.object",
+				"restaurant.holder.material.trace",
+				"restaurant.holder.support.testimony"
+			],
+			"id": "room.restaurant",
+			"parent": "hotel",
+			"room_id": "restaurant"
+		},
+		"room.salon": {
+			"accepts": [],
+			"accessible": true,
+			"children": [
+				"salon.holder.record",
+				"salon.holder.material.object",
+				"salon.holder.material.trace",
+				"salon.holder.support.testimony"
+			],
+			"id": "room.salon",
+			"parent": "hotel",
+			"room_id": "salon"
+		},
+		"room.storage": {
+			"accepts": [],
+			"accessible": true,
+			"children": [
+				"storage.holder.record",
+				"storage.holder.material.object",
+				"storage.holder.material.trace",
+				"storage.holder.support.testimony"
+			],
+			"id": "room.storage",
+			"parent": "hotel",
+			"room_id": "storage"
+		},
+		"salon.holder.material.object": {
+			"accepts": [
+				"material.object"
+			],
+			"accessible": true,
+			"children": [
+				"salon.slot.material.object"
+			],
+			"id": "salon.holder.material.object",
+			"parent": "room.salon",
+			"room_id": "salon"
+		},
+		"salon.holder.material.trace": {
+			"accepts": [
+				"material.trace"
+			],
+			"accessible": true,
+			"children": [
+				"salon.slot.material.trace"
+			],
+			"id": "salon.holder.material.trace",
+			"parent": "room.salon",
+			"room_id": "salon"
+		},
+		"salon.holder.record": {
+			"accepts": [
+				"record"
+			],
+			"accessible": true,
+			"children": [
+				"salon.slot.record"
+			],
+			"id": "salon.holder.record",
+			"parent": "room.salon",
+			"room_id": "salon"
+		},
+		"salon.holder.support.testimony": {
+			"accepts": [
+				"support.testimony"
+			],
+			"accessible": true,
+			"children": [
+				"salon.slot.support.testimony"
+			],
+			"id": "salon.holder.support.testimony",
+			"parent": "room.salon",
+			"room_id": "salon"
+		},
+		"salon.slot.material.object": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "salon.slot.material.object",
+			"parent": "salon.holder.material.object",
+			"room_id": "salon"
+		},
+		"salon.slot.material.trace": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "salon.slot.material.trace",
+			"parent": "salon.holder.material.trace",
+			"room_id": "salon"
+		},
+		"salon.slot.record": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "salon.slot.record",
+			"parent": "salon.holder.record",
+			"room_id": "salon"
+		},
+		"salon.slot.support.testimony": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "salon.slot.support.testimony",
+			"parent": "salon.holder.support.testimony",
+			"room_id": "salon"
+		},
+		"storage.holder.material.object": {
+			"accepts": [
+				"material.object"
+			],
+			"accessible": true,
+			"children": [
+				"storage.slot.material.object"
+			],
+			"id": "storage.holder.material.object",
+			"parent": "room.storage",
+			"room_id": "storage"
+		},
+		"storage.holder.material.trace": {
+			"accepts": [
+				"material.trace"
+			],
+			"accessible": true,
+			"children": [
+				"storage.slot.material.trace"
+			],
+			"id": "storage.holder.material.trace",
+			"parent": "room.storage",
+			"room_id": "storage"
+		},
+		"storage.holder.record": {
+			"accepts": [
+				"record"
+			],
+			"accessible": true,
+			"children": [
+				"storage.slot.record"
+			],
+			"id": "storage.holder.record",
+			"parent": "room.storage",
+			"room_id": "storage"
+		},
+		"storage.holder.support.testimony": {
+			"accepts": [
+				"support.testimony"
+			],
+			"accessible": true,
+			"children": [
+				"storage.slot.support.testimony"
+			],
+			"id": "storage.holder.support.testimony",
+			"parent": "room.storage",
+			"room_id": "storage"
+		},
+		"storage.slot.material.object": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "storage.slot.material.object",
+			"parent": "storage.holder.material.object",
+			"room_id": "storage"
+		},
+		"storage.slot.material.trace": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "storage.slot.material.trace",
+			"parent": "storage.holder.material.trace",
+			"room_id": "storage"
+		},
+		"storage.slot.record": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "storage.slot.record",
+			"parent": "storage.holder.record",
+			"room_id": "storage"
+		},
+		"storage.slot.support.testimony": {
+			"accepts": [],
+			"accessible": true,
+			"children": [],
+			"id": "storage.slot.support.testimony",
+			"parent": "storage.holder.support.testimony",
+			"room_id": "storage"
+		}
+	},
+	"policy": {
+		"counterproof_scope": "existing",
+		"minimum_by_claim": {
+			"culprit": 3,
+			"method": 2,
+			"motive": 2
+		},
+		"minimum_total": 7
+	},
+	"relations": [
+		{
+			"from": "person_3",
+			"open": true,
+			"to": "victim",
+			"type": "jealousy"
+		},
+		{
+			"from": "person_2",
+			"open": true,
+			"to": "victim",
+			"type": "money"
+		},
+		{
+			"from": "person_0",
+			"open": false,
+			"to": "victim",
+			"type": "revenge"
+		}
+	],
+	"schema_version": 5,
+	"seed": "708272",
+	"support_rules": {
+		"exclusion:person_3": {
+			"claim": "culprit",
+			"independence_group": "identity:person_3",
+			"inference_id": "attendance",
+			"requires": [
+				"activity_register",
+				"examination"
+			],
+			"subject": "person_3",
+			"value": "person_3",
+			"weight": 2
+		},
+		"material:person_3": {
+			"claim": "culprit",
+			"independence_group": "identity:person_3",
+			"inference_id": "material_identity",
+			"requires": [
+				"contact",
+				"wardrobe"
+			],
+			"subject": "person_3",
+			"value": "person_3",
+			"weight": 2
+		},
+		"method:object_1:examination": {
+			"claim": "method",
+			"independence_group": "injury_mechanism",
+			"inference_id": "injury_method",
+			"requires": [
+				"examination",
+				"object_1"
+			],
+			"subject": "",
+			"value": "gunshot",
+			"weight": 2
+		},
+		"motive:conflict_2_record": {
+			"claim": "motive",
+			"independence_group": "grievance:person_2",
+			"inference_id": "active_motive",
+			"requires": [
+				"conflict_2_record"
+			],
+			"subject": "person_2",
+			"value": "money",
+			"weight": 2
+		},
+		"motive:conflict_3_record": {
+			"claim": "motive",
+			"independence_group": "grievance:person_3",
+			"inference_id": "active_motive",
+			"requires": [
+				"conflict_3_record"
+			],
+			"subject": "person_3",
+			"value": "jealousy",
+			"weight": 2
+		},
+		"presence:sighting_0": {
+			"claim": "culprit",
+			"independence_group": "presence:person_0",
+			"inference_id": "opportunity",
+			"requires": [
+				"examination",
+				"sighting_0"
+			],
+			"subject": "person_0",
+			"value": "person_0",
+			"weight": 1
+		},
+		"presence:sighting_1": {
+			"claim": "culprit",
+			"independence_group": "presence:person_1",
+			"inference_id": "opportunity",
+			"requires": [
+				"examination",
+				"sighting_1"
+			],
+			"subject": "person_1",
+			"value": "person_1",
+			"weight": 1
+		},
+		"presence:sighting_2": {
+			"claim": "culprit",
+			"independence_group": "presence:person_2",
+			"inference_id": "opportunity",
+			"requires": [
+				"examination",
+				"sighting_2"
+			],
+			"subject": "person_2",
+			"value": "person_2",
+			"weight": 1
+		},
+		"presence:sighting_3": {
+			"claim": "culprit",
+			"independence_group": "presence:person_3",
+			"inference_id": "opportunity",
+			"requires": [
+				"examination",
+				"sighting_3"
+			],
+			"subject": "person_3",
+			"value": "person_3",
+			"weight": 1
+		}
+	},
+	"truth": {
+		"culprit": "person_3",
+		"event_id": "murder",
+		"method": "gunshot",
+		"motive": "jealousy",
+		"victim": "victim",
+		"weapon": "pistol"
+	}
+}

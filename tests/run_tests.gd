@@ -53,14 +53,11 @@ func _initialize() -> void:
 
 func proofs(data: Dictionary, alternative: bool = false) -> Array:
 	var index: String = data.truth.culprit.trim_prefix("person_")
-	var selection: Array = ["sighting_" + index, "examination", "conflict_" + index + "_record"]
+	var selection: Array = ["sighting_" + index, "time_record", "scene_trace", "conflict_" + index + "_record"]
 	if alternative:
 		selection.append("activity_register")
 	else:
 		selection.append_array(["contact", "wardrobe"])
-	for item in data.evidence.values():
-		if item.properties.observation_type == "object" and item.properties.weapon == data.truth.weapon:
-			selection.append(item.id)
 	return selection
 
 func evaluate(data: Dictionary, ids: Array) -> Dictionary:
@@ -84,7 +81,7 @@ func _test_short_case(data: Dictionary) -> void:
 				check(not p.has("handled_by") and not p.has("person") and not p.has("blood_owner"), "object never names culprit")
 				check(evaluate(data, [item.id]).total == 0, "object alone does not prove murder")
 				if data.events[item.event_id].kind != "discard":
-					check(evaluate(data, ["examination", item.id]).scores.method == 0, "unrelated suspicious object cannot prove actual method")
+					check(evaluate(data, [item.id]).scores.method == 0, "unrelated suspicious object alone cannot prove actual method")
 			"incident":
 				incidents += 1
 				var companion = false
@@ -104,7 +101,7 @@ func _test_short_case(data: Dictionary) -> void:
 	check(topics.size() == 3 and topics.values().all(func(n): return n == 1), "no repeated motive topics")
 	check(topics.get("withheld_payment", 0) == 1, "exactly one financial history")
 	check(people_with_grievances.size() == 3, "different histories belong to different people")
-	check(texts.size() == 4, "witness observations describe different actions")
+	check(texts.size() == 2, "two concrete victim contacts, not four vague passages")
 	var fabric_matches = 0
 	var thread_matches = 0
 	for entry in data.evidence.wardrobe.properties.entries:
@@ -161,11 +158,12 @@ func _test_invalid_cases(data: Dictionary) -> void:
 		"actors": [data.truth.culprit], "causes": [], "effects": {}, "observations": {}}
 	_reject(broken, "impossible_schedule:" + data.truth.culprit, "travel time checked")
 	broken = data.duplicate(true)
-	broken.evidence.examination.properties.pattern = "impossible"
-	_reject(broken, "incompatible_consequence:examination", "method traces checked")
+	broken.evidence.scene_trace.properties.signature = "impossible"
+	_reject(broken, "incompatible_consequence:scene_trace", "method traces checked")
 	broken = data.duplicate(true)
-	broken.evidence.sighting_0.source_character = "unknown"
-	_reject(broken, "unknown_testimony_source:sighting_0", "testimony knowledge checked")
+	var sighting = "sighting_" + data.truth.culprit.trim_prefix("person_")
+	broken.evidence[sighting].source_character = "unknown"
+	_reject(broken, "unknown_testimony_source:" + sighting, "testimony knowledge checked")
 	broken = data.duplicate(true)
 	var grievance = "conflict_" + data.truth.culprit.trim_prefix("person_") + "_record"
 	broken.evidence[grievance].properties.person = "victim"
@@ -230,12 +228,16 @@ func _test_boundary(data: Dictionary) -> void:
 	check(not observation.has("support_rules") and not observation.has("event_id"), "observation allowlist")
 	observation.properties.fabric = "changed"
 	check(session.discoveries()[0].properties.fabric == data.evidence.contact.properties.fabric, "presentation cannot mutate discovery")
-	session.notes.append({"culprit": "victim"})
+	var note_id = session.board.add_note(Vector2.ZERO)
+	session.board.edit_note(note_id, "Minha hipótese: vítima.")
 	check(Data.encode(data) == original, "discoveries and hypotheses preserve truth")
 	var accusation = data.truth.duplicate(true)
 	accusation.evidence_ids = proofs(data)
 	for id in accusation.evidence_ids:
-		session.inspect(id)
+		if data.evidence[id].kind == "testimony":
+			session.visit_location("lobby")
+			session.ask("porter", id)
+		else: session.inspect(id)
 	check(session.submit(accusation) == {"outcome": "solved"}, "normal verdict hides score and truth")
 	check(session.submit(accusation).has("error"), "accusation is final")
 	check(Investigation.new(data).submit(accusation, true).debug.has("truth"), "explicit post-verdict debug")
@@ -253,4 +255,4 @@ func _test_reported_seed(current: Dictionary) -> void:
 	var archived = JSON.parse_string(FileAccess.get_file_as_string("res://tests/fixtures/seed_914368_v0_2_0.json"))
 	check(archived.seed == "914368" and archived.generator_version == "0.2.0" and archived.evidence.size() == 38, "reported case preserved verbatim")
 	check(archived.truth == current.truth, "reported seed retains its factual solution")
-	check(current.evidence.size() == 16, "reported seed retains short case plus one routine-use context")
+	check(current.evidence.size() == 15, "reported seed retains short investigation without an autopsy")

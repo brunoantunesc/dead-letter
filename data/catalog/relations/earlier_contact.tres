@@ -14,4 +14,4 @@ equal_fields = {"fabric": "fabric", "thread": "thread"}
 subject_field = "source.properties.person"
 source_rows = ""
 target_rows = ""
-context_definition_id = "examination"
+context_definition_id = "time_record"

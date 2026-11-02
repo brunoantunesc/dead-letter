@@ -23,6 +23,12 @@ func _initialize() -> void:
 			print("  ", object.id, ": ", Presentation.title(object))
 	for id in options.get("inspect", "").split(",", false):
 		print(JSON.stringify(session.inspect(id)))
+	if options.has("visit"):
+		session.visit_location(options.visit)
+	if options.has("talk"):
+		print(JSON.stringify(session.dialogue(options.talk)))
+		for id in options.get("ask", "").split(",", false):
+			print(JSON.stringify(session.ask(options.talk, id)))
 	if options.has("culprit"):
 		var accusation = {"culprit": options.culprit, "motive": options.get("motive", ""),
 			"method": options.get("method", ""), "evidence_ids": Array(options.get("evidence", "").split(",", false))}

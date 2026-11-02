@@ -32,6 +32,8 @@ var _opened = false
 var pile_label: Label
 var place_button: Button
 var stash_button: Button
+var clue_window: AcceptDialog
+var clue_body: Label
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -47,7 +49,7 @@ func _ready() -> void:
 	add_child(page)
 	var header = HBoxContainer.new()
 	page.add_child(header)
-	var title = _label(header, "board.title", 24)
+	var title = _label(header, "board.title", 28)
 	title.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	locale_choice = OptionButton.new()
 	for locale_id in L.available_locales():
@@ -60,7 +62,7 @@ func _ready() -> void:
 	connect_button = _button(tools, "board.connect", _toggle_connect)
 	_button(tools, "board.new_note", _add_note)
 	_button(tools, "board.fit", func(): canvas.fit_cards())
-	status = _label(tools, "board.help", 13)
+	status = _label(page, "board.help", 18)
 	status.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	var body = HBoxContainer.new()
 	body.add_theme_constant_override("separation", 18)
@@ -72,9 +74,11 @@ func _ready() -> void:
 	canvas.custom_minimum_size = Vector2(320, 300)
 	body.add_child(canvas)
 	canvas.card_selected.connect(_select_card)
+	canvas.card_opened.connect(_open_clue)
+	canvas.card_stashed.connect(_stash_card)
 	canvas.link_selected.connect(_select_link)
 	var sidebar = VBoxContainer.new()
-	sidebar.custom_minimum_size.x = 310
+	sidebar.custom_minimum_size.x = 360
 	sidebar.add_theme_constant_override("separation", 9)
 	body.add_child(sidebar)
 	var pile = Control.new()
@@ -83,7 +87,7 @@ func _ready() -> void:
 	for offset in [8, 4, 0]:
 		var sheet = ColorRect.new()
 		sheet.position = Vector2(offset, offset)
-		sheet.size = Vector2(290, 38)
+		sheet.size = Vector2(340, 38)
 		sheet.color = Color("77745b") if offset > 0 else Color("b5a680")
 		sheet.mouse_filter = Control.MOUSE_FILTER_IGNORE
 		pile.add_child(sheet)
@@ -91,7 +95,7 @@ func _ready() -> void:
 	pile_label.position = Vector2(10, 8)
 	pile_label.add_theme_color_override("font_color", Color("23281f"))
 	pile.add_child(pile_label)
-	_label(sidebar, "board.cards", 12)
+	_label(sidebar, "board.cards", 16)
 	card_picker = OptionButton.new()
 	card_picker.fit_to_longest_item = false
 	card_picker.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
@@ -103,7 +107,7 @@ func _ready() -> void:
 			canvas.focus_card(id))
 	place_button = _button(sidebar, "board.place", _place_selected)
 	stash_button = _button(sidebar, "board.stash", _stash_selected)
-	_label(sidebar, "board.connections", 12)
+	_label(sidebar, "board.connections", 16)
 	link_picker = OptionButton.new()
 	link_picker.fit_to_longest_item = false
 	link_picker.text_overrun_behavior = TextServer.OVERRUN_TRIM_ELLIPSIS
@@ -112,32 +116,48 @@ func _ready() -> void:
 		var id = str(link_picker.get_item_metadata(index))
 		if id != "": _select_link(id))
 	sidebar.add_child(HSeparator.new())
-	detail_title = _label(sidebar, "", 20)
+	detail_title = _label(sidebar, "", 24)
 	var scroll = ScrollContainer.new()
 	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
 	sidebar.add_child(scroll)
-	detail_body = _label(scroll, "", 15)
+	detail_body = _label(scroll, "", 20)
 	detail_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	connection_fields = VBoxContainer.new()
 	sidebar.add_child(connection_fields)
-	_label(connection_fields, "board.marker", 12)
+	_label(connection_fields, "board.marker", 16)
 	marker = OptionButton.new()
 	connection_fields.add_child(marker)
 	marker.item_selected.connect(func(_index): _edit_link())
-	_label(connection_fields, "board.link_label", 12)
+	_label(connection_fields, "board.link_label", 16)
 	link_text = LineEdit.new()
 	connection_fields.add_child(link_text)
 	link_text.text_changed.connect(func(_text): _edit_link())
 	note_fields = VBoxContainer.new()
 	sidebar.add_child(note_fields)
-	_label(note_fields, "board.note_body", 12)
+	_label(note_fields, "board.note_body", 16)
 	note_text = TextEdit.new()
 	note_text.custom_minimum_size.y = 150
 	note_text.wrap_mode = TextEdit.LINE_WRAPPING_BOUNDARY
 	note_fields.add_child(note_text)
 	note_text.text_changed.connect(_edit_note)
 	delete_button = _button(sidebar, "board.remove", _remove_selected)
+	clue_window = AcceptDialog.new()
+	clue_window.min_size = Vector2i(620, 420)
+	clue_window.transient = true
+	var clue_style = StyleBoxFlat.new()
+	clue_style.bg_color = Color("20291f")
+	clue_style.border_color = Color("b5a680")
+	clue_style.set_border_width_all(2)
+	clue_style.set_content_margin_all(18)
+	clue_window.add_theme_stylebox_override("panel", clue_style)
+	add_child(clue_window)
+	var clue_scroll = ScrollContainer.new()
+	clue_scroll.custom_minimum_size = Vector2(580, 320)
+	clue_scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	clue_window.add_child(clue_scroll)
+	clue_body = _label(clue_scroll, "", 22)
+	clue_body.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	refresh()
 	hide()
 
@@ -149,7 +169,7 @@ func _build_theme() -> void:
 	font.antialiasing = TextServer.FONT_ANTIALIASING_NONE
 	font.subpixel_positioning = TextServer.SUBPIXEL_POSITIONING_DISABLED
 	board_theme.default_font = font
-	board_theme.default_font_size = 14
+	board_theme.default_font_size = 20
 	for type in ["Button", "OptionButton", "LineEdit", "TextEdit"]:
 		for state in ["normal", "hover", "pressed", "focus"]:
 			var box = StyleBoxFlat.new()
@@ -184,7 +204,7 @@ func new_session(state: RefCounted = null) -> void:
 	selected_link = ""
 	_opened = false
 	canvas.pan = Vector2(30, 30)
-	canvas.zoom = 0.65
+	canvas.zoom = 1.0
 	canvas.connecting = false
 	canvas.connection_start = ""
 	hide()
@@ -255,11 +275,25 @@ func _content(card: Dictionary) -> Dictionary:
 					title = Presentation.title(observation)
 					body = Presentation.describe(observation, people)
 					if card.kind == "object":
-						body = L.text("board.object_found") + "\n\n" + body
+						var descriptions: Array[String] = []
+						for detail in observations:
+							if detail.id in card.evidence_ids:
+								descriptions.append(Presentation.describe(detail, people))
+						body = L.text("board.object_found") + "\n\n" + "\n\n".join(descriptions)
 		"note":
 			title = str(card.text).get_slice("\n", 0).left(80) if card.text != "" else L.text("board.note")
 			body = card.text
-	return {"title": title, "body": body, "kind": L.text("board.kind." + card.kind)}
+	var card_title = title
+	var location = ""
+	if card.kind in ["evidence", "object"]:
+		var reference: String = card.reference if card.kind == "evidence" else card.evidence_id
+		for observation in observations:
+			if observation.id == reference:
+				card_title = Presentation.short_title(observation)
+				location = L.text("location." + str(observation.location))
+				if observation.properties.has("person"):
+					card_title += "\n" + Presentation.person(str(observation.properties.person), people)
+	return {"title": title, "card_title": card_title, "location": location, "body": body, "kind": L.text("board.kind." + card.kind), "inspect": L.text("board.inspect")}
 
 func _refresh_pickers() -> void:
 	pile_label.text = L.text("board.pile", {"count": model.cards.size() - model.placed_cards().size()})
@@ -387,4 +421,22 @@ func _remove_selected() -> void:
 	elif selected_card != "":
 		model.remove_note(selected_card)
 		selected_card = ""
+	refresh()
+
+func _open_clue(id: String) -> void:
+	if not labels.has(id): return
+	# Public observations only; the enlarged view never queries factual case data.
+	clue_window.title = labels[id].title
+	clue_window.ok_button_text = L.text("board.dismiss")
+	clue_body.text = labels[id].location + "
+
+" + labels[id].title + "
+
+" + labels[id].body
+	clue_window.popup_centered(Vector2i(660, 460))
+
+func _stash_card(id: String) -> void:
+	if model == null or not model.cards.has(id): return
+	model.unplace_card(id)
+	canvas.connection_start = ""
 	refresh()

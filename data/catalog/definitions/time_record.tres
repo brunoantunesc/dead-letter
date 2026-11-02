@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EvidenceDefinition" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://core/catalog/evidence_definition.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = "time_record"
+selector = {"observation_type": "time_record"}
+title_key = "evidence.time_record.title"
+text_key = "evidence.time_record.body"
+parameters = {"place": {"field": "place", "format": "location"}, "start": {"field": "start", "format": "time"}, "end": {"field": "end", "format": "time"}}
+visual_id = "visual.time_record"
+category_id = "record.administrative"
+claim_ids = PackedStringArray("time_window", "last_known_alive")
+causal_kinds = PackedStringArray("discovery_record")
+observation_fields = PackedStringArray("place", "start", "end")
+text_variants = PackedStringArray("evidence.time_record.body.v1", "evidence.time_record.body.v2")

@@ -15,3 +15,4 @@ category_id = "material.object"
 claim_ids = PackedStringArray("criminal_origin")
 causal_kinds = PackedStringArray("discard", "cut", "lifting", "inspection", "sports", "cleaning")
 observation_fields = PackedStringArray("weapon", "form", "object_id")
+text_variants = PackedStringArray("evidence.object.knife.body.v1", "evidence.object.knife.body.v2")

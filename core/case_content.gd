@@ -2,6 +2,7 @@ extends RefCounted
 ## Vocabulary migrated from Python. Observations describe properties, not guilt.
 const METHODS = ["stabbing", "strangulation", "gunshot", "blunt_force", "poisoning"]
 const MOTIVES = ["money", "jealousy", "revenge"]
+const RECENT_CONTACT_MINUTES = 6
 const PROFILES = {
 	"stabbing": {"weapon": "knife", "pattern": "narrow_cut", "form": "narrow_edge", "room": "kitchen", "incident": "cut"},
 	"strangulation": {"weapon": "rope", "pattern": "neck_band", "form": "braided_loop", "room": "storage", "incident": "lifting"},
@@ -21,3 +22,10 @@ static func method_for(pattern: String, form: String) -> String:
 		if PROFILES[method].pattern == pattern and PROFILES[method].form == form:
 			return method
 	return ""
+
+static func method_from_pattern(pattern: String) -> String:
+	var matches: Array[String] = []
+	for method in PROFILES:
+		if PROFILES[method].pattern == pattern:
+			matches.append(method)
+	return matches[0] if matches.size() == 1 else ""

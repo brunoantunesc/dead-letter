@@ -15,3 +15,4 @@ category_id = "record.administrative"
 claim_ids = PackedStringArray("cleaning_effective")
 causal_kinds = PackedStringArray("trace_cleaning")
 observation_fields = PackedStringArray("fabric", "thread", "time")
+text_variants = PackedStringArray("evidence.trace_cleaning.body.v1", "evidence.trace_cleaning.body.v2")

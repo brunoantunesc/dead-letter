@@ -14,4 +14,4 @@ equal_fields = {}
 subject_field = "source.properties.from_person"
 source_rows = ""
 target_rows = "entries"
-context_definition_id = "examination"
+context_definition_id = "time_record"
